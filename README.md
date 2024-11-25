@@ -59,13 +59,6 @@ SCENARIO=FIX ./b.sh $conf
 
 ## Reproducing Results
 
-TODO:
-- explanation for instructions and expected results
-- easy to run 5 repetition for 2 scenarios
-- instruction for ClevFuzz (run fuzzing for 24h)
-- instructions for WAFLGo
-- scripts for validate and parse result to table
-
 ### RQ1: Evaluation of Capabilities
 
 Run the following command to run experiment under default setting:
@@ -78,40 +71,28 @@ SCENARIO=BIC GIT_INFO=FULL MAX_ITER=5 LLM_TEMP=0.5 LLM=gpt-4o ./run.sh $conf
 
 ### RQ2: Ablation Study
 
-#### Commit Information
+#### Prompt Synthesizer
 
 ```
 GIT_INFO=MSGONLY ./run.sh $conf
 GIT_INFO=DIFFONLY ./run.sh $conf
-```
-
-#### Task Difficulty
-
-```
 GENCMD=1 ./run.sh $conf
-```
-
-#### Feedback Utility
-
-```
-NOFEEDBACK=1 ./run.sh $conf
-```
-
-#### Number of Iterations
-
-```
-MAX_ITER=10 ./run.sh $conf
 ```
 
 #### LLM Module
 
-
 ```
 LLM_TEMP=1.0 ./run.sh $conf
-
 LLM=gpt-4o-mini ./run.sh $conf
+```
+
+#### Execution Analyzer
+
+```
+NOFEEDBACK=1 ./run.sh $conf
+MAX_ITER=10 ./run.sh $conf
 ```
 
 ### RQ3: Comparison to the State-of-the-Art
 
-TODO
+Follow instructions on https://github.com/He1loNice/WAFLGo to run WAFLGo
