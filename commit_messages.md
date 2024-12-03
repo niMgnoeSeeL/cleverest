@@ -8,6 +8,10 @@
 
 **Commit:** 8c27b12
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 4
 
 **Commit Message Character Count:** 41
@@ -20,6 +24,10 @@ Fix leak in Function.prototype.toString.
 #### Issue #141
 
 **Commit:** 832e069
+
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
 
 **Commit Message Word Count:** 86
 
@@ -49,6 +57,10 @@ surrogate pairs should not be affected by these changes.
 
 **Commit:** 4c7f6be
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 28
 
 **Commit Message Character Count:** 187
@@ -64,6 +76,10 @@ double precision arithmetic with no overflow checks.
 #### Issue #166
 
 **Commit:** 3f71a1c
+
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
 
 **Commit Message Word Count:** 89
 
@@ -91,6 +107,10 @@ of memory thrashing.
 
 **Commit:** 833f82c
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 8
 
 **Commit Message Character Count:** 66
@@ -103,6 +123,10 @@ Fix issue #65: Uninitialized name in Function.prototype function.
 #### Issue #141
 
 **Commit:** 6871e5b
+
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 9
 
@@ -117,6 +141,10 @@ Issue #141: Add missing end-of-string checks in regexp lexer.
 
 **Commit:** f93d245
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
+
 **Commit Message Word Count:** 2
 
 **Commit Message Character Count:** 14
@@ -129,6 +157,10 @@ Fix js_strtol
 #### Issue #166
 
 **Commit:** 8b5ba20
+
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
 
 **Commit Message Word Count:** 20
 
@@ -148,6 +180,10 @@ Add a scratch buffer to js_State to hold temporary strings.
 
 **Commit:** 9a82b94
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 24
 
 **Commit Message Character Count:** 175
@@ -163,6 +199,10 @@ without having to mess with ctxt->sax manually.
 #### Issue #550
 
 **Commit:** 7e3f469
+
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
 
 **Commit Message Word Count:** 40
 
@@ -184,6 +224,10 @@ every time.
 
 **Commit:** d0c3f01
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 57
 
 **Commit Message Character Count:** 381
@@ -204,6 +248,10 @@ Fixes #535.
 #### Issue #550
 
 **Commit:** 6273df6
+
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 57
 
@@ -229,6 +277,10 @@ Fixes #550.
 
 **Commit:** 3d35d20
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 30
 
 **Commit Message Character Count:** 198
@@ -246,6 +298,10 @@ of the same object recursively.
 
 **Commit:** 3cae777
 
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
+
 **Commit Message Word Count:** 8
 
 **Commit Message Character Count:** 50
@@ -261,6 +317,10 @@ Bug #99141
 
 **Commit:** e674ca6
 
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
+
 **Commit Message Word Count:** 66
 
 **Commit Message Character Count:** 398
@@ -275,6 +335,10 @@ If a PDF form field value uses a font that is not in the resources dictionary, a
 #### Issue #1305
 
 **Commit:** aaf2e80
+
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 46
 
@@ -293,6 +357,10 @@ ourselves
 #### Issue #1381
 
 **Commit:** 245abad
+
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 44
 
@@ -314,6 +382,10 @@ tok call
 
 **Commit:** 4564a00
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** Yes
+
 **Commit Message Word Count:** 6
 
 **Commit Message Character Count:** 36
@@ -327,6 +399,10 @@ pdfunite: Fix crash on broken files
 
 **Commit:** efb6868
 
+**Commit Always Reached by Cleverest with default mode:** Yes
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
+
 **Commit Message Word Count:** 6
 
 **Commit Message Character Count:** 42
@@ -339,6 +415,10 @@ pdfunite: Don't crash in broken documents
 #### Issue #1303
 
 **Commit:** a4ca3a9
+
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 11
 
@@ -354,6 +434,10 @@ Fixes crash on broken files. Issue #1303
 #### Issue #1305
 
 **Commit:** 907d05a
+
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 18
 
@@ -371,6 +455,10 @@ Issue #1305
 #### Issue #1381
 
 **Commit:** 1be35ee
+
+**Commit Always Reached by Cleverest with default mode:** No
+
+**Commit Always Reached by Cleverest with MSGONLY mode:** No
 
 **Commit Message Word Count:** 21
 
