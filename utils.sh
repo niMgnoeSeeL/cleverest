@@ -3,8 +3,9 @@
 get_cmd () {
     local cmd="$1"
     local input_file="$2"
+    local timeout="timeout 30s"
     # replace @@ in cmd with input_file and execute
-    echo "$cmd" | sed "s|@@|$input_file|g"  # use | because $input_file may contain /
+    echo "$timeout $cmd" | sed "s|@@|$input_file|g"  # use | because $input_file may contain /
 }
 
 check_output_invalid() {
@@ -16,11 +17,25 @@ check_output_invalid() {
 }
 
 check_output_bug() {
-    # check existence of bug, currently support parse specific kind of bug from AddressSanitizer output
+    # input can be passed from $1, if empty, try to read from stdin, which can still be empty
+    local input="$1"
+    [ -z "$input" ] && ! test -t 0 && input=$(cat)
+    # check existence of bug, currently support parse bug from AddressSanitizer and "^Error: JERRY_FATAL_FAILED_ASSERTION"
     # example input: multi-line string containing "ERROR: AddressSanitizer: global-buffer-overflow"
     # should return: "global-buffer-overflow"
     # find lines containing "ERROR: AddressSanitizer" and extract the bug type after ": "
-    echo "$1" | grep -oP "ERROR: AddressSanitizer: \K[a-zA-Z-]+" | head -1
+    # for pattern in "ERROR: AddressSanitizer: " "ERROR: UndefinedBehaviorSanitizer: " "^Error: "; do
+    for pattern in "ERROR: AddressSanitizer: " "ERROR: UndefinedBehaviorSanitizer: "; do
+        if bug=$(echo "$input" | grep -oP "${pattern}\K[a-zA-Z_-]+" | head -1); then
+            [ ! -z "$bug" ] && echo "$bug" && return 1
+        fi
+    done
+    # Check for Aborted
+    for pattern in "AddressSanitizer:DEADLYSIGNAL" "Aborted" "Segmentation fault"; do
+        if bug=$(echo "$input" | grep -o "${pattern}" | head -1); then
+            [ ! -z "$bug" ] && echo "$bug" && return 1
+        fi
+    done
 }
 
 parse_llm_input() {
@@ -98,7 +113,7 @@ commit_affected_lines() {
 
 git_commit_content() {
     local commit=$1
-    git show --format=%B $commit
+    git show --first-parent --format=%B $commit -- '*.c' '*.cpp' '*.cc' '*.h' # handle merge commit
 }
 
 git_commit_msgonly() {
@@ -107,14 +122,14 @@ git_commit_msgonly() {
 }
 
 git_commit_diffonly() {
-    local commit=$1
-    git diff ${commit}^ ${commit}
+    local commit=${1:-"HEAD"}
+    git diff ${commit}^ ${commit} -- '*.c' '*.cpp' '*.cc' '*.h'
 }
 
 is_commit_codechange() {
-# return $(true) if commit change *.c *.cpp file, $(false) otherwise
-    local commit=$1
-    git diff --name-only HEAD^ HEAD | grep -E "\.(c|cpp)$"
+# return $(true) if commit change c/cpp/cc/h source file, $(false) otherwise
+    local commit=${1:-"HEAD"}
+    git diff --name-only ${commit}^ ${commit} | grep -E "\.(c|cpp|cc|h)$"
 }
 
 commit_oneline() {
@@ -124,12 +139,17 @@ commit_oneline() {
 }
 
 recent_codechange_commits() {
-    local n=$1
+    local n=${1:-"10"}
+    local pat=${2:-""}
     local count=0
     git log --format="%h" | while read commit; do
-        if git show --name-only "$commit" | grep -E '\.(c|cc|cpp)$' > /dev/null; then
-            if ! git log -1 --format="%s" "$commit" | grep -qE "doc:|build:|windows:"; then
-                git log -1 --format="%h # %s" "$commit"
+        if git show --name-only "$commit" | grep -qE '\.(c|cc|cpp)$' > /dev/null; then
+            if ! git log -1 --format="%s" "$commit" | grep -iqE "doc:|build:|windows:|fuzz:|example:|test:|tests:|html:"; then
+                # skip if $pat is not empty and commit message doesn't match $pat regex 
+                if [ ! -z "$pat" ] && ! git log -1 --format="%s" "$commit" | grep -qE "$pat"; then
+                    continue
+                fi
+                git log -1 --format="%h # %s" --abbrev=7 "$commit" # --shortstat
                 count=$((count + 1))
                 if [ $count -ge $n ]; then
                     break
@@ -137,6 +157,130 @@ recent_codechange_commits() {
             fi
         fi
     done
+}
+
+gcov_tree() {
+    local builddir=$1
+    local proj=${2:-$PROJ_NAME}
+    
+    # Check if builddir is provided
+    if [ -z "$builddir" ]; then
+        echo "Error: Please provide a build directory as argument"
+        return 1
+    fi
+
+    # Check if directory exists
+    if [ ! -d "$builddir" ]; then
+        echo "Error: Directory $builddir does not exist"
+        return 1
+    fi
+
+    # Find all .gcda files in builddir recursively
+    find "$builddir" -type f -name "*.gcda" | while read -r gcda_file; do
+        # Run gcov and capture stdout
+        coverage_output=$(gcov -fm -H "$gcda_file" 2>/dev/null)
+        # echo -e "$gcda_file:\n$coverage_output"; continue
+        # echo "Parsing $gcda_file"
+        
+        # Skip if gcov failed or no output
+        if [ -z "$coverage_output" ]; then
+            continue
+        fi
+
+        excluded_filepat="(^/usr/|\.h$|\.hpp$)"
+        keeped_filepat="(\.c$|\.cpp$|\.cc$)"
+        # Extract file coverage
+        echo "$coverage_output" | grep -B1 "Lines executed" | grep "File " | while read -r file_line; do
+            file_name=$(echo "$file_line" | sed "s/File '//" | sed "s/'//")
+            # Skip if file matches excluded pattern or not matches keeped pattern
+            if [[ "$file_name" =~ $excluded_filepat ]] || [[ ! "$file_name" =~ $keeped_filepat ]]; then
+                echo "Skip $file_name because it's excluded or not keeped" >&2
+                continue
+            fi
+            coverage_line=$(echo "$coverage_output" | grep -F -A1 "$file_line" | tail -n1)
+            file_percent=$(echo "$coverage_line" | grep -o '[0-9]\+\.[0-9]\+%' | head -1)
+            file_linetot=$(echo "$coverage_line" | grep -o 'of [0-9]\+' | cut -d' ' -f2)
+            
+            # $file_percent could empty, eg. "No executable lines"
+            if [ -z "$file_percent" ]; then
+                echo "empty file percent for $file_line $coverage_line" >&2
+                return 1
+            fi
+            # Skip if file coverage is 0.00%
+            if [ "$file_percent" = "0.00%" ]; then
+                continue
+            fi
+
+            echo "Coverage of $file_name: $file_percent of $file_linetot"
+        done
+
+        # Extract function coverage
+        # NOTE: skip if $proj is z3 or php-src, because they have too many functions, exceeding LLM context
+        if [[ "$proj" == "z3" || "$proj" == "php-src" ]]; then
+            continue
+        fi
+        echo "$coverage_output" | grep -B1 "Lines executed" | grep "Function " | while read -r func_line; do
+            func_name=$(echo "$func_line" | sed "s/Function '//" | sed "s/'//")
+            # Get next line with coverage info
+            coverage_line=$(echo "$coverage_output" | grep -F -A1 "$func_line" | tail -n1)
+            func_percent=$(echo "$coverage_line" | grep -o '[0-9]\+\.[0-9]\+%' | head -1)
+            func_linetot=$(echo "$coverage_line" | grep -o 'of [0-9]\+' | cut -d' ' -f2)
+            
+            # skip if $func_percent is empty
+            if [ -z "$func_percent" ]; then
+                echo "empty func percent for $func_line $coverage_line"
+                return 1
+            fi
+            # Only print functions with coverage > 0.00%
+            if [ "$func_percent" != "0.00%" ]; then
+                echo "  $func_name: $func_percent of $func_linetot"
+            fi
+        done
+    done
+}
+
+gcovr_tree() {
+# NOTE: modifed gcovr to add --functions flag, printing all function coverage with human-readable format
+    local builddir="$1"
+    
+    # Check if builddir is provided
+    if [ -z "$builddir" ]; then
+        echo "Error: Please provide a build directory as argument"
+        return 1
+    fi
+
+    # Check if directory exists
+    if [ ! -d "$builddir" ]; then
+        echo "Error: Directory $builddir does not exist"
+        return 1
+    fi
+
+    # Run gcovr and capture stdout
+    coverage_output=$(gcovr -o /tmp/a --functions "$builddir" 2>/dev/null)
+    
+    # Skip if gcovr failed or no output
+    if [ -z "$coverage_output" ]; then
+        echo "No coverage data found" >&2
+        return 1
+    fi
+
+    # First, filter out lines with 0.00%
+    filtered_output=$(echo "$coverage_output" | grep -v "0.00%")
+
+    # Process the filtered output to only keep file headers with functions
+    echo "$filtered_output" | awk '
+    /^Function Coverage of/ { 
+        file_line = $0; 
+        has_functions = 0; 
+        next; 
+    }
+    /^  / { 
+        if (!has_functions) { 
+            print file_line; 
+        } 
+        print $0; 
+        has_functions = 1; 
+    }'
 }
 
 afl_testcase_ms() {
