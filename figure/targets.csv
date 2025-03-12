@@ -1,0 +1,24 @@
+software,description,command,issue,BIC,BFC,url
+mujs,a JavaScript interpreter supporting ES5 and some ES6 features,mujs @@,65,8c27b12,833f82c,https://github.com/ccxvii/mujs/issues/65
+mujs,a JavaScript interpreter supporting ES5 and some ES6 features,mujs @@,141,832e069,6871e5b,https://github.com/ccxvii/mujs/issues/141
+mujs,a JavaScript interpreter supporting ES5 and some ES6 features,mujs @@,145,4c7f6be,f93d245,https://github.com/ccxvii/mujs/issues/145
+mujs,a JavaScript interpreter supporting ES5 and some ES6 features,mujs @@,166,3f71a1c,8b5ba20,https://github.com/ccxvii/mujs/issues/166
+libxml2,a XML library providing xmllint utility,xmllint --recover --sax1 --sax @@,535,9a82b94,d0c3f01,https://gitlab.gnome.org/GNOME/libxml2/issues/535
+libxml2,a XML library providing xmllint utility,xmllint --recover --dropdtd --nofixup-base-uris --sax1 @@,550,7e3f469,6273df6,https://gitlab.gnome.org/GNOME/libxml2/issues/550
+poppler,a PDF processing library with utilities,pdfunite @@ @@ /tmp/out.pdf,1282,3d35d20,4564a00,https://gitlab.freedesktop.org/poppler/poppler/issues/1282
+poppler,a PDF processing library with utilities,pdfunite @@ @@ /tmp/out.pdf,1289,3cae777,efb6868,https://gitlab.freedesktop.org/poppler/poppler/issues/1289
+poppler,a PDF processing library with utilities,pdftops @@ /dev/null,1303,e674ca6,a4ca3a9,https://gitlab.freedesktop.org/poppler/poppler/issues/1303
+poppler,a PDF processing library with utilities,pdftoppm -mono -cropbox @@,1305,aaf2e80,907d05a,https://gitlab.freedesktop.org/poppler/poppler/issues/1305
+poppler,a PDF processing library with utilities,pdftoppm -mono -cropbox @@,1381,245abad,1be35ee,https://gitlab.freedesktop.org/poppler/poppler/issues/1381
+jerryscript,a lightweight JavaScript engine for resource-constrained devices,jerry @@,5013,b7e3bae,3686410,https://github.com/jerryscript-project/jerryscript/issues/5013
+jerryscript,a lightweight JavaScript engine for resource-constrained devices,jerry @@,5138,70e275e,95cc5e9,https://github.com/jerryscript-project/jerryscript/issues/5138
+jerryscript,a lightweight JavaScript engine for resource-constrained devices,jerry @@,5117,53b61c1,d7e2125,https://github.com/jerryscript-project/jerryscript/issues/5117
+jerryscript,a lightweight JavaScript engine for resource-constrained devices,jerry @@,5153,70e275e,de51531,https://github.com/jerryscript-project/jerryscript/issues/5153
+z3,a theorem prover,z3 @@,6659,0f3c562,a849a29,https://github.com/Z3Prover/z3/issues/6659
+z3,a theorem prover,z3 @@,6914,a62e4b2,eea9c0b,https://github.com/Z3Prover/z3/issues/6914
+z3,a theorem prover,z3 @@,7246,dec87fe,49610f5,https://github.com/Z3Prover/z3/issues/7246
+z3,a theorem prover,z3 @@,7252,a7b1db6,a6b5027,https://github.com/Z3Prover/z3/issues/7252
+php-src,the PHP interpreter,php @@,16777,5cb38e9,18b18f0,https://github.com/php/php-src/issues/16777
+php-src,the PHP interpreter,php @@,16978,8c704ab,d17ed34,https://github.com/php/php-src/issues/16978
+php-src,the PHP interpreter,php @@,17442,998bce1,b068c2f,https://github.com/php/php-src/issues/17442
+php-src,the PHP interpreter,php @@,17463,7904a08,e4473ab,https://github.com/php/php-src/issues/17463
