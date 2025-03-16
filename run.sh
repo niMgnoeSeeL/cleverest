@@ -13,6 +13,19 @@ NOFEEDBACK=${NOFEEDBACK:-""}
 GENCMD=${GENCMD:-""}
 RUNFUZZ=${RUNFUZZ:-""}
 
+# https://github.com/janlay/openai-cli should be put in CWD
+openai=openai
+if [[ "$LLM" == deepseek* ]]; then
+    # adapt for deepseek free API
+    export OPENAI_API_ENDPOINT=https://integrate.api.nvidia.com
+    # export OPENAI_API_ENDPOINT=https://openrouter.ai/api
+    export OPENAI_API_KEY=nvapi-example
+    # export OPENAI_API_KEY=sk-or-example
+    export OPENAI_MAX_TOKENS=8192  # thinking output too long
+else  # default to OPENAI https://api.openai.com
+    unset OPENAI_API_ENDPOINT
+fi
+
 source utils.sh
 # load proj-specific config file
 conf=$1
@@ -60,11 +73,16 @@ collect_exp () {
 
 export ASAN_OPTIONS=detect_leaks=0
 PROMPT_SYS_PROJ="You are a software expert testing $PROJ_NAME, $PROJ_DESC"
-PROMPT_SYS_FORMAT="You must respond only ONE answer with following format:
+PROMPT_SYS_FORMAT="You must respond only ONE final answer with following format:
 \`\`\`
 input you construct, not too long, can be valid/broken format
 \`\`\`
 A very brief explanation of how your input can trigger bug for this commit."
+
+# if LLM model is reasoning like deepseek-r1, append system prompt ask it to avoid overthinking and print final result with format above
+if [[ "$LLM" == deepseek-r1 ]]; then
+    PROMPT_SYS_FORMAT+="\n\nYou can do some reasoning, but please **avoid overthinking**. When you get a reasonable answer, please just **stop thinking** and print final result with format above."
+fi
 
 PROMPT_SYS_GOAL_BIC="I will show a commit that introduces potential new bug, please review carefully and construct a input to trigger bug, or cause behavior difference, or at least reach lines affected by this commit.
 Since the bug is introduced by commit, it should be triggered for program after the commit, not before the commit."
@@ -111,12 +129,14 @@ finals=()  # final result for each commit
 st_exp=$SECONDS
 summary_file=SUMMARY_${full_suffix}.txt
 print_configurations | tee -a $summary_file
-summary_table="commit |$(printf " result%d" $(seq 1 $MAX_ITER)) | final | time(seconds)"
+summary_table="issue | commit |$(printf " result%d" $(seq 1 $MAX_ITER)) | final | time(seconds)"
 echo -e "\nSummary table of $PROJ_NAME:\n$summary_table" | tee -a $summary_file
 for i in "${!COMMITS[@]}"; do
+    issue=${ISSUES[$i]:-$i}
     commit=${COMMITS[$i]}   
+    id="#${issue}_${commit}"
     command=${COMMANDS[$i]}
-    chat_log=chat_${commit}_${LLM}_${suffix}.log
+    chat_log=chat_${SCENARIO}_${id}_${LLM}_${suffix}.log
     builddir_before=build_before_$commit
     builddir_after=build_after_$commit
     success_total[$i]=0
@@ -142,7 +162,7 @@ for i in "${!COMMITS[@]}"; do
         help_msg=$(eval "$cmd_help" 2>&1)
         find $builddir_after -name "*.gcda" -delete
     fi
-    changed_files=$(git diff --name-only $commit^ $commit)
+    changed_files=$(git diff --name-only $commit^ $commit | grep -E '\.(c|cpp|cc|h)$')
     cnt=0
     msg_prev=""
     msg_prev_inputs=""
@@ -156,31 +176,37 @@ for i in "${!COMMITS[@]}"; do
             git checkout --force $commit^ || { echo "Failed to checkout commit $commit^, exiting."; exit 1; }
             cmd_before=$(get_cmd "$builddir_before/$DIR_REL/$command" "$input_file")
             echo "Executing command: $cmd_before" | tee -a $chat_log
-            output_before=$(eval "echo '' | $cmd_before" 2>&1)
+            output_before=$(script -aeq -c "echo 'C' | $cmd_before")
             retcode_before=$?
+            # first, gen gcov with gcda files containing $PROJ_NAME
             gcda_before=$(find $builddir_before -name "*${PROJ_NAME}*.gcda")
             # gcda_before may contain multiple files seperated by newline, -o for each file
             for gcda in $gcda_before; do
                 (set -x; gcov -r -H -o $gcda $changed_files)
             done
+            # then, gen gcov with gcda files containing each changed file name
             for file in $changed_files; do
                 filename=$(basename $file)
-                # find gcda object file in $builddir_before by each file name
-                gcda_before=$(find $builddir_before -name $filename.gcda)
+                # find gcda object file in $builddir_before by file name (with or without extension)
+                gcda_before=$(find $builddir_before -name "${filename%.*}.gcda" -o -name "$filename.gcda")
                 if [[ "$gcda_before" ]]; then
-                    gcov -H -o $gcda_before $file
+                    gcov_err=$(gcov -H -o $gcda_before $file 2>&1 >/dev/null)
+                    if [[ "$gcov_err" =~ "Cannot open source file" ]]; then
+                        (cd $builddir_before && gcov -H -o ${gcda_before#$builddir_before/} $file; mv $filename.gcov ../$filename.gcov.before_${id}.$cnt)
+                    else
+                        mv $filename.gcov $filename.gcov.before_${id}.$cnt
+                    fi
                 else
-                    echo "No $filename.gcda found for $file in $builddir_before."
-                fi    # commit $commit: ${results_this[@] $success_total
-                mv $filename.gcov $filename.gcov.before_$commit.$cnt
+                    echo "No ${filename%.*}.gcda or $filename.gcda found for $file in $builddir_before."
+                fi
             done
-            rm *.gcov
+            (set -x; rm -f *.gcov; rm -f $builddir_before/*.gcov)
 
             # export GCOV_PREFIX=$builddir_after
             git checkout --force $commit || { echo "Failed to checkout commit $commit, exiting."; exit 1; }
             cmd_after=$(get_cmd "$builddir_after/$DIR_REL/$command" $input_file)
             echo "Executing command: $cmd_after" | tee -a $chat_log
-            output_after=$(eval "echo '' | $cmd_after" 2>&1)
+            output_after=$(script -aeq -c "echo 'C' | $cmd_after")
             retcode_after=$?
             gcda_after=$(find $builddir_after -name "*${PROJ_NAME}*.gcda")
             for gcda in $gcda_after; do
@@ -188,16 +214,20 @@ for i in "${!COMMITS[@]}"; do
             done
             for file in $changed_files; do
                 filename=$(basename $file)
-                # find gcda object file in $builddir_after by each file name
-                gcda_after=$(find $builddir_after -name $filename.gcda)
+                # find gcda object file in $builddir_after by file name (with or without extension)
+                gcda_after=$(find $builddir_after -name "${filename%.*}.gcda" -o -name "$filename.gcda")
                 if [[ "$gcda_after" ]]; then
-                    gcov -H -o $gcda_after $file
+                    gcov_err=$(gcov -H -o $gcda_after $file 2>&1 >/dev/null)
+                    if [[ "$gcov_err" =~ "Cannot open source file" ]]; then
+                        (cd $builddir_after && gcov -H -o ${gcda_after#$builddir_after/} $file; mv $filename.gcov ../$filename.gcov.after_${id}.$cnt)
+                    else
+                        mv $filename.gcov $filename.gcov.after_${id}.$cnt
+                    fi
                 else
-                    echo "No $filename.gcda found for $file in $builddir_after."
+                    echo "No ${filename%.*}.gcda or $filename.gcda found for $file in $builddir_after."
                 fi
-                mv $filename.gcov $filename.gcov.after_$commit.$cnt
             done
-            rm *.gcov
+            (set -x; rm -f *.gcov; rm -f $builddir_after/*.gcov)
 
             # Execution Analyzer
             echo "Output before commit $commit: $output_before, return code: $retcode_before" | tee -a $chat_log
@@ -240,6 +270,7 @@ for i in "${!COMMITS[@]}"; do
                 status="behave"
                 [ "${finals[$i]}" != "B" ] && finals[$i]="D"
                 echo "The programs B/A commit $commit behave differently with $input_file!\n" | tee -a $chat_log
+                msg_prev+="Previous try #$cnt caused program behavior difference related to commit but FAILED to trigger bug:\n"
                 # break
             else  # behave same, check coverage overlap
                 echo "The programs B/A $commit behave the same with $input_file." | tee -a $chat_log
@@ -248,9 +279,9 @@ for i in "${!COMMITS[@]}"; do
                 cover_after=""
                 for file in $changed_files; do
                     filename=$(basename $file)
-                    gcov_before=$filename.gcov.before_$commit.$cnt
-                    gcov_after=$filename.gcov.after_$commit.$cnt
-                    if [ ! -f $gcov_before ] || [ ! -f $gcov_after ]; then
+                    gcov_before=$filename.gcov.before_${id}.$cnt
+                    gcov_after=$filename.gcov.after_${id}.$cnt
+                    if [ ! -f $gcov_before ] && [ ! -f $gcov_after ]; then
                         echo "No gcov report found for $file before/after commit $commit, skipping." | tee -a $chat_log
                         continue
                     else
@@ -311,7 +342,7 @@ for i in "${!COMMITS[@]}"; do
             results_this[$cnt]=$status
             echo "Execution status for $commit in #$cnt: $status" | tee -a $chat_log
             if [[ "$status" != "invalid" && "$status" != "fail" ]]; then
-                cp $input_file TRIGGER_${commit}_${cnt}_${LLM}_${status}
+                cp $input_file TRIGGER_${id}_${cnt}_${LLM}_${status}
             fi
             if [ $cnt -ge $MAX_ITER ]; then
                 echo "Already tested $commit for $MAX_ITER tries, moving to next commit.\n" | tee -a $chat_log
@@ -345,17 +376,42 @@ for i in "${!COMMITS[@]}"; do
             fi
         fi
 
-        echo -e "$msg" > MSG_${commit}_${cnt}_${LLM}.txt
+        echo -e "$msg" > MSG_${id}_${cnt}_${LLM}.txt
         echo -e ">>>>>>>>👨🏻‍💻User msg #$cnt:\n$msg\n\n<<<<<<<<\n" >> $chat_log
 
-        input_file="INPUT_${commit}_$((cnt+1))_${LLM}"
-        ans=$(echo "$msg" | timeout 30s ../openai +model=$LLM +temperature=$LLM_TEMP)
-        # ans=$(echo "$msg" | timeout 30s ../openai -n)
-        input=$(parse_llm_input "$ans")
-        [ -z "$input" ] && echo "Parsed empty input from LLM response, skipping." | tee -a $chat_log && continue
+        input_file="INPUT_${id}_$((cnt+1))_${LLM}"
+        # query LLM with $msg and parse input from answer, retry needed for deepseek-r1 API
+        max_retries=3
+        retry_count=0
+        while [ $retry_count -lt $max_retries ]; do
+            st_llm=$SECONDS
+            if [[ "$LLM" == deepseek-r1 ]]; then
+                ans=$(echo "$msg" | timeout 1200s ../$openai +model=deepseek-ai/$LLM +temperature=$LLM_TEMP)
+                # ans=$(echo "$msg" | timeout 1200s ../$openai +model=deepseek/deepseek-r1:free +temperature=$LLM_TEMP)
+            else
+                ans=$(echo "$msg" | timeout 30s ../$openai +model=$LLM +temperature=$LLM_TEMP)
+            fi
+            duration_llm=$(($SECONDS-$st_llm))
+            echo "LLM response time for $id #$cnt (retry #$retry_count): $duration_llm seconds" | tee -a $chat_log
+            input=$(parse_llm_input "$ans")
+            
+            if [ -n "$input" ]; then
+            # Valid input received, break the retry loop
+                break
+            else
+                retry_count=$((retry_count+1))
+                echo -e "Failed LLM attempt #$retry_count: Parsed empty input from LLM response:\n$ans\nretrying in 5 seconds...\n" | tee -a $chat_log
+                sleep 5
+            fi
+        done
+
+        if [ -z "$input" ]; then
+            echo "Failed to get valid input after $max_retries attempts, skipping." | tee -a $chat_log
+            continue
+        fi
         echo "AI response: $ans"
         echo "Input parsed: $input"
-        echo -e "$ans" > ANS_${commit}_${cnt}_${LLM}.txt
+        echo -e "$ans" > ANS_${id}_${cnt}_${LLM}.txt
         echo -e ">>>>>>>>🤖$LLM ans #$cnt:\n$ans\n<<<<<<<<\n\n" >> $chat_log
         echo -e "$input" > $input_file
         if [ "$GENCMD" ]; then
@@ -363,7 +419,7 @@ for i in "${!COMMITS[@]}"; do
             [ -z "$command" ] && echo "Parsed empty command from LLM response, skipping." | tee -a $chat_log && continue
             abort_if_cmd_danger $cmd
             echo "Command parsed: $command"
-            echo -e "$command" > CMD_${commit}_${cnt}_${LLM}.txt
+            echo -e "$command" > CMD_${id}_${cnt}_${LLM}.txt
         fi
         cnt=$((cnt+1))
         
@@ -374,7 +430,7 @@ for i in "${!COMMITS[@]}"; do
 
     # print summary as table, each line shows commit, result for each iteration, and sum
     # commit $commit: ${results_this[@] $success_total
-    summary_this="$commit | ${results_this[@]} | ${finals[$i]} | ${duration}"
+    summary_this="$issue | $commit | ${results_this[@]} | ${finals[$i]} | ${duration}"
     echo "$summary_this" | tee -a $chat_log $summary_file
     summary_table+="$summary_this\n"
 done
