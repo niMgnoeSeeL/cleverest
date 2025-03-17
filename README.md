@@ -98,4 +98,4 @@ MAX_ITER=10 ./run.sh $conf
 
 ### RQ3: Comparison to the State-of-the-Art
 
-Follow instructions on https://github.com/He1loNice/WAFLGo to run WAFLGo
+Follow instructions in [`fuzz/README.md`](fuzz/README.md) to run WAFLGo and ClevFuzz experiments.
