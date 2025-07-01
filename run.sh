@@ -56,6 +56,8 @@ git_commit_info () {
         git_commit_msgonly $commit
     elif [ "$GIT_INFO" = "DIFFONLY" ]; then
         git_commit_diffonly $commit
+    elif [ "$GIT_INFO" = "ENHANCED" ]; then
+        git_commit_enhanced $commit
     else
         git_commit_content $commit
     fi

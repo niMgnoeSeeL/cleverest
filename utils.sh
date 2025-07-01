@@ -126,6 +126,21 @@ git_commit_diffonly() {
     git diff ${commit}^ ${commit} -- '*.c' '*.cpp' '*.cc' '*.h'
 }
 
+git_commit_enhanced() {
+    # get commit content and query LLM to enhance it's message
+    local commit=$1
+    local llm=${LLM:-"gpt-4o-mini"}
+    commit_raw=$(git_commit_content $commit)
+    if [ -z "$commit_raw" ]; then
+        echo "No commit content found for $commit"
+        return 1
+    fi
+    # query LLM to enhance commit message
+    msg="Enhance the following commit by generating a more informative message to show developer's intention. Your output should keep original commit format with diff:\n\n$commit_raw"
+    ans=$(echo "$msg" | timeout 30s ../openai +model=$llm)
+    echo "$ans"
+}
+
 is_commit_codechange() {
 # return $(true) if commit change c/cpp/cc/h source file, $(false) otherwise
     local commit=${1:-"HEAD"}
