@@ -26,12 +26,11 @@ reproduce_bug() {
     local commit=${IID2BIC[$issue_id]}
   fi
   local truth_poc=$(find $truth_dir -name "*$issue_id*" | head -1)
-  local builddir_before="build_before_$commit"
-  local builddir_after="build_after_$commit"
-  local exe_before="$builddir_before/$DIR_REL/$EXE"
-  local exe_after="$builddir_after/$DIR_REL/$EXE"
-  local cmd_before="$exe_before ../$truth_poc"
-  local cmd_after="$exe_after ../$truth_poc"
+  local builddir_before="buildafl_before_$commit"
+  local builddir_after="buildafl_after_$commit"
+  local command=${COMMANDS_MAP[$commit]}
+  local cmd_before=$(get_cmd "$builddir_before/$DIR_REL/$command" ../"$truth_poc")
+  local cmd_after=$(get_cmd "$builddir_after/$DIR_REL/$command" "../$truth_poc")
   cmds_before+="\n$cmd_before"
   cmds_after+="\n$cmd_after"
 
@@ -41,8 +40,8 @@ reproduce_bug() {
   fi
   
   pushd $PROJ_NAME
-  if [[ ! -f "$exe_before" || ! -f "$exe_after" ]]; then
-    echo "ERROR: Executable $exe_before / $exe_after not found" 1>&2
+  if [[ ! -f "$builddir_before/$DIR_REL/$EXE" || ! -f "$builddir_after/$DIR_REL/$EXE" ]]; then
+    echo "ERROR: Executable $builddir_before/$DIR_REL/$EXE / $builddir_after/$DIR_REL/$EXE not found" 1>&2
     exit 1
   fi
   echo "Reproducing bug issue $issue_id with $SCENARIO commit $commit and PoC $truth_poc" 1>&2
