@@ -116,29 +116,47 @@ git_commit_content() {
     git show --first-parent --format=%B $commit -- '*.c' '*.cpp' '*.cc' '*.h' # handle merge commit
 }
 
+git_commit_full() {  # same as git_commit_content
+    local commit=$1
+    git show --first-parent --format=%B $commit -- '*.c' '*.cpp' '*.cc' '*.h' # handle merge commit
+}
+
 git_commit_msgonly() {
     local commit=$1
     git show -s --format=%B $commit
 }
 
 git_commit_diffonly() {
-    local commit=${1:-"HEAD"}
+    local commit=${1-"HEAD"}
     git diff ${commit}^ ${commit} -- '*.c' '*.cpp' '*.cc' '*.h'
 }
 
-git_commit_enhanced() {
-    # get commit content and query LLM to enhance it's message
+get_commit_msg_from_json() {
     local commit=$1
-    local llm=${LLM:-"gpt-4o-mini"}
-    commit_raw=$(git_commit_content $commit)
-    if [ -z "$commit_raw" ]; then
-        echo "No commit content found for $commit"
+    local mode=$2
+    local json_file="../data/msgs.json"
+
+    if [ ! -f "$json_file" ]; then
+        echo "Error: JSON file $json_file not found."
         return 1
     fi
-    # query LLM to enhance commit message
-    msg="Enhance the following commit by generating a more informative message to show developer's intention. Your output should keep original commit format with diff:\n\n$commit_raw"
-    ans=$(echo "$msg" | timeout 30s ../openai +model=$llm)
-    echo "$ans"
+
+    jq -r ".\"$commit\".\"msg_${mode,,}\"" "$json_file"
+}
+
+git_commit_enhanced() {
+    local commit=$1
+    get_commit_msg_from_json "$commit" "ENHANCED"
+}
+
+git_commit_reduced() {
+    local commit=$1
+    get_commit_msg_from_json "$commit" "REDUCED"
+}
+
+git_commit_featureonly() {
+    local commit=$1
+    get_commit_msg_from_json "$commit" "FEATUREONLY"
 }
 
 is_commit_codechange() {

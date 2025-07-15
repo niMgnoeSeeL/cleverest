@@ -49,18 +49,32 @@ full_suffix=${conf_suffix}_${suffix}
 
 git_commit_info () {
     local commit=$1
-    # if GIT_INFO is set to MSGONLY, call git_commit_msgonly
-    # if GIT_INFO is set to DIFFONLY, call git_commit_diffonly
-    # otherwise, call git_commit_content
-    if [ "$GIT_INFO" = "MSGONLY" ]; then
-        git_commit_msgonly $commit
-    elif [ "$GIT_INFO" = "DIFFONLY" ]; then
-        git_commit_diffonly $commit
-    elif [ "$GIT_INFO" = "ENHANCED" ]; then
-        git_commit_enhanced $commit
-    else
-        git_commit_content $commit
-    fi
+    local mode=$GIT_INFO
+
+    case $mode in
+        FULL)
+            git_commit_full "$commit"
+            ;;
+        MSGONLY)
+            git_commit_msgonly "$commit"
+            ;;
+        DIFFONLY)
+            git_commit_diffonly "$commit"
+            ;;
+        ENHANCED)
+            git_commit_enhanced "$commit"
+            ;;
+        REDUCED)
+            git_commit_reduced "$commit"
+            ;;
+        FEATUREONLY)
+            git_commit_featureonly "$commit"
+            ;;
+        *)
+            echo "Invalid mode: $mode"
+            exit 1
+            ;;
+    esac
 }
 
 collect_exp () {
