@@ -351,6 +351,7 @@ for i in "${!COMMITS[@]}"; do
             # if finals[$i] is "B", count as success and also move to next commit
             if [ "${finals[$i]}" = "B" ]; then
                 echo "Successfully trigger intended bug for commit $commit, moving to next commit.\n" | tee -a $chat_log
+                cp $input_file POC_${SCENARIO}_${id}_${cnt}_${LLM}  # name as POC_* to quickly find truly bug-revealing input
                 break
             fi
             # incremental prompting
