@@ -41,7 +41,7 @@
 
     Add a scratch buffer to js_State to hold temporary strings.'
   msg_enhanced: null
-  msg_reduced: 'Issue #166: Use special iterator for string and array indices.
+  msg_reduced: 'Issue #166: Use special iterator for indices.
 
 
     Add a scratch buffer to js_State to hold temporary strings.'
@@ -68,17 +68,6 @@
     Fixes #535.'
   msg_enhanced: null
   msg_reduced: 'parser: Fix old SAX1 parser with custom callbacks
-
-
-    For some reason, xmlCtxtUseOptionsInternal set the start and end element
-
-    SAX handlers to the internal DOM builder functions when XML_PARSE_SAX1
-
-    was specified. This means that custom SAX handlers could never work with
-
-    that flag because these functions would receive the wrong user data
-
-    argument and crash immediately.
 
 
     Fixes #535.'
@@ -119,7 +108,7 @@
   msg: 'pdfunite: Fix crash on broken files'
   msg_enhanced: 'pdfunite: Fix crash on broken files when `PDFDoc::replacePageDict`
     attempts to access a page dictionary from a non-dictionary object.'
-  msg_reduced: 'pdfunite: Fix crash on broken files'
+  msg_reduced: 'pdfunite: Fix crash'
 - proj: poppler
   issue: 1289
   commit: efb6868
@@ -213,7 +202,7 @@
 
 
     JerryScript-DCO-1.0-Signed-off-by: Zoltan Herczeg zherczeg.u-szeged@partner.samsung.com'
-  msg_reduced: 'Mark generator as running during yield* (#5014)
+  msg_reduced: 'Mark generator as running (#5014)
 
 
     Fixes #5013
@@ -239,7 +228,7 @@
 
     JerryScript-DCO-1.0-Signed-off-by: Lily Jiang bhjiang.whu@hotmail.com'
   msg_enhanced: null
-  msg_reduced: 'Fix the private field crash for the Array object. (#5139)
+  msg_reduced: 'Fix the private field crash (#5139)
 
 
     Fixes 5097, 5100, 5138
@@ -262,7 +251,7 @@
 
     JerryScript-DCO-1.0-Signed-off-by: Máté Tokodi mate.tokodi@szteszoftver.hu'
   msg_enhanced: null
-  msg_reduced: 'Fix arguments object in eval-ed functions in static class initializers
+  msg_reduced: 'Fix arguments object in functions in static class initializers
     (#5140)
 
 
@@ -316,7 +305,7 @@
     This commit fixes a heap-use-after-free bug that occurs when `smt_model_finder::reset_eval_cache()`
     is not called after expressions are removed from the SMT solver, leading to dangling
     pointers in the evaluation cache.'
-  msg_reduced: 'fix #6914'
+  msg_reduced: '#6914'
 - proj: z3
   issue: 7246
   commit: 49610f5
@@ -370,7 +359,7 @@
 
 
     Closes GH-16824.'
-  msg_reduced: 'Fix GH-16777: Calling the constructor again on a DOM object after
+  msg_reduced: 'Fix GH-16777: Calling the constructor again on a object after
     it is in a document causes UAF
 
 
@@ -432,8 +421,7 @@
 
     close GH-465'
   msg_enhanced: null
-  msg_reduced: 'Fix GH-17463: SplTempFileObject::ftruncate() segfault on negative
-    length.
+  msg_reduced: 'Fix GH-17463: SplTempFileObject::ftruncate() segfault.
 
 
     close GH-465'
