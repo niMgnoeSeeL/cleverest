@@ -92,10 +92,11 @@ def main():
     # Find all SUMMARY_*.txt files in the specified input directory
     summary_files = [os.path.join(input_dir, f) for f in os.listdir(input_dir) if f.startswith('SUMMARY_') and f.endswith('.txt')]
     # recursively find all SUMMARY_*.txt files
-    if not summary_files:
+    if True:
+    # if not summary_files:
       for root, dirs, files in os.walk(input_dir):
         depth = root[len(input_dir):].count(os.sep)
-        if depth > 3:
+        if depth > 1:  # avoid redundant SUMMARY under exp_*
           continue
         for file in files:
           if file.startswith('SUMMARY_') and file.endswith('.txt'):
@@ -105,9 +106,10 @@ def main():
     print("Found {} summary files".format(len(summary_files)))
     for summary_file in summary_files:
         config, results = parse_summary_file(summary_file)
+        summary_filename = os.path.basename(summary_file)
         for result in results:
             aggregated_results.append([
-                os.path.basename(summary_file),
+                summary_filename,
                 config.get('SCENARIO', ''),
                 config.get('GIT_INFO', ''),
                 config.get('MAX_ITER', ''),
@@ -116,7 +118,7 @@ def main():
                 config.get('NOFEEDBACK', ''),
                 config.get('GENCMD', ''),
                 config.get('RUNFUZZ', ''),
-                summary_file.split('_')[1],  # subject
+                summary_filename.split('_')[1],  # subject
                 result[0],  # commit 
                 result[1],  # final_result
                 result[2],  # unintended_bug
