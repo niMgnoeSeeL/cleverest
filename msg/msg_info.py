@@ -24,7 +24,7 @@ Please enhance the commit message so it describes condition to reach/trigger the
 The goal is that seeing the enhanced message it is enough to construct high-quality regression test.
 The enhanced message should keep the original message style/structure, preferably a single complete sentence.
 If original message contains body, keep it intact, otherwise do NOT add body.
-Do NOT directly include example test case. Prefer natural language over code/implementation detail unless it is necessary.
+Do NOT directly include original/example test case in the message. Prefer natural language over code/implementation detail unless it is necessary.
 Only reply with the enhanced commit message, nothing else.
 
 Issue Report: {url_issue}
@@ -34,11 +34,11 @@ Bugfix commit:
 {commit_info}
 """
 
-def enhance_msg(url_issue: str, commit_info: str):
+def enhance_msg(url_issue: str, commit_info: str) -> str:
     """Enhance the commit message with additional context."""
     prompt = PROMPT_ENHANCE.format(url_issue=url_issue.strip(), commit_info=commit_info.strip())
     # litellm call gemini api with url context tool
-    logger.debug(f"Enhance issue: {url_issue}")
+    logger.debug(f"Enhance msg for issue: {url_issue}")
     for _ in range(3):  # Retry up to 3 times
         response = completion(
             messages=[{"role": "user", "content": prompt}],
@@ -46,10 +46,12 @@ def enhance_msg(url_issue: str, commit_info: str):
             tools=[{"urlContext": {}}],
             reasoning_effort="disable"
         )
-        if response and response.choices and response.choices[0].message:
-            logger.debug(f"Got msg: {response.choices[0].message.content}")
-            return response.choices[0].message.content.strip()
-        logger.warning("API returned None or invalid response, retrying...")
+        try:
+            msg_changed = response.choices[0].message.content.strip()
+            logger.debug(f"Got msg: {msg_changed}")
+            return msg_changed
+        except AttributeError:
+            logger.warning("API returned None or invalid response, retrying...")
     logger.error("Failed to get a valid response after 3 retries")
     return "Error: Unable to enhance commit message"
 
@@ -180,7 +182,10 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
         df_fix = df_agg[(df_agg['commit'] == commit_fix) & (df_agg['iid'] == issue)]
         df_fix_msgonly = df_fix[df_fix['git_info'] == 'MSGONLY']
         
-        def best_result(df):
+        def calculate_score_avg(df: pd.DataFrame):
+            return df['final_result'].map(SCORE_MAP).mean()
+
+        def best_result(df: pd.DataFrame) -> str:
             for result in ['B', 'D', 'R', 'X', 'N']:
                 if result in df['final_result'].values:
                     return result
@@ -188,14 +193,31 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
             
         result_fix = best_result(df_fix)
         result_fix_msgonly = best_result(df_fix_msgonly)
-        
-        msgfix_can_enhance = result_fix_msgonly != 'B'
-        msgfix_can_reduce = result_fix_msgonly not in ['N', 'X']
-        
+        score_fix_msgonly = calculate_score_avg(df_fix_msgonly)
+
+        # msgfix_can_enhance = result_fix_msgonly != 'B'
+        # msgfix_can_reduce = result_fix_msgonly not in ['N', 'X']
+        msgfix_can_enhance = score_fix_msgonly < 3.0  # avg score < 3.0 means not all 'B'
+        msgfix_can_reduce = score_fix_msgonly > 0.0  # avg score > 0 means not all 'N'
+
+        # read backup yaml to use existing 'msg_enhanced' there
+        def read_yaml(file_path: str, commit: str, field: str) -> str:
+            with open(file_path, 'r') as f:
+                items: list = yaml.safe_load(f)
+                for item in items:
+                    if item.get('commit') == commit:
+                        return item.get(field, "")
+            return ""
+
         enhanced_msg = None
+        logger.debug(f"{issue=}, {result_fix_msgonly=}, {score_fix_msgonly=}, {msgfix_can_enhance=}")
         if do_enhance and msgfix_can_enhance:
-            enhanced_msg = enhance_msg(url_issue, commit_info_fix)
-            
+            if result_fix_msgonly != 'B':  # should have existing value in gemini.yaml.bak
+                logger.debug(f"Reuse existing enhanced message for {issue} {commit_fix}")
+                enhanced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_enhanced")
+            else:
+                logger.debug(f"Enhance message for {issue} {commit_fix}")
+                enhanced_msg = enhance_msg(url_issue, commit_info_fix)
         msg_rows.append({
             'proj': proj,
             'issue': issue,
@@ -203,9 +225,10 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
             'scenario': 'FIX',
             'best_result': result_fix,
             'best_result_msgonly': result_fix_msgonly,
+            'score_msgonly': float(score_fix_msgonly),
             'msg': msg_fix,
             'msg_enhanced': enhanced_msg,
-            'msg_reduced': msg_fix if msgfix_can_reduce else None
+            'msg_reduced': msg_fix if msgfix_can_reduce else None  # put original msg, manually reduce later
         })
     
     return msg_rows
@@ -219,7 +242,7 @@ def main():
     script_dir = Path(__file__).parent
     figure_dir = script_dir.parent / "figure"
     input_file_targets = figure_dir / "targets.csv"
-    input_file_agg = figure_dir / "aggregated_results.csv"
+    input_file_agg = figure_dir / "aggregated_results_new.csv"
     output_file_csv = script_dir / "msg_success.csv"
     output_file_excel = script_dir / "msg_success.xlsx"
     output_msg_yaml = script_dir / "gemini.yaml"

@@ -4,6 +4,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fix issue #65: Uninitialized name in Function.prototype function.'
   msg_enhanced: 'Fix issue #65: Uninitialized `name` and `length` properties in `Function.prototype`
     causing a null pointer dereference when `Function.prototype` is converted to a
@@ -16,6 +17,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Issue #141: Add missing end-of-string checks in regexp lexer.'
   msg_enhanced: 'Issue #141: Add missing end-of-string checks in regexp lexer, which
     caused a heap-buffer-overflow when parsing incomplete escape sequences like `\c`,
@@ -27,15 +29,18 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: B
+  score_msgonly: 2.4
   msg: Fix js_strtol
-  msg_enhanced: null
-  msg_reduced: Fix js_strtol
+  msg_enhanced: Fix js_strtol when the input string contains characters with an ASCII
+    value less than '0', leading to incorrect number conversion and potential global-buffer-overflow.
+  msg_reduced: Fix strtol
 - proj: mujs
   issue: 166
   commit: 8b5ba20
   scenario: FIX
   best_result: B
   best_result_msgonly: B
+  score_msgonly: 3.0
   msg: 'Issue #166: Use special iterator for string and array indices.
 
 
@@ -51,6 +56,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: B
+  score_msgonly: 3.0
   msg: 'parser: Fix old SAX1 parser with custom callbacks
 
 
@@ -77,6 +83,7 @@
   scenario: FIX
   best_result: X
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'xpath: Ignore entity ref nodes when computing node hash
 
 
@@ -105,6 +112,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: R
+  score_msgonly: 1.0
   msg: 'pdfunite: Fix crash on broken files'
   msg_enhanced: 'pdfunite: Fix crash on broken files when `PDFDoc::replacePageDict`
     attempts to access a page dictionary from a non-dictionary object.'
@@ -115,6 +123,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'pdfunite: Don''t crash in broken documents'
   msg_enhanced: 'pdfunite: Don''t crash when merging documents containing AcroForm
     dictionaries where the "Fields" array contains a non-reference object.'
@@ -125,6 +134,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'topIdx can''t be negative
 
 
@@ -142,6 +152,7 @@
   scenario: FIX
   best_result: N
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fix crash in file that wants to do huge transparency group
 
 
@@ -162,6 +173,7 @@
   scenario: FIX
   best_result: N
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fix stack overflow in PostScriptFunction::parseCode
 
 
@@ -185,6 +197,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: R
+  score_msgonly: 1.0
   msg: 'Mark generator as running during yield* (#5014)
 
 
@@ -215,6 +228,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: B
+  score_msgonly: 1.0
   msg: 'Fix the private field crash for the Array object. (#5139)
 
 
@@ -227,7 +241,9 @@
     JerryScript-DCO-1.0-Signed-off-by: Baihe Jiang <baihe.jiang@outlook.com>
 
     JerryScript-DCO-1.0-Signed-off-by: Lily Jiang bhjiang.whu@hotmail.com'
-  msg_enhanced: null
+  msg_enhanced: Fix the private field crash for the Array object when defining a private
+    method or field in a class that extends Array, because the fast array optimization
+    is not compatible with private fields and methods.
   msg_reduced: 'Fix the private field crash (#5139)
 
 
@@ -246,11 +262,19 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: B
+  score_msgonly: 1.4
   msg: 'Fix arguments object in eval-ed functions in static class initializers (#5140)
 
 
     JerryScript-DCO-1.0-Signed-off-by: Máté Tokodi mate.tokodi@szteszoftver.hu'
-  msg_enhanced: null
+  msg_enhanced: 'Fix arguments object in eval-ed functions in static class initializers
+    by correctly preserving and restoring the `PARSER_INSIDE_CLASS_FIELD` flag around
+    `eval` calls within static class initialization blocks, which previously led to
+    a segmentation fault when accessing `arguments` within a function declared inside
+    `eval`.
+
+
+    JerryScript-DCO-1.0-Signed-off-by: Máté Tokodi mate.tokodi@szteszoftver.hu'
   msg_reduced: 'Fix arguments object in functions in static class initializers
     (#5140)
 
@@ -262,6 +286,7 @@
   scenario: FIX
   best_result: N
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fix parsing of invalid asterix symbol after private field symbol (#5155)
 
 
@@ -285,6 +310,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'fix #6659'
   msg_enhanced: Fix a heap-use-after-free bug in `dominator_simplifier::cache` that
     occurs when the `dom-simplify` tactic is used with certain formulas, specifically
@@ -298,6 +324,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: R
+  score_msgonly: 0.2
   msg: 'fix #6914'
   msg_enhanced: 'fix #6914
 
@@ -312,6 +339,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'fix #7246
 
 
@@ -326,6 +354,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'fix #7252
 
 
@@ -346,6 +375,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: R
+  score_msgonly: 0.6
   msg: 'Fix GH-16777: Calling the constructor again on a DOM object after it is in
     a document causes UAF
 
@@ -370,6 +400,7 @@
   scenario: FIX
   best_result: R
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fixed GH-16978: Avoid unnecessary padding with leading zeros (#16988)
 
 
@@ -398,6 +429,7 @@
   scenario: FIX
   best_result: N
   best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fix GH-17442: Engine UAF with reference assign and dtor
 
 
@@ -416,6 +448,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: B
+  score_msgonly: 3.0
   msg: 'Fix GH-17463: SplTempFileObject::ftruncate() segfault on negative length.
 
 
