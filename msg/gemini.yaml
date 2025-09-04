@@ -3,14 +3,14 @@
   commit: 833f82c
   scenario: FIX
   best_result: B
-  best_result_msgonly: N
-  score_msgonly: 0.0
+  best_result_msgonly: B
+  score_msgonly: 0.3
   msg: 'Fix issue #65: Uninitialized name in Function.prototype function.'
   msg_enhanced: 'Fix issue #65: Uninitialized `name` and `length` properties in `Function.prototype`
     causing a null pointer dereference when `Function.prototype` is converted to a
     string, specifically observed when `Array.prototype.splice` is called with `Function.prototype`
     as an argument.'
-  msg_reduced: null
+  msg_reduced: 'Fix issue #65: Uninitialized name in Function'
 - proj: mujs
   issue: 141
   commit: 6871e5b
@@ -29,7 +29,7 @@
   scenario: FIX
   best_result: B
   best_result_msgonly: B
-  score_msgonly: 2.4
+  score_msgonly: 2.7
   msg: Fix js_strtol
   msg_enhanced: Fix js_strtol when the input string contains characters with an ASCII
     value less than '0', leading to incorrect number conversion and potential global-buffer-overflow.
@@ -150,9 +150,9 @@
   issue: 1305
   commit: 907d05a
   scenario: FIX
-  best_result: N
-  best_result_msgonly: N
-  score_msgonly: 0.0
+  best_result: D
+  best_result_msgonly: D
+  score_msgonly: 0.2
   msg: 'Fix crash in file that wants to do huge transparency group
 
 
@@ -166,7 +166,10 @@
 
 
     Issue #1305'
-  msg_reduced: null
+  msg_reduced: 'Fix crash in file that wants to do transparency group
+
+
+    Issue #1305'
 - proj: poppler
   issue: 1381
   commit: 1be35ee
@@ -275,8 +278,7 @@
 
 
     JerryScript-DCO-1.0-Signed-off-by: Máté Tokodi mate.tokodi@szteszoftver.hu'
-  msg_reduced: 'Fix arguments object in functions in static class initializers
-    (#5140)
+  msg_reduced: 'Fix arguments object in functions in static class initializers (#5140)
 
 
     JerryScript-DCO-1.0-Signed-off-by: Máté Tokodi mate.tokodi@szteszoftver.hu'
@@ -312,7 +314,8 @@
   best_result_msgonly: N
   score_msgonly: 0.0
   msg: 'fix #6659'
-  msg_enhanced: 'fix #6659: heap-use-after-free triggered by caching a freed expression node in dominator simplifier during `dom-simplify` tactic execution'
+  msg_enhanced: 'fix #6659: heap-use-after-free triggered by caching a freed expression
+    node in dominator simplifier during `dom-simplify` tactic execution'
   msg_reduced: null
 - proj: z3
   issue: 6914
@@ -322,7 +325,8 @@
   best_result_msgonly: R
   score_msgonly: 0.2
   msg: 'fix #6914'
-  msg_enhanced: 'fix #6914: heap-use-after-free with str.to_int in nested quantifiers due to missing eval cache reset'
+  msg_enhanced: 'fix #6914: heap-use-after-free with str.to_int in nested quantifiers
+    due to missing eval cache reset'
   msg_reduced: '#6914'
 - proj: z3
   issue: 7246
@@ -335,7 +339,8 @@
 
 
     Signed-off-by: Nikolaj Bjorner <nbjorner@microsoft.com>'
-  msg_enhanced: 'fix #7246: prevent segfault when push occurs before set-logic by validating solver state during pop'
+  msg_enhanced: 'fix #7246: prevent segfault when push occurs before set-logic by
+    validating solver state during pop'
   msg_reduced: null
 - proj: z3
   issue: 7252
@@ -348,7 +353,9 @@
 
 
     Signed-off-by: Nikolaj Bjorner <nbjorner@microsoft.com>'
-  msg_enhanced: 'fix #7252 segmentation fault in nested re.loop formula processing when handling specific boundary values for nested re.loop expressions with same bounds of 0 and 1'
+  msg_enhanced: 'fix #7252 segmentation fault in nested re.loop formula processing
+    when handling specific boundary values for nested re.loop expressions with same
+    bounds of 0 and 1'
   msg_reduced: null
 - proj: php-src
   issue: 16777
@@ -370,8 +377,8 @@
 
 
     Closes GH-16824.'
-  msg_reduced: 'Fix GH-16777: Calling the constructor again on a object after
-    it is in a document causes UAF
+  msg_reduced: 'Fix GH-16777: Calling the constructor again on a object after it is
+    in a document causes UAF
 
 
     Closes GH-16824.'

@@ -209,15 +209,21 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
                         return item.get(field, "")
             return ""
 
-        enhanced_msg = None
+        enhanced_msg, reduced_msg = None, None
         logger.debug(f"{issue=}, {result_fix_msgonly=}, {score_fix_msgonly=}, {msgfix_can_enhance=}")
-        if do_enhance and msgfix_can_enhance:
-            if result_fix_msgonly != 'B':  # should have existing value in gemini.yaml.bak
-                logger.debug(f"Reuse existing enhanced message for {issue} {commit_fix}")
+        if do_enhance:
+            if msgfix_can_enhance:
+                logger.debug(f"Try to first read existing enhanced message for {issue} {commit_fix}")
                 enhanced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_enhanced")
-            else:
-                logger.debug(f"Enhance message for {issue} {commit_fix}")
-                enhanced_msg = enhance_msg(url_issue, commit_info_fix)
+                if not enhanced_msg:
+                    logger.debug(f"No existing enhanced message, call LLM to enhance")
+                    enhanced_msg = enhance_msg(url_issue, commit_info_fix)
+            if msgfix_can_reduce:
+                logger.debug(f"Try to first read existing reduced message for {issue} {commit_fix}")
+                reduced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_reduced")
+                if not reduced_msg:
+                    logger.debug(f"No existing reduced message, put original msg for manual edit later")
+                    reduced_msg = msg_fix
         msg_rows.append({
             'proj': proj,
             'issue': issue,
@@ -228,7 +234,7 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
             'score_msgonly': float(score_fix_msgonly),
             'msg': msg_fix,
             'msg_enhanced': enhanced_msg,
-            'msg_reduced': msg_fix if msgfix_can_reduce else None  # put original msg, manually reduce later
+            'msg_reduced': reduced_msg,
         })
     
     return msg_rows
@@ -242,7 +248,7 @@ def main():
     script_dir = Path(__file__).parent
     figure_dir = script_dir.parent / "figure"
     input_file_targets = figure_dir / "targets.csv"
-    input_file_agg = figure_dir / "aggregated_results_new.csv"
+    input_file_agg = figure_dir / "aggregated_results_10rep.csv"
     output_file_csv = script_dir / "msg_success.csv"
     output_file_excel = script_dir / "msg_success.xlsx"
     output_msg_yaml = script_dir / "gemini.yaml"
