@@ -203,6 +203,8 @@ for i in "${!COMMITS[@]}"; do
             # then, gen gcov with gcda files containing each changed file name
             for file in $changed_files; do
                 filename=$(basename $file)
+                # for mujs, gcov already generated with $PROJ_NAME gcda, skip searching $filename.gcda and just rename
+                [ -f $filename.gcov ] && mv $filename.gcov $filename.gcov.before_${id}.$cnt && continue
                 # find gcda object file in $builddir_before by file name (with or without extension)
                 gcda_before=$(find $builddir_before -name "${filename%.*}.gcda" -o -name "$filename.gcda")
                 if [[ "$gcda_before" ]]; then
@@ -230,6 +232,7 @@ for i in "${!COMMITS[@]}"; do
             done
             for file in $changed_files; do
                 filename=$(basename $file)
+                [ -f $filename.gcov ] && mv $filename.gcov $filename.gcov.after_${id}.$cnt && continue
                 # find gcda object file in $builddir_after by file name (with or without extension)
                 gcda_after=$(find $builddir_after -name "${filename%.*}.gcda" -o -name "$filename.gcda")
                 if [[ "$gcda_after" ]]; then
