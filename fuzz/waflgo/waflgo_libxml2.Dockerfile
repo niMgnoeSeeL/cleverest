@@ -71,4 +71,5 @@ RUN git config --global --add safe.directory /home/libxml2
 # avoid WAFLGo exit when seeds crash
 ENV AFL_SKIP_CRASHES=1
 # Run fuzz in tmux session
-CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source libxml2.env && run_waflgo'" Enter && bash
+WORKDIR /home/libxml2
+CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source ../libxml2.env && run_waflgo'" Enter && bash

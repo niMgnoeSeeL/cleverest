@@ -43,9 +43,10 @@ RUN git clone https://gitlab.freedesktop.org/poppler/poppler/
 # Clone unifuzz/seeds
 RUN git clone https://github.com/unifuzz/seeds
 
+# NOTE: cmake from pip too new >4.0, incompatible with old cmakefile
 # Uninstall cmake from apt and install latest cmake with pip
-RUN apt-get remove -y cmake && \
-    pip install --upgrade cmake
+# RUN apt-get remove -y cmake && \
+#     pip install --upgrade cmake
 
 # Install dependencies for poppler
 RUN apt-get update && apt-get install -y libfreetype-dev libfontconfig-dev libjpeg-dev libopenjp2-7-dev liblcms2-dev libpng-dev libcurl4-nss-dev libnss3-dev libnspr4-dev
@@ -71,4 +72,5 @@ RUN git config --global --add safe.directory /home/poppler
 # avoid WAFLGo exit when seeds crash
 ENV AFL_SKIP_CRASHES=1
 # Run fuzz in tmux session
-CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source poppler.env && run_waflgo'" Enter && bash
+WORKDIR /home/poppler
+CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source ../poppler.env && run_waflgo'" Enter && bash

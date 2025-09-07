@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
     tmux \
     ranger
 
-FROM base AS waflgo_php
+FROM base AS waflgo_jerryscript
 
 # Set user same as host, can use `envsubst` to actually replace with env value
 # ARG UNAME=$USER
@@ -70,4 +70,5 @@ RUN git config --global --add safe.directory /home/jerryscript
 # avoid WAFLGo exit when seeds crash
 ENV AFL_SKIP_CRASHES=1
 # Run fuzz in tmux session
-CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source jerryscript.env && run_waflgo'" Enter && bash
+WORKDIR /home/jerryscript
+CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source ../jerryscript.env && run_waflgo'" Enter && bash

@@ -2,7 +2,7 @@
 
 # usage: rdocker.sh <path-to-project-config> <commit>
 
-SCENARIO=${SCENARIO:-FIX}
+SCENARIO=${SCENARIO:-BIC}
 conf=${1-"jerryscript.env"}
 source $conf
 source utils.sh
@@ -11,7 +11,7 @@ source utils.sh
 if [ -z "$2" ]; then
     for i in "${!COMMITS[@]}"; do
         commit=${COMMITS[$i]}   
-        for j in {1..5}; do
+        for j in {1..10}; do
             docker run --name runwaflgo_${PROJ_NAME}_${commit}_$j -dit waflgo_$PROJ_NAME:$commit
             # docker stop runwaflgo_${PROJ_NAME}_${commit}_$j
             # docker rm runwaflgo_${PROJ_NAME}_${commit}_$j
