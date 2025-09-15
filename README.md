@@ -1,4 +1,4 @@
-# Cleverest
+# Anonymous Artifact for Cleverest
 
 Cleverest is a feedback-directed, zero-shot LLM-based regression test generation technique proposed in the paper "[Paper Title]". We evaluate its effectiveness on 46 commits of six subject programs: three already in WAFLGo dataset (Mujs, Libxml2, and Poppler) and three newly added programs (JerryScript, Z3, PHP). This repository contains the implementation of Cleverest along with the dataset and instructions to reproduce the main results in the paper.
 
@@ -10,7 +10,7 @@ If you want to use Cleverest in your research or refer it, please use the follow
 [bibtext]
 ```
 
-The full paper is available at [INSERT](INSERT).
+The supplementary material is available at **[supp/supplementary.pdf](supp/supplementary.pdf)**.
 
 ## Data Replication
 
