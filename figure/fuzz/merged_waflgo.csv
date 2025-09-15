@@ -1,0 +1,266 @@
+scenario	subject	issue	commit	idx	status	final	first crash	time to find first crash
+BIC	mujs	65	8c27b12	1	old	B	out_mujs_8c27b12_1/queue/id:000287,155094,src:000220,op:havoc,rep:2,+cov	155094
+BIC	mujs	65	8c27b12	2	old	B	out_mujs_8c27b12_2/crashes/id:000000,20353874,sig:11,src:004383,op:havoc,rep:8	20353874
+BIC	mujs	65	8c27b12	3	old	B	out_mujs_8c27b12_3/queue/id:000332,105214,src:000004,op:havoc,rep:4,+cov	105214
+BIC	mujs	65	8c27b12	4	old	B	out_mujs_8c27b12_4/crashes.2024-09-03-14:23:42/id:000000,7825728,sig:11,src:002920,op:havoc,rep:4	7825728
+BIC	mujs	65	8c27b12	5	old	B	out_mujs_8c27b12_5/queue/id:001088,463886,src:000374,op:havoc,rep:2,+cov	463886
+BIC	mujs	65	8c27b12	6	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_6/crashes/id:000000,81210709,sig:11,src:002981,op:havoc,rep:16	81210709
+BIC	mujs	65	8c27b12	7	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_7/queue/id:000494,984841,src:000008,op:havoc,rep:8,+cov	984841
+BIC	mujs	65	8c27b12	8	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_8/crashes/id:000000,22820115,sig:11,src:002886,op:havoc,rep:32	22820115
+BIC	mujs	65	8c27b12	9	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_9/queue/id:001124,715076,src:001103,op:havoc,rep:32,+cov	715076
+BIC	mujs	65	8c27b12	10	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_10/crashes/id:000000,35728182,sig:11,src:003120,op:havoc,rep:16	35728182
+BIC	mujs	141	832e069	1	old	X	out_mujs_832e069_1/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+BIC	mujs	141	832e069	2	old	X	out_mujs_832e069_2/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+BIC	mujs	141	832e069	3	old	X	out_mujs_832e069_3/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+BIC	mujs	141	832e069	4	old	X	out_mujs_832e069_4/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+BIC	mujs	141	832e069	5	old	X	out_mujs_832e069_5/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+BIC	mujs	141	832e069	6	bug_heap-buffer-overflow^	X	/clever/fuzz/waflgo/out/waflgo_mujs_832e069_6/queue/id:000000,orig:CVE-2016-10132 |	
+BIC	mujs	141	832e069	7	bug_heap-buffer-overflow^	X	/clever/fuzz/waflgo/out/waflgo_mujs_832e069_7/queue/id:000000,orig:CVE-2016-10132 |	
+BIC	mujs	141	832e069	8	bug_heap-buffer-overflow^	X	/clever/fuzz/waflgo/out/waflgo_mujs_832e069_8/queue/id:000000,orig:CVE-2016-10132 |	
+BIC	mujs	141	832e069	9	bug_heap-buffer-overflow^	X	/clever/fuzz/waflgo/out/waflgo_mujs_832e069_9/queue/id:000000,orig:CVE-2016-10132 |	
+BIC	mujs	141	832e069	10	bug_heap-buffer-overflow^	X	/clever/fuzz/waflgo/out/waflgo_mujs_832e069_10/queue/id:000000,orig:CVE-2016-10132 |	
+BIC	mujs	145	4c7f6be	1	old	B	out_mujs_4c7f6be_1/crashes.2024-09-03-14:23:48/target_id:000000,1296891,sig:11,src:001003,op:flip1,pos:124	1296891
+BIC	mujs	145	4c7f6be	2	old	B	out_mujs_4c7f6be_2/crashes.2024-09-03-14:23:49/target_id:000000,410306,sig:11,src:000839,op:havoc,rep:8	410306
+BIC	mujs	145	4c7f6be	3	old	B	out_mujs_4c7f6be_3/crashes.2024-09-03-14:23:50/target_id:000000,252995,sig:11,src:000530,op:flip1,pos:41	252995
+BIC	mujs	145	4c7f6be	4	old	B	out_mujs_4c7f6be_4/crashes.2024-09-03-14:23:51/target_id:000000,1343817,sig:11,src:000927,op:flip1,pos:124	1343817
+BIC	mujs	145	4c7f6be	5	old	B	out_mujs_4c7f6be_5/crashes.2024-09-03-14:24:08/target_id:000000,901429,sig:11,src:000941,op:flip1,pos:124	901429
+BIC	mujs	145	4c7f6be	6	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_6/queue/id:001003,5133174,src:000972,op:havoc,rep:8,+cov	5133174
+BIC	mujs	145	4c7f6be	7	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_7/queue/id:000533,516764,src:000432,op:havoc,rep:32,+cov	516764
+BIC	mujs	145	4c7f6be	8	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_8/queue/id:000543,173977,src:000459,op:havoc,rep:4,+cov	173977
+BIC	mujs	145	4c7f6be	9	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_9/queue/id:000587,161809,src:000536,op:havoc,rep:8,+cov	161809
+BIC	mujs	145	4c7f6be	10	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_10/queue/id:000537,221894,src:000456,op:havoc,rep:4	221894
+BIC	mujs	166	3f71a1c	1	old	B	out_mujs_3f71a1c_1/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	2	old	B	out_mujs_3f71a1c_2/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	3	old	B	out_mujs_3f71a1c_3/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	4	old	B	out_mujs_3f71a1c_4/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	5	old	B	out_mujs_3f71a1c_5/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	6	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_6/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	7	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_7/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	8	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_8/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	9	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_9/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	mujs	166	3f71a1c	10	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_10/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	libxml2	535	9a82b94	6	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_6/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	7	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_7/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	8	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_8/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	9	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_9/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	10	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_10/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	550	7e3f469	1	old	D	out_libxml2_7e3f469_1/queue/id:000003,orig:dtd12	orig:dtd12
+BIC	libxml2	550	7e3f469	2	old	D	out_libxml2_7e3f469_2/queue/id:000003,orig:dtd12	orig:dtd12
+BIC	libxml2	550	7e3f469	3	old	D	out_libxml2_7e3f469_3/queue/id:000003,orig:dtd12	orig:dtd12
+BIC	libxml2	550	7e3f469	4	old	D	out_libxml2_7e3f469_4/queue/id:000003,orig:dtd12	orig:dtd12
+BIC	libxml2	550	7e3f469	5	old	R	out_libxml2_7e3f469_5/queue/id:000003,orig:dtd12	orig:dtd12
+BIC	libxml2	550	7e3f469	6	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_6/queue/id:003107,7204024,src:003007,op:havoc,rep:16 |	
+BIC	libxml2	550	7e3f469	7	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_7/queue/id:003530,14411643,src:003433,op:havoc,rep:8 |	
+BIC	libxml2	550	7e3f469	8	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_8/queue/id:002224,3426628,src:002125,op:havoc,rep:4,is_suf_target |	
+BIC	libxml2	550	7e3f469	9	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_9/queue/id:002107,2900424,src:001976,op:havoc,rep:4,+cov |	
+BIC	libxml2	550	7e3f469	10	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_10/queue/id:001850,2211812,src:001697,op:havoc,rep:8,is_suf_target |	
+BIC	poppler	1282	3d35d20	1	old	B	out_poppler_3d35d20_1/queue/id:000586,344849,src:000005,op:flip8,pos:10606,+cov	344849
+BIC	poppler	1282	3d35d20	2	old	B	out_poppler_3d35d20_2/queue/id:000578,337084,src:000004,op:flip8,pos:10437,+cov	337084
+BIC	poppler	1282	3d35d20	3	old	B	out_poppler_3d35d20_3/queue/id:000581,339520,src:000005,op:flip8,pos:10606,+cov	339520
+BIC	poppler	1282	3d35d20	4	old	B	out_poppler_3d35d20_4/queue/id:000992,555113,src:000010,op:flip8,pos:402	555113
+BIC	poppler	1282	3d35d20	5	old	B	out_poppler_3d35d20_5/queue/id:000569,338538,src:000004,op:flip8,pos:10437,+cov	338538
+BIC	poppler	1282	3d35d20	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_6/crashes/id:000002,2784705,sig:06,src:000019,op:havoc,rep:128 |	
+BIC	poppler	1282	3d35d20	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_7/crashes/id:000002,5311803,sig:06,src:000019,op:havoc,rep:64 |	
+BIC	poppler	1282	3d35d20	8	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_8/crashes/id:000002,5525125,sig:06,src:000019,op:havoc,rep:32 |	
+BIC	poppler	1282	3d35d20	9	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_9/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
+BIC	poppler	1282	3d35d20	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_10/crashes/id:000002,4876223,sig:06,src:000019,op:havoc,rep:32 |	
+BIC	poppler	1289	3cae777	1	old	X	out_poppler_3cae777_1/crashes/id:000000,108165,sig:11,src:000000,op:flip8,pos:11287	108165
+BIC	poppler	1289	3cae777	2	old	X	out_poppler_3cae777_2/crashes/id:000000,108305,sig:11,src:000000,op:flip8,pos:11287	108305
+BIC	poppler	1289	3cae777	3	old	X	out_poppler_3cae777_3/crashes/id:000000,108255,sig:11,src:000000,op:flip8,pos:11287	108255
+BIC	poppler	1289	3cae777	4	old	X	out_poppler_3cae777_4/crashes/id:000000,108183,sig:11,src:000000,op:flip8,pos:11287	108183
+BIC	poppler	1289	3cae777	5	old	X	out_poppler_3cae777_5/crashes/id:000000,108338,sig:11,src:000000,op:flip8,pos:11287	108338
+BIC	poppler	1289	3cae777	6	bug_heap-buffer-overflow^heap-buffer-overflow	X	/clever/fuzz/waflgo/out/waflgo_poppler_3cae777_6/crashes/id:000000,166788,sig:11,src:000000,op:flip8,pos:11287 |	
+BIC	poppler	1289	3cae777	7	bug_SEGV^SEGV	X	/clever/fuzz/waflgo/out/waflgo_poppler_3cae777_7/crashes/id:000000,167147,sig:11,src:000000,op:flip8,pos:11287 |	
+BIC	poppler	1289	3cae777	8	bug_SEGV^SEGV	X	/clever/fuzz/waflgo/out/waflgo_poppler_3cae777_8/crashes/id:000000,167222,sig:11,src:000000,op:flip8,pos:11287 |	
+BIC	poppler	1289	3cae777	9	bug_SEGV^SEGV	X	/clever/fuzz/waflgo/out/waflgo_poppler_3cae777_9/crashes/id:000000,167690,sig:11,src:000000,op:flip8,pos:11287 |	
+BIC	poppler	1289	3cae777	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_poppler_3cae777_10/crashes/id:000000,166759,sig:11,src:000000,op:flip8,pos:11287 |	
+BIC	poppler	1303	e674ca6	1	old	N		 |
+BIC	poppler	1303	e674ca6	2	old	N		 |
+BIC	poppler	1303	e674ca6	3	old	N		 |
+BIC	poppler	1303	e674ca6	4	old	N		 |
+BIC	poppler	1303	e674ca6	5	old	N		 |
+BIC	poppler	1303	e674ca6	6	none	N	 |	
+BIC	poppler	1303	e674ca6	7	none	N	 |	
+BIC	poppler	1303	e674ca6	8	none	N	 |	
+BIC	poppler	1303	e674ca6	9	none	N	 |	
+BIC	poppler	1303	e674ca6	10	none	N	 |	
+BIC	poppler	1305	aaf2e80	1	old	N		 |
+BIC	poppler	1305	aaf2e80	2	old	N		 |
+BIC	poppler	1305	aaf2e80	3	old	N		 |
+BIC	poppler	1305	aaf2e80	4	old	N		 |
+BIC	poppler	1305	aaf2e80	5	old	N		 |
+BIC	poppler	1305	aaf2e80	6	none	N	 |	
+BIC	poppler	1305	aaf2e80	7	none	N	 |	
+BIC	poppler	1305	aaf2e80	8	none	N	 |	
+BIC	poppler	1305	aaf2e80	9	none	N	 |	
+BIC	poppler	1305	aaf2e80	10	none	N	 |	
+BIC	poppler	1381	245abad	1	old	R	out_poppler_245abad_1/queue/id:000044,orig:fithesis-fsps-color.pdf	orig:fithesis-fsps-color.pdf
+BIC	poppler	1381	245abad	2	old	D	out_poppler_245abad_2/queue/id:000044,orig:fithesis-fsps-color.pdf	orig:fithesis-fsps-color.pdf
+BIC	poppler	1381	245abad	3	old	D	out_poppler_245abad_3/queue/id:000044,orig:fithesis-fsps-color.pdf	orig:fithesis-fsps-color.pdf
+BIC	poppler	1381	245abad	4	old	D	out_poppler_245abad_4/queue/id:000044,orig:fithesis-fsps-color.pdf	orig:fithesis-fsps-color.pdf
+BIC	poppler	1381	245abad	5	old	D	out_poppler_245abad_5/queue/id:000044,orig:fithesis-fsps-color.pdf	orig:fithesis-fsps-color.pdf
+BIC	poppler	1381	245abad	6	none	N	 |	
+BIC	poppler	1381	245abad	7	none	N	 |	
+BIC	poppler	1381	245abad	8	none	N	 |	
+BIC	poppler	1381	245abad	9	none	N	 |	
+BIC	poppler	1381	245abad	10	none	N	 |	
+BIC	jerryscript	5117	53b61c1	1	bug_^SEGV	B	baselines/waflgo_jerryscript_53b61c1_1/queue/id:000528,393322,src:000147,op:havoc,rep:16,is_suf_target	393322.0
+BIC	jerryscript	5117	53b61c1	2	none	D	baselines/waflgo_jerryscript_53b61c1_2/queue/id:000555,402281,src:000259,op:havoc,rep:2,+cov |	
+BIC	jerryscript	5117	53b61c1	3	bug_^SEGV	B	baselines/waflgo_jerryscript_53b61c1_3/queue/id:000513,380707,src:000191,op:havoc,rep:8,+cov	380707.0
+BIC	jerryscript	5117	53b61c1	4	bug_^SEGV	B	baselines/waflgo_jerryscript_53b61c1_4/queue/id:001037,1863041,src:000893,op:havoc,rep:16,is_suf_target	1863041.0
+BIC	jerryscript	5117	53b61c1	5	bug_^SEGV	B	baselines/waflgo_jerryscript_53b61c1_5/queue/id:000565,494126,src:000276,op:havoc,rep:16,+cov	494126.0
+BIC	jerryscript	5117	53b61c1	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_6/crashes/id:000011,1144553,sig:06,src:000003,op:flip1,pos:41 |	
+BIC	jerryscript	5117	53b61c1	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_7/crashes/id:000016,1889956,sig:06,src:000003,op:flip1,pos:41 |	
+BIC	jerryscript	5117	53b61c1	8	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_8/crashes/id:000027,1485066,sig:06,src:000003,op:flip1,pos:41 |	
+BIC	jerryscript	5117	53b61c1	9	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_9/crashes/id:000013,2355942,sig:06,src:000003,op:flip1,pos:41 |	
+BIC	jerryscript	5117	53b61c1	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_10/crashes/id:000012,979043,sig:06,src:000003,op:flip1,pos:41 |	
+BIC	jerryscript	5138	70e275e	1	none	D	baselines/waflgo_jerryscript_70e275e_1/queue/id:000030,6726,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	2	none	D	baselines/waflgo_jerryscript_70e275e_2/queue/id:000030,6733,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	3	none	D	baselines/waflgo_jerryscript_70e275e_3/queue/id:000031,6825,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	4	none	D	baselines/waflgo_jerryscript_70e275e_4/queue/id:000030,6686,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	5	none	D	baselines/waflgo_jerryscript_70e275e_5/queue/id:000031,6801,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	6	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_6/queue/id:000031,5627,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	7	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_7/queue/id:000030,5584,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	8	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_8/queue/id:000034,7455,src:000002,op:havoc,rep:128,+cov |	
+BIC	jerryscript	5138	70e275e	9	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_9/queue/id:000046,9511,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5138	70e275e	10	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_10/queue/id:000031,5632,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	1	none	D	baselines/waflgo_jerryscript_70e275e_1/queue/id:000030,6726,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	2	none	D	baselines/waflgo_jerryscript_70e275e_2/queue/id:000030,6733,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	3	none	D	baselines/waflgo_jerryscript_70e275e_3/queue/id:000031,6825,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	4	none	D	baselines/waflgo_jerryscript_70e275e_4/queue/id:000030,6686,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	5	none	D	baselines/waflgo_jerryscript_70e275e_5/queue/id:000031,6801,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	6	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_6/queue/id:000031,5627,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	7	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_7/queue/id:000030,5584,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	8	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_8/queue/id:000034,7455,src:000002,op:havoc,rep:128,+cov |	
+BIC	jerryscript	5153	70e275e	9	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_9/queue/id:000046,9511,src:000003,op:flip1,pos:3,+cov |	
+BIC	jerryscript	5153	70e275e	10	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_10/queue/id:000031,5632,src:000003,op:flip1,pos:3,+cov |	
+FIX	mujs	65	833f82c	1	old	X	out_mujs_833f82c_1/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+FIX	mujs	65	833f82c	2	old	X	out_mujs_833f82c_2/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+FIX	mujs	65	833f82c	3	old	X	out_mujs_833f82c_3/crashes.2024-09-03-14:26:46/target_id:000000,36076139,sig:11,src:003157,op:havoc,rep:8	36076139
+FIX	mujs	65	833f82c	4	old	R	out_mujs_833f82c_4/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+FIX	mujs	65	833f82c	5	old	X	out_mujs_833f82c_5/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
+FIX	mujs	65	833f82c	6	none	N	 |	
+FIX	mujs	65	833f82c	7	none	N	 |	
+FIX	mujs	65	833f82c	8	none	N	 |	
+FIX	mujs	65	833f82c	9	none	N	 |	
+FIX	mujs	65	833f82c	10	none	N	 |	
+FIX	mujs	141	6871e5b	1	old	B	out_mujs_6871e5b_1/queue/id:000574,622058,src:000213,op:havoc,rep:64,+cov	622058
+FIX	mujs	141	6871e5b	2	old	B	out_mujs_6871e5b_2/queue/id:000527,737438,src:000223,op:havoc,rep:32,+cov	737438
+FIX	mujs	141	6871e5b	3	old	B	out_mujs_6871e5b_3/queue/id:000587,663413,src:000227,op:havoc,rep:32,+cov	663413
+FIX	mujs	141	6871e5b	4	old	B	out_mujs_6871e5b_4/queue/id:000693,979254,src:000477,op:havoc,rep:128,+cov	979254
+FIX	mujs	141	6871e5b	5	old	B	out_mujs_6871e5b_5/queue/id:000616,833402,src:000386,op:havoc,rep:64,+cov	833402
+FIX	mujs	141	6871e5b	6	none	N	 |	
+FIX	mujs	141	6871e5b	7	none	D	/clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_7/queue/id:003335,16358040,src:002875,op:havoc,rep:32 |	
+FIX	mujs	141	6871e5b	8	none	D	/clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_8/queue/id:000684,1020469,src:000406,op:havoc,rep:128 |	
+FIX	mujs	141	6871e5b	9	none	D	/clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_9/queue/id:000627,2077824,src:000553,op:havoc,rep:4 |	
+FIX	mujs	141	6871e5b	10	none	D	/clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_10/queue/id:000581,16287544,src:000472,op:havoc,rep:8 |	
+FIX	mujs	145	f93d245	1	old	B	out_mujs_f93d245_1/queue/id:000987,451098,src:000016,op:flip1,pos:11,+cov	451098
+FIX	mujs	145	f93d245	2	old	B	out_mujs_f93d245_2/queue/id:000601,235072,src:000545,op:havoc,rep:4	235072
+FIX	mujs	145	f93d245	3	old	B	out_mujs_f93d245_3/queue/id:000627,270459,src:000573,op:havoc,rep:4	270459
+FIX	mujs	145	f93d245	4	old	B	out_mujs_f93d245_4/queue/id:000879,412342,src:000755,op:havoc,rep:16,+cov	412342
+FIX	mujs	145	f93d245	5	old	B	out_mujs_f93d245_5/queue/id:000831,412174,src:000016,op:flip1,pos:11,+cov	412174
+FIX	mujs	145	f93d245	6	bug_global-buffer-overflow^	B	/clever/fuzz/waflgo/out/waflgo_mujs_f93d245_6/queue/id:000738,389094,src:000722,op:flip1,pos:30,+cov	389094
+FIX	mujs	145	f93d245	7	bug_global-buffer-overflow^	B	/clever/fuzz/waflgo/out/waflgo_mujs_f93d245_7/queue/id:000988,454367,src:000016,op:flip1,pos:11,+cov	454367
+FIX	mujs	145	f93d245	8	bug_global-buffer-overflow^	B	/clever/fuzz/waflgo/out/waflgo_mujs_f93d245_8/queue/id:001045,567524,src:000016,op:flip1,pos:11,+cov	567524
+FIX	mujs	145	f93d245	9	bug_global-buffer-overflow^	B	/clever/fuzz/waflgo/out/waflgo_mujs_f93d245_9/queue/id:000850,908155,src:000016,op:havoc,rep:2,+cov	908155
+FIX	mujs	145	f93d245	10	bug_heap-buffer-overflow^	B	/clever/fuzz/waflgo/out/waflgo_mujs_f93d245_10/queue/id:001870,961523,src:001834,op:havoc,rep:8,is_suf_target	961523
+FIX	mujs	166	8b5ba20	1	old	B	out_mujs_8b5ba20_1/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	2	old	B	out_mujs_8b5ba20_2/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	3	old	B	out_mujs_8b5ba20_3/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	4	old	B	out_mujs_8b5ba20_4/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	5	old	B	out_mujs_8b5ba20_5/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	6	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_6/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	7	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_7/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	8	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_8/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	9	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_9/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	mujs	166	8b5ba20	10	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_10/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+FIX	libxml2	550	6273df6	1	old	N		 |
+FIX	libxml2	550	6273df6	2	old	N		 |
+FIX	libxml2	550	6273df6	3	old	N		 |
+FIX	libxml2	550	6273df6	4	old	N		 |
+FIX	libxml2	550	6273df6	5	old	N		 |
+FIX	libxml2	550	6273df6	6	none	N	 |	
+FIX	libxml2	550	6273df6	7	none	N	 |	
+FIX	libxml2	550	6273df6	8	none	N	 |	
+FIX	libxml2	550	6273df6	9	none	N	 |	
+FIX	libxml2	550	6273df6	10	none	N	 |	
+FIX	poppler	1282	4564a00	1	old	R	out_poppler_4564a00_1/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
+FIX	poppler	1282	4564a00	2	old	R	out_poppler_4564a00_2/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
+FIX	poppler	1282	4564a00	3	old	R	out_poppler_4564a00_3/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
+FIX	poppler	1282	4564a00	4	old	R	out_poppler_4564a00_4/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
+FIX	poppler	1282	4564a00	5	old	R	out_poppler_4564a00_5/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
+FIX	poppler	1282	4564a00	6	none	N	 |	
+FIX	poppler	1282	4564a00	7	none	N	 |	
+FIX	poppler	1282	4564a00	8	none	N	 |	
+FIX	poppler	1282	4564a00	9	none	N	 |	
+FIX	poppler	1282	4564a00	10	none	N	 |	
+FIX	poppler	1289	efb6868	1	old	N		 |
+FIX	poppler	1289	efb6868	2	old	N		 |
+FIX	poppler	1289	efb6868	3	old	N		 |
+FIX	poppler	1289	efb6868	4	old	N		 |
+FIX	poppler	1289	efb6868	5	old	N		 |
+FIX	poppler	1289	efb6868	6	none	N	 |	
+FIX	poppler	1289	efb6868	7	none	N	 |	
+FIX	poppler	1289	efb6868	8	none	N	 |	
+FIX	poppler	1289	efb6868	9	none	N	 |	
+FIX	poppler	1289	efb6868	10	none	N	 |	
+FIX	poppler	1303	a4ca3a9	1	old	N		 |
+FIX	poppler	1303	a4ca3a9	2	old	N		 |
+FIX	poppler	1303	a4ca3a9	3	old	N		 |
+FIX	poppler	1303	a4ca3a9	4	old	N		 |
+FIX	poppler	1303	a4ca3a9	5	old	N		 |
+FIX	poppler	1303	a4ca3a9	6	none	N	 |	
+FIX	poppler	1303	a4ca3a9	7	none	N	 |	
+FIX	poppler	1303	a4ca3a9	8	none	N	 |	
+FIX	poppler	1303	a4ca3a9	9	none	N	 |	
+FIX	poppler	1303	a4ca3a9	10	none	N	 |	
+FIX	poppler	1305	907d05a	1	old	R	out_poppler_907d05a_1/queue/id:000026,orig:docs-boxshape.pdf	orig:docs-boxshape.pdf
+FIX	poppler	1305	907d05a	2	old	R	out_poppler_907d05a_2/queue/id:000026,orig:docs-boxshape.pdf	orig:docs-boxshape.pdf
+FIX	poppler	1305	907d05a	3	old	R	out_poppler_907d05a_3/queue/id:000026,orig:docs-boxshape.pdf	orig:docs-boxshape.pdf
+FIX	poppler	1305	907d05a	4	old	R	out_poppler_907d05a_4/queue/id:000026,orig:docs-boxshape.pdf	orig:docs-boxshape.pdf
+FIX	poppler	1305	907d05a	5	old	R	out_poppler_907d05a_5/queue/id:000026,orig:docs-boxshape.pdf	orig:docs-boxshape.pdf
+FIX	poppler	1305	907d05a	6	none	N	 |	
+FIX	poppler	1305	907d05a	7	none	N	 |	
+FIX	poppler	1305	907d05a	8	none	N	 |	
+FIX	poppler	1305	907d05a	9	none	N	 |	
+FIX	poppler	1305	907d05a	10	none	N	 |	
+FIX	poppler	1381	1be35ee	1	old	R	out_poppler_1be35ee_1/queue/id:000006,orig:DDC-09.pdf	orig:DDC-09.pdf
+FIX	poppler	1381	1be35ee	2	old	R	out_poppler_1be35ee_2/queue/id:000006,orig:DDC-09.pdf	orig:DDC-09.pdf
+FIX	poppler	1381	1be35ee	3	old	R	out_poppler_1be35ee_3/queue/id:000006,orig:DDC-09.pdf	orig:DDC-09.pdf
+FIX	poppler	1381	1be35ee	4	old	R	out_poppler_1be35ee_4/queue/id:000006,orig:DDC-09.pdf	orig:DDC-09.pdf
+FIX	poppler	1381	1be35ee	5	old	R	out_poppler_1be35ee_5/queue/id:000006,orig:DDC-09.pdf	orig:DDC-09.pdf
+FIX	poppler	1381	1be35ee	6	none	N	 |	
+FIX	poppler	1381	1be35ee	7	none	N	 |	
+FIX	poppler	1381	1be35ee	8	none	N	 |	
+FIX	poppler	1381	1be35ee	9	none	N	 |	
+FIX	poppler	1381	1be35ee	10	none	N	 |	
+FIX	jerryscript	5013	3686410	1	none	X	baselines/waflgo_jerryscript_3686410_1/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5013	3686410	2	none	X	baselines/waflgo_jerryscript_3686410_2/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5013	3686410	3	none	X	baselines/waflgo_jerryscript_3686410_3/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5013	3686410	4	none	X	baselines/waflgo_jerryscript_3686410_4/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5013	3686410	5	none	X	baselines/waflgo_jerryscript_3686410_5/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5013	3686410	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_3686410_6/crashes/id:000000,30315964,sig:06,src:000003,op:havoc,rep:2 |	
+FIX	jerryscript	5013	3686410	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_3686410_7/crashes/id:000000,1790909,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	jerryscript	5013	3686410	8	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_3686410_8/crashes/id:000000,1639539,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	jerryscript	5013	3686410	9	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_3686410_9/crashes/id:000000,2849808,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	jerryscript	5013	3686410	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_3686410_10/crashes/id:000000,16438755,sig:06,src:002485,op:havoc,rep:2 |	
+FIX	jerryscript	5117	d7e2125	1	none	X	baselines/waflgo_jerryscript_d7e2125_1/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	2	none	X	baselines/waflgo_jerryscript_d7e2125_2/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	3	none	X	baselines/waflgo_jerryscript_d7e2125_3/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	4	none	X	baselines/waflgo_jerryscript_d7e2125_4/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	5	none	X	baselines/waflgo_jerryscript_d7e2125_5/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_d7e2125_6/crashes/id:000021,44853848,sig:06,src:005325,op:havoc,rep:8 |	
+FIX	jerryscript	5117	d7e2125	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_d7e2125_7/crashes/id:000013,33897864,sig:06,src:004491,op:havoc,rep:2 |	
+FIX	jerryscript	5117	d7e2125	8	none	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_d7e2125_8/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	9	none	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_d7e2125_9/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5117	d7e2125	10	none	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_d7e2125_10/crashes/id:000014,7487864,sig:06,src:003240,op:havoc,rep:2 |	
+FIX	jerryscript	5138	95cc5e9	1	none	X	baselines/waflgo_jerryscript_95cc5e9_1/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5138	95cc5e9	2	none	X	baselines/waflgo_jerryscript_95cc5e9_2/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5138	95cc5e9	3	none	X	baselines/waflgo_jerryscript_95cc5e9_3/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5138	95cc5e9	4	none	X	baselines/waflgo_jerryscript_95cc5e9_4/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5138	95cc5e9	5	none	X	baselines/waflgo_jerryscript_95cc5e9_5/queue/id:000001,orig:CVE-2016-10133 |	
+FIX	jerryscript	5138	95cc5e9	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_6/crashes/id:000000,187467,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	jerryscript	5138	95cc5e9	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_7/crashes/id:000000,21640994,sig:06,src:001424,op:flip1,pos:41 |	
+FIX	jerryscript	5138	95cc5e9	8	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_8/crashes/id:000000,543996,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	jerryscript	5138	95cc5e9	9	none	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_9/crashes/id:000000,822043,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	jerryscript	5138	95cc5e9	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_10/crashes/id:000000,983771,sig:06,src:000003,op:flip1,pos:41 |	

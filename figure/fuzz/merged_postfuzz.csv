@@ -1,0 +1,298 @@
+scenario	subject	issue	commit	idx	status	final	first crash	time to find first crash
+BIC	mujs	65	8c27b12	250905-2232	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2235	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2238	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2240	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2242	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2245	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2247	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2250	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_2_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2252	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	65	8c27b12	250905-2254	bug_^heap-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow	0.0
+BIC	mujs	141	832e069	250905-2232	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:003014,time:23863771,execs:5310228,op:havoc,rep:9	23863771.0
+BIC	mujs	141	832e069	250905-2235	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001819,time:4192597,execs:883635,op:havoc,rep:1	4192597.0
+BIC	mujs	141	832e069	250905-2238	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001027,time:13406357,execs:2991495,op:havoc,rep:13	13406357.0
+BIC	mujs	141	832e069	250905-2240	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001623,time:37298857,execs:8504070,op:havoc,rep:2	37298857.0
+BIC	mujs	141	832e069	250905-2242	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001490,time:3357036,execs:690003,op:havoc,rep:3	3357036.0
+BIC	mujs	141	832e069	250905-2245	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001888,time:17487634,execs:3926491,op:havoc,rep:4	17487634.0
+BIC	mujs	141	832e069	250905-2247	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:000839,time:7856636,execs:1782447,op:havoc,rep:1	7856636.0
+BIC	mujs	141	832e069	250905-2250	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:002318,time:8423857,execs:1910963,op:havoc,rep:1	8423857.0
+BIC	mujs	141	832e069	250905-2252	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001663,time:3478705,execs:735984,op:havoc,rep:7	3478705.0
+BIC	mujs	141	832e069	250905-2254	bug_heap-buffer-overflow^heap-buffer-overflow	B	id:000000,sig:06,src:001101,time:3693966,execs:774374,op:havoc,rep:4	3693966.0
+BIC	mujs	145	4c7f6be	250905-2232	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000002,time:6660,execs:1689,op:arith8,pos:17,val:-6	6660.0
+BIC	mujs	145	4c7f6be	250905-2235	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000001,time:206,execs:110,op:quick,pos:17	206.0
+BIC	mujs	145	4c7f6be	250905-2238	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000000,time:5724,execs:1435,op:arith8,pos:17,val:-6	5724.0
+BIC	mujs	145	4c7f6be	250905-2240	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000001,time:174,execs:83,op:quick,pos:12	174.0
+BIC	mujs	145	4c7f6be	250905-2242	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000004,time:775,execs:283,op:flip1,pos:10	775.0
+BIC	mujs	145	4c7f6be	250905-2245	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000002,time:1006,execs:326,op:flip1,pos:16	1006.0
+BIC	mujs	145	4c7f6be	250905-2247	bug_^global-buffer-overflow	B	id:000000,sig:06,src:000002,time:304,execs:132,op:quick,pos:18	304.0
+BIC	mujs	145	4c7f6be	250905-2250	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000000,time:174,execs:74,op:quick,pos:11	174.0
+BIC	mujs	145	4c7f6be	250905-2252	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000001,time:4339,execs:1065,op:flip32,pos:18	4339.0
+BIC	mujs	145	4c7f6be	250905-2254	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000002,time:14293,execs:3284,op:havoc,rep:1	14293.0
+BIC	mujs	166	3f71a1c	250905-2232	none	D	id:005465,src:000314+002661,time:78938077,execs:17011791,op:splice,rep:2,+cov |	
+BIC	mujs	166	3f71a1c	250905-2235	none	N	 |	
+BIC	mujs	166	3f71a1c	250905-2238	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#166_3f71a1c_1_gpt-4o-2024-08-06_behave |	
+BIC	mujs	166	3f71a1c	250905-2240	none	D	id:003443,src:003371,time:16882536,execs:4046485,op:havoc,rep:2,+cov |	
+BIC	mujs	166	3f71a1c	250905-2242	none	N	 |	
+BIC	mujs	166	3f71a1c	250905-2245	none	D	id:004073,src:002941,time:22158795,execs:5325046,op:havoc,rep:1,+cov |	
+BIC	mujs	166	3f71a1c	250905-2247	none	N	 |	
+BIC	mujs	166	3f71a1c	250905-2250	none	D	id:005167,src:002678+004317,time:72502467,execs:15794039,op:splice,rep:3,+cov |	
+BIC	mujs	166	3f71a1c	250905-2252	none	D	id:004304,src:004063,time:30658650,execs:7354409,op:havoc,rep:1,+cov |	
+BIC	mujs	166	3f71a1c	250905-2254	none	D	id:000651,src:000441,time:590912,execs:142228,op:havoc,rep:2,+cov |	
+BIC	libxml2	535	9a82b94	250826-2134	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250826-2135	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250826-2136	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250826-2138	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250826-2139	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250903-1710	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250903-1712	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250903-1715	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250903-1717	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	250903-1719	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	550	7e3f469	250826-2134	none	D	id:003124,src:003106,time:27668818,execs:2430723,op:havoc,rep:3 |	
+BIC	libxml2	550	7e3f469	250826-2135	none	D	id:002276,src:002145,time:9450407,execs:850291,op:havoc,rep:3 |	
+BIC	libxml2	550	7e3f469	250826-2136	none	D	id:001905,src:001470,time:4307296,execs:409155,op:havoc,rep:2 |	
+BIC	libxml2	550	7e3f469	250826-2138	none	D	id:002384,src:000234+002376,time:11948235,execs:1084201,op:splice,rep:8 |	
+BIC	libxml2	550	7e3f469	250826-2139	none	D	id:003914,src:003913,time:55581364,execs:4398054,op:havoc,rep:2 |	
+BIC	libxml2	550	7e3f469	250903-1710	none	D	id:003308,src:002712,time:37542890,execs:3635544,op:havoc,rep:1 |	
+BIC	libxml2	550	7e3f469	250903-1712	none	D	id:002540,src:002529,time:13357044,execs:1300690,op:havoc,rep:2 |	
+BIC	libxml2	550	7e3f469	250903-1715	none	D	id:003274,src:003203,time:39287460,execs:3789982,op:havoc,rep:1 |	
+BIC	libxml2	550	7e3f469	250903-1717	none	D	id:001346,src:000004,time:3307145,execs:338228,op:havoc,rep:5,+cov |	
+BIC	libxml2	550	7e3f469	250903-1719	none	D	id:001837,src:001740,time:6886564,execs:611417,op:havoc,rep:1,+cov |	
+BIC	poppler	1282	3d35d20	250827-1951	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:24084,execs:1122,op:quick,pos:292	24084.0
+BIC	poppler	1282	3d35d20	250827-2003	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:17264,execs:977,op:quick,pos:244	17264.0
+BIC	poppler	1282	3d35d20	250827-2026	bug_^heap-use-after-free	B	id:000000,sig:06,src:000002,time:24655,execs:1128,op:quick,pos:279	24655.0
+BIC	poppler	1282	3d35d20	250903-1703	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:2339,execs:340,op:inf,pos:0	2339.0
+BIC	poppler	1282	3d35d20	250903-1722	bug_^heap-use-after-free	B	id:000000,sig:06,src:000001,time:3720,execs:524,op:havoc,rep:2	3720.0
+BIC	poppler	1282	3d35d20	250903-1746	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:2412,execs:350,op:inf,pos:0	2412.0
+BIC	poppler	1282	3d35d20	250903-1809	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:2506,execs:349,op:inf,pos:0	2506.0
+BIC	poppler	1282	3d35d20	250903-1837	bug_^heap-use-after-free	B	id:000000,sig:06,src:000004,time:7572,execs:1010,op:quick,pos:240	7572.0
+BIC	poppler	1289	3cae777	250827-1940	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	poppler	1289	3cae777	250827-1951	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	poppler	1289	3cae777	250827-2003	bug_^Aborted	B	id:000005,sig:06,src:000002,time:9622,execs:467,op:quick,pos:70	9622.0
+BIC	poppler	1289	3cae777	250827-2015	bug_SEGV^SEGV	X	id:000000,sig:11,src:000003,time:7294,execs:367,op:quick,pos:51	7294.0
+BIC	poppler	1289	3cae777	250827-2026	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	poppler	1289	3cae777	250903-1703	bug_^Aborted	B	id:000003,sig:06,src:000002,time:4562,execs:607,op:quick,pos:60	4562.0
+BIC	poppler	1289	3cae777	250903-1722	bug_^Aborted	B	id:000004,sig:06,src:000002,time:3543,execs:468,op:quick,pos:70	3543.0
+BIC	poppler	1289	3cae777	250903-1746	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	poppler	1289	3cae777	250903-1809	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	poppler	1289	3cae777	250903-1837	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	jerryscript	5013	b7e3bae	250826-2133	bug_Aborted^Aborted	X	id:000000,sig:06,src:000000,time:77924,execs:21821,op:havoc,rep:1	77924.0
+BIC	jerryscript	5013	b7e3bae	250826-2139	bug_stack-overflow^stack-overflow	X	id:000000,sig:06,src:000000,time:1403,execs:549,op:quick,pos:133	1403.0
+BIC	jerryscript	5013	b7e3bae	250826-2145	bug_Aborted^Aborted	X	id:000000,sig:06,src:000002,time:136110,execs:36318,op:havoc,rep:2	136110.0
+BIC	jerryscript	5013	b7e3bae	250826-2150	bug_^Aborted	B	id:000000,sig:06,src:000001,time:101758,execs:27723,op:havoc,rep:1	101758.0
+BIC	jerryscript	5013	b7e3bae	250826-2156	bug_Aborted^Aborted	X	id:000000,sig:06,src:002498+004647,time:12400773,execs:3000184,op:splice,rep:2	12400773.0
+BIC	jerryscript	5013	b7e3bae	250903-1708	bug_Aborted^Aborted	X	id:000000,sig:06,src:003762,time:7798294,execs:1595383,op:havoc,rep:4	7798294.0
+BIC	jerryscript	5013	b7e3bae	250903-1714	bug_Aborted^Aborted	X	id:000000,sig:06,src:000362,time:588602,execs:150367,op:havoc,rep:1	588602.0
+BIC	jerryscript	5013	b7e3bae	250903-1720	bug_Aborted^Aborted	X	id:000000,sig:06,src:000981,time:1605508,execs:354584,op:havoc,rep:4	1605508.0
+BIC	jerryscript	5013	b7e3bae	250903-1727	bug_Aborted^Aborted	X	id:000000,sig:06,src:001410,time:1570129,execs:347287,op:havoc,rep:2	1570129.0
+BIC	jerryscript	5013	b7e3bae	250903-1733	bug_Aborted^Aborted	X	id:000000,sig:06,src:002219,time:2627166,execs:572313,op:havoc,rep:1	2627166.0
+BIC	jerryscript	5117	53b61c1	250826-2133	bug_^Aborted	B	id:000000,sig:06,src:000003,time:2530,execs:879,op:flip1,pos:66	2530.0
+BIC	jerryscript	5117	53b61c1	250826-2139	bug_^Aborted	B	id:000000,sig:06,src:000003,time:130378,execs:33674,op:havoc,rep:2	130378.0
+BIC	jerryscript	5117	53b61c1	250826-2145	bug_^Aborted	B	id:000000,sig:06,src:000003,time:151426,execs:38626,op:havoc,rep:3	151426.0
+BIC	jerryscript	5117	53b61c1	250826-2150	bug_^Aborted	B	id:000000,sig:06,src:000596+000002,time:295913,execs:73159,op:splice,rep:1	295913.0
+BIC	jerryscript	5117	53b61c1	250826-2156	bug_^Aborted	B	id:000000,sig:06,src:000003,time:3559,execs:1167,op:flip2,pos:35	3559.0
+BIC	jerryscript	5117	53b61c1	250903-1708	bug_^Aborted	B	id:000003,sig:06,src:000205,time:358055,execs:101269,op:quick,pos:47	358055.0
+BIC	jerryscript	5117	53b61c1	250903-1714	bug_^Aborted	B	id:000000,sig:06,src:000000,time:20568,execs:10465,op:havoc,rep:1	20568.0
+BIC	jerryscript	5117	53b61c1	250903-1720	bug_^Aborted	B	id:000000,sig:06,src:000001,time:28471,execs:12649,op:havoc,rep:1	28471.0
+BIC	jerryscript	5117	53b61c1	250903-1727	bug_^Aborted	B	id:000000,sig:06,src:000000,time:9601,execs:4807,op:havoc,rep:2	9601.0
+BIC	jerryscript	5117	53b61c1	250903-1733	bug_^Aborted	B	id:000000,sig:06,src:000000,time:14354,execs:6985,op:havoc,rep:2	14354.0
+BIC	jerryscript	5138	70e275e	250826-2133	bug_^Aborted	B	id:000000,sig:06,src:000001,time:189502,execs:46835,op:havoc,rep:4	189502.0
+BIC	jerryscript	5138	70e275e	250826-2139	bug_^Aborted	B	id:000000,sig:06,src:000003,time:1334,execs:503,op:quick,pos:80	1334.0
+BIC	jerryscript	5138	70e275e	250826-2145	bug_^Aborted	B	id:000000,sig:06,src:000000,time:1461,execs:535,op:quick,pos:109	1461.0
+BIC	jerryscript	5138	70e275e	250826-2150	bug_^Aborted	B	id:000000,sig:06,src:000004,time:46326,execs:13949,op:havoc,rep:3	46326.0
+BIC	jerryscript	5138	70e275e	250826-2156	bug_^Aborted	B	id:000000,sig:06,src:000001,time:1228,execs:442,op:quick,pos:82	1228.0
+BIC	jerryscript	5138	70e275e	250903-1708	bug_^Aborted	B	id:000000,sig:06,src:000002,time:705,execs:428,op:quick,pos:82	705.0
+BIC	jerryscript	5138	70e275e	250903-1714	bug_^Aborted	B	id:000000,sig:06,src:000000,time:54741,execs:25020,op:havoc,rep:3	54741.0
+BIC	jerryscript	5138	70e275e	250903-1720	bug_^Aborted	B	id:000000,sig:06,src:000001,time:2417,execs:1056,op:flip1,pos:53	2417.0
+BIC	jerryscript	5138	70e275e	250903-1727	bug_^Aborted	B	id:000000,sig:06,src:001317+001217,time:962052,execs:223246,op:splice,rep:2	962052.0
+BIC	jerryscript	5138	70e275e	250903-1733	bug_^Aborted	B	id:000000,sig:06,src:000000,time:727,execs:406,op:quick,pos:81	727.0
+BIC	jerryscript	5153	70e275e	250826-2133	bug_^Aborted	B	id:000000,sig:06,src:000001,time:1297,execs:504,op:quick,pos:99	1297.0
+BIC	jerryscript	5153	70e275e	250826-2139	bug_^Aborted	B	id:000000,sig:06,src:000000,time:1404,execs:529,op:quick,pos:116	1404.0
+BIC	jerryscript	5153	70e275e	250826-2145	bug_^Aborted	B	id:000000,sig:06,src:000002,time:48627,execs:14515,op:havoc,rep:3	48627.0
+BIC	jerryscript	5153	70e275e	250826-2150	bug_^Aborted	B	id:000000,sig:06,src:000004,time:2383,execs:811,op:quick,pos:259	2383.0
+BIC	jerryscript	5153	70e275e	250826-2156	bug_^Aborted	B	id:000000,sig:06,src:000549+000003,time:485703,execs:118019,op:splice,rep:3	485703.0
+BIC	jerryscript	5153	70e275e	250903-1708	bug_^Aborted	B	id:000000,sig:06,src:000000,time:22131,execs:11019,op:havoc,rep:3	22131.0
+BIC	jerryscript	5153	70e275e	250903-1714	bug_^Aborted	B	id:000000,sig:06,src:000000,time:758,execs:448,op:quick,pos:86	758.0
+BIC	jerryscript	5153	70e275e	250903-1720	bug_^Aborted	B	id:000000,sig:06,src:000003,time:33005,execs:15681,op:havoc,rep:2	33005.0
+BIC	jerryscript	5153	70e275e	250903-1727	bug_^Aborted	B	id:000000,sig:06,src:000002,time:675,execs:393,op:quick,pos:80	675.0
+BIC	jerryscript	5153	70e275e	250903-1733	bug_^Aborted	B	id:000000,sig:06,src:000001,time:511,execs:296,op:quick,pos:56	511.0
+BIC	z3	6914	a62e4b2	250827-1915	none	N	 |	
+BIC	z3	6914	a62e4b2	250827-1928	none	N	 |	
+BIC	z3	7246	dec87fe	250827-1911	behave	D	id:000884,src:000870+000571,time:6240997,execs:67235,op:splice,rep:3,+cov |	
+BIC	z3	7246	dec87fe	250827-1915	behave	D	id:000095,src:000002,time:415155,execs:4065,op:flip2,pos:5 |	
+BIC	z3	7246	dec87fe	250827-1920	none	D	id:000114,src:000000,time:443210,execs:4708,op:int32,pos:15,val:+127,+cov |	
+BIC	z3	7246	dec87fe	250827-1924	none	D	id:000288,src:000061+000259,time:990937,execs:10227,op:splice,rep:5,+cov |	
+BIC	z3	7246	dec87fe	250827-1928	none	D	id:000338,src:000000,time:880067,execs:11065,op:havoc,rep:8,+cov |	
+BIC	z3	7246	dec87fe	250903-1707	none	D	id:000151,src:000000,time:425596,execs:4697,op:havoc,rep:8,+cov |	
+BIC	z3	7246	dec87fe	250903-1720	none	D	id:000076,src:000000,time:154954,execs:1438,op:flip32,pos:15,+cov |	
+BIC	z3	7246	dec87fe	250903-1733	behave	D	id:000005,src:000003,time:1442,execs:48,op:quick,pos:0,+cov |	
+BIC	z3	7246	dec87fe	250903-1743	behave	D	id:000076,src:000004,time:71224,execs:3167,op:havoc,rep:2,+cov |	
+BIC	z3	7246	dec87fe	250903-1753	behave	D	id:000315,src:000001,time:461668,execs:14801,op:havoc,rep:4,+cov |	
+BIC	z3	7252	a7b1db6	250827-1911	none	N	 |	
+BIC	z3	7252	a7b1db6	250827-1915	none	N	 |	
+BIC	z3	7252	a7b1db6	250827-1920	none	N	 |	
+BIC	z3	7252	a7b1db6	250827-1924	none	N	 |	
+BIC	z3	7252	a7b1db6	250827-1928	none	N	 |	
+BIC	z3	7252	a7b1db6	250903-1733	none	N	 |	
+BIC	z3	7252	a7b1db6	250903-1743	none	N	 |	
+BIC	z3	7252	a7b1db6	250903-1753	none	N	 |	
+BIC	php-src	16777	5cb38e9	250826-2135	none	N	 |	
+BIC	php-src	16777	5cb38e9	250826-2141	none	N	 |	
+BIC	php-src	16777	5cb38e9	250826-2147	none	N	 |	
+BIC	php-src	16777	5cb38e9	250826-2154	none	N	 |	
+BIC	php-src	16777	5cb38e9	250826-2201	none	N	 |	
+BIC	php-src	16777	5cb38e9	250903-1706	none	N	 |	
+BIC	php-src	16777	5cb38e9	250903-1712	none	N	 |	
+BIC	php-src	16777	5cb38e9	250903-1720	none	N	 |	
+BIC	php-src	16777	5cb38e9	250903-1729	none	N	 |	
+BIC	php-src	16777	5cb38e9	250903-1739	none	N	 |	
+BIC	php-src	16978	8c704ab	250826-2135	none	D	id:003803,src:001014,time:44095571,execs:531736,op:havoc,rep:2,+cov |	
+BIC	php-src	16978	8c704ab	250826-2141	bug_^negative-size-param	B	id:000000,sig:06,src:000002,time:2712737,execs:33141,op:havoc,rep:1	2712737.0
+BIC	php-src	16978	8c704ab	250826-2147	none	D	id:001762,src:001761,time:14149201,execs:171560,op:havoc,rep:2,+cov |	
+BIC	php-src	16978	8c704ab	250826-2154	bug_^negative-size-param	B	id:000000,sig:06,src:001333,time:6248788,execs:76162,op:havoc,rep:1	6248788.0
+BIC	php-src	16978	8c704ab	250826-2201	none	N	 |	
+BIC	php-src	16978	8c704ab	250903-1706	none	N	 |	
+BIC	php-src	16978	8c704ab	250903-1712	none	D	id:000809,src:000739,time:2680189,execs:31403,op:havoc,rep:1,+cov |	
+BIC	php-src	16978	8c704ab	250903-1720	bug_^negative-size-param	B	id:000000,sig:06,src:001665,time:10455208,execs:121788,op:havoc,rep:1	10455208.0
+BIC	php-src	16978	8c704ab	250903-1729	bug_^negative-size-param	B	id:000000,sig:06,src:001130,time:30150635,execs:350377,op:quick,pos:47,val:+2	30150635.0
+BIC	php-src	16978	8c704ab	250903-1739	bug_^negative-size-param	B	id:000000,sig:06,src:000003,time:1913048,execs:22116,op:havoc,rep:1	1913048.0
+BIC	php-src	17442	998bce1	250826-2135	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250826-2141	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250826-2147	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250826-2154	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250826-2201	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250903-1706	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250903-1712	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250903-1720	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250903-1729	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_4_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17442	998bce1	250903-1739	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave |	
+BIC	php-src	17463	7904a08	250826-2147	none	D	id:001429,src:001427,time:7237085,execs:177691,op:havoc,rep:1,+cov |	
+BIC	php-src	17463	7904a08	250826-2154	none	D	id:000038,src:000003,time:8959,execs:604,op:quick,pos:29,+cov |	
+BIC	php-src	17463	7904a08	250903-1706	none	N	 |	
+BIC	php-src	17463	7904a08	250903-1720	none	D	id:006888,src:006886,time:79838583,execs:1883981,op:havoc,rep:1 |	
+BIC	php-src	17463	7904a08	250903-1729	none	N	 |	
+BIC	php-src	17463	7904a08	250903-1739	none	N	 |	
+FIX	mujs	65	833f82c	250906-0154	none	N	 |	
+FIX	mujs	65	833f82c	250906-0156	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_833f82c_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	mujs	65	833f82c	250906-0157	bug_SEGV^	B	id:000000,sig:11,src:000004,time:890139,execs:236296,op:havoc,rep:2	890139.0
+FIX	mujs	65	833f82c	250906-0158	bug_SEGV^	B	id:000000,sig:11,src:001775+004024,time:20694956,execs:5468898,op:splice,rep:1	20694956.0
+FIX	mujs	65	833f82c	250906-0200	none	N	 |	
+FIX	mujs	65	833f82c	250906-0201	none	N	 |	
+FIX	mujs	65	833f82c	250906-0203	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_833f82c_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	mujs	65	833f82c	250906-0204	bug_SEGV^	B	id:000000,sig:11,src:005646+000002,time:65925463,execs:16080248,op:splice,rep:1	65925463.0
+FIX	mujs	65	833f82c	250906-0205	bug_SEGV^	B	id:000000,sig:11,src:001223+000446,time:1244220,execs:333080,op:splice,rep:2	1244220.0
+FIX	mujs	65	833f82c	250906-0207	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_833f82c_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	mujs	141	6871e5b	250906-0154	bug_heap-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#141_6871e5b_5_gpt-4o-2024-08-06_bug_heap-buffer-overflow^	0.0
+FIX	mujs	141	6871e5b	250906-0156	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:6357,execs:1538,op:arith8,pos:15,val:-18	6357.0
+FIX	mujs	141	6871e5b	250906-0157	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:003522,time:19785436,execs:4783884,op:havoc,rep:2	19785436.0
+FIX	mujs	141	6871e5b	250906-0158	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:002295,time:10092746,execs:2440514,op:havoc,rep:1	10092746.0
+FIX	mujs	141	6871e5b	250906-0200	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:36957,execs:8881,op:havoc,rep:6	36957.0
+FIX	mujs	141	6871e5b	250906-0201	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000257,time:8007549,execs:1938986,op:havoc,rep:2	8007549.0
+FIX	mujs	141	6871e5b	250906-0203	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:2548,execs:640,op:arith8,pos:2,val:-18	2548.0
+FIX	mujs	141	6871e5b	250906-0204	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001990,time:3444944,execs:835591,op:havoc,rep:2	3444944.0
+FIX	mujs	141	6871e5b	250906-0205	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000734,time:3589093,execs:876980,op:havoc,rep:3	3589093.0
+FIX	mujs	141	6871e5b	250906-0207	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001526+000621,time:10947472,execs:2241274,op:splice,rep:2	10947472.0
+FIX	mujs	145	f93d245	250906-0154	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000003,time:3443,execs:899,op:flip32,pos:10	3443.0
+FIX	mujs	145	f93d245	250906-0156	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:3542,execs:915,op:flip32,pos:12	3542.0
+FIX	mujs	145	f93d245	250906-0157	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:4270,execs:1071,op:flip32,pos:25	4270.0
+FIX	mujs	145	f93d245	250906-0158	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:16408,execs:3965,op:havoc,rep:3	16408.0
+FIX	mujs	145	f93d245	250906-0200	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000000,time:45699,execs:11247,op:havoc,rep:1	45699.0
+FIX	mujs	145	f93d245	250906-0201	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000002,time:33211,execs:8115,op:havoc,rep:4	33211.0
+FIX	mujs	145	f93d245	250906-0203	bug_global-buffer-overflow^	B	id:000000,sig:06,src:000001,time:5789,execs:1430,op:arith8,pos:17,val:-6	5789.0
+FIX	mujs	145	f93d245	250906-0204	bug_global-buffer-overflow^	B	id:000000,sig:06,src:000001,time:6489,execs:1601,op:arith8,pos:17,val:-6	6489.0
+FIX	mujs	145	f93d245	250906-0205	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:3639,execs:900,op:flip32,pos:12	3639.0
+FIX	mujs	145	f93d245	250906-0207	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:000001,time:4366,execs:1079,op:flip32,pos:22	4366.0
+FIX	mujs	166	8b5ba20	250906-0154	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0156	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0157	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0158	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0200	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0201	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0203	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0204	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0205	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	mujs	166	8b5ba20	250906-0207	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	535	d0c3f01	250826-0828	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250826-0831	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250826-0833	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250826-0836	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250826-0839	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250903-1843	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250903-1845	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250903-1847	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250903-1849	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	250903-1850	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	poppler	1282	4564a00	250825-0916	none	N	 |	
+FIX	poppler	1282	4564a00	250825-0927	none	N	 |	
+FIX	poppler	1282	4564a00	250825-0953	bug_Aborted^	B	id:000000,sig:06,src:002172,time:26736473,execs:1192845,op:havoc,rep:6	26736473.0
+FIX	poppler	1282	4564a00	250825-1002	none	N	 |	
+FIX	poppler	1282	4564a00	250904-0351	none	N	 |	
+FIX	poppler	1282	4564a00	250904-0402	none	N	 |	
+FIX	poppler	1282	4564a00	250904-0411	none	N	 |	
+FIX	poppler	1282	4564a00	250904-0422	none	N	 |	
+FIX	poppler	1282	4564a00	250904-0431	none	N	 |	
+FIX	poppler	1289	efb6868	250825-0916	bug_Aborted^	B	id:000000,sig:06,src:000001,time:8108,execs:449,op:quick,pos:58	8108.0
+FIX	poppler	1289	efb6868	250825-0927	bug_Aborted^	B	id:000000,sig:06,src:000000,time:8664,execs:457,op:quick,pos:70	8664.0
+FIX	poppler	1289	efb6868	250825-0953	bug_Aborted^	B	id:000000,sig:06,src:000000,time:7090,execs:372,op:quick,pos:57	7090.0
+FIX	poppler	1289	efb6868	250904-0351	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	poppler	1289	efb6868	250904-0402	bug_Aborted^	B	id:000000,sig:06,src:000000,time:2215,execs:331,op:quick,pos:57	2215.0
+FIX	poppler	1289	efb6868	250904-0411	bug_Aborted^	B	id:000000,sig:06,src:000000,time:3522,execs:501,op:quick,pos:70	3522.0
+FIX	poppler	1289	efb6868	250904-0422	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	poppler	1289	efb6868	250904-0431	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	poppler	1303	a4ca3a9	250904-0402	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#1303_a4ca3a9_2_gpt-4o-2024-08-06_behave |	
+FIX	jerryscript	5013	3686410	250825-2226	bug_Aborted^	B	id:000000,sig:06,src:000002,time:4827051,execs:1168290,op:havoc,rep:1	4827051.0
+FIX	jerryscript	5013	3686410	250825-2228	bug_Aborted^	B	id:000000,sig:06,src:000000,time:80018,execs:22094,op:havoc,rep:1	80018.0
+FIX	jerryscript	5013	3686410	250825-2230	bug_Aborted^	B	id:000004,sig:06,src:000004,time:4736545,execs:1147944,op:havoc,rep:2	4736545.0
+FIX	jerryscript	5013	3686410	250825-2232	bug_Aborted^	B	id:000015,sig:06,src:000257,time:43204576,execs:8843424,op:havoc,rep:1	43204576.0
+FIX	jerryscript	5013	3686410	250825-2234	bug_Aborted^	B	id:000000,sig:06,src:000000,time:109612,execs:23983,op:havoc,rep:1	109612.0
+FIX	jerryscript	5013	3686410	250903-2144	bug_Aborted^	B	id:000021,sig:06,src:000003,time:5972066,execs:1368576,op:havoc,rep:1	5972066.0
+FIX	jerryscript	5013	3686410	250903-2150	bug_Aborted^	B	id:000001,sig:06,src:000001,time:5105772,execs:1180305,op:havoc,rep:2	5105772.0
+FIX	jerryscript	5013	3686410	250903-2156	bug_Aborted^	B	id:000000,sig:06,src:000002,time:4214363,execs:998459,op:havoc,rep:2	4214363.0
+FIX	jerryscript	5013	3686410	250903-2201	bug_Aborted^	B	id:000004,sig:06,src:000001,time:4989331,execs:1167084,op:havoc,rep:1	4989331.0
+FIX	jerryscript	5013	3686410	250903-2208	bug_Aborted^	B	id:000004,sig:06,src:001137+000001,time:36381693,execs:8293567,op:splice,rep:1	36381693.0
+FIX	jerryscript	5117	d7e2125	250825-2226	none	X	id:000000,sig:06,src:000000,time:27969,execs:9863,op:havoc,rep:1	27969.0
+FIX	jerryscript	5117	d7e2125	250825-2228	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	jerryscript	5117	d7e2125	250825-2230	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	jerryscript	5117	d7e2125	250825-2232	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	jerryscript	5117	d7e2125	250825-2234	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
+FIX	jerryscript	5117	d7e2125	250903-2144	bug_Aborted^	B	id:000139,sig:06,src:007058,time:32037410,execs:7165197,op:havoc,rep:2	32037410.0
+FIX	jerryscript	5117	d7e2125	250903-2150	bug_Aborted^Aborted	X	id:000000,sig:06,src:000001,time:44769,execs:21322,op:havoc,rep:5	44769.0
+FIX	jerryscript	5117	d7e2125	250903-2156	bug_Aborted^	B	id:000065,sig:06,src:001250+000004,time:10788804,execs:2503377,op:splice,rep:2	10788804.0
+FIX	jerryscript	5117	d7e2125	250903-2201	bug_Aborted^	B	id:000341,sig:06,src:008033,time:85181073,execs:19469079,op:havoc,rep:1	85181073.0
+FIX	jerryscript	5117	d7e2125	250903-2208	none	X	id:000000,sig:06,src:000003,time:5880,execs:3047,op:arith8,pos:27,val:+14	5880.0
+FIX	jerryscript	5138	95cc5e9	250825-2226	bug_Aborted^	B	id:000104,sig:06,src:003631+002712,time:16504633,execs:3859587,op:splice,rep:2	16504633.0
+FIX	jerryscript	5138	95cc5e9	250825-2228	bug_Aborted^Aborted	X	id:000000,sig:06,src:000000,time:248704,execs:60327,op:havoc,rep:1	248704.0
+FIX	jerryscript	5138	95cc5e9	250825-2230	none	X	id:000000,sig:06,src:000725+000682,time:510969,execs:107182,op:splice,rep:3	510969.0
+FIX	jerryscript	5138	95cc5e9	250825-2232	bug_Aborted^	B	id:000130,sig:06,src:007426,time:43622044,execs:8926901,op:havoc,rep:3	43622044.0
+FIX	jerryscript	5138	95cc5e9	250825-2234	bug_Aborted^Aborted	X	id:000000,sig:06,src:000000,time:98486,execs:21605,op:havoc,rep:1	98486.0
+FIX	jerryscript	5138	95cc5e9	250903-2144	bug_Aborted^Aborted	X	id:000000,sig:06,src:000000,time:92073,execs:38476,op:havoc,rep:1	92073.0
+FIX	jerryscript	5138	95cc5e9	250903-2150	bug_Aborted^	B	id:000114,sig:06,src:005836+006811,time:44086956,execs:9747397,op:splice,rep:1	44086956.0
+FIX	jerryscript	5138	95cc5e9	250903-2156	bug_Aborted^Aborted	X	id:000000,sig:06,src:000001,time:30636,execs:14507,op:havoc,rep:2	30636.0
+FIX	jerryscript	5138	95cc5e9	250903-2201	bug_Aborted^	B	id:000039,sig:06,src:006333,time:19596583,execs:4404687,op:havoc,rep:8	19596583.0
+FIX	jerryscript	5138	95cc5e9	250903-2208	bug_Aborted^Aborted	X	id:000000,sig:06,src:000001,time:49072,execs:21633,op:havoc,rep:2	49072.0
+FIX	z3	7252	a6b5027	250826-2135	none	N	 |	
+FIX	z3	7252	a6b5027	250826-2140	none	N	 |	
+FIX	z3	7252	a6b5027	250826-2150	none	N	 |	
+FIX	z3	7252	a6b5027	250903-2341	none	N	 |	
+FIX	z3	7252	a6b5027	250903-2351	none	N	 |	
+FIX	php-src	16777	18b18f0	250825-1737	none	N	 |	
+FIX	php-src	16777	18b18f0	250825-1740	none	N	 |	
+FIX	php-src	16777	18b18f0	250825-1744	none	N	 |	
+FIX	php-src	16777	18b18f0	250825-1747	none	N	 |	
+FIX	php-src	16777	18b18f0	250825-1750	none	N	 |	
+FIX	php-src	16777	18b18f0	250903-2305	none	N	 |	
+FIX	php-src	16777	18b18f0	250903-2310	none	N	 |	
+FIX	php-src	16777	18b18f0	250903-2315	none	N	 |	
+FIX	php-src	16777	18b18f0	250903-2320	none	N	 |	
+FIX	php-src	16777	18b18f0	250903-2326	none	N	 |	
+FIX	php-src	17463	e4473ab	250825-1737	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250825-1740	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250825-1744	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250825-1747	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250825-1750	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250903-2305	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250903-2310	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250903-2315	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250903-2320	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	php-src	17463	e4473ab	250903-2326	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
