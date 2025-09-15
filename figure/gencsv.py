@@ -74,6 +74,7 @@ def parse_summary_file(file_path):
                 if final_result == 'X' and commit in MANUAL_MAP:
                   score = MANUAL_MAP[commit]
                 if config['GIT_INFO'] == 'MSGONLY' and commit == '907d05a' and final_result == 'D':  # poppler #1305 FIX MSGONLY one behave cannot be reproduced, set to 0
+                  final_result = 'N'
                   score = 0
                 success = 1 if final_result == 'B' else 0
                 results.append((commit, final_result, unintended_bug, time, issue, score, success))

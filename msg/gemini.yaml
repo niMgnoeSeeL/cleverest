@@ -11,6 +11,10 @@
     string, specifically observed when `Array.prototype.splice` is called with `Function.prototype`
     as an argument.'
   msg_reduced: 'Fix issue #65: Uninitialized name in Function'
+  best_result_enhanced: B
+  score_enhanced: 3.0
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: mujs
   issue: 141
   commit: 6871e5b
@@ -23,6 +27,8 @@
     caused a heap-buffer-overflow when parsing incomplete escape sequences like `\c`,
     `\x`, or `\u` at the end of a regular expression string.'
   msg_reduced: null
+  best_result_enhanced: B
+  score_enhanced: 3.0
 - proj: mujs
   issue: 145
   commit: f93d245
@@ -34,6 +40,10 @@
   msg_enhanced: Fix js_strtol when the input string contains characters with an ASCII
     value less than '0', leading to incorrect number conversion and potential global-buffer-overflow.
   msg_reduced: Fix strtol
+  best_result_enhanced: B
+  score_enhanced: 3.0
+  best_result_reduced: B
+  score_reduced: 1.8
 - proj: mujs
   issue: 166
   commit: 8b5ba20
@@ -50,6 +60,8 @@
 
 
     Add a scratch buffer to js_State to hold temporary strings.'
+  best_result_reduced: B
+  score_reduced: 1.6
 - proj: libxml2
   issue: 535
   commit: d0c3f01
@@ -77,6 +89,8 @@
 
 
     Fixes #535.'
+  best_result_reduced: B
+  score_reduced: 3.0
 - proj: libxml2
   issue: 550
   commit: 6273df6
@@ -106,6 +120,8 @@
 
     Fixes #550.'
   msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
 - proj: poppler
   issue: 1282
   commit: 4564a00
@@ -117,6 +133,10 @@
   msg_enhanced: 'pdfunite: Fix crash on broken files when `PDFDoc::replacePageDict`
     attempts to access a page dictionary from a non-dictionary object.'
   msg_reduced: 'pdfunite: Fix crash'
+  best_result_enhanced: R
+  score_enhanced: 0.9
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: poppler
   issue: 1289
   commit: efb6868
@@ -128,6 +148,8 @@
   msg_enhanced: 'pdfunite: Don''t crash when merging documents containing AcroForm
     dictionaries where the "Fields" array contains a non-reference object.'
   msg_reduced: null
+  best_result_enhanced: B
+  score_enhanced: 2.1
 - proj: poppler
   issue: 1303
   commit: a4ca3a9
@@ -146,6 +168,8 @@
     dictionary is a negative integer, leading to a segmentation fault when accessing
     array elements with the invalid index.'
   msg_reduced: null
+  best_result_enhanced: D
+  score_enhanced: 1.6
 - proj: poppler
   issue: 1305
   commit: 907d05a
@@ -170,6 +194,10 @@
 
 
     Issue #1305'
+  best_result_enhanced: N
+  score_enhanced: 0.0
+  best_result_reduced: R
+  score_reduced: 0.1
 - proj: poppler
   issue: 1381
   commit: 1be35ee
@@ -194,6 +222,8 @@
 
     Fixes issue #1381'
   msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
 - proj: jerryscript
   issue: 5013
   commit: '3686410'
@@ -225,6 +255,10 @@
 
 
     JerryScript-DCO-1.0-Signed-off-by: Zoltan Herczeg zherczeg.u-szeged@partner.samsung.com'
+  best_result_enhanced: R
+  score_enhanced: 1.0
+  best_result_reduced: N
+  score_reduced: 0.0
 - proj: jerryscript
   issue: 5138
   commit: 95cc5e9
@@ -259,6 +293,10 @@
     JerryScript-DCO-1.0-Signed-off-by: Baihe Jiang <baihe.jiang@outlook.com>
 
     JerryScript-DCO-1.0-Signed-off-by: Lily Jiang bhjiang.whu@hotmail.com'
+  best_result_enhanced: B
+  score_enhanced: 3.0
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: jerryscript
   issue: 5117
   commit: d7e2125
@@ -282,11 +320,15 @@
 
 
     JerryScript-DCO-1.0-Signed-off-by: Máté Tokodi mate.tokodi@szteszoftver.hu'
+  best_result_enhanced: B
+  score_enhanced: 2.8
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: jerryscript
   issue: 5153
   commit: de51531
   scenario: FIX
-  best_result: N
+  best_result: B
   best_result_msgonly: N
   score_msgonly: 0.0
   msg: 'Fix parsing of invalid asterix symbol after private field symbol (#5155)
@@ -306,6 +348,8 @@
 
     JerryScript-DCO-1.0-Signed-off-by: Ádám Kulcsár kuladam@inf.u-szeged.hu'
   msg_reduced: null
+  best_result_enhanced: B
+  score_enhanced: 1.2
 - proj: z3
   issue: 6659
   commit: a849a29
@@ -317,6 +361,8 @@
   msg_enhanced: 'fix #6659: heap-use-after-free triggered by caching a freed expression
     node in dominator simplifier during `dom-simplify` tactic execution'
   msg_reduced: null
+  best_result_enhanced: R
+  score_enhanced: 0.9
 - proj: z3
   issue: 6914
   commit: eea9c0b
@@ -328,6 +374,10 @@
   msg_enhanced: 'fix #6914: heap-use-after-free with str.to_int in nested quantifiers
     due to missing eval cache reset'
   msg_reduced: '#6914'
+  best_result_enhanced: R
+  score_enhanced: 0.7
+  best_result_reduced: N
+  score_reduced: 0.0
 - proj: z3
   issue: 7246
   commit: 49610f5
@@ -342,6 +392,8 @@
   msg_enhanced: 'fix #7246: prevent segfault when push occurs before set-logic by
     validating solver state during pop'
   msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
 - proj: z3
   issue: 7252
   commit: a6b5027
@@ -357,6 +409,8 @@
     when handling specific boundary values for nested re.loop expressions with same
     bounds of 0 and 1'
   msg_reduced: null
+  best_result_enhanced: B
+  score_enhanced: 1.6
 - proj: php-src
   issue: 16777
   commit: 18b18f0
@@ -382,11 +436,15 @@
 
 
     Closes GH-16824.'
+  best_result_enhanced: R
+  score_enhanced: 0.7
+  best_result_reduced: N
+  score_reduced: 0.0
 - proj: php-src
   issue: 16978
   commit: d17ed34
   scenario: FIX
-  best_result: R
+  best_result: D
   best_result_msgonly: N
   score_msgonly: 0.0
   msg: 'Fixed GH-16978: Avoid unnecessary padding with leading zeros (#16988)
@@ -411,6 +469,8 @@
 
     closes #16988'
   msg_reduced: null
+  best_result_enhanced: D
+  score_enhanced: 0.2
 - proj: php-src
   issue: 17442
   commit: b068c2f
@@ -430,6 +490,8 @@
 
     Closes GH-17443.'
   msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
 - proj: php-src
   issue: 17463
   commit: e4473ab
@@ -446,3 +508,5 @@
 
 
     close GH-465'
+  best_result_reduced: B
+  score_reduced: 3.0
