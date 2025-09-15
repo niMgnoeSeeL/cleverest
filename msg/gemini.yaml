@@ -174,9 +174,9 @@
   issue: 1305
   commit: 907d05a
   scenario: FIX
-  best_result: D
-  best_result_msgonly: D
-  score_msgonly: 0.2
+  best_result: R
+  best_result_msgonly: N
+  score_msgonly: 0.0
   msg: 'Fix crash in file that wants to do huge transparency group
 
 
@@ -190,14 +190,9 @@
 
 
     Issue #1305'
-  msg_reduced: 'Fix crash in file that wants to do transparency group
-
-
-    Issue #1305'
+  msg_reduced: null
   best_result_enhanced: N
   score_enhanced: 0.0
-  best_result_reduced: R
-  score_reduced: 0.1
 - proj: poppler
   issue: 1381
   commit: 1be35ee

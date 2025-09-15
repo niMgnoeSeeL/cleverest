@@ -8,6 +8,7 @@ import yaml
 import logging
 import argparse
 from litellm import completion
+from pandas.io.formats.style import Styler
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -114,8 +115,8 @@ def generate_excel_data(df_targets, df_agg, repo_root):
         df_fix_enhanced = df_fix[df_fix['git_info'] == 'ENHANCED']
         df_fix_reduced = df_fix[df_fix['git_info'] == 'REDUCED']
         
-        def calculate_score_avg(df):
-            return df['final_result'].map(SCORE_MAP).mean()
+        def calculate_score_avg(df: pd.DataFrame):
+            return df['score'].mean()
             
         def best_result(df):
             # get best result among B > D > R > X > N in all 'final_result'
@@ -179,11 +180,13 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
         commit_info_fix = get_commit_message(repo_path, commit_fix, msgonly=False)
         
         # Use pandas DataFrame for counting success
-        df_fix = df_agg[(df_agg['commit'] == commit_fix) & (df_agg['iid'] == issue)]
+        df_fix = df_agg[(df_agg['commit'] == commit_fix) & (df_agg['iid'] == issue) & (df_agg['LLM'] != 'deepseek-r1')]
         df_fix_msgonly = df_fix[df_fix['git_info'] == 'MSGONLY']
+        df_fix_enhanced = df_fix[df_fix['git_info'] == 'ENHANCED']
+        df_fix_reduced = df_fix[df_fix['git_info'] == 'REDUCED']
         
         def calculate_score_avg(df: pd.DataFrame):
-            return df['final_result'].map(SCORE_MAP).mean()
+            return df['score'].mean()
 
         def best_result(df: pd.DataFrame) -> str:
             for result in ['B', 'D', 'R', 'X', 'N']:
@@ -194,6 +197,12 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
         result_fix = best_result(df_fix)
         result_fix_msgonly = best_result(df_fix_msgonly)
         score_fix_msgonly = calculate_score_avg(df_fix_msgonly)
+        if not df_fix_enhanced.empty:
+            result_fix_enhanced = best_result(df_fix_enhanced)
+            score_fix_enhanced = calculate_score_avg(df_fix_enhanced)
+        if not df_fix_reduced.empty:
+            result_fix_reduced = best_result(df_fix_reduced)
+            score_fix_reduced = calculate_score_avg(df_fix_reduced)
 
         # msgfix_can_enhance = result_fix_msgonly != 'B'
         # msgfix_can_reduce = result_fix_msgonly not in ['N', 'X']
@@ -211,20 +220,19 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
 
         enhanced_msg, reduced_msg = None, None
         logger.debug(f"{issue=}, {result_fix_msgonly=}, {score_fix_msgonly=}, {msgfix_can_enhance=}")
-        if do_enhance:
-            if msgfix_can_enhance:
-                logger.debug(f"Try to first read existing enhanced message for {issue} {commit_fix}")
-                enhanced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_enhanced")
-                if not enhanced_msg:
-                    logger.debug(f"No existing enhanced message, call LLM to enhance")
-                    enhanced_msg = enhance_msg(url_issue, commit_info_fix)
-            if msgfix_can_reduce:
-                logger.debug(f"Try to first read existing reduced message for {issue} {commit_fix}")
-                reduced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_reduced")
-                if not reduced_msg:
-                    logger.debug(f"No existing reduced message, put original msg for manual edit later")
-                    reduced_msg = msg_fix
-        msg_rows.append({
+        if msgfix_can_enhance:
+            logger.debug(f"Try to first read existing enhanced message for {issue} {commit_fix}")
+            enhanced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_enhanced")
+            if not enhanced_msg and do_enhance:
+                logger.debug(f"No existing enhanced message, call LLM to enhance")
+                enhanced_msg = enhance_msg(url_issue, commit_info_fix)
+        if msgfix_can_reduce:
+            logger.debug(f"Try to first read existing reduced message for {issue} {commit_fix}")
+            reduced_msg = read_yaml("gemini.yaml.bak", commit_fix, "msg_reduced")
+            if not reduced_msg and do_enhance:
+                logger.debug(f"No existing reduced message, put original msg for manual edit later")
+                reduced_msg = msg_fix
+        yaml_item = {
             'proj': proj,
             'issue': issue,
             'commit': commit_fix,
@@ -235,8 +243,19 @@ def generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=False):
             'msg': msg_fix,
             'msg_enhanced': enhanced_msg,
             'msg_reduced': reduced_msg,
-        })
-    
+        }
+        if msgfix_can_enhance and not df_fix_enhanced.empty:
+            yaml_item.update({
+                'best_result_enhanced': result_fix_enhanced,
+                'score_enhanced': float(score_fix_enhanced),
+            })
+        if msgfix_can_reduce and not df_fix_reduced.empty:
+            yaml_item.update({
+                'best_result_reduced': result_fix_reduced,
+                'score_reduced': float(score_fix_reduced),
+            })
+        msg_rows.append(yaml_item)
+
     return msg_rows
 
 def main():
@@ -248,7 +267,7 @@ def main():
     script_dir = Path(__file__).parent
     figure_dir = script_dir.parent / "figure"
     input_file_targets = figure_dir / "targets.csv"
-    input_file_agg = figure_dir / "aggregated_results_10rep.csv"
+    input_file_agg = figure_dir / "aggregated_results.csv"
     output_file_csv = script_dir / "msg_success.csv"
     output_file_excel = script_dir / "msg_success.xlsx"
     output_msg_yaml = script_dir / "gemini.yaml"
@@ -269,16 +288,35 @@ def main():
     df_out['issue'] = df_out.apply(lambda row: make_hyperlink(row['issue'], row['issue_url']), axis=1)
     df_out.drop(columns=['issue_url'], inplace=True)  # Remove the issue_url column
 
-    # Write to Excel with hyperlinks
-    df_out.to_excel(output_file_excel, index=False)
-    
-    # Generate and save YAML data if --enhance flag is provided
-    if args.enhance:
-        msg_rows = generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=True)
-        write_yaml(msg_rows, output_msg_yaml)
-        print(f"Generated {output_file_csv}, {output_file_excel}, and {output_msg_yaml} with {len(df_out)} rows")
-    else:
-        print(f"Generated {output_file_csv} and {output_file_excel} with {len(df_out)} rows")
+    # Define a function for conditional formatting
+    def highlight_scores(row):
+        styles = ['']
+        if row['score_fix_enhanced'] > row['score_fix_msgonly']:
+            styles.append('background-color: green')
+        elif row['score_fix_enhanced'] < row['score_fix_msgonly']:
+            styles.append('background-color: orange')
+        else:
+            styles.append('')
 
+        if row['score_fix_reduced'] < row['score_fix_msgonly']:
+            styles.append('background-color: green')
+        elif row['score_fix_reduced'] > row['score_fix_msgonly']:
+            styles.append('background-color: orange')
+        else:
+            styles.append('')
+
+        return styles
+
+    # Apply conditional formatting
+    styled_df = df_out.style.apply(lambda row: highlight_scores(row), axis=1, subset=['score_fix_msgonly', 'score_fix_enhanced', 'score_fix_reduced'])
+
+    # Write to Excel with conditional formatting
+    styled_df.to_excel(output_file_excel, index=False, engine='openpyxl')
+
+    # Generate and save YAML data
+    msg_rows = generate_yaml_data(df_targets, df_agg, repo_root, do_enhance=args.enhance)
+    write_yaml(msg_rows, output_msg_yaml)
+    print(f"Generated {output_file_csv}, {output_file_excel}, and {output_msg_yaml} with {len(df_out)} rows")
+ 
 if __name__ == "__main__":
     main()
