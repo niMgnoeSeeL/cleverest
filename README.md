@@ -14,11 +14,11 @@ The full paper is available at [INSERT](INSERT).
 
 ## Data Replication
 
-In the paper, we run experiments on 6 software (mujs, libxml2, poppler, jerryscript, z3, php) for 2 scenarios (bug-finding and bug-reproduction) under 9 different ablation settings (default, MSGONLY, DIFFONLY, GENCMD, TEMP1.0, gpt-4o-mini, deepseek-r1, ITER10, NOFEEDBACK) and repeat 5 times. Each software has 80 experiments (90 for libxml2 and poppler becuase only these two have CLI options to test with GENCMD).
+In the paper, we run experiments on 6 software (mujs, libxml2, poppler, jerryscript, z3, php) for 2 scenarios (bug-finding and bug-reproduction) under 10 different ablation settings (default, MSGONLY, DIFFONLY, GENCMD, TEMP1.0, gpt-4o-mini, deepseek-r1, ITER10, NOFEEDBACK, ENHANCED/REDUCED for FIX scenario) and repeat 10 times. Each software has 180 experiments (200 for libxml2 and poppler becuase only these two have CLI options to test with GENCMD).
 
-The result of all experiments on all commits is aggregated as a CSV file in `figure/aggregated_results.csv` with 1910 data rows. The tables in the paper are then drawed from this CSV file.
+The result of all experiments on all commits is aggregated as a CSV file in `figure/aggregated_results.csv` with 4280 data rows. The tables in the paper are then drawed from this CSV file.
 
-The data of experiments in the paper is available at `repdata.tar.xz` (uncompressed size 400+ MB), which contains 500 text files prefixed by `SUMMARY_` and 500 folders prefixed by `exp_`. For each software, there are 80 (90 for libxml2 and poppler) `SUMMARY_*` files and `exp_*` folders corresponding to different ablation settings. The `SUMMARY_*` file contains the configuration of a experiment and the result for each commit in a table format. The `exp_*` folder contains intemidiate data containing full history of interacting with LLM (`chat_*.log`), all generated test cases (`INPUT_*`), non-trival test cases that trigger bugs, cause output difference or reach commit-changed code (`TRIGGER_*`) and other useful intermediate files.
+The data of experiments in the paper is available at `repdata.tar.xz` (uncompressed size 1.2 GB), which contains 1120 text files prefixed by `SUMMARY_` and 1120 folders prefixed by `exp_`. For each software, there are 180 (200 for libxml2 and poppler) `SUMMARY_*` files and `exp_*` folders corresponding to different ablation settings. The `SUMMARY_*` file contains the configuration of a experiment and the result for each commit in a table format. The `exp_*` folder contains intemidiate data containing full history of interacting with LLM (`chat_*.log`), all generated test cases (`INPUT_*`), non-trival test cases that trigger bugs, cause output difference or reach commit-changed code (`TRIGGER_*`) and other useful intermediate files.
 
 ## Evaluation Setup
 
@@ -96,6 +96,16 @@ NOFEEDBACK=1 ./run.sh $conf
 MAX_ITER=10 ./run.sh $conf
 ```
 
-### RQ3: Comparison to the State-of-the-Art
+### RQ3: Effectiveness of Commit Messages
+
+The enhanced/reduced commit messages produced by gemini-2.5-flash are stored in `msg/gemini.yaml` for reference.
+To run experiments with enhanced/reduced commit messages, run the following commands:
+
+```bash
+SCENARIO=FIX GIT_INFO=ENHANCED ./run.sh $conf
+SCENARIO=FIX GIT_INFO=REDUCED ./run.sh $conf
+```
+
+### RQ4: Comparison to the State-of-the-Art
 
 Follow instructions in [`fuzz/README.md`](fuzz/README.md) to run WAFLGo and ClevFuzz experiments.
