@@ -62,4 +62,5 @@ RUN git config --global --add safe.directory /home/jq
 # avoid WAFLGo exit when seeds crash
 ENV AFL_SKIP_CRASHES=1
 # Run fuzz in tmux session
-CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source jq.env && run_waflgo'" Enter && bash
+WORKDIR /home/jq
+CMD tmux new-session -d -s fuzz_$commit && tmux send-keys -t fuzz_$commit "timeout 24h bash -c 'source ../jq.env && run_waflgo'" Enter && bash
