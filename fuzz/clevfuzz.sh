@@ -35,6 +35,7 @@ for i in "${!COMMITS[@]}"; do
     issue=${ISSUES[$i]}
     commit=${COMMITS[$i]}   
     id="#${issue}_${commit}"
+    [ "$PROJ_NAME" = "libxml2" ] && id="${issue}_${commit}"  # filename containing # affect libxml2 #550 bug-triggering
     buildafl_before=buildafl_before_$commit
     buildafl_after=buildafl_after_$commit
     indir=fuzzin_${id}
