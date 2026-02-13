@@ -1,6 +1,51 @@
-issue | commit | idx | final | time to find first crash in ms | first_crash
-550 | 7e3f469 | 1 | D | orig:dtd12 | out_libxml2_7e3f469_1/queue/id:000003,orig:dtd12
-550 | 7e3f469 | 2 | D | orig:dtd12 | out_libxml2_7e3f469_2/queue/id:000003,orig:dtd12
-550 | 7e3f469 | 3 | D | orig:dtd12 | out_libxml2_7e3f469_3/queue/id:000003,orig:dtd12
-550 | 7e3f469 | 4 | D | orig:dtd12 | out_libxml2_7e3f469_4/queue/id:000003,orig:dtd12
-550 | 7e3f469 | 5 | R | orig:dtd12 | out_libxml2_7e3f469_5/queue/id:000003,orig:dtd12
+issue | commit | idx | status | final | first crash | time to find first crash
+535 | 9a82b94 | 1 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_1/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 2 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_2/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 3 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_3/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 4 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_4/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 5 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_5/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 6 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_6/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 7 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_7/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 8 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_8/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 9 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_9/queue/id:000000,orig:dtd1 | orig:dtd1
+535 | 9a82b94 | 10 | bug_^global-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_10/queue/id:000000,orig:dtd1 | orig:dtd1
+550 | 74c84a8 | 1 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_1/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 2 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_2/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 3 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_3/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 4 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_4/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 5 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_5/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 6 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_6/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 7 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_7/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 8 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_8/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 9 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_9/queue/id:000013,orig:eve.dtd | 
+550 | 74c84a8 | 10 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_10/queue/id:000013,orig:eve.dtd | 
+553 | 1406b20 | 1 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_1/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 2 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_2/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 3 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_3/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 4 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_4/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 5 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_5/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 6 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_6/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 7 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_7/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 8 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_8/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 9 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_9/queue/id:000000,orig:dtd1 | orig:dtd1
+553 | 1406b20 | 10 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_10/queue/id:000000,orig:dtd1 | orig:dtd1
+720 | 14604a4 | 1 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_1/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 2 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_2/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 3 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_3/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 4 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_4/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 5 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_5/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 6 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_6/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 7 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_7/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 8 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_8/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 9 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_9/queue/id:000000,orig:dtd1 | 
+720 | 14604a4 | 10 | behave | D | /clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_10/queue/id:000000,orig:dtd1 | 
+841 | 9cfc723 | 1 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_1/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 2 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_2/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 3 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_3/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 4 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_4/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 5 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_5/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 6 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_6/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 7 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_7/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 8 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_8/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 9 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_9/queue/id:000000,orig:dtd1 | orig:dtd1
+841 | 9cfc723 | 10 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_10/queue/id:000000,orig:dtd1 | orig:dtd1

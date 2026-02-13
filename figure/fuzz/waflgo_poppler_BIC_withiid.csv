@@ -1,26 +1,51 @@
-issue | commit | idx | final | time to find first crash in ms | first_crash
-1282 | 3d35d20 | 1 | B | 344849 | out_poppler_3d35d20_1/queue/id:000586,344849,src:000005,op:flip8,pos:10606,+cov
-1282 | 3d35d20 | 2 | B | 337084 | out_poppler_3d35d20_2/queue/id:000578,337084,src:000004,op:flip8,pos:10437,+cov
-1282 | 3d35d20 | 3 | B | 339520 | out_poppler_3d35d20_3/queue/id:000581,339520,src:000005,op:flip8,pos:10606,+cov
-1282 | 3d35d20 | 4 | B | 555113 | out_poppler_3d35d20_4/queue/id:000992,555113,src:000010,op:flip8,pos:402
-1282 | 3d35d20 | 5 | B | 338538 | out_poppler_3d35d20_5/queue/id:000569,338538,src:000004,op:flip8,pos:10437,+cov
-1289 | 3cae777 | 1 | X | 108165 | out_poppler_3cae777_1/crashes/id:000000,108165,sig:11,src:000000,op:flip8,pos:11287
-1289 | 3cae777 | 2 | X | 108305 | out_poppler_3cae777_2/crashes/id:000000,108305,sig:11,src:000000,op:flip8,pos:11287
-1289 | 3cae777 | 3 | X | 108255 | out_poppler_3cae777_3/crashes/id:000000,108255,sig:11,src:000000,op:flip8,pos:11287
-1289 | 3cae777 | 4 | X | 108183 | out_poppler_3cae777_4/crashes/id:000000,108183,sig:11,src:000000,op:flip8,pos:11287
-1289 | 3cae777 | 5 | X | 108338 | out_poppler_3cae777_5/crashes/id:000000,108338,sig:11,src:000000,op:flip8,pos:11287
-1303 | e674ca6 | 1 | N |  | 
-1303 | e674ca6 | 2 | N |  | 
-1303 | e674ca6 | 3 | N |  | 
-1303 | e674ca6 | 4 | N |  | 
-1303 | e674ca6 | 5 | N |  | 
-1305 | aaf2e80 | 1 | N |  | 
-1305 | aaf2e80 | 2 | N |  | 
-1305 | aaf2e80 | 3 | N |  | 
-1305 | aaf2e80 | 4 | N |  | 
-1305 | aaf2e80 | 5 | N |  | 
-1381 | 245abad | 1 | R | orig:fithesis-fsps-color.pdf | out_poppler_245abad_1/queue/id:000044,orig:fithesis-fsps-color.pdf
-1381 | 245abad | 2 | D | orig:fithesis-fsps-color.pdf | out_poppler_245abad_2/queue/id:000044,orig:fithesis-fsps-color.pdf
-1381 | 245abad | 3 | D | orig:fithesis-fsps-color.pdf | out_poppler_245abad_3/queue/id:000044,orig:fithesis-fsps-color.pdf
-1381 | 245abad | 4 | D | orig:fithesis-fsps-color.pdf | out_poppler_245abad_4/queue/id:000044,orig:fithesis-fsps-color.pdf
-1381 | 245abad | 5 | D | orig:fithesis-fsps-color.pdf | out_poppler_245abad_5/queue/id:000044,orig:fithesis-fsps-color.pdf
+issue | commit | idx | status | final | first crash | time to find first crash
+1282 | 3d35d20 | 1 | old | B | out_poppler_3d35d20_1/queue/id:000586,344849,src:000005,op:flip8,pos:10606,+cov | 344849
+1282 | 3d35d20 | 2 | old | B | out_poppler_3d35d20_2/queue/id:000578,337084,src:000004,op:flip8,pos:10437,+cov | 337084
+1282 | 3d35d20 | 3 | old | B | out_poppler_3d35d20_3/queue/id:000581,339520,src:000005,op:flip8,pos:10606,+cov | 339520
+1282 | 3d35d20 | 4 | old | B | out_poppler_3d35d20_4/queue/id:000992,555113,src:000010,op:flip8,pos:402 | 555113
+1282 | 3d35d20 | 5 | old | B | out_poppler_3d35d20_5/queue/id:000569,338538,src:000004,op:flip8,pos:10437,+cov | 338538
+1282 | 3d35d20 | 6 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_6/crashes/id:000002,2784705,sig:06,src:000019,op:havoc,rep:128 | 
+1282 | 3d35d20 | 7 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_7/crashes/id:000002,5311803,sig:06,src:000019,op:havoc,rep:64 | 
+1282 | 3d35d20 | 8 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_8/crashes/id:000002,5525125,sig:06,src:000019,op:havoc,rep:32 | 
+1282 | 3d35d20 | 9 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_9/queue/id:000000,orig:3-eledpar_mwe.pdf | orig:3-eledpar_mwe.pdf
+1282 | 3d35d20 | 10 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_poppler_3d35d20_10/crashes/id:000002,4876223,sig:06,src:000019,op:havoc,rep:32 | 
+1289 | 3cae777 | 1 | old | X | out_poppler_3cae777_1/crashes/id:000000,108165,sig:11,src:000000,op:flip8,pos:11287 | 108165
+1289 | 3cae777 | 2 | old | X | out_poppler_3cae777_2/crashes/id:000000,108305,sig:11,src:000000,op:flip8,pos:11287 | 108305
+1289 | 3cae777 | 3 | old | X | out_poppler_3cae777_3/crashes/id:000000,108255,sig:11,src:000000,op:flip8,pos:11287 | 108255
+1289 | 3cae777 | 4 | old | X | out_poppler_3cae777_4/crashes/id:000000,108183,sig:11,src:000000,op:flip8,pos:11287 | 108183
+1289 | 3cae777 | 5 | old | X | out_poppler_3cae777_5/crashes/id:000000,108338,sig:11,src:000000,op:flip8,pos:11287 | 108338
+1289 | 3cae777 | 6 | bug_heap-buffer-overflow^heap-buffer-overflow | X | /clever/fuzz/waflgo/out/waflgo_poppler_3cae777_6/crashes/id:000000,166788,sig:11,src:000000,op:flip8,pos:11287 | 
+1289 | 3cae777 | 7 | bug_SEGV^SEGV | X | /clever/fuzz/waflgo/out/waflgo_poppler_3cae777_7/crashes/id:000000,167147,sig:11,src:000000,op:flip8,pos:11287 | 
+1289 | 3cae777 | 8 | bug_SEGV^SEGV | X | /clever/fuzz/waflgo/out/waflgo_poppler_3cae777_8/crashes/id:000000,167222,sig:11,src:000000,op:flip8,pos:11287 | 
+1289 | 3cae777 | 9 | bug_SEGV^SEGV | X | /clever/fuzz/waflgo/out/waflgo_poppler_3cae777_9/crashes/id:000000,167690,sig:11,src:000000,op:flip8,pos:11287 | 
+1289 | 3cae777 | 10 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_poppler_3cae777_10/crashes/id:000000,166759,sig:11,src:000000,op:flip8,pos:11287 | 
+1303 | e674ca6 | 1 | old | N | None |  |
+1303 | e674ca6 | 2 | old | N | None |  |
+1303 | e674ca6 | 3 | old | N | None |  |
+1303 | e674ca6 | 4 | old | N | None |  |
+1303 | e674ca6 | 5 | old | N | None |  |
+1303 | e674ca6 | 6 | none | N |  | 
+1303 | e674ca6 | 7 | none | N |  | 
+1303 | e674ca6 | 8 | none | N |  | 
+1303 | e674ca6 | 9 | none | N |  | 
+1303 | e674ca6 | 10 | none | N |  | 
+1305 | aaf2e80 | 1 | old | N | None |  |
+1305 | aaf2e80 | 2 | old | N | None |  |
+1305 | aaf2e80 | 3 | old | N | None |  |
+1305 | aaf2e80 | 4 | old | N | None |  |
+1305 | aaf2e80 | 5 | old | N | None |  |
+1305 | aaf2e80 | 6 | none | N |  | 
+1305 | aaf2e80 | 7 | none | N |  | 
+1305 | aaf2e80 | 8 | none | N |  | 
+1305 | aaf2e80 | 9 | none | N |  | 
+1305 | aaf2e80 | 10 | none | N |  | 
+1381 | 245abad | 1 | old | R | out_poppler_245abad_1/queue/id:000044,orig:fithesis-fsps-color.pdf | orig:fithesis-fsps-color.pdf
+1381 | 245abad | 2 | old | D | out_poppler_245abad_2/queue/id:000044,orig:fithesis-fsps-color.pdf | orig:fithesis-fsps-color.pdf
+1381 | 245abad | 3 | old | D | out_poppler_245abad_3/queue/id:000044,orig:fithesis-fsps-color.pdf | orig:fithesis-fsps-color.pdf
+1381 | 245abad | 4 | old | D | out_poppler_245abad_4/queue/id:000044,orig:fithesis-fsps-color.pdf | orig:fithesis-fsps-color.pdf
+1381 | 245abad | 5 | old | D | out_poppler_245abad_5/queue/id:000044,orig:fithesis-fsps-color.pdf | orig:fithesis-fsps-color.pdf
+1381 | 245abad | 6 | none | N |  | 
+1381 | 245abad | 7 | none | N |  | 
+1381 | 245abad | 8 | none | N |  | 
+1381 | 245abad | 9 | none | N |  | 
+1381 | 245abad | 10 | none | N |  | 

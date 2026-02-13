@@ -1,0 +1,5 @@
+issue | commit | # of files | # of (B,D,R,X,N) | final | first file | bug_types
+2825 | 3fa10e8 | 38 | (0,0,1,0,0) | R | seeds/json/0.json | 
+2976 | 71c2ab5 | 38 | (0,0,1,0,5) | R | seeds/json/33.json | 
+3262 | de21386 | 38 | (1,0,1,0,0) | B | seeds/json/53.json | bug_SEGV^:1 
+49014 | 499c91b | 38 | (0,0,0,0,38) | N |  | 

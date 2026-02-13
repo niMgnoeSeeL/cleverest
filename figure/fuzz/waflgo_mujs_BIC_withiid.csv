@@ -1,21 +1,41 @@
-issue | commit | idx | final | time to find first crash in ms | first_crash
-65 | 8c27b12 | 1 | B | 155094 | out_mujs_8c27b12_1/queue/id:000287,155094,src:000220,op:havoc,rep:2,+cov
-65 | 8c27b12 | 2 | B | 20353874 | out_mujs_8c27b12_2/crashes/id:000000,20353874,sig:11,src:004383,op:havoc,rep:8
-65 | 8c27b12 | 3 | B | 105214 | out_mujs_8c27b12_3/queue/id:000332,105214,src:000004,op:havoc,rep:4,+cov
-65 | 8c27b12 | 4 | B | 7825728 | out_mujs_8c27b12_4/crashes.2024-09-03-14:23:42/id:000000,7825728,sig:11,src:002920,op:havoc,rep:4
-65 | 8c27b12 | 5 | B | 463886 | out_mujs_8c27b12_5/queue/id:001088,463886,src:000374,op:havoc,rep:2,+cov
-141 | 832e069 | 1 | X | orig:CVE-2016-10132 | out_mujs_832e069_1/queue/id:000000,orig:CVE-2016-10132
-141 | 832e069 | 2 | X | orig:CVE-2016-10132 | out_mujs_832e069_2/queue/id:000000,orig:CVE-2016-10132
-141 | 832e069 | 3 | X | orig:CVE-2016-10132 | out_mujs_832e069_3/queue/id:000000,orig:CVE-2016-10132
-141 | 832e069 | 4 | X | orig:CVE-2016-10132 | out_mujs_832e069_4/queue/id:000000,orig:CVE-2016-10132
-141 | 832e069 | 5 | X | orig:CVE-2016-10132 | out_mujs_832e069_5/queue/id:000000,orig:CVE-2016-10132
-145 | 4c7f6be | 1 | B | 1296891 | out_mujs_4c7f6be_1/crashes.2024-09-03-14:23:48/target_id:000000,1296891,sig:11,src:001003,op:flip1,pos:124
-145 | 4c7f6be | 2 | B | 410306 | out_mujs_4c7f6be_2/crashes.2024-09-03-14:23:49/target_id:000000,410306,sig:11,src:000839,op:havoc,rep:8
-145 | 4c7f6be | 3 | B | 252995 | out_mujs_4c7f6be_3/crashes.2024-09-03-14:23:50/target_id:000000,252995,sig:11,src:000530,op:flip1,pos:41
-145 | 4c7f6be | 4 | B | 1343817 | out_mujs_4c7f6be_4/crashes.2024-09-03-14:23:51/target_id:000000,1343817,sig:11,src:000927,op:flip1,pos:124
-145 | 4c7f6be | 5 | B | 901429 | out_mujs_4c7f6be_5/crashes.2024-09-03-14:24:08/target_id:000000,901429,sig:11,src:000941,op:flip1,pos:124
-166 | 3f71a1c | 1 | B | orig:jsc_5.js | out_mujs_3f71a1c_1/queue/id:000013,orig:jsc_5.js
-166 | 3f71a1c | 2 | B | orig:jsc_5.js | out_mujs_3f71a1c_2/queue/id:000013,orig:jsc_5.js
-166 | 3f71a1c | 3 | B | orig:jsc_5.js | out_mujs_3f71a1c_3/queue/id:000013,orig:jsc_5.js
-166 | 3f71a1c | 4 | B | orig:jsc_5.js | out_mujs_3f71a1c_4/queue/id:000013,orig:jsc_5.js
-166 | 3f71a1c | 5 | B | orig:jsc_5.js | out_mujs_3f71a1c_5/queue/id:000013,orig:jsc_5.js
+issue | commit | idx | status | final | first crash | time to find first crash
+65 | 8c27b12 | 1 | old | B | out_mujs_8c27b12_1/queue/id:000287,155094,src:000220,op:havoc,rep:2,+cov | 155094
+65 | 8c27b12 | 2 | old | B | out_mujs_8c27b12_2/crashes/id:000000,20353874,sig:11,src:004383,op:havoc,rep:8 | 20353874
+65 | 8c27b12 | 3 | old | B | out_mujs_8c27b12_3/queue/id:000332,105214,src:000004,op:havoc,rep:4,+cov | 105214
+65 | 8c27b12 | 4 | old | B | out_mujs_8c27b12_4/crashes.2024-09-03-14:23:42/id:000000,7825728,sig:11,src:002920,op:havoc,rep:4 | 7825728
+65 | 8c27b12 | 5 | old | B | out_mujs_8c27b12_5/queue/id:001088,463886,src:000374,op:havoc,rep:2,+cov | 463886
+65 | 8c27b12 | 6 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_6/crashes/id:000000,81210709,sig:11,src:002981,op:havoc,rep:16 | 81210709
+65 | 8c27b12 | 7 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_7/queue/id:000494,984841,src:000008,op:havoc,rep:8,+cov | 984841
+65 | 8c27b12 | 8 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_8/crashes/id:000000,22820115,sig:11,src:002886,op:havoc,rep:32 | 22820115
+65 | 8c27b12 | 9 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_9/queue/id:001124,715076,src:001103,op:havoc,rep:32,+cov | 715076
+65 | 8c27b12 | 10 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_8c27b12_10/crashes/id:000000,35728182,sig:11,src:003120,op:havoc,rep:16 | 35728182
+141 | 832e069 | 1 | old | X | out_mujs_832e069_1/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+141 | 832e069 | 2 | old | X | out_mujs_832e069_2/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+141 | 832e069 | 3 | old | X | out_mujs_832e069_3/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+141 | 832e069 | 4 | old | X | out_mujs_832e069_4/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+141 | 832e069 | 5 | old | X | out_mujs_832e069_5/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+141 | 832e069 | 6 | bug_heap-buffer-overflow^ | X | /clever/fuzz/waflgo/out/waflgo_mujs_832e069_6/queue/id:000000,orig:CVE-2016-10132 | 
+141 | 832e069 | 7 | bug_heap-buffer-overflow^ | X | /clever/fuzz/waflgo/out/waflgo_mujs_832e069_7/queue/id:000000,orig:CVE-2016-10132 | 
+141 | 832e069 | 8 | bug_heap-buffer-overflow^ | X | /clever/fuzz/waflgo/out/waflgo_mujs_832e069_8/queue/id:000000,orig:CVE-2016-10132 | 
+141 | 832e069 | 9 | bug_heap-buffer-overflow^ | X | /clever/fuzz/waflgo/out/waflgo_mujs_832e069_9/queue/id:000000,orig:CVE-2016-10132 | 
+141 | 832e069 | 10 | bug_heap-buffer-overflow^ | X | /clever/fuzz/waflgo/out/waflgo_mujs_832e069_10/queue/id:000000,orig:CVE-2016-10132 | 
+145 | 4c7f6be | 1 | old | B | out_mujs_4c7f6be_1/crashes.2024-09-03-14:23:48/target_id:000000,1296891,sig:11,src:001003,op:flip1,pos:124 | 1296891
+145 | 4c7f6be | 2 | old | B | out_mujs_4c7f6be_2/crashes.2024-09-03-14:23:49/target_id:000000,410306,sig:11,src:000839,op:havoc,rep:8 | 410306
+145 | 4c7f6be | 3 | old | B | out_mujs_4c7f6be_3/crashes.2024-09-03-14:23:50/target_id:000000,252995,sig:11,src:000530,op:flip1,pos:41 | 252995
+145 | 4c7f6be | 4 | old | B | out_mujs_4c7f6be_4/crashes.2024-09-03-14:23:51/target_id:000000,1343817,sig:11,src:000927,op:flip1,pos:124 | 1343817
+145 | 4c7f6be | 5 | old | B | out_mujs_4c7f6be_5/crashes.2024-09-03-14:24:08/target_id:000000,901429,sig:11,src:000941,op:flip1,pos:124 | 901429
+145 | 4c7f6be | 6 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_6/queue/id:001003,5133174,src:000972,op:havoc,rep:8,+cov | 5133174
+145 | 4c7f6be | 7 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_7/queue/id:000533,516764,src:000432,op:havoc,rep:32,+cov | 516764
+145 | 4c7f6be | 8 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_8/queue/id:000543,173977,src:000459,op:havoc,rep:4,+cov | 173977
+145 | 4c7f6be | 9 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_9/queue/id:000587,161809,src:000536,op:havoc,rep:8,+cov | 161809
+145 | 4c7f6be | 10 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_mujs_4c7f6be_10/queue/id:000537,221894,src:000456,op:havoc,rep:4 | 221894
+166 | 3f71a1c | 1 | old | B | out_mujs_3f71a1c_1/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 2 | old | B | out_mujs_3f71a1c_2/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 3 | old | B | out_mujs_3f71a1c_3/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 4 | old | B | out_mujs_3f71a1c_4/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 5 | old | B | out_mujs_3f71a1c_5/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 6 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_6/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 7 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_7/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 8 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_8/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 9 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_9/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 3f71a1c | 10 | bug_^heap-use-after-free | B | /clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_10/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js

@@ -1,0 +1,31 @@
+issue | commit | idx | status | final | first crash | time to find first crash
+13041 | 908ab1c | 1 | none | N |  | 
+13041 | 908ab1c | 2 | none | N |  | 
+13041 | 908ab1c | 3 | none | N |  | 
+13041 | 908ab1c | 4 | none | N |  | 
+13041 | 908ab1c | 5 | none | N |  | 
+13041 | 908ab1c | 6 | none | N |  | 
+13041 | 908ab1c | 7 | none | N |  | 
+13041 | 908ab1c | 8 | none | N |  | 
+13041 | 908ab1c | 9 | none | N |  | 
+13041 | 908ab1c | 10 | none | N |  | 
+17733 | 3185bb5 | 1 | behave | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_1/queue/id:001294,6012068,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 2 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_2/queue/id:001334,6089593,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 3 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_3/queue/id:001316,6066625,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 4 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_4/queue/id:001313,5969575,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 5 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_5/queue/id:001332,6027929,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 6 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_6/queue/id:001335,6027407,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 7 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_7/queue/id:001314,6011147,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 8 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_8/queue/id:001309,6101961,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 9 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_9/queue/id:001325,6050417,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17733 | 3185bb5 | 10 | none | D | /clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_10/queue/id:001337,6174223,src:000007,op:arith8,pos:2682,val:-5,+cov | 
+17847 | 0615d13 | 1 | none | N |  | 
+17847 | 0615d13 | 2 | none | N |  | 
+17847 | 0615d13 | 3 | none | N |  | 
+17847 | 0615d13 | 4 | none | N |  | 
+17847 | 0615d13 | 5 | none | N |  | 
+17847 | 0615d13 | 6 | none | N |  | 
+17847 | 0615d13 | 7 | none | N |  | 
+17847 | 0615d13 | 8 | none | N |  | 
+17847 | 0615d13 | 9 | none | N |  | 
+17847 | 0615d13 | 10 | none | N |  | 

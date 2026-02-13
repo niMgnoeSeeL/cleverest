@@ -1,0 +1,6 @@
+issue | commit | idx | status | final | first crash | time to find first crash
+2825 | 3fa10e8 | 260116-0622 | bug_Aborted^Aborted | X | id:000000,sig:06,src:004043,time:24652553,execs:3095397,op:havoc,rep:3 | 24652553
+2825 | 3fa10e8 | 260117-0906 | bug_SEGV^ | B | id:000000,sig:11,src:004655+000624,time:63043074,execs:7458327,op:splice,rep:3 | 63043074
+2825 | 3fa10e8 | 260117-0908 | bug_SEGV^ | B | id:000000,sig:11,src:002012+000295,time:25912435,execs:3273128,op:splice,rep:1 | 25912435
+2825 | 3fa10e8 | 260117-0911 | bug_Aborted^Aborted | X | id:000000,sig:06,src:002341+000543,time:39218171,execs:4942723,op:splice,rep:2 | 39218171
+2825 | 3fa10e8 | 260117-0915 | bug_Aborted^Aborted | X | id:000000,sig:06,src:002600,time:7330730,execs:863571,op:havoc,rep:1 | 7330730

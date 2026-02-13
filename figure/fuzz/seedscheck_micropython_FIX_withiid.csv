@@ -1,0 +1,7 @@
+issue | commit | # of files | # of (B,D,R,X,N) | final | first file | bug_types
+13007 | f397a3e | 13 | (0,13,0,0,0) | D | seeds/py/cexample_class.py | 
+13041 | 908ab1c | 13 | (0,13,0,0,0) | D | seeds/py/cexample_class.py | 
+17733 | 3185bb5 | 13 | (0,13,0,0,0) | D | seeds/py/cexample_class.py | 
+17815 | c0252d7 | 13 | (0,13,0,0,0) | D | seeds/py/cexample_class.py | 
+17841 | 4b013ec | 13 | (0,13,0,0,0) | D | seeds/py/cexample_class.py | 
+17847 | 0615d13 | 13 | (0,13,0,0,0) | D | seeds/py/cexample_class.py | 

@@ -1,0 +1,42 @@
+issue | commit | idx | status | final | first crash | time to find first crash
+13007 | f397a3e | 260127-1233 | none | N |  | 
+13041 | 908ab1c | 260120-0711 | bug_Segmentation fault^ | B | id:000000,sig:11,src:003349,time:10451228,execs:8174062,op:havoc,rep:2 | 10451228
+13041 | 908ab1c | 260127-1227 | bug_Segmentation fault^ | B | id:000000,sig:11,src:003715,time:4986595,execs:4159404,op:havoc,rep:1 | 4986595
+13041 | 908ab1c | 260127-1233 | bug_Segmentation fault^ | B | id:000000,sig:11,src:002432,time:1879798,execs:1646700,op:havoc,rep:1 | 1879798
+13041 | 908ab1c | 260127-1238 | bug_Segmentation fault^ | B | id:000000,sig:11,src:002897,time:1585237,execs:1325066,op:havoc,rep:3 | 1585237
+13041 | 908ab1c | 260127-1243 | bug_Segmentation fault^ | B | id:000000,sig:11,src:000366,time:1371083,execs:977218,op:havoc,rep:1 | 1371083
+13041 | 908ab1c | 260127-1248 | bug_Aborted^ | B | id:000000,sig:06,src:000791,time:10770499,execs:7533309,op:havoc,rep:2 | 10770499
+13041 | 908ab1c | 260127-1253 | bug_Segmentation fault^ | B | id:000000,sig:11,src:003713,time:3616288,execs:2470641,op:havoc,rep:1 | 3616288
+13041 | 908ab1c | 260127-1259 | bug_Aborted^ | B | id:000000,sig:06,src:000003,time:9015173,execs:6236292,op:havoc,rep:1 | 9015173
+13041 | 908ab1c | 260127-1305 | bug_Segmentation fault^ | B | id:000000,sig:11,src:006524,time:62581938,execs:43242358,op:havoc,rep:1 | 62581938
+13041 | 908ab1c | 260127-1310 | bug_Segmentation fault^ | B | id:000000,sig:11,src:000537,time:879404,execs:603424,op:havoc,rep:2 | 879404
+17733 | 3185bb5 | 260120-0711 | bug_Segmentation fault^Segmentation fault | X | id:000000,sig:11,src:004656+007411,time:59262408,execs:50030298,op:splice,rep:2 | 59262408
+17733 | 3185bb5 | 260127-1227 | bug_Segmentation fault^ | B | id:000000,sig:11,src:007503,time:28125595,execs:21825599,op:havoc,rep:5 | 28125595
+17733 | 3185bb5 | 260127-1233 | none | N |  | 
+17733 | 3185bb5 | 260127-1238 | bug_Segmentation fault^ | B | id:000000,sig:11,src:004017,time:3830517,execs:3416706,op:havoc,rep:2 | 3830517
+17733 | 3185bb5 | 260127-1243 | bug_Segmentation fault^ | B | id:000000,sig:11,src:002979,time:2499574,execs:1916512,op:havoc,rep:2 | 2499574
+17733 | 3185bb5 | 260127-1248 | bug_Segmentation fault^ | B | id:000000,sig:11,src:006188,time:34405238,execs:25120280,op:havoc,rep:1 | 34405238
+17733 | 3185bb5 | 260127-1253 | bug_Segmentation fault^ | B | id:000000,sig:11,src:007180+000973,time:39319884,execs:26918471,op:splice,rep:4 | 39319884
+17733 | 3185bb5 | 260127-1259 | bug_Segmentation fault^Segmentation fault | X | id:000000,sig:11,src:005179,time:51556877,execs:37864079,op:havoc,rep:8 | 51556877
+17733 | 3185bb5 | 260127-1305 | bug_Aborted^Aborted | X | id:000000,sig:06,src:004922,time:11439590,execs:8252105,op:havoc,rep:8 | 11439590
+17733 | 3185bb5 | 260127-1310 | none | N |  | 
+17815 | c0252d7 | 260120-0711 | bug_Segmentation fault^ | B | id:000000,sig:11,src:000000,time:160,execs:203,op:flip1,pos:3 | 160
+17815 | c0252d7 | 260127-1227 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1233 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1238 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1243 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1248 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1253 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1259 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1305 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17815 | c0252d7 | 260127-1310 | bug_Segmentation fault^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^ | 0
+17841 | 4b013ec | 260120-0711 | none | N |  | 
+17841 | 4b013ec | 260127-1227 | none | N |  | 
+17841 | 4b013ec | 260127-1233 | none | N |  | 
+17841 | 4b013ec | 260127-1238 | none | N |  | 
+17841 | 4b013ec | 260127-1243 | none | N |  | 
+17841 | 4b013ec | 260127-1248 | none | N |  | 
+17841 | 4b013ec | 260127-1253 | none | N |  | 
+17841 | 4b013ec | 260127-1259 | none | N |  | 
+17841 | 4b013ec | 260127-1305 | none | N |  | 
+17841 | 4b013ec | 260127-1310 | none | N |  | 

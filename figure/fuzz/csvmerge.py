@@ -10,13 +10,19 @@ the new csv should have the following columns:
 scenario | subject | issue | commit | idx | status | final | first crash | time to find first crash
 '''
 
+import argparse
 import glob
 import pandas as pd
 
 if __name__ == '__main__':
-  # csv_files = sorted(glob.glob("waflgo_*.csv"))
-  csv_files = sorted(glob.glob("postfuzz_*.csv"))
-  csv_files = [f for f in csv_files if "withiid" not in f]
+  parser = argparse.ArgumentParser()
+  parser.add_argument('--waflgo', action='store_true')
+  args = parser.parse_args()
+  if args.waflgo:
+    csv_files = sorted(glob.glob("waflgo_*.csv"))
+  else:
+    csv_files = sorted(glob.glob("postfuzz_*.csv"))
+  # csv_files = [f for f in csv_files if "withiid" not in f]
   print(f"Found {len(csv_files)} files: {csv_files}")
   all_dfs = []
   cols = ['scenario', 'subject', 'issue', 'commit', 'idx', 'status', 'final', 'first crash', 'time to find first crash']
@@ -41,9 +47,9 @@ if __name__ == '__main__':
       df.rename(columns={'first_crash': cols[-2]}, inplace=True)
     if 'status' not in df.columns:
       df['status'] = 'old'
-    # manual correct 'final' for mujs issue 141 BIC commit 832e069
-    # if 'status' not ending with ^ and final is 'X', change final to 'B'
-    df.loc[(df['issue'] == 141) & (df['commit'] == '832e069') & (~df['status'].str.endswith('^')) & (df['final'] == 'X'), 'final'] = 'B'
+    # manual correct 'final' for mujs issue 141 BIC commit 832e069 as it always crash before
+    # if 'status' not ending with ^ and final is 'X', change final to 'B' as fuzzer already trigger bug after
+    df.loc[(df['issue'] == 141) & (df['commit'] == '832e069') & (df['status'].str.startswith('bug')) & (~df['status'].str.endswith('^')) & (df['final'] == 'X'), 'final'] = 'B'
     # reorder columns
     for col in cols:
       if col not in df.columns:
@@ -54,5 +60,9 @@ if __name__ == '__main__':
     merged_df = pd.concat(all_dfs, ignore_index=True)
     # sort by scenario, issue
     merged_df.sort_values(by=['scenario', 'issue', 'idx'], inplace=True)
-    merged_df.to_csv("merged_postfuzz.csv", index=False, sep='\t')
-    print(f"Merged data saved to merged_postfuzz.csv")
+    if args.waflgo:
+      merged_df.to_csv("merged_waflgo.csv", index=False, sep='\t')
+      print(f"Merged data saved to merged_waflgo.csv")
+    else:
+      merged_df.to_csv("merged_postfuzz.csv", index=False, sep='\t')
+      print(f"Merged data saved to merged_postfuzz.csv")

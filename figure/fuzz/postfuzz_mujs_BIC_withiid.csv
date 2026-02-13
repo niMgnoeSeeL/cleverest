@@ -1,21 +1,41 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-65 | 8c27b12 | 240828-1933 | bug_^heap-buffer-overflow | B | fuzzout_8c27b12_after/default/queue/id:000000,time:0,execs:0,orig:INPUT_8c27b12_1_gpt-4o-2024-08-06 | 0
-65 | 8c27b12 | 240828-1937 | bug_^heap-buffer-overflow | B | fuzzout_8c27b12_after/default/crashes/id:000000,sig:06,src:000001,time:17634,execs:2064,op:arith8,pos:7,val:+11 | 17634
-65 | 8c27b12 | 240828-1942 | bug_^heap-buffer-overflow | B | fuzzout_8c27b12_after/default/queue/id:000000,time:0,execs:0,orig:INPUT_8c27b12_1_gpt-4o-2024-08-06 | 0
-65 | 8c27b12 | 240828-1945 | bug_^heap-buffer-overflow | B | fuzzout_8c27b12_after/default/crashes/id:000000,sig:06,src:001043+000064,time:7080533,execs:447078,op:splice,rep:4 | 7080533
-65 | 8c27b12 | 240828-1950 | bug_^heap-buffer-overflow | B | fuzzout_8c27b12_after/default/crashes/id:000000,sig:06,src:000000,time:178135,execs:11922,op:havoc,rep:2 | 178135
-141 | 832e069 | 240828-1933 | bug_heap-buffer-overflow^heap-buffer-overflow | B | fuzzout_832e069_after/default/crashes/id:000000,sig:06,src:001970,time:54122926,execs:2932829,op:havoc,rep:1 | 54122926
-141 | 832e069 | 240828-1937 | bug_heap-buffer-overflow^heap-buffer-overflow | B | fuzzout_832e069_after/default/crashes/id:000000,sig:06,src:001552,time:15963219,execs:892007,op:havoc,rep:1 | 15963219
-141 | 832e069 | 240828-1942 | bug_heap-buffer-overflow^heap-buffer-overflow | B | fuzzout_832e069_after/default/crashes/id:000000,sig:06,src:001216,time:9239877,execs:541361,op:havoc,rep:4 | 9239877
-141 | 832e069 | 240828-1945 | bug_heap-buffer-overflow^ | X | fuzzout_832e069_after/default/queue/id:000000,time:0,execs:0,orig:INPUT_832e069_1_gpt-4o-2024-08-06 | 0
-141 | 832e069 | 240828-1950 | bug_heap-buffer-overflow^heap-buffer-overflow | B | fuzzout_832e069_after/default/crashes/id:000000,sig:06,src:001778,time:9000271,execs:499390,op:havoc,rep:2 | 9000271
-145 | 4c7f6be | 240828-1933 | bug_^heap-buffer-overflow | B | fuzzout_4c7f6be_after/default/crashes/id:000000,sig:06,src:000000,time:7364,execs:997,op:flip32,pos:18 | 7364
-145 | 4c7f6be | 240828-1937 | bug_^global-buffer-overflow | B | fuzzout_4c7f6be_after/default/crashes/id:000000,sig:06,src:000003,time:1103,execs:153,op:quick,pos:19 | 1103
-145 | 4c7f6be | 240828-1942 | bug_^heap-buffer-overflow | B | fuzzout_4c7f6be_after/default/crashes/id:000000,sig:06,src:000003,time:3529,execs:354,op:flip2,pos:16 | 3529
-145 | 4c7f6be | 240828-1945 | bug_^global-buffer-overflow | B | fuzzout_4c7f6be_after/default/crashes/id:000000,sig:06,src:000001,time:561,execs:73,op:quick,pos:10 | 561
-145 | 4c7f6be | 240828-1950 | bug_^global-buffer-overflow | B | fuzzout_4c7f6be_after/default/crashes/id:000000,sig:06,src:000000,time:23397,execs:1517,op:arith8,pos:17,val:-6 | 23397
-166 | 3f71a1c | 240828-1933 | none | D | fuzzout_3f71a1c_after/default/queue/id:000929,src:000151,time:3724391,execs:275295,op:havoc,rep:1,+cov | 
-166 | 3f71a1c | 240828-1937 | none | D | fuzzout_3f71a1c_after/default/queue/id:000964,src:000001,time:2507145,execs:182325,op:havoc,rep:2,+cov | 
-166 | 3f71a1c | 240828-1942 | none | D | fuzzout_3f71a1c_after/default/queue/id:000004,time:0,execs:0,orig:INPUT_3f71a1c_5_gpt-4o-2024-08-06 | 
-166 | 3f71a1c | 240828-1945 | none | N |  | 
-166 | 3f71a1c | 240828-1950 | none | N |  | 
+65 | 8c27b12 | 250905-2232 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2235 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2238 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2240 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2242 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2245 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2247 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2250 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_2_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2252 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+65 | 8c27b12 | 250905-2254 | bug_^heap-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_#65_8c27b12_1_gpt-4o-2024-08-06_bug_^heap-buffer-overflow | 0
+141 | 832e069 | 250905-2232 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:003014,time:23863771,execs:5310228,op:havoc,rep:9 | 23863771
+141 | 832e069 | 250905-2235 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001819,time:4192597,execs:883635,op:havoc,rep:1 | 4192597
+141 | 832e069 | 250905-2238 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001027,time:13406357,execs:2991495,op:havoc,rep:13 | 13406357
+141 | 832e069 | 250905-2240 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001623,time:37298857,execs:8504070,op:havoc,rep:2 | 37298857
+141 | 832e069 | 250905-2242 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001490,time:3357036,execs:690003,op:havoc,rep:3 | 3357036
+141 | 832e069 | 250905-2245 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001888,time:17487634,execs:3926491,op:havoc,rep:4 | 17487634
+141 | 832e069 | 250905-2247 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:000839,time:7856636,execs:1782447,op:havoc,rep:1 | 7856636
+141 | 832e069 | 250905-2250 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:002318,time:8423857,execs:1910963,op:havoc,rep:1 | 8423857
+141 | 832e069 | 250905-2252 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001663,time:3478705,execs:735984,op:havoc,rep:7 | 3478705
+141 | 832e069 | 250905-2254 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001101,time:3693966,execs:774374,op:havoc,rep:4 | 3693966
+145 | 4c7f6be | 250905-2232 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000002,time:6660,execs:1689,op:arith8,pos:17,val:-6 | 6660
+145 | 4c7f6be | 250905-2235 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000001,time:206,execs:110,op:quick,pos:17 | 206
+145 | 4c7f6be | 250905-2238 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000000,time:5724,execs:1435,op:arith8,pos:17,val:-6 | 5724
+145 | 4c7f6be | 250905-2240 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000001,time:174,execs:83,op:quick,pos:12 | 174
+145 | 4c7f6be | 250905-2242 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000004,time:775,execs:283,op:flip1,pos:10 | 775
+145 | 4c7f6be | 250905-2245 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000002,time:1006,execs:326,op:flip1,pos:16 | 1006
+145 | 4c7f6be | 250905-2247 | bug_^global-buffer-overflow | B | id:000000,sig:06,src:000002,time:304,execs:132,op:quick,pos:18 | 304
+145 | 4c7f6be | 250905-2250 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000000,time:174,execs:74,op:quick,pos:11 | 174
+145 | 4c7f6be | 250905-2252 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000001,time:4339,execs:1065,op:flip32,pos:18 | 4339
+145 | 4c7f6be | 250905-2254 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000002,time:14293,execs:3284,op:havoc,rep:1 | 14293
+166 | 3f71a1c | 250905-2232 | none | D | id:005465,src:000314+002661,time:78938077,execs:17011791,op:splice,rep:2,+cov | 
+166 | 3f71a1c | 250905-2235 | none | N |  | 
+166 | 3f71a1c | 250905-2238 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#166_3f71a1c_1_gpt-4o-2024-08-06_behave | 
+166 | 3f71a1c | 250905-2240 | none | D | id:003443,src:003371,time:16882536,execs:4046485,op:havoc,rep:2,+cov | 
+166 | 3f71a1c | 250905-2242 | none | N |  | 
+166 | 3f71a1c | 250905-2245 | none | D | id:004073,src:002941,time:22158795,execs:5325046,op:havoc,rep:1,+cov | 
+166 | 3f71a1c | 250905-2247 | none | N |  | 
+166 | 3f71a1c | 250905-2250 | none | D | id:005167,src:002678+004317,time:72502467,execs:15794039,op:splice,rep:3,+cov | 
+166 | 3f71a1c | 250905-2252 | none | D | id:004304,src:004063,time:30658650,execs:7354409,op:havoc,rep:1,+cov | 
+166 | 3f71a1c | 250905-2254 | none | D | id:000651,src:000441,time:590912,execs:142228,op:havoc,rep:2,+cov | 

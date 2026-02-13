@@ -4,13 +4,28 @@ issue | commit | idx | status | final | first crash | time to find first crash
 5138 | 70e275e | 3 | none | D | baselines/waflgo_jerryscript_70e275e_3/queue/id:000031,6825,src:000003,op:flip1,pos:3,+cov | 
 5138 | 70e275e | 4 | none | D | baselines/waflgo_jerryscript_70e275e_4/queue/id:000030,6686,src:000003,op:flip1,pos:3,+cov | 
 5138 | 70e275e | 5 | none | D | baselines/waflgo_jerryscript_70e275e_5/queue/id:000031,6801,src:000003,op:flip1,pos:3,+cov | 
+5138 | 70e275e | 6 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_6/queue/id:000031,5627,src:000003,op:flip1,pos:3,+cov | 
+5138 | 70e275e | 7 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_7/queue/id:000030,5584,src:000003,op:flip1,pos:3,+cov | 
+5138 | 70e275e | 8 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_8/queue/id:000034,7455,src:000002,op:havoc,rep:128,+cov | 
+5138 | 70e275e | 9 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_9/queue/id:000046,9511,src:000003,op:flip1,pos:3,+cov | 
+5138 | 70e275e | 10 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_10/queue/id:000031,5632,src:000003,op:flip1,pos:3,+cov | 
 5117 | 53b61c1 | 1 | bug_^SEGV | B | baselines/waflgo_jerryscript_53b61c1_1/queue/id:000528,393322,src:000147,op:havoc,rep:16,is_suf_target | 393322
 5117 | 53b61c1 | 2 | none | D | baselines/waflgo_jerryscript_53b61c1_2/queue/id:000555,402281,src:000259,op:havoc,rep:2,+cov | 
 5117 | 53b61c1 | 3 | bug_^SEGV | B | baselines/waflgo_jerryscript_53b61c1_3/queue/id:000513,380707,src:000191,op:havoc,rep:8,+cov | 380707
 5117 | 53b61c1 | 4 | bug_^SEGV | B | baselines/waflgo_jerryscript_53b61c1_4/queue/id:001037,1863041,src:000893,op:havoc,rep:16,is_suf_target | 1863041
 5117 | 53b61c1 | 5 | bug_^SEGV | B | baselines/waflgo_jerryscript_53b61c1_5/queue/id:000565,494126,src:000276,op:havoc,rep:16,+cov | 494126
+5117 | 53b61c1 | 6 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_6/crashes/id:000011,1144553,sig:06,src:000003,op:flip1,pos:41 | 
+5117 | 53b61c1 | 7 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_7/crashes/id:000016,1889956,sig:06,src:000003,op:flip1,pos:41 | 
+5117 | 53b61c1 | 8 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_8/crashes/id:000027,1485066,sig:06,src:000003,op:flip1,pos:41 | 
+5117 | 53b61c1 | 9 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_9/crashes/id:000013,2355942,sig:06,src:000003,op:flip1,pos:41 | 
+5117 | 53b61c1 | 10 | bug_Aborted^Aborted | X | /clever/fuzz/waflgo/out/waflgo_jerryscript_53b61c1_10/crashes/id:000012,979043,sig:06,src:000003,op:flip1,pos:41 | 
 5153 | 70e275e | 1 | none | D | baselines/waflgo_jerryscript_70e275e_1/queue/id:000030,6726,src:000003,op:flip1,pos:3,+cov | 
 5153 | 70e275e | 2 | none | D | baselines/waflgo_jerryscript_70e275e_2/queue/id:000030,6733,src:000003,op:flip1,pos:3,+cov | 
 5153 | 70e275e | 3 | none | D | baselines/waflgo_jerryscript_70e275e_3/queue/id:000031,6825,src:000003,op:flip1,pos:3,+cov | 
 5153 | 70e275e | 4 | none | D | baselines/waflgo_jerryscript_70e275e_4/queue/id:000030,6686,src:000003,op:flip1,pos:3,+cov | 
 5153 | 70e275e | 5 | none | D | baselines/waflgo_jerryscript_70e275e_5/queue/id:000031,6801,src:000003,op:flip1,pos:3,+cov | 
+5153 | 70e275e | 6 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_6/queue/id:000031,5627,src:000003,op:flip1,pos:3,+cov | 
+5153 | 70e275e | 7 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_7/queue/id:000030,5584,src:000003,op:flip1,pos:3,+cov | 
+5153 | 70e275e | 8 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_8/queue/id:000034,7455,src:000002,op:havoc,rep:128,+cov | 
+5153 | 70e275e | 9 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_9/queue/id:000046,9511,src:000003,op:flip1,pos:3,+cov | 
+5153 | 70e275e | 10 | none | D | /clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_10/queue/id:000031,5632,src:000003,op:flip1,pos:3,+cov | 

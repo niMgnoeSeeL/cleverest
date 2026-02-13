@@ -1,0 +1,41 @@
+issue | commit | idx | status | final | first crash | time to find first crash
+2825 | 680baef | 1 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_1/queue/id:001236,2624301,src:000676,op:havoc,rep:2 | 
+2825 | 680baef | 2 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_2/queue/id:001636,16016318,src:001170,op:havoc,rep:4 | 
+2825 | 680baef | 3 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_3/queue/id:001883,31737737,src:001708,op:havoc,rep:16 | 
+2825 | 680baef | 4 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_4/queue/id:001127,1932350,src:000287,op:havoc,rep:16,+cov | 
+2825 | 680baef | 5 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_5/queue/id:001265,3404453,src:000746,op:flip1,pos:14,+cov | 
+2825 | 680baef | 6 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_6/queue/id:001430,21067468,src:001320,op:havoc,rep:8 | 
+2825 | 680baef | 7 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_7/queue/id:001406,24887898,src:001047,op:havoc,rep:16 | 
+2825 | 680baef | 8 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_8/queue/id:001262,3164322,src:000775,op:flip1,pos:21 | 
+2825 | 680baef | 9 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_9/queue/id:001298,2914567,src:000748,op:flip1,pos:309,+cov | 
+2825 | 680baef | 10 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_10/queue/id:001565,9750997,src:001000,op:rbadd8,pos:14,+cov | 
+2976 | 680baef | 1 | behave | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_1/queue/id:000694,5539999,src:000672,op:havoc,rep:8,+cov | 
+2976 | 680baef | 2 | behave | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_2/queue/id:000614,4111993,src:000574,op:havoc,rep:16 | 
+2976 | 680baef | 3 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_3/queue/id:000795,6755744,src:000787,op:havoc,rep:64,+cov | 
+2976 | 680baef | 4 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_4/queue/id:001187,32926024,src:000639,op:havoc,rep:4,+cov | 
+2976 | 680baef | 5 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_5/queue/id:000821,7294701,src:000795,op:havoc,rep:2 | 7294701
+2976 | 680baef | 6 | behave | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_6/queue/id:001236,27815453,src:001185,op:havoc,rep:4,+cov | 
+2976 | 680baef | 7 | bug_^heap-buffer-overflow | B | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_7/queue/id:000649,6513245,src:000472,op:rbadd8,pos:2685,+cov | 6513245
+2976 | 680baef | 8 | behave | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_8/queue/id:001150,18435847,src:001145,op:havoc,rep:2,+cov | 
+2976 | 680baef | 9 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_9/queue/id:000703,5745379,src:000694,op:havoc,rep:2,+cov | 
+2976 | 680baef | 10 | behave | D | /clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_10/queue/id:000699,5818200,src:000695,op:havoc,rep:2,+cov | 
+3262 | 0e067ef | 1 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_1/crashes/id:000002,154436,sig:11,src:000001,op:havoc,rep:4 | 154436
+3262 | 0e067ef | 2 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_2/crashes/id:000001,164678,sig:11,src:000001,op:havoc,rep:2 | 164678
+3262 | 0e067ef | 3 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_3/crashes/id:000001,141917,sig:11,src:000001,op:havoc,rep:4 | 141917
+3262 | 0e067ef | 4 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_4/crashes/id:000001,170681,sig:11,src:000001,op:havoc,rep:8 | 170681
+3262 | 0e067ef | 5 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_5/crashes/id:000001,141178,sig:11,src:000001,op:havoc,rep:16 | 141178
+3262 | 0e067ef | 6 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_6/crashes/id:000001,60414,sig:11,src:000001,op:havoc,rep:2 | 60414
+3262 | 0e067ef | 7 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_7/crashes/id:000001,134781,sig:11,src:000001,op:havoc,rep:2 | 134781
+3262 | 0e067ef | 8 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_8/crashes/id:000001,156801,sig:11,src:000001,op:havoc,rep:4 | 156801
+3262 | 0e067ef | 9 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_9/crashes/id:000002,161258,sig:11,src:000001,op:havoc,rep:2 | 161258
+3262 | 0e067ef | 10 | bug_^SEGV | B | /clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_10/crashes/id:000001,144993,sig:11,src:000001,op:havoc,rep:2 | 144993
+49014 | 4003202 | 1 | none | N |  | 
+49014 | 4003202 | 2 | none | N |  | 
+49014 | 4003202 | 3 | none | N |  | 
+49014 | 4003202 | 4 | none | N |  | 
+49014 | 4003202 | 5 | none | N |  | 
+49014 | 4003202 | 6 | none | N |  | 
+49014 | 4003202 | 7 | none | N |  | 
+49014 | 4003202 | 8 | none | N |  | 
+49014 | 4003202 | 9 | bug_SEGV^SEGV | X | /clever/fuzz/waflgo/out/waflgo_jq_49014_4003202_9/crashes/id:000000,2996307,sig:11,src:001982,op:havoc,rep:4 | 
+49014 | 4003202 | 10 | bug_SEGV^SEGV | X | /clever/fuzz/waflgo/out/waflgo_jq_49014_4003202_10/crashes/id:000000,16944998,sig:11,src:003222,op:havoc,rep:16 | 
