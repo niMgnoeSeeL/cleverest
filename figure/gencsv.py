@@ -2,6 +2,7 @@ import os
 import csv
 import sys
 import argparse
+import glob
 
 
 SCORE_MAP = {'B': 3, 'D': 2, 'R': 1, 'X': 0, 'N': 0}
@@ -109,16 +110,8 @@ def main():
 
     # Find all SUMMARY_*.txt files in the specified input directory
     summary_files = [os.path.join(input_dir, f) for f in os.listdir(input_dir) if f.startswith('SUMMARY_') and f.endswith('.txt')]
-    # recursively find all SUMMARY_*.txt files
-    if True:
-    # if not summary_files:
-      for root, dirs, files in os.walk(input_dir, followlinks=True):
-        depth = root[len(input_dir):].count(os.sep)
-        if depth > 1:  # avoid redundant SUMMARY under exp_*
-          continue
-        for file in files:
-          if file.startswith('SUMMARY_') and file.endswith('.txt'):
-            summary_files.append(os.path.join(root, file))
+    # find all {input_dir}/<subject>/SUMMARY_*.txt files
+    summary_files.extend(glob.glob(os.path.join(input_dir, '*', 'SUMMARY_*.txt')))
     aggregated_results = []
 
     print("Found {} summary files".format(len(summary_files)))
