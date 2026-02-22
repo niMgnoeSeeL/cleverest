@@ -89,6 +89,8 @@
 
 
     Fixes #535.'
+  best_result_reduced: B
+  score_reduced: 3.0
 - proj: libxml2
   issue: 550
   commit: 6273df6
@@ -118,6 +120,8 @@
 
     Fixes #550.'
   msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
 - proj: libxml2
   issue: 553
   commit: db21cd5
@@ -140,6 +144,8 @@
 
 
     See #344. Fixes #553.'
+  best_result_reduced: B
+  score_reduced: 3.0
 - proj: libxml2
   issue: 720
   commit: 3ad7f81
@@ -154,9 +160,9 @@
 
 
     Fixes #720.'
-  msg_enhanced: '[CVE-2024-34459] Fix buffer overread in `xmllint --htmlout`
-    by preventing the input pointer from decrementing past the start of the
-    buffer when an error occurs at the beginning of a line.
+  msg_enhanced: '[CVE-2024-34459] Fix buffer overread in `xmllint --htmlout` by preventing
+    the input pointer from decrementing past the start of the buffer when an error
+    occurs at the beginning of a line.
 
 
     Add a missing bounds check.
@@ -170,6 +176,10 @@
 
 
     Fixes #720.'
+  best_result_enhanced: R
+  score_enhanced: 1.0
+  best_result_reduced: R
+  score_reduced: 0.9
 - proj: libxml2
   issue: 841
   commit: dc6270d
@@ -186,6 +196,8 @@
 
 
     Short-lived regression. Fixes #841.'
+  best_result_reduced: B
+  score_reduced: 3.0
 - proj: poppler
   issue: 1282
   commit: 4564a00
@@ -604,6 +616,10 @@
     The decNumber library subtracts the exponents of two numbers,
 
     we make sure to limit the number of digits not to make it overflows.'
+  best_result_enhanced: D
+  score_enhanced: 1.2
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: jq
   issue: 2976
   commit: 71c2ab5
@@ -653,6 +669,8 @@
 
 
     Fixes GHSA-686w-5m7m-54vc'
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: jq
   issue: 3262
   commit: de21386
@@ -681,8 +699,12 @@
   msg_reduced: 'Fix signed integer overflow
 
 
-    This commit fixes signed integer overflow and SEGV issues.
-    This fixes CVE-2024-23337 and fixes #3262.'
+    This commit fixes signed integer overflow and SEGV issues. This fixes CVE-2024-23337
+    and fixes #3262.'
+  best_result_enhanced: B
+  score_enhanced: 2.8
+  best_result_reduced: B
+  score_reduced: 3.0
 - proj: jq
   issue: 49014
   commit: 499c91b
@@ -695,6 +717,8 @@
     not attempt to dereference a freed format string when handling an empty format
     string.
   msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
 - proj: micropython
   issue: 13007
   commit: f397a3e
@@ -744,6 +768,10 @@
 
 
     Signed-off-by: Damien George <damien@micropython.org>'
+  best_result_enhanced: D
+  score_enhanced: 1.0
+  best_result_reduced: N
+  score_reduced: 0.0
 - proj: micropython
   issue: 13041
   commit: 908ab1c
@@ -781,8 +809,12 @@
     \ ints, MPZ long ints) and Zephyr STM32WB\nboard (32 bit small ints, long long\
     \ large ints).\n\nThis work was funded through GitHub Sponsors.\n\nSigned-off-by:\
     \ Angus Gratton <angus@redyak.com.au>"
-  msg_reduced: "py/objint: Fix int.to_bytes() buffer size checks.\n
-    \nSigned-off-by: Angus Gratton <angus@redyak.com.au>"
+  msg_reduced: "py/objint: Fix int.to_bytes() buffer size checks.\n \nSigned-off-by:\
+    \ Angus Gratton <angus@redyak.com.au>"
+  best_result_enhanced: D
+  score_enhanced: 2.0
+  best_result_reduced: D
+  score_reduced: 2.0
 - proj: micropython
   issue: 17733
   commit: 3185bb5
@@ -841,6 +873,10 @@
 
 
     Signed-off-by: Damien George <damien@micropython.org>'
+  best_result_enhanced: R
+  score_enhanced: 1.0
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: micropython
   issue: 17815
   commit: c0252d7
@@ -854,11 +890,13 @@
   msg_enhanced: null
   msg_reduced: "py/parse: Fix missing nlr_pop call in complex path of binary_op_maybe.\n\
     \    aa\n\nFixes issue #17815.\n\nSigned-off-by: Jeff Epler <jepler@gmail.com>"
+  best_result_reduced: R
+  score_reduced: 0.3
 - proj: micropython
   issue: 17841
   commit: 4b013ec
   scenario: FIX
-  best_result: R
+  best_result: B
   best_result_msgonly: R
   score_msgonly: 1.0
   msg: 'extmod/vfs_reader: Check that open() resulted in a file-like object.
@@ -898,11 +936,15 @@
     Signed-off-by: Jeff Epler <jepler@gmail.com>
 
     Signed-off-by: Jeff Epler <jepler@unpythonic.net>'
+  best_result_enhanced: B
+  score_enhanced: 1.2
+  best_result_reduced: R
+  score_reduced: 1.0
 - proj: micropython
   issue: 17847
   commit: 0615d13
   scenario: FIX
-  best_result: N
+  best_result: B
   best_result_msgonly: N
   score_msgonly: 0.0
   msg: 'py/objringio: Detect incorrect constructor calls.
@@ -938,3 +980,5 @@
 
     Signed-off-by: Jeff Epler <jepler@gmail.com>'
   msg_reduced: null
+  best_result_enhanced: B
+  score_enhanced: 2.4
