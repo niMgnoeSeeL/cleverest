@@ -4,7 +4,7 @@
 # bisect between the bug-fixing commit and the earliest commit in 2020
 # NOTE: some commits may fail to build, they should return 125 so git bisect handle them as untestable instead of bad
 
-set -xe
+set -e
 
 conf=$1
 source $conf
@@ -16,10 +16,14 @@ if [ -z ${#COMMITS_FIX[@]} ]; then
   exit 1
 fi
 
+COMMITS_BIC=()
+export ASAN_OPTIONS=detect_leaks=0
+
 locate_bic() {
   local truth_dir=$1
   local issue_id=$2
   local fix_commit=${IID2FIX[$issue_id]}
+  local command=${COMMANDS_MAP[$fix_commit]}
   local builddir="build_bisect"
   local truth_poc=$(find $truth_dir -name "*$issue_id*" | head -1)
 
@@ -37,31 +41,28 @@ locate_bic() {
   type build_target >/dev/null 2>&1 || { echo "ERROR: build_target function not defined"; exit 1; }
 
   # get bug_intended by executing build_before_$fix_commit
-  # bug_intended=$(echo 'C' | ./build_before_$fix_commit/$DIR_REL/$EXE ../$truth_poc 2>&1 | check_output_bug || true)
-  bug_intended=$(script -aeq -c "echo C | ./build_before_$fix_commit/$DIR_REL/$EXE ../$truth_poc" | check_output_bug || true)
+  local cmd_before_fix=$(get_cmd "build_before_$fix_commit/$DIR_REL/$command" ../$truth_poc)
+  bug_intended=$(script -aeq -c "echo C | $cmd_before_fix" | check_output_bug || true)
+  local runcmd=$(get_cmd "$builddir/$DIR_REL/$command" ../$truth_poc)
   
   echo "Bug intended by fix commit $fix_commit: $bug_intended"
   git bisect start $fix_commit^ $first_commit
   # NOTE: when `rm -rf $builddir`, sleep 1 to avoid error like rm: cannot remove 'build_bisect/math/polynomial/.nfs00000000124d18d600003294': Device or resource bus
   # NOTE: sometimes check_output_bug return other bug, so we need to check existence of $bug_intended
-  bisect_runcmd="set -x; while ! rm -rf $builddir 2>/dev/null; do sleep 1; done && source ../$conf && source ../utils.sh && pre_build $builddir && build_target $builddir && script -aeq -c 'echo C | $builddir/$DIR_REL/$EXE ../$truth_poc' bisect_run.log | check_output_bug | (! grep \"$bug_intended\") "
+  bisect_runcmd="set -x; while ! rm -rf $builddir 2>/dev/null; do sleep 1; done && source ../$conf && source ../utils.sh && pre_build $builddir && build_target $builddir && script -aeq -c 'echo C | $runcmd' bisect_run.log | check_output_bug | (! grep \"$bug_intended\") "
   git bisect run bash -c "$bisect_runcmd"
   git bisect visualize
-  bic_commit=$(git rev-parse --short=7 refs/bisect/bad)
+  local bic_commit=$(git rev-parse --short=7 refs/bisect/bad)
   # $bic_commit may not be accurate, build to check again
   builddir_bic_after=build_BICafter_$bic_commit
   builddir_bic_before=build_BICbefore_$bic_commit
   echo "Seems BIC commit for issue $issue_id is $bic_commit, build it in $builddir_bic_after and $builddir_bic_before"
   git checkout $bic_commit^ && pre_build $builddir_bic_before && build_target $builddir_bic_before
   git checkout $bic_commit && pre_build $builddir_bic_after && build_target $builddir_bic_after
-  local exe_before="$builddir_bic_before/$DIR_REL/$EXE"
-  local exe_after="$builddir_bic_after/$DIR_REL/$EXE"
-  local cmd_before="echo 'C' | $exe_before ../$truth_poc"
-  local cmd_after="echo 'C' | $exe_after ../$truth_poc"
-  local output_before=$(script -aeq -c "$cmd_before")
-  local output_after=$(script -aeq -c "$cmd_after")
-  local bug_before=$(check_output_bug "$output_before")
-  local bug_after=$(check_output_bug "$output_after")
+  local cmd_before=$(get_cmd "$builddir_bic_before/$DIR_REL/$command" ../$truth_poc)
+  local cmd_after=$(get_cmd "$builddir_bic_after/$DIR_REL/$command" ../$truth_poc)
+  local bug_before=$(script -aeq -c "$cmd_before" | check_output_bug || true)
+  local bug_after=$(script -aeq -c "$cmd_after" | check_output_bug || true)
   # bic is verified only if bug_after == $bug_intended and bug_before != $bug_intended
   if [[ "$bug_after" == "$bug_intended" && "$bug_before" != "$bug_intended" ]]; then
     echo "Issue $issue_id BIC $bic_commit is verified! before: $bug_before, after: $bug_after"
@@ -85,3 +86,9 @@ done
 
 echo -e $summary_table
 echo "COMMITS_BIC=(${COMMITS_BIC[@]})"
+
+pushd $PROJ_NAME
+for commit in "${COMMITS_BIC[@]}"; do
+  commit_oneline $commit
+done
+popd

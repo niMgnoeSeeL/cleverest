@@ -151,6 +151,7 @@ for i in "${!COMMITS[@]}"; do
     issue=${ISSUES[$i]:-$i}
     commit=${COMMITS[$i]}   
     id="#${issue}_${commit}"
+    [ "$PROJ_NAME" = "libxml2" ] && id="${issue}_${commit}"  # filename containing # affect libxml2 #550 bug-triggering
     command=${COMMANDS[$i]}
     chat_log=chat_${SCENARIO}_${id}_${LLM}_${suffix}.log
     builddir_before=build_before_$commit
@@ -249,8 +250,13 @@ for i in "${!COMMITS[@]}"; do
             (set -x; rm -f *.gcov; rm -f $builddir_after/*.gcov)
 
             # Execution Analyzer
-            echo "Output before commit $commit: $output_before, return code: $retcode_before" | tee -a $chat_log
-            echo "Output after commit $commit: $output_after, return code: $retcode_after" | tee -a $chat_log
+            echo "Output before commit $commit: ${output_before:0:8192}, return code: $retcode_before" | tee -a $chat_log
+            echo "Output after commit $commit: ${output_after:0:8192}, return code: $retcode_after" | tee -a $chat_log
+            # NOTE: remove potential builddir in output to make sure output actually differ
+            # hash output to avoid large string comparison
+            hash_before=$(echo "$output_before" | sed "s|$builddir_before|REDACTED|g" | md5sum)
+            hash_after=$(echo "$output_after" | sed "s|$builddir_after|REDACTED|g" | md5sum)
+            [[ "$hash_before" != "$hash_after" ]] && output_differ=true || output_differ=false
             bug_before=$(check_output_bug "$output_before")
             bug_after=$(check_output_bug "$output_after")
             if [[ "$bug_before" || "$bug_after" ]]; then  # bug triggered, different feedback based on scenario
@@ -285,7 +291,7 @@ for i in "${!COMMITS[@]}"; do
                 status="invalid"
                 echo "Invalid output in commit $commit with $input_file. Failed!" | tee -a $chat_log
                 msg_prev+="Previous try #$cnt seems to not execute correctly and have invalid output:\n"
-            elif [ "$output_before" != "$output_after" ] || [ "$retcode_before" != "$retcode_after" ]; then  # behavior difference
+            elif [ "$output_differ" = true ] || [ "$retcode_before" != "$retcode_after" ]; then  # behavior difference
                 status="behave"
                 [ "${finals[$i]}" != "B" ] && finals[$i]="D"
                 echo "The programs B/A commit $commit behave differently with $input_file!\n" | tee -a $chat_log
@@ -379,7 +385,7 @@ for i in "${!COMMITS[@]}"; do
             msg_prev_inputs+="Previous Input #$cnt:\n$input\n"
             # $output_before and $output_after may be too long, cut to 4096 characters before sending to LLM
 
-            if [ "$output_before" != "$output_after" ] || [ "$retcode_before" != "$retcode_after" ]; then
+            if [ "$output_differ" = true ] || [ "$retcode_before" != "$retcode_after" ]; then
                 output_before=$(echo "$output_before" | head -c 4096)
                 output_after=$(echo "$output_after" | head -c 4096)
                 msg_prev+="Program behave differently before/after commit $commit:\n"
@@ -437,7 +443,7 @@ for i in "${!COMMITS[@]}"; do
         if [ "$GENCMD" ]; then
             command=$(parse_llm_cmd "$ans")
             [ -z "$command" ] && echo "Parsed empty command from LLM response, skipping." | tee -a $chat_log && continue
-            abort_if_cmd_danger $cmd
+            abort_if_cmd_danger $command
             echo "Command parsed: $command"
             echo -e "$command" > CMD_${id}_${cnt}_${LLM}.txt
         fi

@@ -1,21 +1,21 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-6659 | 0f3c562 | 250212-2003 | bug_heap-use-after-free^heap-use-after-free | X | fuzzout_#6659_0f3c562_after/default/crashes/id:000000,sig:06,src:002017,time:9584745,execs:134866,op:havoc,rep:11 | 
-6659 | 0f3c562 | 250217-1948 | none | N |  | 
-6659 | 0f3c562 | 250217-2001 | none | N |  | 
-6659 | 0f3c562 | 250217-2009 | none | N |  | 
-6659 | 0f3c562 | 250217-2021 | none | N |  | 
-6914 | a62e4b2 | 250212-2003 | none | N |  | 
-6914 | a62e4b2 | 250217-1948 | none | N |  | 
-6914 | a62e4b2 | 250217-2001 | none | N |  | 
-6914 | a62e4b2 | 250217-2009 | none | N |  | 
-6914 | a62e4b2 | 250217-2021 | none | N |  | 
-7246 | dec87fe | 250212-2003 | none | N |  | 
-7246 | dec87fe | 250217-1948 | none | N |  | 
-7246 | dec87fe | 250217-2001 | none | N |  | 
-7246 | dec87fe | 250217-2009 | none | N |  | 
-7246 | dec87fe | 250217-2021 | none | N |  | 
-7252 | a7b1db6 | 250212-2003 | none | N |  | 
-7252 | a7b1db6 | 250217-1948 | none | N |  | 
-7252 | a7b1db6 | 250217-2001 | none | N |  | 
-7252 | a7b1db6 | 250217-2009 | none | N |  | 
-7252 | a7b1db6 | 250217-2021 | none | N |  | 
+6914 | a62e4b2 | 250827-1915 | none | N |  | 
+6914 | a62e4b2 | 250827-1928 | none | N |  | 
+7246 | dec87fe | 250903-1707 | none | D | id:000151,src:000000,time:425596,execs:4697,op:havoc,rep:8,+cov | 
+7246 | dec87fe | 250903-1720 | none | D | id:000076,src:000000,time:154954,execs:1438,op:flip32,pos:15,+cov | 
+7246 | dec87fe | 250903-1733 | behave | D | id:000005,src:000003,time:1442,execs:48,op:quick,pos:0,+cov | 
+7246 | dec87fe | 250903-1743 | behave | D | id:000076,src:000004,time:71224,execs:3167,op:havoc,rep:2,+cov | 
+7246 | dec87fe | 250903-1753 | behave | D | id:000315,src:000001,time:461668,execs:14801,op:havoc,rep:4,+cov | 
+7246 | dec87fe | 250827-1911 | behave | D | id:000884,src:000870+000571,time:6240997,execs:67235,op:splice,rep:3,+cov | 
+7246 | dec87fe | 250827-1915 | behave | D | id:000095,src:000002,time:415155,execs:4065,op:flip2,pos:5 | 
+7246 | dec87fe | 250827-1920 | none | D | id:000114,src:000000,time:443210,execs:4708,op:int32,pos:15,val:+127,+cov | 
+7246 | dec87fe | 250827-1924 | none | D | id:000288,src:000061+000259,time:990937,execs:10227,op:splice,rep:5,+cov | 
+7246 | dec87fe | 250827-1928 | none | D | id:000338,src:000000,time:880067,execs:11065,op:havoc,rep:8,+cov | 
+7252 | a7b1db6 | 250903-1733 | none | N |  | 
+7252 | a7b1db6 | 250903-1743 | none | N |  | 
+7252 | a7b1db6 | 250903-1753 | none | N |  | 
+7252 | a7b1db6 | 250827-1911 | none | N |  | 
+7252 | a7b1db6 | 250827-1915 | none | N |  | 
+7252 | a7b1db6 | 250827-1920 | none | N |  | 
+7252 | a7b1db6 | 250827-1924 | none | N |  | 
+7252 | a7b1db6 | 250827-1928 | none | N |  | 

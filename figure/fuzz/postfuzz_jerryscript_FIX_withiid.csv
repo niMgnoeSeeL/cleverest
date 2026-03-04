@@ -1,21 +1,31 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-5013 | 3686410 | 250212-2332 | none | X | fuzzout_#5013_3686410_before/default/crashes/id:000001,sig:06,src:004349,time:13326964,execs:2800833,op:havoc,rep:2 | 
-5013 | 3686410 | 250217-2138 | bug_stack-overflow^ | B | fuzzout_#5013_3686410_before/default/crashes/id:000062,sig:11,src:009494,time:71349472,execs:15791650,op:havoc,rep:2 | 71349472
-5013 | 3686410 | 250217-2141 | none | X | fuzzout_#5013_3686410_before/default/crashes/id:000000,sig:06,src:001641,time:1599371,execs:349715,op:havoc,rep:2 | 
-5013 | 3686410 | 250217-2145 | bug_stack-overflow^ | B | fuzzout_#5013_3686410_before/default/crashes/id:000000,sig:11,src:000003,time:79464,execs:15215,op:havoc,rep:1 | 79464
-5013 | 3686410 | 250217-2147 | bug_stack-overflow^ | B | fuzzout_#5013_3686410_before/default/crashes/id:000026,sig:11,src:003749,time:19793983,execs:3990501,op:havoc,rep:1 | 19793983
-5138 | 95cc5e9 | 250212-2332 | bug_Aborted^ | B | fuzzout_#5138_95cc5e9_before/default/crashes/id:000131,sig:06,src:008423,time:60060039,execs:11683897,op:havoc,rep:1 | 60060039
-5138 | 95cc5e9 | 250217-2138 | bug_Aborted^ | B | fuzzout_#5138_95cc5e9_before/default/crashes/id:000024,sig:06,src:002931+001187,time:8522609,execs:1856343,op:splice,rep:13 | 8522609
-5138 | 95cc5e9 | 250217-2141 | bug_Aborted^ | B | fuzzout_#5138_95cc5e9_before/default/crashes/id:000016,sig:06,src:002761,time:3940757,execs:870022,op:havoc,rep:1 | 3940757
-5138 | 95cc5e9 | 250217-2145 | bug_Aborted^ | B | fuzzout_#5138_95cc5e9_before/default/crashes/id:000169,sig:06,src:003943+000869,time:75286060,execs:14629774,op:splice,rep:3 | 75286060
-5138 | 95cc5e9 | 250217-2147 | bug_Aborted^Aborted | X | fuzzout_#5138_95cc5e9_before/default/crashes/id:000000,sig:06,src:000002,time:1063776,execs:212237,op:havoc,rep:2 | 
-5117 | d7e2125 | 250212-2332 | bug_Aborted^Aborted | X | fuzzout_#5117_d7e2125_before/default/crashes/id:000000,sig:06,src:000000,time:28216,execs:5363,op:havoc,rep:6 | 
-5117 | d7e2125 | 250217-2138 | bug_Aborted^ | B | fuzzout_#5117_d7e2125_before/default/crashes/id:000157,sig:06,src:005251+000004,time:40544214,execs:8740764,op:splice,rep:1 | 40544214
-5117 | d7e2125 | 250217-2141 | bug_Aborted^Aborted | X | fuzzout_#5117_d7e2125_before/default/crashes/id:000000,sig:06,src:000000,time:23032,execs:5446,op:havoc,rep:3 | 
-5117 | d7e2125 | 250217-2145 | none | N |  | 
-5117 | d7e2125 | 250217-2147 | none | N |  | 
-5153 | de51531 | 250212-2332 | bug_Aborted^ | B | fuzzout_#5153_de51531_before/default/crashes/id:000006,sig:06,src:004668,time:10088762,execs:2124616,op:havoc,rep:3 | 10088762
-5153 | de51531 | 250217-2138 | bug_Aborted^ | B | fuzzout_#5153_de51531_before/default/crashes/id:000202,sig:06,src:002541+003948,time:35191687,execs:7573453,op:splice,rep:2 | 35191687
-5153 | de51531 | 250217-2141 | bug_Aborted^ | B | fuzzout_#5153_de51531_before/default/crashes/id:000102,sig:06,src:006547,time:24990201,execs:5225284,op:havoc,rep:1 | 24990201
-5153 | de51531 | 250217-2145 | bug_Aborted^Aborted | X | fuzzout_#5153_de51531_before/default/crashes/id:000000,sig:06,src:002101,time:2390282,execs:477158,op:havoc,rep:6 | 
-5153 | de51531 | 250217-2147 | bug_Aborted^ | B | fuzzout_#5153_de51531_before/default/crashes/id:000044,sig:06,src:004962,time:13317558,execs:2679183,op:havoc,rep:1 | 13317558
+5013 | 3686410 | 250903-2144 | bug_Aborted^ | B | id:000021,sig:06,src:000003,time:5972066,execs:1368576,op:havoc,rep:1 | 5972066
+5013 | 3686410 | 250903-2150 | bug_Aborted^ | B | id:000001,sig:06,src:000001,time:5105772,execs:1180305,op:havoc,rep:2 | 5105772
+5013 | 3686410 | 250903-2156 | bug_Aborted^ | B | id:000000,sig:06,src:000002,time:4214363,execs:998459,op:havoc,rep:2 | 4214363
+5013 | 3686410 | 250903-2201 | bug_Aborted^ | B | id:000004,sig:06,src:000001,time:4989331,execs:1167084,op:havoc,rep:1 | 4989331
+5013 | 3686410 | 250903-2208 | bug_Aborted^ | B | id:000004,sig:06,src:001137+000001,time:36381693,execs:8293567,op:splice,rep:1 | 36381693
+5013 | 3686410 | 250825-2226 | bug_Aborted^ | B | id:000000,sig:06,src:000002,time:4827051,execs:1168290,op:havoc,rep:1 | 4827051
+5013 | 3686410 | 250825-2228 | bug_Aborted^ | B | id:000000,sig:06,src:000000,time:80018,execs:22094,op:havoc,rep:1 | 80018
+5013 | 3686410 | 250825-2230 | bug_Aborted^ | B | id:000004,sig:06,src:000004,time:4736545,execs:1147944,op:havoc,rep:2 | 4736545
+5013 | 3686410 | 250825-2232 | bug_Aborted^ | B | id:000015,sig:06,src:000257,time:43204576,execs:8843424,op:havoc,rep:1 | 43204576
+5013 | 3686410 | 250825-2234 | bug_Aborted^ | B | id:000000,sig:06,src:000000,time:109612,execs:23983,op:havoc,rep:1 | 109612
+5138 | 95cc5e9 | 250903-2144 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000000,time:92073,execs:38476,op:havoc,rep:1 | 92073
+5138 | 95cc5e9 | 250903-2150 | bug_Aborted^ | B | id:000114,sig:06,src:005836+006811,time:44086956,execs:9747397,op:splice,rep:1 | 44086956
+5138 | 95cc5e9 | 250903-2156 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000001,time:30636,execs:14507,op:havoc,rep:2 | 30636
+5138 | 95cc5e9 | 250903-2201 | bug_Aborted^ | B | id:000039,sig:06,src:006333,time:19596583,execs:4404687,op:havoc,rep:8 | 19596583
+5138 | 95cc5e9 | 250903-2208 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000001,time:49072,execs:21633,op:havoc,rep:2 | 49072
+5138 | 95cc5e9 | 250825-2226 | bug_Aborted^ | B | id:000104,sig:06,src:003631+002712,time:16504633,execs:3859587,op:splice,rep:2 | 16504633
+5138 | 95cc5e9 | 250825-2228 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000000,time:248704,execs:60327,op:havoc,rep:1 | 248704
+5138 | 95cc5e9 | 250825-2230 | none | X | id:000000,sig:06,src:000725+000682,time:510969,execs:107182,op:splice,rep:3 | 510969
+5138 | 95cc5e9 | 250825-2232 | bug_Aborted^ | B | id:000130,sig:06,src:007426,time:43622044,execs:8926901,op:havoc,rep:3 | 43622044
+5138 | 95cc5e9 | 250825-2234 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000000,time:98486,execs:21605,op:havoc,rep:1 | 98486
+5117 | d7e2125 | 250903-2144 | bug_Aborted^ | B | id:000139,sig:06,src:007058,time:32037410,execs:7165197,op:havoc,rep:2 | 32037410
+5117 | d7e2125 | 250903-2150 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000001,time:44769,execs:21322,op:havoc,rep:5 | 44769
+5117 | d7e2125 | 250903-2156 | bug_Aborted^ | B | id:000065,sig:06,src:001250+000004,time:10788804,execs:2503377,op:splice,rep:2 | 10788804
+5117 | d7e2125 | 250903-2201 | bug_Aborted^ | B | id:000341,sig:06,src:008033,time:85181073,execs:19469079,op:havoc,rep:1 | 85181073
+5117 | d7e2125 | 250903-2208 | none | X | id:000000,sig:06,src:000003,time:5880,execs:3047,op:arith8,pos:27,val:+14 | 5880
+5117 | d7e2125 | 250825-2226 | none | X | id:000000,sig:06,src:000000,time:27969,execs:9863,op:havoc,rep:1 | 27969
+5117 | d7e2125 | 250825-2228 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^ | 0
+5117 | d7e2125 | 250825-2230 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^ | 0
+5117 | d7e2125 | 250825-2232 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^ | 0
+5117 | d7e2125 | 250825-2234 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#5117_d7e2125_1_gpt-4o-2024-08-06_bug_Aborted^ | 0

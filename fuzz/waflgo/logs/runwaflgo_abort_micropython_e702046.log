@@ -1,0 +1,24 @@
++ '[' -z 'micropython @@' ']'
+++ echo micropython @@
+++ cut '-d ' -f1
++ local exe=micropython
+++ echo micropython @@
+++ cut '-d ' -f2-
++ cmd='micropython.ci @@'
++ /home/WAFLGo/afl-fuzz -T waflgo-micropython -t 1000+ -m none -z exp -c 45m -q
+1 -i /home/pyseeds/ -o /home/out -- /home/micropython/buildwaflgo_e702046//micro
+python.ci @@
+waflgo-fuzz 2.56b by xy
+[+] Running with EXP schedule and time-to-exploitation set to 45 minutes
+[+] You have 128 CPU cores and 2 runnable tasks (utilization: 2%).
+[+] Try parallel jobs - see /usr/local/share/doc/afl/parallel_fuzzing.txt.
+[!] WARNING: Not binding to a CPU core (AFL_NO_AFFINITY set).
+[*] Checking core_pattern...
+[+] target_ids_num 0
+targets_branch_num 2.56b 0
+
+[-] PROGRAM ABORT : target_count is null
+
+         Location : setup_shm(), afl-fuzz.c:2044
+
+[afl++ 636b4f3c65c3] /home/micropython ((e7020463f...)) #

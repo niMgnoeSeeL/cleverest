@@ -1,0 +1,1007 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from waflgo_php-src.Dockerfile
+#1 transferring dockerfile: 1.93kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/he1lonice/waflgo:v1
+#2 DONE 1.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [base 1/5] FROM docker.io/he1lonice/waflgo:v1@sha256:99607cd61e16bb55a655bf4bef3a8afae9061a615a7f24b5d3dbd10b9ae05d18
+#4 resolve docker.io/he1lonice/waflgo:v1@sha256:99607cd61e16bb55a655bf4bef3a8afae9061a615a7f24b5d3dbd10b9ae05d18 done
+#4 DONE 0.0s
+
+#5 [base 5/5] RUN apt-get update && apt-get install -y     bat     htop     tmux     ranger
+#5 CACHED
+
+#6 [waflgo_php  1/10] RUN git clone https://github.com/php/php-src
+#6 CACHED
+
+#7 [base 3/5] RUN git clone https://github.com/He1loNice/WAFLGo
+#7 CACHED
+
+#8 [waflgo_php  2/10] RUN apt-get remove -y cmake &&     pip install --upgrade cmake
+#8 CACHED
+
+#9 [base 2/5] WORKDIR /home/
+#9 CACHED
+
+#10 [base 4/5] RUN cd WAFLGo &&     make -j8 &&     make -C llvm_mode -j8 &&     cd instrument/ &&     cmake . &&     make -j8
+#10 CACHED
+
+#11 [waflgo_php  3/10] RUN apt-get update && apt-get install -y re2c libsqlite3-dev
+#11 CACHED
+
+#12 [internal] load build context
+#12 transferring context: 25.60kB done
+#12 DONE 0.0s
+
+#13 [waflgo_php  4/10] RUN mkdir -p /home/seeds/php &&     cp php-src/tests/basic/* /home/seeds/php/
+#13 DONE 0.2s
+
+#14 [waflgo_php  5/10] COPY php.env ./
+#14 DONE 0.0s
+
+#15 [waflgo_php  6/10] COPY utils.sh ./
+#15 DONE 0.0s
+
+#16 [waflgo_php  7/10] COPY bwaflgo.sh ./
+#16 DONE 0.0s
+
+#17 [waflgo_php  8/10] RUN ./bwaflgo.sh php.env 5cb38e9
+#17 0.121 /home/php-src /home
+#17 28.07 Note: switching to '5cb38e9'.
+#17 28.07 
+#17 28.07 You are in 'detached HEAD' state. You can look around, make experimental
+#17 28.07 changes and commit them, and you can discard any commits you make in this
+#17 28.07 state without impacting any branches by switching back to a branch.
+#17 28.07 
+#17 28.07 If you want to create a new branch to retain commits you create, you may
+#17 28.07 do so (now or later) by using -c with the switch command. Example:
+#17 28.07 
+#17 28.07   git switch -c <new-branch-name>
+#17 28.07 
+#17 28.07 Or undo this operation with:
+#17 28.07 
+#17 28.07   git switch -
+#17 28.07 
+#17 28.07 Turn off this advice by setting config variable advice.detachedHead to false
+#17 28.07 
+#17 28.07 HEAD is now at 5cb38e9d247 Fix various document ref pointer mismanagements
+#17 28.16 make: *** No rule to make target 'distclean'.  Stop.
+#17 28.16 ++ git rev-parse --short=7 HEAD
+#17 28.16 + local commit=5cb38e9
+#17 28.16 + local builddir=buildwaflgo_5cb38e9
+#17 28.16 + mkdir -p buildwaflgo_5cb38e9
+#17 28.16 + export 'ADD=-g --notI '
+#17 28.16 + ADD='-g --notI '
+#17 28.16 + export CC=/home/WAFLGo/afl-clang-fast CXX=/home/WAFLGo/afl-clang-fast++ 'CFLAGS=-g --notI ' 'CXXFLAGS=-g --notI '
+#17 28.16 + CC=/home/WAFLGo/afl-clang-fast
+#17 28.16 + CXX=/home/WAFLGo/afl-clang-fast++
+#17 28.16 + CFLAGS='-g --notI '
+#17 28.16 + CXXFLAGS='-g --notI '
+#17 28.16 + export AFL_CC=gclang AFL_CXX=gclang++
+#17 28.16 + AFL_CC=gclang
+#17 28.16 + AFL_CXX=gclang++
+#17 28.16 + [[  18b18f0 d17ed34 b068c2f e4473ab  =~  5cb38e9  ]]
+#17 28.16 + ./buildconf --force
+#17 28.17 buildconf: Checking installation
+#17 28.23 buildconf: autoconf version 2.69 (ok)
+#17 28.23 buildconf: Forcing buildconf. The configure files will be regenerated.
+#17 28.23 buildconf: Cleaning cache and configure files
+#17 28.23 buildconf: Rebuilding configure
+#17 29.32 buildconf: Rebuilding main/php_config.h.in
+#17 29.47 buildconf: Run ./configure to proceed with customizing the PHP build.
+#17 29.47 + buildopts+=' --enable-bcmath --disable-opcache-jit --disable-fiber-asm'
+#17 29.47 + cd buildwaflgo_5cb38e9
+#17 29.47 + ../configure --enable-bcmath --disable-opcache-jit --disable-fiber-asm --prefix=/home/php-src/buildwaflgo_5cb38e9
+#17 29.83 shtool:echo:Warning: unable to determine terminal sequence for bold mode
+#17 29.86 shtool:echo:Warning: unable to determine terminal sequence for bold mode
+#17 56.45 rmdir: failed to remove 'out': Directory not empty
+#17 56.45 rmdir: failed to remove 'conftest': Directory not empty
+#17 56.45 rm: cannot remove 'conftest': Is a directory
+#17 56.48 rm: cannot remove 'conftest': Is a directory
+#17 56.53 rm: cannot remove 'conftest': Is a directory
+#17 56.74 rm: cannot remove 'conftest': Is a directory
+#17 56.98 rmdir: failed to remove 'out': Directory not empty
+#17 56.98 rmdir: failed to remove 'conftest': Directory not empty
+#17 56.98 rm: cannot remove 'conftest': Is a directory
+#17 57.94 + make -C buildwaflgo_5cb38e9 -j32
+#17 58.37 mkdir: cannot create directory 'ext/opcache/.libs': File exists
+#17 58.65 Not Instrument __afl_prev_loc
+#17 58.74 Not Instrument __afl_prev_loc
+#17 58.81 Not Instrument __afl_prev_loc
+#17 58.81 Not Instrument __afl_prev_loc
+#17 58.82 Not Instrument __afl_prev_loc
+#17 58.87 Not Instrument __afl_prev_loc
+#17 58.91 Not Instrument __afl_prev_loc
+#17 58.95 Not Instrument __afl_prev_loc
+#17 58.95 Not Instrument __afl_prev_loc
+#17 58.95 Not Instrument __afl_prev_loc
+#17 59.01 Not Instrument __afl_prev_loc
+#17 59.02 Not Instrument __afl_prev_loc
+#17 59.04 Not Instrument __afl_prev_loc
+#17 59.08 Not Instrument __afl_prev_loc
+#17 59.09 Not Instrument __afl_prev_loc
+#17 59.10 Not Instrument __afl_prev_loc
+#17 59.11 Not Instrument __afl_prev_loc
+#17 59.12 Not Instrument __afl_prev_loc
+#17 59.13 Not Instrument __afl_prev_loc
+#17 59.15 Not Instrument __afl_prev_loc
+#17 59.20 Not Instrument __afl_prev_loc
+#17 59.21 Not Instrument __afl_prev_loc
+#17 59.22 Not Instrument __afl_prev_loc
+#17 59.26 Not Instrument __afl_prev_loc
+#17 59.35 Not Instrument __afl_prev_loc
+#17 59.39 Not Instrument __afl_prev_loc
+#17 59.40 Not Instrument __afl_prev_loc
+#17 59.43 Not Instrument __afl_prev_loc
+#17 59.46 Not Instrument __afl_prev_loc
+#17 59.50 Not Instrument __afl_prev_loc
+#17 59.51 Not Instrument __afl_prev_loc
+#17 59.55 Not Instrument __afl_prev_loc
+#17 59.55 Not Instrument __afl_prev_loc
+#17 59.55 Not Instrument __afl_prev_loc
+#17 59.65 Not Instrument __afl_prev_loc
+#17 59.68 Not Instrument __afl_prev_loc
+#17 59.71 Not Instrument __afl_prev_loc
+#17 59.75 Not Instrument __afl_prev_loc
+#17 59.80 Not Instrument __afl_prev_loc
+#17 59.86 Not Instrument __afl_prev_loc
+#17 59.86 Not Instrument __afl_prev_loc
+#17 59.91 Not Instrument __afl_prev_loc
+#17 59.91 Not Instrument __afl_prev_loc
+#17 59.92 Not Instrument __afl_prev_loc
+#17 59.93 Not Instrument __afl_prev_loc
+#17 59.95 Not Instrument __afl_prev_loc
+#17 59.98 Not Instrument __afl_prev_loc
+#17 60.00 Not Instrument __afl_prev_loc
+#17 60.01 Not Instrument __afl_prev_loc
+#17 60.02 Not Instrument __afl_prev_loc
+#17 60.05 Not Instrument __afl_prev_loc
+#17 60.11 Not Instrument __afl_prev_loc
+#17 60.12 Not Instrument __afl_prev_loc
+#17 60.24 Not Instrument __afl_prev_loc
+#17 60.25 Not Instrument __afl_prev_loc
+#17 60.27 Not Instrument __afl_prev_loc
+#17 60.46 Not Instrument __afl_prev_loc
+#17 60.68 Not Instrument __afl_prev_loc
+#17 60.82 Not Instrument __afl_prev_loc
+#17 61.11 Not Instrument __afl_prev_loc
+#17 61.11 Not Instrument __afl_prev_loc
+#17 61.11 Not Instrument __afl_prev_loc
+#17 61.22 Not Instrument __afl_prev_loc
+#17 61.25 Not Instrument __afl_prev_loc
+#17 61.26 Not Instrument __afl_prev_loc
+#17 61.35 Not Instrument __afl_prev_loc
+#17 61.38 Not Instrument __afl_prev_loc
+#17 61.45 Not Instrument __afl_prev_loc
+#17 61.46 Not Instrument __afl_prev_loc
+#17 61.50 Not Instrument __afl_prev_loc
+#17 61.51 Not Instrument __afl_prev_loc
+#17 61.54 Not Instrument __afl_prev_loc
+#17 61.55 Not Instrument __afl_prev_loc
+#17 61.61 Not Instrument __afl_prev_loc
+#17 61.64 Not Instrument __afl_prev_loc
+#17 61.65 Not Instrument __afl_prev_loc
+#17 61.67 Not Instrument __afl_prev_loc
+#17 61.68 Not Instrument __afl_prev_loc
+#17 61.70 Not Instrument __afl_prev_loc
+#17 61.73 Not Instrument __afl_prev_loc
+#17 61.76 Not Instrument __afl_prev_loc
+#17 61.98 Not Instrument __afl_prev_loc
+#17 61.99 Not Instrument __afl_prev_loc
+#17 62.01 Not Instrument __afl_prev_loc
+#17 62.03 Not Instrument __afl_prev_loc
+#17 62.05 Not Instrument __afl_prev_loc
+#17 62.05 Not Instrument __afl_prev_loc
+#17 62.06 Not Instrument __afl_prev_loc
+#17 62.10 Not Instrument __afl_prev_loc
+#17 62.19 Not Instrument __afl_prev_loc
+#17 62.20 Not Instrument __afl_prev_loc
+#17 62.20 Not Instrument __afl_prev_loc
+#17 62.20 Not Instrument __afl_prev_loc
+#17 62.27 Not Instrument __afl_prev_loc
+#17 62.30 Not Instrument __afl_prev_loc
+#17 62.32 Not Instrument __afl_prev_loc
+#17 62.37 Not Instrument __afl_prev_loc
+#17 62.40 Not Instrument __afl_prev_loc
+#17 62.41 Not Instrument __afl_prev_loc
+#17 62.45 Not Instrument __afl_prev_loc
+#17 62.58 Not Instrument __afl_prev_loc
+#17 62.63 Not Instrument __afl_prev_loc
+#17 62.64 Not Instrument __afl_prev_loc
+#17 62.72 Not Instrument __afl_prev_loc
+#17 62.75 Not Instrument __afl_prev_loc
+#17 63.15 Not Instrument __afl_prev_loc
+#17 63.16 Not Instrument __afl_prev_loc
+#17 63.20 Not Instrument __afl_prev_loc
+#17 63.21 Not Instrument __afl_prev_loc
+#17 63.38 Not Instrument __afl_prev_loc
+#17 63.38 Not Instrument __afl_prev_loc
+#17 63.40 Not Instrument __afl_prev_loc
+#17 63.41 Not Instrument __afl_prev_loc
+#17 63.45 Not Instrument __afl_prev_loc
+#17 63.45 Not Instrument __afl_prev_loc
+#17 63.46 Not Instrument __afl_prev_loc
+#17 63.49 Not Instrument __afl_prev_loc
+#17 63.49 Not Instrument __afl_prev_loc
+#17 63.53 Not Instrument __afl_prev_loc
+#17 63.65 Not Instrument __afl_prev_loc
+#17 63.66 Not Instrument __afl_prev_loc
+#17 63.69 Not Instrument __afl_prev_loc
+#17 63.72 Not Instrument __afl_prev_loc
+#17 63.75 Not Instrument __afl_prev_loc
+#17 63.80 Not Instrument __afl_prev_loc
+#17 63.83 Not Instrument __afl_prev_loc
+#17 63.84 Not Instrument __afl_prev_loc
+#17 63.85 Not Instrument __afl_prev_loc
+#17 63.97 Not Instrument __afl_prev_loc
+#17 63.97 Not Instrument __afl_prev_loc
+#17 64.00 Not Instrument __afl_prev_loc
+#17 64.04 Not Instrument __afl_prev_loc
+#17 64.08 Not Instrument __afl_prev_loc
+#17 64.09 Not Instrument __afl_prev_loc
+#17 64.10 Not Instrument __afl_prev_loc
+#17 64.16 Not Instrument __afl_prev_loc
+#17 64.20 Not Instrument __afl_prev_loc
+#17 64.22 Not Instrument __afl_prev_loc
+#17 64.22 Not Instrument __afl_prev_loc
+#17 64.39 Not Instrument __afl_prev_loc
+#17 64.41 Not Instrument __afl_prev_loc
+#17 64.41 Not Instrument __afl_prev_loc
+#17 64.45 Not Instrument __afl_prev_loc
+#17 64.46 Not Instrument __afl_prev_loc
+#17 64.46 Not Instrument __afl_prev_loc
+#17 64.47 Not Instrument __afl_prev_loc
+#17 64.54 Not Instrument __afl_prev_loc
+#17 64.59 Not Instrument __afl_prev_loc
+#17 64.71 Not Instrument __afl_prev_loc
+#17 64.71 Not Instrument __afl_prev_loc
+#17 64.75 Not Instrument __afl_prev_loc
+#17 64.75 Not Instrument __afl_prev_loc
+#17 64.79 Not Instrument __afl_prev_loc
+#17 64.90 Not Instrument __afl_prev_loc
+#17 64.91 Not Instrument __afl_prev_loc
+#17 65.30 Not Instrument __afl_prev_loc
+#17 65.31 Not Instrument __afl_prev_loc
+#17 65.55 Not Instrument __afl_prev_loc
+#17 65.77 Not Instrument __afl_prev_loc
+#17 65.87 Not Instrument __afl_prev_loc
+#17 65.93 Not Instrument __afl_prev_loc
+#17 66.01 Not Instrument __afl_prev_loc
+#17 66.07 Not Instrument __afl_prev_loc
+#17 66.09 Not Instrument __afl_prev_loc
+#17 66.17 Not Instrument __afl_prev_loc
+#17 66.20 Not Instrument __afl_prev_loc
+#17 66.21 Not Instrument __afl_prev_loc
+#17 66.24 Not Instrument __afl_prev_loc
+#17 66.27 Not Instrument __afl_prev_loc
+#17 66.29 Not Instrument __afl_prev_loc
+#17 66.39 Not Instrument __afl_prev_loc
+#17 66.39 Not Instrument __afl_prev_loc
+#17 66.44 Not Instrument __afl_prev_loc
+#17 66.66 Not Instrument __afl_prev_loc
+#17 66.70 Not Instrument __afl_prev_loc
+#17 66.71 Not Instrument __afl_prev_loc
+#17 66.71 Not Instrument __afl_prev_loc
+#17 66.75 Not Instrument __afl_prev_loc
+#17 66.82 Not Instrument __afl_prev_loc
+#17 66.84 Not Instrument __afl_prev_loc
+#17 66.87 Not Instrument __afl_prev_loc
+#17 66.91 Not Instrument __afl_prev_loc
+#17 66.95 Not Instrument __afl_prev_loc
+#17 67.00 Not Instrument __afl_prev_loc
+#17 67.01 Not Instrument __afl_prev_loc
+#17 67.06 Not Instrument __afl_prev_loc
+#17 67.08 Not Instrument __afl_prev_loc
+#17 67.10 Not Instrument __afl_prev_loc
+#17 67.16 Not Instrument __afl_prev_loc
+#17 67.16 Not Instrument __afl_prev_loc
+#17 67.17 Not Instrument __afl_prev_loc
+#17 67.32 Not Instrument __afl_prev_loc
+#17 67.39 Not Instrument __afl_prev_loc
+#17 67.50 Not Instrument __afl_prev_loc
+#17 67.50 Not Instrument __afl_prev_loc
+#17 67.67 Not Instrument __afl_prev_loc
+#17 67.69 Not Instrument __afl_prev_loc
+#17 67.73 Not Instrument __afl_prev_loc
+#17 67.77 Not Instrument __afl_prev_loc
+#17 67.79 Not Instrument __afl_prev_loc
+#17 67.85 Not Instrument __afl_prev_loc
+#17 67.89 Not Instrument __afl_prev_loc
+#17 68.05 Not Instrument __afl_prev_loc
+#17 68.10 Not Instrument __afl_prev_loc
+#17 68.11 Not Instrument __afl_prev_loc
+#17 68.14 Not Instrument __afl_prev_loc
+#17 68.16 Not Instrument __afl_prev_loc
+#17 68.22 Not Instrument __afl_prev_loc
+#17 68.28 Not Instrument __afl_prev_loc
+#17 68.28 Not Instrument __afl_prev_loc
+#17 68.39 Not Instrument __afl_prev_loc
+#17 68.70 Not Instrument __afl_prev_loc
+#17 68.71 Not Instrument __afl_prev_loc
+#17 68.72 Not Instrument __afl_prev_loc
+#17 68.76 Not Instrument __afl_prev_loc
+#17 68.78 Not Instrument __afl_prev_loc
+#17 68.78 Not Instrument __afl_prev_loc
+#17 68.79 Not Instrument __afl_prev_loc
+#17 68.89 Not Instrument __afl_prev_loc
+#17 68.96 Not Instrument __afl_prev_loc
+#17 68.97 Not Instrument __afl_prev_loc
+#17 68.97 Not Instrument __afl_prev_loc
+#17 69.20 Not Instrument __afl_prev_loc
+#17 69.38 Not Instrument __afl_prev_loc
+#17 69.48 Not Instrument __afl_prev_loc
+#17 69.55 Not Instrument __afl_prev_loc
+#17 69.56 Not Instrument __afl_prev_loc
+#17 69.57 Not Instrument __afl_prev_loc
+#17 69.72 Not Instrument __afl_prev_loc
+#17 69.80 Not Instrument __afl_prev_loc
+#17 69.81 Not Instrument __afl_prev_loc
+#17 69.83 Not Instrument __afl_prev_loc
+#17 70.01 Not Instrument __afl_prev_loc
+#17 70.01 Not Instrument __afl_prev_loc
+#17 70.17 Not Instrument __afl_prev_loc
+#17 70.19 Not Instrument __afl_prev_loc
+#17 70.20 Not Instrument __afl_prev_loc
+#17 70.20 Not Instrument __afl_prev_loc
+#17 70.26 Not Instrument __afl_prev_loc
+#17 70.30 Not Instrument __afl_prev_loc
+#17 70.34 Not Instrument __afl_prev_loc
+#17 70.34 Not Instrument __afl_prev_loc
+#17 70.42 Not Instrument __afl_prev_loc
+#17 70.44 Not Instrument __afl_prev_loc
+#17 70.54 Not Instrument __afl_prev_loc
+#17 70.57 Not Instrument __afl_prev_loc
+#17 70.59 Not Instrument __afl_prev_loc
+#17 70.59 Not Instrument __afl_prev_loc
+#17 70.63 Not Instrument __afl_prev_loc
+#17 70.67 Not Instrument __afl_prev_loc
+#17 70.68 Not Instrument __afl_prev_loc
+#17 70.69 Not Instrument __afl_prev_loc
+#17 70.76 Not Instrument __afl_prev_loc
+#17 70.81 Not Instrument __afl_prev_loc
+#17 70.86 Not Instrument __afl_prev_loc
+#17 70.91 Not Instrument __afl_prev_loc
+#17 70.91 Not Instrument __afl_prev_loc
+#17 70.91 Not Instrument __afl_prev_loc
+#17 71.02 Not Instrument __afl_prev_loc
+#17 71.06 Not Instrument __afl_prev_loc
+#17 71.08 Not Instrument __afl_prev_loc
+#17 71.10 Not Instrument __afl_prev_loc
+#17 71.15 Not Instrument __afl_prev_loc
+#17 71.28 Not Instrument __afl_prev_loc
+#17 71.34 Not Instrument __afl_prev_loc
+#17 71.35 Not Instrument __afl_prev_loc
+#17 71.38 Not Instrument __afl_prev_loc
+#17 71.43 Not Instrument __afl_prev_loc
+#17 71.45 Not Instrument __afl_prev_loc
+#17 71.47 Not Instrument __afl_prev_loc
+#17 71.55 Not Instrument __afl_prev_loc
+#17 71.56 Not Instrument __afl_prev_loc
+#17 71.57 Not Instrument __afl_prev_loc
+#17 71.79 Not Instrument __afl_prev_loc
+#17 71.81 Not Instrument __afl_prev_loc
+#17 71.82 Not Instrument __afl_prev_loc
+#17 71.82 Not Instrument __afl_prev_loc
+#17 71.95 Not Instrument __afl_prev_loc
+#17 72.04 Not Instrument __afl_prev_loc
+#17 72.15 Not Instrument __afl_prev_loc
+#17 72.18 Not Instrument __afl_prev_loc
+#17 72.20 Not Instrument __afl_prev_loc
+#17 72.26 Not Instrument __afl_prev_loc
+#17 72.31 Not Instrument __afl_prev_loc
+#17 72.33 Not Instrument __afl_prev_loc
+#17 72.37 Not Instrument __afl_prev_loc
+#17 72.42 Not Instrument __afl_prev_loc
+#17 72.45 Not Instrument __afl_prev_loc
+#17 72.57 Not Instrument __afl_prev_loc
+#17 72.80 Not Instrument __afl_prev_loc
+#17 72.90 Not Instrument __afl_prev_loc
+#17 73.18 Not Instrument __afl_prev_loc
+#17 73.22 Not Instrument __afl_prev_loc
+#17 73.79 Not Instrument __afl_prev_loc
+#17 73.82 Not Instrument __afl_prev_loc
+#17 73.87 Not Instrument __afl_prev_loc
+#17 73.88 Not Instrument __afl_prev_loc
+#17 73.98 Not Instrument __afl_prev_loc
+#17 74.02 Not Instrument __afl_prev_loc
+#17 74.08 Not Instrument __afl_prev_loc
+#17 74.12 Not Instrument __afl_prev_loc
+#17 74.14 Not Instrument __afl_prev_loc
+#17 74.15 Not Instrument __afl_prev_loc
+#17 74.17 Not Instrument __afl_prev_loc
+#17 74.20 Not Instrument __afl_prev_loc
+#17 74.21 Not Instrument __afl_prev_loc
+#17 74.23 Not Instrument __afl_prev_loc
+#17 74.33 Not Instrument __afl_prev_loc
+#17 74.35 Not Instrument __afl_prev_loc
+#17 74.35 Not Instrument __afl_prev_loc
+#17 74.38 Not Instrument __afl_prev_loc
+#17 74.40 Not Instrument __afl_prev_loc
+#17 74.47 Not Instrument __afl_prev_loc
+#17 74.54 Not Instrument __afl_prev_loc
+#17 74.60 Not Instrument __afl_prev_loc
+#17 74.67 Not Instrument __afl_prev_loc
+#17 74.68 Not Instrument __afl_prev_loc
+#17 74.71 Not Instrument __afl_prev_loc
+#17 74.71 Not Instrument __afl_prev_loc
+#17 74.78 Not Instrument __afl_prev_loc
+#17 74.80 Not Instrument __afl_prev_loc
+#17 74.83 Not Instrument __afl_prev_loc
+#17 74.88 Not Instrument __afl_prev_loc
+#17 74.96 Not Instrument __afl_prev_loc
+#17 75.01 Not Instrument __afl_prev_loc
+#17 75.03 Not Instrument __afl_prev_loc
+#17 75.04 Not Instrument __afl_prev_loc
+#17 75.05 Not Instrument __afl_prev_loc
+#17 75.10 Not Instrument __afl_prev_loc
+#17 75.15 Not Instrument __afl_prev_loc
+#17 75.16 Not Instrument __afl_prev_loc
+#17 75.18 Not Instrument __afl_prev_loc
+#17 75.27 Not Instrument __afl_prev_loc
+#17 75.30 Not Instrument __afl_prev_loc
+#17 75.30 Not Instrument __afl_prev_loc
+#17 75.30 Not Instrument __afl_prev_loc
+#17 75.37 Not Instrument __afl_prev_loc
+#17 75.39 Not Instrument __afl_prev_loc
+#17 75.41 Not Instrument __afl_prev_loc
+#17 75.48 Not Instrument __afl_prev_loc
+#17 75.49 Not Instrument __afl_prev_loc
+#17 75.52 Not Instrument __afl_prev_loc
+#17 76.27 Not Instrument __afl_prev_loc
+#17 76.28 Not Instrument __afl_prev_loc
+#17 76.58 Not Instrument __afl_prev_loc
+#17 76.64 Not Instrument __afl_prev_loc
+#17 76.68 Not Instrument __afl_prev_loc
+#17 76.73 Not Instrument __afl_prev_loc
+#17 76.74 Not Instrument __afl_prev_loc
+#17 76.74 Not Instrument __afl_prev_loc
+#17 76.76 Not Instrument __afl_prev_loc
+#17 76.77 Not Instrument __afl_prev_loc
+#17 76.78 Not Instrument __afl_prev_loc
+#17 76.85 Not Instrument __afl_prev_loc
+#17 76.91 Not Instrument __afl_prev_loc
+#17 76.94 Not Instrument __afl_prev_loc
+#17 77.01 Not Instrument __afl_prev_loc
+#17 77.16 Not Instrument __afl_prev_loc
+#17 77.21 Not Instrument __afl_prev_loc
+#17 77.26 Not Instrument __afl_prev_loc
+#17 77.26 Not Instrument __afl_prev_loc
+#17 77.30 Not Instrument __afl_prev_loc
+#17 77.31 Not Instrument __afl_prev_loc
+#17 77.38 Not Instrument __afl_prev_loc
+#17 77.52 Not Instrument __afl_prev_loc
+#17 77.53 Not Instrument __afl_prev_loc
+#17 77.66 Not Instrument __afl_prev_loc
+#17 77.67 Not Instrument __afl_prev_loc
+#17 77.78 Not Instrument __afl_prev_loc
+#17 77.81 Not Instrument __afl_prev_loc
+#17 77.92 Not Instrument __afl_prev_loc
+#17 77.96 Not Instrument __afl_prev_loc
+#17 77.99 Not Instrument __afl_prev_loc
+#17 78.11 Not Instrument __afl_prev_loc
+#17 78.15 Not Instrument __afl_prev_loc
+#17 78.25 Not Instrument __afl_prev_loc
+#17 78.28 Not Instrument __afl_prev_loc
+#17 78.29 Not Instrument __afl_prev_loc
+#17 78.29 Not Instrument __afl_prev_loc
+#17 78.44 Not Instrument __afl_prev_loc
+#17 78.46 Not Instrument __afl_prev_loc
+#17 78.52 Not Instrument __afl_prev_loc
+#17 78.54 Not Instrument __afl_prev_loc
+#17 78.62 Not Instrument __afl_prev_loc
+#17 78.68 Not Instrument __afl_prev_loc
+#17 78.71 Not Instrument __afl_prev_loc
+#17 78.76 Not Instrument __afl_prev_loc
+#17 78.82 Not Instrument __afl_prev_loc
+#17 78.91 Not Instrument __afl_prev_loc
+#17 78.92 Not Instrument __afl_prev_loc
+#17 78.99 Not Instrument __afl_prev_loc
+#17 79.00 Not Instrument __afl_prev_loc
+#17 79.26 Not Instrument __afl_prev_loc
+#17 79.26 Not Instrument __afl_prev_loc
+#17 79.32 Not Instrument __afl_prev_loc
+#17 79.39 Not Instrument __afl_prev_loc
+#17 79.42 Not Instrument __afl_prev_loc
+#17 79.50 Not Instrument __afl_prev_loc
+#17 79.55 Not Instrument __afl_prev_loc
+#17 79.56 Not Instrument __afl_prev_loc
+#17 79.57 Not Instrument __afl_prev_loc
+#17 79.66 Not Instrument __afl_prev_loc
+#17 79.81 Not Instrument __afl_prev_loc
+#17 79.81 Not Instrument __afl_prev_loc
+#17 79.85 Not Instrument __afl_prev_loc
+#17 79.89 Not Instrument __afl_prev_loc
+#17 79.90 Not Instrument __afl_prev_loc
+#17 80.01 Not Instrument __afl_prev_loc
+#17 80.05 Not Instrument __afl_prev_loc
+#17 80.07 Not Instrument __afl_prev_loc
+#17 80.09 Not Instrument __afl_prev_loc
+#17 80.13 Not Instrument __afl_prev_loc
+#17 80.18 Not Instrument __afl_prev_loc
+#17 80.33 Not Instrument __afl_prev_loc
+#17 80.39 Not Instrument __afl_prev_loc
+#17 80.44 Not Instrument __afl_prev_loc
+#17 80.46 Not Instrument __afl_prev_loc
+#17 80.73 Not Instrument __afl_prev_loc
+#17 80.84 Not Instrument __afl_prev_loc
+#17 80.95 Not Instrument __afl_prev_loc
+#17 80.99 Not Instrument __afl_prev_loc
+#17 81.10 Not Instrument __afl_prev_loc
+#17 81.12 Not Instrument __afl_prev_loc
+#17 81.18 Not Instrument __afl_prev_loc
+#17 81.20 Not Instrument __afl_prev_loc
+#17 81.25 Not Instrument __afl_prev_loc
+#17 81.28 Not Instrument __afl_prev_loc
+#17 81.33 Not Instrument __afl_prev_loc
+#17 81.41 Not Instrument __afl_prev_loc
+#17 81.42 Not Instrument __afl_prev_loc
+#17 81.46 Not Instrument __afl_prev_loc
+#17 81.67 Not Instrument __afl_prev_loc
+#17 81.72 Not Instrument __afl_prev_loc
+#17 81.80 Not Instrument __afl_prev_loc
+#17 81.88 Not Instrument __afl_prev_loc
+#17 81.91 Not Instrument __afl_prev_loc
+#17 81.98 Not Instrument __afl_prev_loc
+#17 82.01 Not Instrument __afl_prev_loc
+#17 82.02 Not Instrument __afl_prev_loc
+#17 82.07 Not Instrument __afl_prev_loc
+#17 82.20 Not Instrument __afl_prev_loc
+#17 82.27 Not Instrument __afl_prev_loc
+#17 82.27 Not Instrument __afl_prev_loc
+#17 82.35 Not Instrument __afl_prev_loc
+#17 82.39 Not Instrument __afl_prev_loc
+#17 82.51 Not Instrument __afl_prev_loc
+#17 82.58 Not Instrument __afl_prev_loc
+#17 82.66 Not Instrument __afl_prev_loc
+#17 82.68 Not Instrument __afl_prev_loc
+#17 82.68 Not Instrument __afl_prev_loc
+#17 82.71 Not Instrument __afl_prev_loc
+#17 82.74 Not Instrument __afl_prev_loc
+#17 82.75 Not Instrument __afl_prev_loc
+#17 82.79 Not Instrument __afl_prev_loc
+#17 82.89 Not Instrument __afl_prev_loc
+#17 82.90 Not Instrument __afl_prev_loc
+#17 82.94 Not Instrument __afl_prev_loc
+#17 82.96 Not Instrument __afl_prev_loc
+#17 83.05 Not Instrument __afl_prev_loc
+#17 83.07 Not Instrument __afl_prev_loc
+#17 83.10 Not Instrument __afl_prev_loc
+#17 83.17 Not Instrument __afl_prev_loc
+#17 83.22 Not Instrument __afl_prev_loc
+#17 83.24 Not Instrument __afl_prev_loc
+#17 83.28 Not Instrument __afl_prev_loc
+#17 83.38 Not Instrument __afl_prev_loc
+#17 83.38 Not Instrument __afl_prev_loc
+#17 83.44 Not Instrument __afl_prev_loc
+#17 83.45 Not Instrument __afl_prev_loc
+#17 83.49 Not Instrument __afl_prev_loc
+#17 83.53 Not Instrument __afl_prev_loc
+#17 83.57 Not Instrument __afl_prev_loc
+#17 83.82 Not Instrument __afl_prev_loc
+#17 83.86 Not Instrument __afl_prev_loc
+#17 84.00 Not Instrument __afl_prev_loc
+#17 84.01 Not Instrument __afl_prev_loc
+#17 84.04 Not Instrument __afl_prev_loc
+#17 84.09 Not Instrument __afl_prev_loc
+#17 84.25 Not Instrument __afl_prev_loc
+#17 84.36 Not Instrument __afl_prev_loc
+#17 84.49 Not Instrument __afl_prev_loc
+#17 84.54 Not Instrument __afl_prev_loc
+#17 84.59 Not Instrument __afl_prev_loc
+#17 84.61 Not Instrument __afl_prev_loc
+#17 84.64 Not Instrument __afl_prev_loc
+#17 84.68 Not Instrument __afl_prev_loc
+#17 84.89 Not Instrument __afl_prev_loc
+#17 84.93 Not Instrument __afl_prev_loc
+#17 84.99 Not Instrument __afl_prev_loc
+#17 84.99 Not Instrument __afl_prev_loc
+#17 85.01 Not Instrument __afl_prev_loc
+#17 85.09 Not Instrument __afl_prev_loc
+#17 85.18 Not Instrument __afl_prev_loc
+#17 85.30 Not Instrument __afl_prev_loc
+#17 85.34 Not Instrument __afl_prev_loc
+#17 85.44 Not Instrument __afl_prev_loc
+#17 85.45 Not Instrument __afl_prev_loc
+#17 85.49 Not Instrument __afl_prev_loc
+#17 85.55 Not Instrument __afl_prev_loc
+#17 85.57 Not Instrument __afl_prev_loc
+#17 85.57 Not Instrument __afl_prev_loc
+#17 85.58 Not Instrument __afl_prev_loc
+#17 85.67 Not Instrument __afl_prev_loc
+#17 85.78 Not Instrument __afl_prev_loc
+#17 85.81 Not Instrument __afl_prev_loc
+#17 85.86 Not Instrument __afl_prev_loc
+#17 86.09 Not Instrument __afl_prev_loc
+#17 86.10 Not Instrument __afl_prev_loc
+#17 86.28 Not Instrument __afl_prev_loc
+#17 86.35 Not Instrument __afl_prev_loc
+#17 86.36 Not Instrument __afl_prev_loc
+#17 86.42 Not Instrument __afl_prev_loc
+#17 86.48 Not Instrument __afl_prev_loc
+#17 86.59 Not Instrument __afl_prev_loc
+#17 86.63 Not Instrument __afl_prev_loc
+#17 86.65 Not Instrument __afl_prev_loc
+#17 86.69 Not Instrument __afl_prev_loc
+#17 86.76 Not Instrument __afl_prev_loc
+#17 86.82 Not Instrument __afl_prev_loc
+#17 86.83 Not Instrument __afl_prev_loc
+#17 86.98 Not Instrument __afl_prev_loc
+#17 86.98 Not Instrument __afl_prev_loc
+#17 87.00 Not Instrument __afl_prev_loc
+#17 87.12 Not Instrument __afl_prev_loc
+#17 87.17 Not Instrument __afl_prev_loc
+#17 87.19 Not Instrument __afl_prev_loc
+#17 87.22 Not Instrument __afl_prev_loc
+#17 87.23 Not Instrument __afl_prev_loc
+#17 87.40 Not Instrument __afl_prev_loc
+#17 87.54 Not Instrument __afl_prev_loc
+#17 87.54 Not Instrument __afl_prev_loc
+#17 87.58 Not Instrument __afl_prev_loc
+#17 87.58 Not Instrument __afl_prev_loc
+#17 87.61 Not Instrument __afl_prev_loc
+#17 87.61 Not Instrument __afl_prev_loc
+#17 87.66 Not Instrument __afl_prev_loc
+#17 87.67 Not Instrument __afl_prev_loc
+#17 87.73 Not Instrument __afl_prev_loc
+#17 87.85 Not Instrument __afl_prev_loc
+#17 87.96 Not Instrument __afl_prev_loc
+#17 88.03 Not Instrument __afl_prev_loc
+#17 88.15 Not Instrument __afl_prev_loc
+#17 88.20 Not Instrument __afl_prev_loc
+#17 88.34 Not Instrument __afl_prev_loc
+#17 88.34 Not Instrument __afl_prev_loc
+#17 88.34 Not Instrument __afl_prev_loc
+#17 88.42 Not Instrument __afl_prev_loc
+#17 88.50 Not Instrument __afl_prev_loc
+#17 88.52 Not Instrument __afl_prev_loc
+#17 88.52 Not Instrument __afl_prev_loc
+#17 88.63 Not Instrument __afl_prev_loc
+#17 88.65 Not Instrument __afl_prev_loc
+#17 88.71 Not Instrument __afl_prev_loc
+#17 88.76 Not Instrument __afl_prev_loc
+#17 88.81 Not Instrument __afl_prev_loc
+#17 88.83 Not Instrument __afl_prev_loc
+#17 88.87 Not Instrument __afl_prev_loc
+#17 88.89 Not Instrument __afl_prev_loc
+#17 89.05 Not Instrument __afl_prev_loc
+#17 89.09 Not Instrument __afl_prev_loc
+#17 89.12 Not Instrument __afl_prev_loc
+#17 89.20 Not Instrument __afl_prev_loc
+#17 89.33 Not Instrument __afl_prev_loc
+#17 89.42 Not Instrument __afl_prev_loc
+#17 89.56 Not Instrument __afl_prev_loc
+#17 89.93 Not Instrument __afl_prev_loc
+#17 89.97 Not Instrument __afl_prev_loc
+#17 90.01 Not Instrument __afl_prev_loc
+#17 90.02 Not Instrument __afl_prev_loc
+#17 90.18 Not Instrument __afl_prev_loc
+#17 90.20 Not Instrument __afl_prev_loc
+#17 90.22 Not Instrument __afl_prev_loc
+#17 90.30 Not Instrument __afl_prev_loc
+#17 90.35 Not Instrument __afl_prev_loc
+#17 90.42 Not Instrument __afl_prev_loc
+#17 90.45 Not Instrument __afl_prev_loc
+#17 90.55 Not Instrument __afl_prev_loc
+#17 90.57 Not Instrument __afl_prev_loc
+#17 90.71 Not Instrument __afl_prev_loc
+#17 90.72 Not Instrument __afl_prev_loc
+#17 90.79 Not Instrument __afl_prev_loc
+#17 90.82 Not Instrument __afl_prev_loc
+#17 90.92 Not Instrument __afl_prev_loc
+#17 90.93 Not Instrument __afl_prev_loc
+#17 90.97 Not Instrument __afl_prev_loc
+#17 90.99 Not Instrument __afl_prev_loc
+#17 91.04 Not Instrument __afl_prev_loc
+#17 91.08 Not Instrument __afl_prev_loc
+#17 91.13 Not Instrument __afl_prev_loc
+#17 91.19 Not Instrument __afl_prev_loc
+#17 91.33 Not Instrument __afl_prev_loc
+#17 91.44 Not Instrument __afl_prev_loc
+#17 91.57 Not Instrument __afl_prev_loc
+#17 91.57 Not Instrument __afl_prev_loc
+#17 91.59 Not Instrument __afl_prev_loc
+#17 91.64 Not Instrument __afl_prev_loc
+#17 91.67 Not Instrument __afl_prev_loc
+#17 91.74 Not Instrument __afl_prev_loc
+#17 91.77 Not Instrument __afl_prev_loc
+#17 91.78 Not Instrument __afl_prev_loc
+#17 91.82 Not Instrument __afl_prev_loc
+#17 91.82 Not Instrument __afl_prev_loc
+#17 91.84 Not Instrument __afl_prev_loc
+#17 91.87 Not Instrument __afl_prev_loc
+#17 91.89 Not Instrument __afl_prev_loc
+#17 91.96 Not Instrument __afl_prev_loc
+#17 91.99 Not Instrument __afl_prev_loc
+#17 91.99 Not Instrument __afl_prev_loc
+#17 92.04 Not Instrument __afl_prev_loc
+#17 92.09 Not Instrument __afl_prev_loc
+#17 92.13 Not Instrument __afl_prev_loc
+#17 92.29 Not Instrument __afl_prev_loc
+#17 92.33 Not Instrument __afl_prev_loc
+#17 92.34 Not Instrument __afl_prev_loc
+#17 92.36 Not Instrument __afl_prev_loc
+#17 92.36 Not Instrument __afl_prev_loc
+#17 92.46 Not Instrument __afl_prev_loc
+#17 92.48 Not Instrument __afl_prev_loc
+#17 92.53 Not Instrument __afl_prev_loc
+#17 92.56 Not Instrument __afl_prev_loc
+#17 92.59 Not Instrument __afl_prev_loc
+#17 92.67 Not Instrument __afl_prev_loc
+#17 92.75 Not Instrument __afl_prev_loc
+#17 92.76 Not Instrument __afl_prev_loc
+#17 92.99 Not Instrument __afl_prev_loc
+#17 93.06 Not Instrument __afl_prev_loc
+#17 93.18 Not Instrument __afl_prev_loc
+#17 93.18 Not Instrument __afl_prev_loc
+#17 93.31 Not Instrument __afl_prev_loc
+#17 93.37 Not Instrument __afl_prev_loc
+#17 93.37 Not Instrument __afl_prev_loc
+#17 93.45 Not Instrument __afl_prev_loc
+#17 93.50 Not Instrument __afl_prev_loc
+#17 93.56 Not Instrument __afl_prev_loc
+#17 93.67 Not Instrument __afl_prev_loc
+#17 93.69 Not Instrument __afl_prev_loc
+#17 93.70 Not Instrument __afl_prev_loc
+#17 93.70 Not Instrument __afl_prev_loc
+#17 93.79 Not Instrument __afl_prev_loc
+#17 93.90 Not Instrument __afl_prev_loc
+#17 93.93 Not Instrument __afl_prev_loc
+#17 94.02 Not Instrument __afl_prev_loc
+#17 94.09 Not Instrument __afl_prev_loc
+#17 94.16 Not Instrument __afl_prev_loc
+#17 94.24 Not Instrument __afl_prev_loc
+#17 94.27 Not Instrument __afl_prev_loc
+#17 94.31 Not Instrument __afl_prev_loc
+#17 94.34 Not Instrument __afl_prev_loc
+#17 94.39 Not Instrument __afl_prev_loc
+#17 94.47 Not Instrument __afl_prev_loc
+#17 94.53 Not Instrument __afl_prev_loc
+#17 94.60 Not Instrument __afl_prev_loc
+#17 94.66 Not Instrument __afl_prev_loc
+#17 94.68 Not Instrument __afl_prev_loc
+#17 94.79 Not Instrument __afl_prev_loc
+#17 94.79 Not Instrument __afl_prev_loc
+#17 94.79 Not Instrument __afl_prev_loc
+#17 94.89 Not Instrument __afl_prev_loc
+#17 94.91 Not Instrument __afl_prev_loc
+#17 94.92 Not Instrument __afl_prev_loc
+#17 95.06 Not Instrument __afl_prev_loc
+#17 95.18 Not Instrument __afl_prev_loc
+#17 95.20 Not Instrument __afl_prev_loc
+#17 95.21 Not Instrument __afl_prev_loc
+#17 95.23 Not Instrument __afl_prev_loc
+#17 95.37 Not Instrument __afl_prev_loc
+#17 95.43 Not Instrument __afl_prev_loc
+#17 95.44 Not Instrument __afl_prev_loc
+#17 95.47 Not Instrument __afl_prev_loc
+#17 95.50 Not Instrument __afl_prev_loc
+#17 95.51 Not Instrument __afl_prev_loc
+#17 95.52 Not Instrument __afl_prev_loc
+#17 95.53 Not Instrument __afl_prev_loc
+#17 95.55 Not Instrument __afl_prev_loc
+#17 95.55 Not Instrument __afl_prev_loc
+#17 95.60 Not Instrument __afl_prev_loc
+#17 95.62 Not Instrument __afl_prev_loc
+#17 95.65 Not Instrument __afl_prev_loc
+#17 95.91 Not Instrument __afl_prev_loc
+#17 96.00 Not Instrument __afl_prev_loc
+#17 96.04 Not Instrument __afl_prev_loc
+#17 96.05 Not Instrument __afl_prev_loc
+#17 96.13 Not Instrument __afl_prev_loc
+#17 96.27 Not Instrument __afl_prev_loc
+#17 96.30 Not Instrument __afl_prev_loc
+#17 96.35 Not Instrument __afl_prev_loc
+#17 96.41 Not Instrument __afl_prev_loc
+#17 96.43 Not Instrument __afl_prev_loc
+#17 96.47 Not Instrument __afl_prev_loc
+#17 96.55 Not Instrument __afl_prev_loc
+#17 96.66 Not Instrument __afl_prev_loc
+#17 96.78 Not Instrument __afl_prev_loc
+#17 96.78 Not Instrument __afl_prev_loc
+#17 96.83 Not Instrument __afl_prev_loc
+#17 96.90 Not Instrument __afl_prev_loc
+#17 96.92 Not Instrument __afl_prev_loc
+#17 97.01 Not Instrument __afl_prev_loc
+#17 97.08 Not Instrument __afl_prev_loc
+#17 97.20 Not Instrument __afl_prev_loc
+#17 97.20 Not Instrument __afl_prev_loc
+#17 97.24 Not Instrument __afl_prev_loc
+#17 97.31 Not Instrument __afl_prev_loc
+#17 97.32 Not Instrument __afl_prev_loc
+#17 97.42 Not Instrument __afl_prev_loc
+#17 97.42 Not Instrument __afl_prev_loc
+#17 97.50 Not Instrument __afl_prev_loc
+#17 97.54 Not Instrument __afl_prev_loc
+#17 97.59 Not Instrument __afl_prev_loc
+#17 97.59 Not Instrument __afl_prev_loc
+#17 97.65 Not Instrument __afl_prev_loc
+#17 97.83 Not Instrument __afl_prev_loc
+#17 97.90 Not Instrument __afl_prev_loc
+#17 97.94 Not Instrument __afl_prev_loc
+#17 97.96 Not Instrument __afl_prev_loc
+#17 98.01 Not Instrument __afl_prev_loc
+#17 98.08 Not Instrument __afl_prev_loc
+#17 98.12 Not Instrument __afl_prev_loc
+#17 98.18 Not Instrument __afl_prev_loc
+#17 98.19 Not Instrument __afl_prev_loc
+#17 98.23 Not Instrument __afl_prev_loc
+#17 98.25 Not Instrument __afl_prev_loc
+#17 98.26 Not Instrument __afl_prev_loc
+#17 98.27 Not Instrument __afl_prev_loc
+#17 98.29 Not Instrument __afl_prev_loc
+#17 98.29 Not Instrument __afl_prev_loc
+#17 98.33 Not Instrument __afl_prev_loc
+#17 98.35 Not Instrument __afl_prev_loc
+#17 98.37 Not Instrument __afl_prev_loc
+#17 98.38 Not Instrument __afl_prev_loc
+#17 98.39 Not Instrument __afl_prev_loc
+#17 98.40 Not Instrument __afl_prev_loc
+#17 98.47 Not Instrument __afl_prev_loc
+#17 98.48 Not Instrument __afl_prev_loc
+#17 98.51 Not Instrument __afl_prev_loc
+#17 98.54 Not Instrument __afl_prev_loc
+#17 98.55 Not Instrument __afl_prev_loc
+#17 98.69 Not Instrument __afl_prev_loc
+#17 98.77 Not Instrument __afl_prev_loc
+#17 98.83 Not Instrument __afl_prev_loc
+#17 99.20 Not Instrument __afl_prev_loc
+#17 99.52 Not Instrument __afl_prev_loc
+#17 99.56 Not Instrument __afl_prev_loc
+#17 99.59 Not Instrument __afl_prev_loc
+#17 99.67 Not Instrument __afl_prev_loc
+#17 99.80 Not Instrument __afl_prev_loc
+#17 99.81 Not Instrument __afl_prev_loc
+#17 99.86 Not Instrument __afl_prev_loc
+#17 99.88 Not Instrument __afl_prev_loc
+#17 99.90 Not Instrument __afl_prev_loc
+#17 99.90 Not Instrument __afl_prev_loc
+#17 99.93 Not Instrument __afl_prev_loc
+#17 99.94 Not Instrument __afl_prev_loc
+#17 99.99 Not Instrument __afl_prev_loc
+#17 100.0 Not Instrument __afl_prev_loc
+#17 100.1 Not Instrument __afl_prev_loc
+#17 100.1 Not Instrument __afl_prev_loc
+#17 100.2 Not Instrument __afl_prev_loc
+#17 100.3 Not Instrument __afl_prev_loc
+#17 100.4 Not Instrument __afl_prev_loc
+#17 100.5 Not Instrument __afl_prev_loc
+#17 100.6 Not Instrument __afl_prev_loc
+#17 100.6 Not Instrument __afl_prev_loc
+#17 100.7 Not Instrument __afl_prev_loc
+#17 100.7 Not Instrument __afl_prev_loc
+#17 100.7 Not Instrument __afl_prev_loc
+#17 100.8 Not Instrument __afl_prev_loc
+#17 100.8 Not Instrument __afl_prev_loc
+#17 101.0 Not Instrument __afl_prev_loc
+#17 101.0 Not Instrument __afl_prev_loc
+#17 101.0 Not Instrument __afl_prev_loc
+#17 101.1 Not Instrument __afl_prev_loc
+#17 101.2 Not Instrument __afl_prev_loc
+#17 101.2 Not Instrument __afl_prev_loc
+#17 101.2 Not Instrument __afl_prev_loc
+#17 101.2 Not Instrument __afl_prev_loc
+#17 101.3 Not Instrument __afl_prev_loc
+#17 101.3 Not Instrument __afl_prev_loc
+#17 101.3 Not Instrument __afl_prev_loc
+#17 101.4 Not Instrument __afl_prev_loc
+#17 101.5 Not Instrument __afl_prev_loc
+#17 101.5 Not Instrument __afl_prev_loc
+#17 101.6 Not Instrument __afl_prev_loc
+#17 101.6 Not Instrument __afl_prev_loc
+#17 101.6 Not Instrument __afl_prev_loc
+#17 101.6 Not Instrument __afl_prev_loc
+#17 101.7 Not Instrument __afl_prev_loc
+#17 101.7 Not Instrument __afl_prev_loc
+#17 101.8 Not Instrument __afl_prev_loc
+#17 102.0 Not Instrument __afl_prev_loc
+#17 102.3 Not Instrument __afl_prev_loc
+#17 102.3 Not Instrument __afl_prev_loc
+#17 102.3 Not Instrument __afl_prev_loc
+#17 102.3 Not Instrument __afl_prev_loc
+#17 102.5 Not Instrument __afl_prev_loc
+#17 102.5 Not Instrument __afl_prev_loc
+#17 102.5 Not Instrument __afl_prev_loc
+#17 102.6 Not Instrument __afl_prev_loc
+#17 102.7 Not Instrument __afl_prev_loc
+#17 103.0 Not Instrument __afl_prev_loc
+#17 103.0 Not Instrument __afl_prev_loc
+#17 103.0 Not Instrument __afl_prev_loc
+#17 103.0 Not Instrument __afl_prev_loc
+#17 103.0 Not Instrument __afl_prev_loc
+#17 103.1 Not Instrument __afl_prev_loc
+#17 103.2 Not Instrument __afl_prev_loc
+#17 103.2 Not Instrument __afl_prev_loc
+#17 103.3 Not Instrument __afl_prev_loc
+#17 103.3 Not Instrument __afl_prev_loc
+#17 103.4 Not Instrument __afl_prev_loc
+#17 103.5 Not Instrument __afl_prev_loc
+#17 103.5 Not Instrument __afl_prev_loc
+#17 103.5 Not Instrument __afl_prev_loc
+#17 103.6 Not Instrument __afl_prev_loc
+#17 103.8 Not Instrument __afl_prev_loc
+#17 105.0 Not Instrument __afl_prev_loc
+#17 105.2 Not Instrument __afl_prev_loc
+#17 109.3 PEAR package PHP_Archive not installed: generated phar will require PHP's phar extension be enabled.
+#17 109.3 + unset AFL_CC AFL_CXX
+#17 109.3 + git checkout 5cb38e9
+#17 109.3 HEAD is now at 5cb38e9d247 Fix various document ref pointer mismanagements
+#17 109.3 + pushd buildwaflgo_5cb38e9/sapi/cli
+#17 109.3 /home/php-src/buildwaflgo_5cb38e9/sapi/cli /home/php-src /home
+#17 109.3 + get-bc php
+#17 117.8 Bitcode file extracted to: php.bc.
+#17 117.8 + echo ''
+#17 117.8 + git diff 'HEAD^1' HEAD
+#17 117.8 + cp /home/showlinenum.awk .
+#17 117.8 + sed -i -e 's/\r$//' showlinenum.awk
+#17 117.8 + chmod +x showlinenum.awk
+#17 117.8 + cat ./commit.diff
+#17 117.8 + ./showlinenum.awk show_header=0 path=1
+#17 117.8 + grep -e '\.[ch]:[0-9]*:+' -e '\.cpp:[0-9]*:+' -e '\.cc:[0-9]*:+'
+#17 117.8 + cut -d+ -f1
+#17 117.8 + rev
+#17 117.8 + cut -c2-
+#17 117.8 + rev
+#17 117.8 + /home/WAFLGo/instrument/bin/cbi --targets=targets php.bc --stats=false
+#17 117.8 php.bc
+#17 117.8 php.bc
+#17 135.6 vcall gep idx not constantint
+#17 856.4 php.env: line 164: 80515 Killed                  /home/WAFLGo/instrument/bin/cbi --targets=targets $EXE.bc --stats=false
+#17 856.4 + cp ./targets_id.txt /home
+#17 856.4 cp: cannot stat './targets_id.txt': No such file or directory
+#17 856.4 + cp ./suffix.txt /home
+#17 856.4 cp: cannot stat './suffix.txt': No such file or directory
+#17 856.4 + cp './targets*.txt' /home
+#17 856.4 cp: cannot stat './targets*.txt': No such file or directory
+#17 856.4 + cp ./distance.txt /home
+#17 856.4 cp: cannot stat './distance.txt': No such file or directory
+#17 856.4 + cp ./branch-distance.txt /home
+#17 856.4 cp: cannot stat './branch-distance.txt': No such file or directory
+#17 856.4 + cp ./branch-distance-min.txt /home
+#17 856.4 cp: cannot stat './branch-distance-min.txt': No such file or directory
+#17 856.4 + cp ./branch-curloc.txt /home
+#17 856.4 cp: cannot stat './branch-curloc.txt': No such file or directory
+#17 856.4 + cp './*_data.txt' /home
+#17 856.4 cp: cannot stat './*_data.txt': No such file or directory
+#17 856.4 + /home/WAFLGo/afl-clang-fast++ php.ci.bc -lreadline -o php.ci
+#17 856.5 clang-13: error: no such file or directory: 'php.ci.bc'
+#17 856.5 + cp ./bbinfo-fast.txt /home/bbinfo-ci-bc.txt
+#17 856.5 cp: cannot stat './bbinfo-fast.txt': No such file or directory
+#17 856.5 + cp ./branch-distance-order.txt /home
+#17 856.5 cp: cannot stat './branch-distance-order.txt': No such file or directory
+#17 856.5 + cp './*-distance-order.txt' /home
+#17 856.5 cp: cannot stat './*-distance-order.txt': No such file or directory
+#17 856.5 + cp './*-order.txt' /home
+#17 856.6 cp: cannot stat './*-order.txt': No such file or directory
+#17 856.6 + popd
+#17 856.6 /home/php-src /home
+#17 856.6 ERROR: buildwaflgo_5cb38e9/sapi/cli/php.ci did not build
+#17 ERROR: process "/bin/bash -c ./bwaflgo.sh php.env $commit" did not complete successfully: exit code: 1
+------
+ > [waflgo_php  8/10] RUN ./bwaflgo.sh php.env 5cb38e9:
+856.5 cp: cannot stat './bbinfo-fast.txt': No such file or directory
+856.5 + cp ./branch-distance-order.txt /home
+856.5 cp: cannot stat './branch-distance-order.txt': No such file or directory
+856.5 + cp './*-distance-order.txt' /home
+856.5 cp: cannot stat './*-distance-order.txt': No such file or directory
+856.5 + cp './*-order.txt' /home
+856.6 cp: cannot stat './*-order.txt': No such file or directory
+856.6 + popd
+856.6 /home/php-src /home
+856.6 ERROR: buildwaflgo_5cb38e9/sapi/cli/php.ci did not build
+------
+waflgo_php-src.Dockerfile:66
+--------------------
+  64 |     
+  65 |     # Build php-src with WAFLGo under /home/php-src/buildwaflgo_$commit
+  66 | >>> RUN ./bwaflgo.sh php.env $commit
+  67 |     
+  68 |     # avoid git permission problem on start
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/bash -c ./bwaflgo.sh php.env $commit" did not complete successfully: exit code: 1

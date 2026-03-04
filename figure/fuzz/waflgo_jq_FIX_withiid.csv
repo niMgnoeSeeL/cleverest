@@ -1,0 +1,41 @@
+issue | commit | idx | status | final | first crash | time to find first crash
+2825 | 3fa10e8 | 1 | none | N |  | 
+2825 | 3fa10e8 | 2 | none | N |  | 
+2825 | 3fa10e8 | 3 | none | N |  | 
+2825 | 3fa10e8 | 4 | none | N |  | 
+2825 | 3fa10e8 | 5 | none | N |  | 
+2825 | 3fa10e8 | 6 | none | N |  | 
+2825 | 3fa10e8 | 7 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_3fa10e8_7/queue/id:001329,32075568,src:001211,op:havoc,rep:2,+cov | 
+2825 | 3fa10e8 | 8 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_3fa10e8_8/queue/id:001585,5875198,src:001577,op:havoc,rep:16,+cov | 
+2825 | 3fa10e8 | 9 | none | N |  | 
+2825 | 3fa10e8 | 10 | none | D | /clever/fuzz/waflgo/out/waflgo_jq_3fa10e8_10/queue/id:001523,13750388,src:001515,op:havoc,rep:2,+cov | 
+2976 | 71c2ab5 | 1 | none | N |  | 
+2976 | 71c2ab5 | 2 | none | N |  | 
+2976 | 71c2ab5 | 3 | none | N |  | 
+2976 | 71c2ab5 | 4 | none | N |  | 
+2976 | 71c2ab5 | 5 | none | N |  | 
+2976 | 71c2ab5 | 6 | bug_heap-buffer-overflow^ | B | /clever/fuzz/waflgo/out/waflgo_jq_71c2ab5_6/queue/id:001315,68618210,src:001133,op:havoc,rep:128,+cov | 68618210
+2976 | 71c2ab5 | 7 | none | N |  | 
+2976 | 71c2ab5 | 8 | none | N |  | 
+2976 | 71c2ab5 | 9 | none | N |  | 
+2976 | 71c2ab5 | 10 | none | N |  | 
+3262 | de21386 | 1 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_1/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 2 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_2/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 3 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_3/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 4 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_4/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 5 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_5/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 6 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_6/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 7 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_7/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 8 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_8/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 9 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_9/queue/id:000011,orig:53.json | orig:53.json
+3262 | de21386 | 10 | bug_SEGV^ | B | /clever/fuzz/waflgo/out/waflgo_jq_de21386_10/queue/id:000011,orig:53.json | orig:53.json
+49014 | 499c91b | 1 | none | N |  | 
+49014 | 499c91b | 2 | none | N |  | 
+49014 | 499c91b | 3 | none | N |  | 
+49014 | 499c91b | 4 | none | N |  | 
+49014 | 499c91b | 5 | none | N |  | 
+49014 | 499c91b | 6 | none | N |  | 
+49014 | 499c91b | 7 | none | N |  | 
+49014 | 499c91b | 8 | none | N |  | 
+49014 | 499c91b | 9 | none | N |  | 
+49014 | 499c91b | 10 | none | N |  | 

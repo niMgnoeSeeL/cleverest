@@ -39,21 +39,56 @@ BIC	mujs	166	3f71a1c	7	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo
 BIC	mujs	166	3f71a1c	8	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_8/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
 BIC	mujs	166	3f71a1c	9	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_9/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
 BIC	mujs	166	3f71a1c	10	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_mujs_3f71a1c_10/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
+BIC	libxml2	535	9a82b94	1	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_1/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	2	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_2/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	3	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_3/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	4	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_4/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	535	9a82b94	5	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_5/queue/id:000000,orig:dtd1	orig:dtd1
 BIC	libxml2	535	9a82b94	6	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_6/queue/id:000000,orig:dtd1	orig:dtd1
 BIC	libxml2	535	9a82b94	7	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_7/queue/id:000000,orig:dtd1	orig:dtd1
 BIC	libxml2	535	9a82b94	8	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_8/queue/id:000000,orig:dtd1	orig:dtd1
 BIC	libxml2	535	9a82b94	9	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_9/queue/id:000000,orig:dtd1	orig:dtd1
 BIC	libxml2	535	9a82b94	10	bug_^global-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9a82b94_10/queue/id:000000,orig:dtd1	orig:dtd1
-BIC	libxml2	550	7e3f469	1	old	D	out_libxml2_7e3f469_1/queue/id:000003,orig:dtd12	orig:dtd12
-BIC	libxml2	550	7e3f469	2	old	D	out_libxml2_7e3f469_2/queue/id:000003,orig:dtd12	orig:dtd12
-BIC	libxml2	550	7e3f469	3	old	D	out_libxml2_7e3f469_3/queue/id:000003,orig:dtd12	orig:dtd12
-BIC	libxml2	550	7e3f469	4	old	D	out_libxml2_7e3f469_4/queue/id:000003,orig:dtd12	orig:dtd12
-BIC	libxml2	550	7e3f469	5	old	R	out_libxml2_7e3f469_5/queue/id:000003,orig:dtd12	orig:dtd12
-BIC	libxml2	550	7e3f469	6	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_6/queue/id:003107,7204024,src:003007,op:havoc,rep:16 |	
-BIC	libxml2	550	7e3f469	7	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_7/queue/id:003530,14411643,src:003433,op:havoc,rep:8 |	
-BIC	libxml2	550	7e3f469	8	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_8/queue/id:002224,3426628,src:002125,op:havoc,rep:4,is_suf_target |	
-BIC	libxml2	550	7e3f469	9	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_9/queue/id:002107,2900424,src:001976,op:havoc,rep:4,+cov |	
-BIC	libxml2	550	7e3f469	10	none	D	/clever/fuzz/waflgo/out/waflgo_libxml2_7e3f469_10/queue/id:001850,2211812,src:001697,op:havoc,rep:8,is_suf_target |	
+BIC	libxml2	550	74c84a8	1	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_1/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	2	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_2/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	3	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_3/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	4	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_4/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	5	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_5/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	6	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_6/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	7	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_7/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	8	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_8/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	9	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_9/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	550	74c84a8	10	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_74c84a8_10/queue/id:000013,orig:eve.dtd |	
+BIC	libxml2	553	1406b20	1	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_1/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	2	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_2/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	3	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_3/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	4	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_4/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	5	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_5/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	6	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_6/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	7	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_7/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	8	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_8/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	9	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_9/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	553	1406b20	10	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_libxml2_1406b20_10/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	720	14604a4	1	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_1/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	2	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_2/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	3	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_3/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	4	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_4/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	5	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_5/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	6	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_6/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	7	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_7/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	8	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_8/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	9	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_9/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	720	14604a4	10	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_14604a4_10/queue/id:000000,orig:dtd1 |	
+BIC	libxml2	841	9cfc723	1	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_1/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	2	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_2/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	3	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_3/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	4	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_4/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	5	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_5/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	6	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_6/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	7	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_7/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	8	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_8/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	9	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_9/queue/id:000000,orig:dtd1	orig:dtd1
+BIC	libxml2	841	9cfc723	10	bug_^heap-use-after-free	B	/clever/fuzz/waflgo/out/waflgo_libxml2_9cfc723_10/queue/id:000000,orig:dtd1	orig:dtd1
 BIC	poppler	1282	3d35d20	1	old	B	out_poppler_3d35d20_1/queue/id:000586,344849,src:000005,op:flip8,pos:10606,+cov	344849
 BIC	poppler	1282	3d35d20	2	old	B	out_poppler_3d35d20_2/queue/id:000578,337084,src:000004,op:flip8,pos:10437,+cov	337084
 BIC	poppler	1282	3d35d20	3	old	B	out_poppler_3d35d20_3/queue/id:000581,339520,src:000005,op:flip8,pos:10606,+cov	339520
@@ -104,6 +139,36 @@ BIC	poppler	1381	245abad	7	none	N	 |
 BIC	poppler	1381	245abad	8	none	N	 |	
 BIC	poppler	1381	245abad	9	none	N	 |	
 BIC	poppler	1381	245abad	10	none	N	 |	
+BIC	jq	2825	680baef	1	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_1/queue/id:001236,2624301,src:000676,op:havoc,rep:2 |	
+BIC	jq	2825	680baef	2	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_2/queue/id:001636,16016318,src:001170,op:havoc,rep:4 |	
+BIC	jq	2825	680baef	3	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_3/queue/id:001883,31737737,src:001708,op:havoc,rep:16 |	
+BIC	jq	2825	680baef	4	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_4/queue/id:001127,1932350,src:000287,op:havoc,rep:16,+cov |	
+BIC	jq	2825	680baef	5	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_5/queue/id:001265,3404453,src:000746,op:flip1,pos:14,+cov |	
+BIC	jq	2825	680baef	6	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_6/queue/id:001430,21067468,src:001320,op:havoc,rep:8 |	
+BIC	jq	2825	680baef	7	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_7/queue/id:001406,24887898,src:001047,op:havoc,rep:16 |	
+BIC	jq	2825	680baef	8	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_8/queue/id:001262,3164322,src:000775,op:flip1,pos:21 |	
+BIC	jq	2825	680baef	9	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_9/queue/id:001298,2914567,src:000748,op:flip1,pos:309,+cov |	
+BIC	jq	2825	680baef	10	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2825_680baef_10/queue/id:001565,9750997,src:001000,op:rbadd8,pos:14,+cov |	
+BIC	jq	2976	680baef	1	behave	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_1/queue/id:000694,5539999,src:000672,op:havoc,rep:8,+cov |	
+BIC	jq	2976	680baef	2	behave	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_2/queue/id:000614,4111993,src:000574,op:havoc,rep:16 |	
+BIC	jq	2976	680baef	3	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_3/queue/id:000795,6755744,src:000787,op:havoc,rep:64,+cov |	
+BIC	jq	2976	680baef	4	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_4/queue/id:001187,32926024,src:000639,op:havoc,rep:4,+cov |	
+BIC	jq	2976	680baef	5	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_5/queue/id:000821,7294701,src:000795,op:havoc,rep:2	7294701.0
+BIC	jq	2976	680baef	6	behave	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_6/queue/id:001236,27815453,src:001185,op:havoc,rep:4,+cov |	
+BIC	jq	2976	680baef	7	bug_^heap-buffer-overflow	B	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_7/queue/id:000649,6513245,src:000472,op:rbadd8,pos:2685,+cov	6513245.0
+BIC	jq	2976	680baef	8	behave	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_8/queue/id:001150,18435847,src:001145,op:havoc,rep:2,+cov |	
+BIC	jq	2976	680baef	9	none	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_9/queue/id:000703,5745379,src:000694,op:havoc,rep:2,+cov |	
+BIC	jq	2976	680baef	10	behave	D	/clever/fuzz/waflgo/out/waflgo_jq_2976_680baef_10/queue/id:000699,5818200,src:000695,op:havoc,rep:2,+cov |	
+BIC	jq	3262	0e067ef	1	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_1/crashes/id:000002,154436,sig:11,src:000001,op:havoc,rep:4	154436.0
+BIC	jq	3262	0e067ef	2	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_2/crashes/id:000001,164678,sig:11,src:000001,op:havoc,rep:2	164678.0
+BIC	jq	3262	0e067ef	3	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_3/crashes/id:000001,141917,sig:11,src:000001,op:havoc,rep:4	141917.0
+BIC	jq	3262	0e067ef	4	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_4/crashes/id:000001,170681,sig:11,src:000001,op:havoc,rep:8	170681.0
+BIC	jq	3262	0e067ef	5	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_5/crashes/id:000001,141178,sig:11,src:000001,op:havoc,rep:16	141178.0
+BIC	jq	3262	0e067ef	6	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_6/crashes/id:000001,60414,sig:11,src:000001,op:havoc,rep:2	60414.0
+BIC	jq	3262	0e067ef	7	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_7/crashes/id:000001,134781,sig:11,src:000001,op:havoc,rep:2	134781.0
+BIC	jq	3262	0e067ef	8	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_8/crashes/id:000001,156801,sig:11,src:000001,op:havoc,rep:4	156801.0
+BIC	jq	3262	0e067ef	9	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_9/crashes/id:000002,161258,sig:11,src:000001,op:havoc,rep:2	161258.0
+BIC	jq	3262	0e067ef	10	bug_^SEGV	B	/clever/fuzz/waflgo/out/waflgo_jq_3262_0e067ef_10/crashes/id:000001,144993,sig:11,src:000001,op:havoc,rep:2	144993.0
 BIC	jerryscript	5117	53b61c1	1	bug_^SEGV	B	baselines/waflgo_jerryscript_53b61c1_1/queue/id:000528,393322,src:000147,op:havoc,rep:16,is_suf_target	393322.0
 BIC	jerryscript	5117	53b61c1	2	none	D	baselines/waflgo_jerryscript_53b61c1_2/queue/id:000555,402281,src:000259,op:havoc,rep:2,+cov |	
 BIC	jerryscript	5117	53b61c1	3	bug_^SEGV	B	baselines/waflgo_jerryscript_53b61c1_3/queue/id:000513,380707,src:000191,op:havoc,rep:8,+cov	380707.0
@@ -134,6 +199,66 @@ BIC	jerryscript	5153	70e275e	7	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript
 BIC	jerryscript	5153	70e275e	8	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_8/queue/id:000034,7455,src:000002,op:havoc,rep:128,+cov |	
 BIC	jerryscript	5153	70e275e	9	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_9/queue/id:000046,9511,src:000003,op:flip1,pos:3,+cov |	
 BIC	jerryscript	5153	70e275e	10	none	D	/clever/fuzz/waflgo/out/waflgo_jerryscript_70e275e_10/queue/id:000031,5632,src:000003,op:flip1,pos:3,+cov |	
+BIC	micropython	13007	4c93955	1	none	N	 |	
+BIC	micropython	13007	4c93955	2	none	N	 |	
+BIC	micropython	13007	4c93955	3	none	N	 |	
+BIC	micropython	13007	4c93955	4	none	N	 |	
+BIC	micropython	13007	4c93955	5	none	N	 |	
+BIC	micropython	13007	4c93955	6	none	N	 |	
+BIC	micropython	13007	4c93955	7	none	N	 |	
+BIC	micropython	13007	4c93955	8	none	N	 |	
+BIC	micropython	13007	4c93955	9	none	N	 |	
+BIC	micropython	13007	4c93955	10	none	N	 |	
+BIC	micropython	13041	1fef566	1	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_1/crashes/id:000000,42463516,sig:06,src:002690,op:havoc,rep:4 |	
+BIC	micropython	13041	1fef566	2	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_2/crashes/id:000000,31304118,sig:11,src:001598,op:rbadd8,pos:3211 |	
+BIC	micropython	13041	1fef566	3	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_3/crashes/id:000000,65363096,sig:06,src:002664,op:havoc,rep:2 |	
+BIC	micropython	13041	1fef566	4	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_4/crashes/id:000000,7491614,sig:06,src:000672,op:rbadd8,pos:1502 |	
+BIC	micropython	13041	1fef566	5	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_5/crashes/id:000000,41330122,sig:06,src:002617,op:int8,pos:783,val:+64 |	
+BIC	micropython	13041	1fef566	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_6/crashes/id:000000,42647088,sig:06,src:002614,op:havoc,rep:4 |	
+BIC	micropython	13041	1fef566	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_7/crashes/id:000000,62456665,sig:06,src:002715,op:havoc,rep:8 |	
+BIC	micropython	13041	1fef566	8	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_8/crashes/id:000000,49962649,sig:06,src:001502,op:havoc,rep:4 |	
+BIC	micropython	13041	1fef566	9	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_9/crashes/id:000000,54903565,sig:06,src:003044,op:havoc,rep:4 |	
+BIC	micropython	13041	1fef566	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_1fef566_10/crashes/id:000000,20823813,sig:06,src:001197,op:flip2,pos:759 |	
+BIC	micropython	17733	5e9189d	1	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_1/queue/id:001324,6925393,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	2	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_2/queue/id:001359,6987959,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	3	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_3/queue/id:001325,6993025,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	4	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_4/queue/id:001353,6954935,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	5	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_5/queue/id:001338,6989362,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	6	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_6/queue/id:001333,7091636,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	7	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_7/queue/id:001327,6975910,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	8	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_8/queue/id:001348,6986006,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	9	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_9/queue/id:001359,7047449,src:000007,op:arith8,pos:2678,val:-5,+cov |	
+BIC	micropython	17733	5e9189d	10	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_5e9189d_10/queue/id:001525,6992183,src:000644,op:ext_AO,pos:2739,+cov |	
+BIC	micropython	17815	69ead7d	1	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_1/queue/id:001386,4456892,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	2	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_2/queue/id:001373,4444356,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	3	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_3/queue/id:001427,4413337,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	4	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_4/queue/id:001367,4421992,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	5	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_5/queue/id:001503,5193224,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	6	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_6/queue/id:001434,4427244,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	7	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_7/queue/id:001542,5580143,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	8	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_8/queue/id:001539,5770346,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	9	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_9/queue/id:001469,4570034,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17815	69ead7d	10	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_69ead7d_10/queue/id:001372,4381717,src:000007,op:flip8,pos:1842 |	
+BIC	micropython	17847	7e14680	1	none	N	 |	
+BIC	micropython	17847	7e14680	2	none	N	 |	
+BIC	micropython	17847	7e14680	3	none	N	 |	
+BIC	micropython	17847	7e14680	4	none	N	 |	
+BIC	micropython	17847	7e14680	5	none	N	 |	
+BIC	micropython	17847	7e14680	6	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_micropython_7e14680_6/crashes/id:000000,6824311,sig:06,src:000007,op:rbadd8,pos:3187 |	
+BIC	micropython	17847	7e14680	7	none	N	 |	
+BIC	micropython	17847	7e14680	8	none	N	 |	
+BIC	micropython	17847	7e14680	9	none	N	 |	
+BIC	micropython	17847	7e14680	10	none	N	 |	
+BIC	jq	49014	4003202	1	none	N	 |	
+BIC	jq	49014	4003202	2	none	N	 |	
+BIC	jq	49014	4003202	3	none	N	 |	
+BIC	jq	49014	4003202	4	none	N	 |	
+BIC	jq	49014	4003202	5	none	N	 |	
+BIC	jq	49014	4003202	6	none	N	 |	
+BIC	jq	49014	4003202	7	none	N	 |	
+BIC	jq	49014	4003202	8	none	N	 |	
+BIC	jq	49014	4003202	9	bug_SEGV^SEGV	X	/clever/fuzz/waflgo/out/waflgo_jq_49014_4003202_9/crashes/id:000000,2996307,sig:11,src:001982,op:havoc,rep:4 |	
+BIC	jq	49014	4003202	10	bug_SEGV^SEGV	X	/clever/fuzz/waflgo/out/waflgo_jq_49014_4003202_10/crashes/id:000000,16944998,sig:11,src:003222,op:havoc,rep:16 |	
 FIX	mujs	65	833f82c	1	old	X	out_mujs_833f82c_1/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
 FIX	mujs	65	833f82c	2	old	X	out_mujs_833f82c_2/queue/id:000000,orig:CVE-2016-10132	orig:CVE-2016-10132
 FIX	mujs	65	833f82c	3	old	X	out_mujs_833f82c_3/crashes.2024-09-03-14:26:46/target_id:000000,36076139,sig:11,src:003157,op:havoc,rep:8	36076139
@@ -174,16 +299,46 @@ FIX	mujs	166	8b5ba20	7	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo
 FIX	mujs	166	8b5ba20	8	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_8/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
 FIX	mujs	166	8b5ba20	9	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_9/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
 FIX	mujs	166	8b5ba20	10	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_10/queue/id:000013,orig:jsc_5.js	orig:jsc_5.js
-FIX	libxml2	550	6273df6	1	old	N		 |
-FIX	libxml2	550	6273df6	2	old	N		 |
-FIX	libxml2	550	6273df6	3	old	N		 |
-FIX	libxml2	550	6273df6	4	old	N		 |
-FIX	libxml2	550	6273df6	5	old	N		 |
+FIX	libxml2	550	6273df6	1	none	N	 |	
+FIX	libxml2	550	6273df6	2	none	N	 |	
+FIX	libxml2	550	6273df6	3	none	N	 |	
+FIX	libxml2	550	6273df6	4	none	N	 |	
+FIX	libxml2	550	6273df6	5	none	N	 |	
 FIX	libxml2	550	6273df6	6	none	N	 |	
 FIX	libxml2	550	6273df6	7	none	N	 |	
 FIX	libxml2	550	6273df6	8	none	N	 |	
 FIX	libxml2	550	6273df6	9	none	N	 |	
 FIX	libxml2	550	6273df6	10	none	N	 |	
+FIX	libxml2	553	db21cd5	1	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_1/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	2	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_2/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	3	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_3/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	4	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_4/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	5	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_5/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	6	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_6/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	7	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_7/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	8	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_8/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	9	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_9/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	553	db21cd5	10	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_db21cd5_10/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	720	3ad7f81	1	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_1/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	2	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_2/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	3	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_3/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	4	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_4/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	5	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_5/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	6	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_6/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	7	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_7/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	8	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_8/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	9	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_9/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	720	3ad7f81	10	behave	D	/clever/fuzz/waflgo/out/waflgo_libxml2_3ad7f81_10/queue/id:000000,orig:dtd1 |	
+FIX	libxml2	841	dc6270d	1	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_1/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	2	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_2/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	3	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_3/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	4	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_4/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	5	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_5/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	6	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_6/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	7	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_7/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	8	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_8/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	9	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_9/queue/id:000000,orig:dtd1	orig:dtd1
+FIX	libxml2	841	dc6270d	10	bug_heap-use-after-free^	B	/clever/fuzz/waflgo/out/waflgo_libxml2_dc6270d_10/queue/id:000000,orig:dtd1	orig:dtd1
 FIX	poppler	1282	4564a00	1	old	R	out_poppler_4564a00_1/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
 FIX	poppler	1282	4564a00	2	old	R	out_poppler_4564a00_2/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
 FIX	poppler	1282	4564a00	3	old	R	out_poppler_4564a00_3/queue/id:000000,orig:3-eledpar_mwe.pdf	orig:3-eledpar_mwe.pdf
@@ -234,6 +389,36 @@ FIX	poppler	1381	1be35ee	7	none	N	 |
 FIX	poppler	1381	1be35ee	8	none	N	 |	
 FIX	poppler	1381	1be35ee	9	none	N	 |	
 FIX	poppler	1381	1be35ee	10	none	N	 |	
+FIX	jq	2825	3fa10e8	1	none	N	 |	
+FIX	jq	2825	3fa10e8	2	none	N	 |	
+FIX	jq	2825	3fa10e8	3	none	N	 |	
+FIX	jq	2825	3fa10e8	4	none	N	 |	
+FIX	jq	2825	3fa10e8	5	none	N	 |	
+FIX	jq	2825	3fa10e8	6	none	N	 |	
+FIX	jq	2825	3fa10e8	7	none	D	/clever/fuzz/waflgo/out/waflgo_jq_3fa10e8_7/queue/id:001329,32075568,src:001211,op:havoc,rep:2,+cov |	
+FIX	jq	2825	3fa10e8	8	none	D	/clever/fuzz/waflgo/out/waflgo_jq_3fa10e8_8/queue/id:001585,5875198,src:001577,op:havoc,rep:16,+cov |	
+FIX	jq	2825	3fa10e8	9	none	N	 |	
+FIX	jq	2825	3fa10e8	10	none	D	/clever/fuzz/waflgo/out/waflgo_jq_3fa10e8_10/queue/id:001523,13750388,src:001515,op:havoc,rep:2,+cov |	
+FIX	jq	2976	71c2ab5	1	none	N	 |	
+FIX	jq	2976	71c2ab5	2	none	N	 |	
+FIX	jq	2976	71c2ab5	3	none	N	 |	
+FIX	jq	2976	71c2ab5	4	none	N	 |	
+FIX	jq	2976	71c2ab5	5	none	N	 |	
+FIX	jq	2976	71c2ab5	6	bug_heap-buffer-overflow^	B	/clever/fuzz/waflgo/out/waflgo_jq_71c2ab5_6/queue/id:001315,68618210,src:001133,op:havoc,rep:128,+cov	68618210
+FIX	jq	2976	71c2ab5	7	none	N	 |	
+FIX	jq	2976	71c2ab5	8	none	N	 |	
+FIX	jq	2976	71c2ab5	9	none	N	 |	
+FIX	jq	2976	71c2ab5	10	none	N	 |	
+FIX	jq	3262	de21386	1	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_1/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	2	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_2/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	3	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_3/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	4	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_4/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	5	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_5/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	6	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_6/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	7	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_7/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	8	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_8/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	9	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_9/queue/id:000011,orig:53.json	orig:53.json
+FIX	jq	3262	de21386	10	bug_SEGV^	B	/clever/fuzz/waflgo/out/waflgo_jq_de21386_10/queue/id:000011,orig:53.json	orig:53.json
 FIX	jerryscript	5013	3686410	1	none	X	baselines/waflgo_jerryscript_3686410_1/queue/id:000001,orig:CVE-2016-10133 |	
 FIX	jerryscript	5013	3686410	2	none	X	baselines/waflgo_jerryscript_3686410_2/queue/id:000001,orig:CVE-2016-10133 |	
 FIX	jerryscript	5013	3686410	3	none	X	baselines/waflgo_jerryscript_3686410_3/queue/id:000001,orig:CVE-2016-10133 |	
@@ -264,3 +449,43 @@ FIX	jerryscript	5138	95cc5e9	7	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waf
 FIX	jerryscript	5138	95cc5e9	8	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_8/crashes/id:000000,543996,sig:06,src:000003,op:flip1,pos:41 |	
 FIX	jerryscript	5138	95cc5e9	9	none	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_9/crashes/id:000000,822043,sig:06,src:000003,op:flip1,pos:41 |	
 FIX	jerryscript	5138	95cc5e9	10	bug_Aborted^Aborted	X	/clever/fuzz/waflgo/out/waflgo_jerryscript_95cc5e9_10/crashes/id:000000,983771,sig:06,src:000003,op:flip1,pos:41 |	
+FIX	micropython	13041	908ab1c	1	none	N	 |	
+FIX	micropython	13041	908ab1c	2	none	N	 |	
+FIX	micropython	13041	908ab1c	3	none	N	 |	
+FIX	micropython	13041	908ab1c	4	none	N	 |	
+FIX	micropython	13041	908ab1c	5	none	N	 |	
+FIX	micropython	13041	908ab1c	6	none	N	 |	
+FIX	micropython	13041	908ab1c	7	none	N	 |	
+FIX	micropython	13041	908ab1c	8	none	N	 |	
+FIX	micropython	13041	908ab1c	9	none	N	 |	
+FIX	micropython	13041	908ab1c	10	none	N	 |	
+FIX	micropython	17733	3185bb5	1	behave	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_1/queue/id:001294,6012068,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	2	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_2/queue/id:001334,6089593,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	3	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_3/queue/id:001316,6066625,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	4	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_4/queue/id:001313,5969575,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	5	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_5/queue/id:001332,6027929,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	6	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_6/queue/id:001335,6027407,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	7	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_7/queue/id:001314,6011147,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	8	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_8/queue/id:001309,6101961,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	9	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_9/queue/id:001325,6050417,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17733	3185bb5	10	none	D	/clever/fuzz/waflgo/out/waflgo_micropython_3185bb5_10/queue/id:001337,6174223,src:000007,op:arith8,pos:2682,val:-5,+cov |	
+FIX	micropython	17847	0615d13	1	none	N	 |	
+FIX	micropython	17847	0615d13	2	none	N	 |	
+FIX	micropython	17847	0615d13	3	none	N	 |	
+FIX	micropython	17847	0615d13	4	none	N	 |	
+FIX	micropython	17847	0615d13	5	none	N	 |	
+FIX	micropython	17847	0615d13	6	none	N	 |	
+FIX	micropython	17847	0615d13	7	none	N	 |	
+FIX	micropython	17847	0615d13	8	none	N	 |	
+FIX	micropython	17847	0615d13	9	none	N	 |	
+FIX	micropython	17847	0615d13	10	none	N	 |	
+FIX	jq	49014	499c91b	1	none	N	 |	
+FIX	jq	49014	499c91b	2	none	N	 |	
+FIX	jq	49014	499c91b	3	none	N	 |	
+FIX	jq	49014	499c91b	4	none	N	 |	
+FIX	jq	49014	499c91b	5	none	N	 |	
+FIX	jq	49014	499c91b	6	none	N	 |	
+FIX	jq	49014	499c91b	7	none	N	 |	
+FIX	jq	49014	499c91b	8	none	N	 |	
+FIX	jq	49014	499c91b	9	none	N	 |	
+FIX	jq	49014	499c91b	10	none	N	 |	

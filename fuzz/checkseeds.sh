@@ -25,7 +25,8 @@ RUNFUZZ=${RUNFUZZ:-""}
 
 # output in format: issue | commit | result | first file
 tbl="issue | commit | # of files | # of (B,D,R,X,N) | final | first file | bug_types"
-suffix=$(echo "$seeds_dir" | tr '/' '_')
+# suffix=$(echo "$seeds_dir" | tr '/' '_')
+suffix=$PROJ_NAME
 tbl_file=seedscheck_${suffix}_${SCENARIO}.csv
 logfile=seedscheck_${suffix}_${SCENARIO}.log
 echo -e "$tbl" > $tbl_file

@@ -26,9 +26,9 @@ reproduce_bug() {
     local commit=${IID2BIC[$issue_id]}
   fi
   local truth_poc=$(find $truth_dir -name "*$issue_id*" | head -1)
-  local builddir_before="buildafl_before_$commit"
-  local builddir_after="buildafl_after_$commit"
-  local command=${COMMANDS_MAP[$commit]}
+  local builddir_before="build_before_$commit"
+  local builddir_after="build_after_$commit"
+  local command=${COMMANDS_MAP[$issue_id]}  # use issue id as same commit can introduce multiple issues
   local cmd_before=$(get_cmd "$builddir_before/$DIR_REL/$command" ../"$truth_poc")
   local cmd_after=$(get_cmd "$builddir_after/$DIR_REL/$command" "../$truth_poc")
   cmds_before+="\n$cmd_before"
@@ -75,3 +75,9 @@ done
 echo -e $summary_table
 echo -e "Commands before: $cmds_before"
 echo -e "Commands after: $cmds_after"
+
+pushd $PROJ_NAME
+for commit in "${COMMITS[@]}"; do
+  commit_oneline $commit
+done
+popd

@@ -31,7 +31,7 @@ check_output_bug() {
         fi
     done
     # Check for Aborted
-    for pattern in "AddressSanitizer:DEADLYSIGNAL" "Aborted" "Segmentation fault"; do
+    for pattern in "AddressSanitizer:DEADLYSIGNAL" "Aborted" "Segmentation fault" "core dumped" "dumped core"; do
         if bug=$(echo "$input" | grep -o "${pattern}" | head -1); then
             [ ! -z "$bug" ] && echo "$bug" && return 1
         fi
@@ -46,7 +46,11 @@ parse_llm_input() {
 
 parse_llm_cmd() {
     local ans=$1
-    local cmd=$(echo "$ans" | sed -n 's/Command: `\([^`]*\)`/\1/p')
+    # NOTE: LLM may still return cmd with relative path if --help show path to exe
+    local full_cmd=$(echo "$ans" | sed -n 's/Command: `\([^`]*\)`/\1/p')
+    local exe_path=${full_cmd%% *}  # Extract the first word (the path/executable)
+    local exe_name=${exe_path##*/}  # Strip directory to get just the filename
+    local cmd="$exe_name ${full_cmd#* }" # Reconstruct the command with the rest of the arguments
     echo "$cmd"
 }
 

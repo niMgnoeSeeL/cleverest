@@ -1,0 +1,33 @@
+issue | commit | idx | status | final | first crash | time to find first crash
+2825 | 680baef | 260116-0616 | bug_^SEGV | B | id:000000,sig:11,src:001347,time:2650564,execs:154570,op:havoc,rep:4 | 2650564
+2825 | 680baef | 260117-0904 | bug_^SEGV | B | id:000000,sig:11,src:002161+001366,time:9536245,execs:1111582,op:splice,rep:2 | 9536245
+2825 | 680baef | 260117-0907 | bug_Segmentation fault^SEGV | B | id:000000,sig:11,src:000490+000073,time:2292206,execs:112330,op:splice,rep:2 | 2292206
+2825 | 680baef | 260117-0909 | bug_^SEGV | B | id:000000,sig:11,src:002769,time:8979005,execs:1054791,op:havoc,rep:1 | 8979005
+2825 | 680baef | 260117-0913 | bug_^Segmentation fault | B | id:000000,sig:11,src:001584+001036,time:3167294,execs:230194,op:splice,rep:4 | 3167294
+2825 | 680baef | 260117-0916 | bug_^Segmentation fault | B | id:000000,sig:11,src:001979,time:7925435,execs:891750,op:havoc,rep:2 | 7925435
+2825 | 680baef | 260117-0919 | bug_Segmentation fault^SEGV | B | id:000000,sig:11,src:001557+002143,time:26497299,execs:3093202,op:splice,rep:4 | 26497299
+2825 | 680baef | 260117-0921 | bug_^SEGV | B | id:000000,sig:11,src:001512+003189,time:78144504,execs:9657827,op:splice,rep:2 | 78144504
+2825 | 680baef | 260117-0924 | bug_^Segmentation fault | B | id:000001,sig:11,src:003439+002841,time:26821873,execs:3268179,op:splice,rep:1 | 26821873
+2825 | 680baef | 260117-0927 | bug_Segmentation fault^SEGV | B | id:000000,sig:11,src:001341+001352,time:3533507,execs:280208,op:splice,rep:1 | 3533507
+2976 | 680baef | 260116-0616 | bug_^Segmentation fault | B | id:000000,sig:06,src:000557+000506,time:2634020,execs:119106,op:splice,rep:2 | 2634020
+2976 | 680baef | 260117-0904 | bug_^heap-buffer-overflow | B | id:000001,sig:06,src:000477,time:2382326,execs:95753,op:havoc,rep:1 | 2382326
+2976 | 680baef | 260117-0907 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000001,time:121650,execs:4584,op:havoc,rep:2 | 121650
+2976 | 680baef | 260117-0909 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000501+000151,time:2975709,execs:151810,op:splice,rep:1 | 2975709
+2976 | 680baef | 260117-0913 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000784,time:4503804,execs:295702,op:havoc,rep:2 | 4503804
+2976 | 680baef | 260117-0916 | bug_^Segmentation fault | B | id:000000,sig:06,src:000806,time:5273142,execs:368987,op:havoc,rep:7 | 5273142
+2976 | 680baef | 260117-0919 | bug_^Segmentation fault | B | id:000000,sig:06,src:000463+000397,time:2010494,execs:74287,op:splice,rep:2 | 2010494
+2976 | 680baef | 260117-0921 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:000586,time:2830974,execs:138567,op:havoc,rep:2 | 2830974
+2976 | 680baef | 260117-0924 | bug_Segmentation fault^heap-buffer-overflow | B | id:000000,sig:06,src:000459+000296,time:19560580,execs:1634259,op:splice,rep:2 | 19560580
+2976 | 680baef | 260117-0927 | bug_^Segmentation fault | B | id:000000,sig:06,src:000953+000430,time:6704028,execs:486555,op:splice,rep:4 | 6704028
+3262 | 0e067ef | 260116-0616 | bug_Segmentation fault^Segmentation fault | X | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0904 | bug_^Segmentation fault | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_3_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0907 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0909 | bug_Segmentation fault^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0913 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0916 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0919 | bug_Segmentation fault^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0921 | bug_Segmentation fault^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0924 | bug_Segmentation fault^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+3262 | 0e067ef | 260117-0927 | bug_Segmentation fault^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV | 0
+49014 | 4003202 | 260116-0616 | bug_SEGV^Segmentation fault | B | id:000002,sig:11,src:004795,time:56429123,execs:7240775,op:havoc,rep:2 | 56429123
+49014 | 4003202 | 260117-0919 | bug_Segmentation fault^heap-use-after-free | B | id:000000,sig:06,src:000000,time:139043,execs:2946,op:arith8,pos:26,val:+31 | 139043

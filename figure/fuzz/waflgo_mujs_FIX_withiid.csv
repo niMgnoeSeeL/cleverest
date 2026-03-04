@@ -1,21 +1,41 @@
-issue | commit | idx | final | time to find first crash in ms | first_crash
-65 | 833f82c | 1 | X | orig:CVE-2016-10132 | out_mujs_833f82c_1/queue/id:000000,orig:CVE-2016-10132
-65 | 833f82c | 2 | X | orig:CVE-2016-10132 | out_mujs_833f82c_2/queue/id:000000,orig:CVE-2016-10132
-65 | 833f82c | 3 | X | 36076139 | out_mujs_833f82c_3/crashes.2024-09-03-14:26:46/target_id:000000,36076139,sig:11,src:003157,op:havoc,rep:8
-65 | 833f82c | 4 | R | orig:CVE-2016-10132 | out_mujs_833f82c_4/queue/id:000000,orig:CVE-2016-10132
-65 | 833f82c | 5 | X | orig:CVE-2016-10132 | out_mujs_833f82c_5/queue/id:000000,orig:CVE-2016-10132
-141 | 6871e5b | 1 | B | 622058 | out_mujs_6871e5b_1/queue/id:000574,622058,src:000213,op:havoc,rep:64,+cov
-141 | 6871e5b | 2 | B | 737438 | out_mujs_6871e5b_2/queue/id:000527,737438,src:000223,op:havoc,rep:32,+cov
-141 | 6871e5b | 3 | B | 663413 | out_mujs_6871e5b_3/queue/id:000587,663413,src:000227,op:havoc,rep:32,+cov
-141 | 6871e5b | 4 | B | 979254 | out_mujs_6871e5b_4/queue/id:000693,979254,src:000477,op:havoc,rep:128,+cov
-141 | 6871e5b | 5 | B | 833402 | out_mujs_6871e5b_5/queue/id:000616,833402,src:000386,op:havoc,rep:64,+cov
-145 | f93d245 | 1 | B | 451098 | out_mujs_f93d245_1/queue/id:000987,451098,src:000016,op:flip1,pos:11,+cov
-145 | f93d245 | 2 | B | 235072 | out_mujs_f93d245_2/queue/id:000601,235072,src:000545,op:havoc,rep:4
-145 | f93d245 | 3 | B | 270459 | out_mujs_f93d245_3/queue/id:000627,270459,src:000573,op:havoc,rep:4
-145 | f93d245 | 4 | B | 412342 | out_mujs_f93d245_4/queue/id:000879,412342,src:000755,op:havoc,rep:16,+cov
-145 | f93d245 | 5 | B | 412174 | out_mujs_f93d245_5/queue/id:000831,412174,src:000016,op:flip1,pos:11,+cov
-166 | 8b5ba20 | 1 | B | orig:jsc_5.js | out_mujs_8b5ba20_1/queue/id:000013,orig:jsc_5.js
-166 | 8b5ba20 | 2 | B | orig:jsc_5.js | out_mujs_8b5ba20_2/queue/id:000013,orig:jsc_5.js
-166 | 8b5ba20 | 3 | B | orig:jsc_5.js | out_mujs_8b5ba20_3/queue/id:000013,orig:jsc_5.js
-166 | 8b5ba20 | 4 | B | orig:jsc_5.js | out_mujs_8b5ba20_4/queue/id:000013,orig:jsc_5.js
-166 | 8b5ba20 | 5 | B | orig:jsc_5.js | out_mujs_8b5ba20_5/queue/id:000013,orig:jsc_5.js
+issue | commit | idx | status | final | first crash | time to find first crash
+65 | 833f82c | 1 | old | X | out_mujs_833f82c_1/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+65 | 833f82c | 2 | old | X | out_mujs_833f82c_2/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+65 | 833f82c | 3 | old | X | out_mujs_833f82c_3/crashes.2024-09-03-14:26:46/target_id:000000,36076139,sig:11,src:003157,op:havoc,rep:8 | 36076139
+65 | 833f82c | 4 | old | R | out_mujs_833f82c_4/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+65 | 833f82c | 5 | old | X | out_mujs_833f82c_5/queue/id:000000,orig:CVE-2016-10132 | orig:CVE-2016-10132
+65 | 833f82c | 6 | none | N |  | 
+65 | 833f82c | 7 | none | N |  | 
+65 | 833f82c | 8 | none | N |  | 
+65 | 833f82c | 9 | none | N |  | 
+65 | 833f82c | 10 | none | N |  | 
+141 | 6871e5b | 1 | old | B | out_mujs_6871e5b_1/queue/id:000574,622058,src:000213,op:havoc,rep:64,+cov | 622058
+141 | 6871e5b | 2 | old | B | out_mujs_6871e5b_2/queue/id:000527,737438,src:000223,op:havoc,rep:32,+cov | 737438
+141 | 6871e5b | 3 | old | B | out_mujs_6871e5b_3/queue/id:000587,663413,src:000227,op:havoc,rep:32,+cov | 663413
+141 | 6871e5b | 4 | old | B | out_mujs_6871e5b_4/queue/id:000693,979254,src:000477,op:havoc,rep:128,+cov | 979254
+141 | 6871e5b | 5 | old | B | out_mujs_6871e5b_5/queue/id:000616,833402,src:000386,op:havoc,rep:64,+cov | 833402
+141 | 6871e5b | 6 | none | N |  | 
+141 | 6871e5b | 7 | none | D | /clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_7/queue/id:003335,16358040,src:002875,op:havoc,rep:32 | 
+141 | 6871e5b | 8 | none | D | /clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_8/queue/id:000684,1020469,src:000406,op:havoc,rep:128 | 
+141 | 6871e5b | 9 | none | D | /clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_9/queue/id:000627,2077824,src:000553,op:havoc,rep:4 | 
+141 | 6871e5b | 10 | none | D | /clever/fuzz/waflgo/out/waflgo_mujs_6871e5b_10/queue/id:000581,16287544,src:000472,op:havoc,rep:8 | 
+145 | f93d245 | 1 | old | B | out_mujs_f93d245_1/queue/id:000987,451098,src:000016,op:flip1,pos:11,+cov | 451098
+145 | f93d245 | 2 | old | B | out_mujs_f93d245_2/queue/id:000601,235072,src:000545,op:havoc,rep:4 | 235072
+145 | f93d245 | 3 | old | B | out_mujs_f93d245_3/queue/id:000627,270459,src:000573,op:havoc,rep:4 | 270459
+145 | f93d245 | 4 | old | B | out_mujs_f93d245_4/queue/id:000879,412342,src:000755,op:havoc,rep:16,+cov | 412342
+145 | f93d245 | 5 | old | B | out_mujs_f93d245_5/queue/id:000831,412174,src:000016,op:flip1,pos:11,+cov | 412174
+145 | f93d245 | 6 | bug_global-buffer-overflow^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_f93d245_6/queue/id:000738,389094,src:000722,op:flip1,pos:30,+cov | 389094
+145 | f93d245 | 7 | bug_global-buffer-overflow^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_f93d245_7/queue/id:000988,454367,src:000016,op:flip1,pos:11,+cov | 454367
+145 | f93d245 | 8 | bug_global-buffer-overflow^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_f93d245_8/queue/id:001045,567524,src:000016,op:flip1,pos:11,+cov | 567524
+145 | f93d245 | 9 | bug_global-buffer-overflow^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_f93d245_9/queue/id:000850,908155,src:000016,op:havoc,rep:2,+cov | 908155
+145 | f93d245 | 10 | bug_heap-buffer-overflow^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_f93d245_10/queue/id:001870,961523,src:001834,op:havoc,rep:8,is_suf_target | 961523
+166 | 8b5ba20 | 1 | old | B | out_mujs_8b5ba20_1/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 2 | old | B | out_mujs_8b5ba20_2/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 3 | old | B | out_mujs_8b5ba20_3/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 4 | old | B | out_mujs_8b5ba20_4/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 5 | old | B | out_mujs_8b5ba20_5/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 6 | bug_heap-use-after-free^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_6/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 7 | bug_heap-use-after-free^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_7/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 8 | bug_heap-use-after-free^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_8/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 9 | bug_heap-use-after-free^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_9/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js
+166 | 8b5ba20 | 10 | bug_heap-use-after-free^ | B | /clever/fuzz/waflgo/out/waflgo_mujs_8b5ba20_10/queue/id:000013,orig:jsc_5.js | orig:jsc_5.js

@@ -1,0 +1,606 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from waflgo_jerryscript.Dockerfile
+#1 transferring dockerfile: 2.06kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/he1lonice/waflgo:v1
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [base 1/5] FROM docker.io/he1lonice/waflgo:v1
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 14.30kB done
+#5 DONE 0.1s
+
+#6 [base 3/5] RUN git clone https://github.com/He1loNice/WAFLGo
+#6 CACHED
+
+#7 [base 4/5] RUN cd WAFLGo &&     make -j8 &&     make -C llvm_mode -j8 &&     cd instrument/ &&     cmake . &&     make -j8
+#7 CACHED
+
+#8 [base 5/5] RUN apt-get update && apt-get install -y     bat     htop     tmux     ranger
+#8 CACHED
+
+#9 [waflgo_jerryscript 1/8] RUN git clone https://github.com/jerryscript-project/jerryscript/
+#9 CACHED
+
+#10 [base 2/5] WORKDIR /home/
+#10 CACHED
+
+#11 [waflgo_jerryscript 2/8] COPY seeds/js/ /home/seeds/js/
+#11 CACHED
+
+#12 [waflgo_jerryscript 3/8] COPY jerryscript.env ./
+#12 DONE 0.1s
+
+#13 [waflgo_jerryscript 4/8] COPY utils.sh ./
+#13 DONE 0.1s
+
+#14 [waflgo_jerryscript 5/8] COPY bwaflgo.sh ./
+#14 DONE 0.1s
+
+#15 [waflgo_jerryscript 6/8] RUN ./bwaflgo.sh jerryscript.env b7e3bae
+#15 0.244 /home/jerryscript /home
+#15 0.520 Note: switching to 'b7e3bae'.
+#15 0.520 
+#15 0.520 You are in 'detached HEAD' state. You can look around, make experimental
+#15 0.520 changes and commit them, and you can discard any commits you make in this
+#15 0.520 state without impacting any branches by switching back to a branch.
+#15 0.520 
+#15 0.520 If you want to create a new branch to retain commits you create, you may
+#15 0.520 do so (now or later) by using -c with the switch command. Example:
+#15 0.520 
+#15 0.520   git switch -c <new-branch-name>
+#15 0.520 
+#15 0.520 Or undo this operation with:
+#15 0.520 
+#15 0.520   git switch -
+#15 0.520 
+#15 0.520 Turn off this advice by setting config variable advice.detachedHead to false
+#15 0.520 
+#15 0.520 HEAD is now at b7e3baee Support caching of next method in generators. (#3937)
+#15 1.520 Not Instrument __afl_prev_loc
+#15 1.520 Not Instrument __afl_prev_loc
+#15 1.520 Not Instrument __afl_prev_loc
+#15 1.520 Not Instrument __afl_prev_loc
+#15 1.521 Not Instrument __afl_prev_loc
+#15 1.521 Not Instrument __afl_prev_loc
+#15 1.521 Not Instrument __afl_prev_loc
+#15 1.521 Not Instrument __afl_prev_loc
+#15 1.521 Not Instrument __afl_prev_loc
+#15 1.521 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.522 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.523 Not Instrument __afl_prev_loc
+#15 1.524 Not Instrument __afl_prev_loc
+#15 1.524 Not Instrument __afl_prev_loc
+#15 1.524 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.525 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.526 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.527 Not Instrument __afl_prev_loc
+#15 1.528 Not Instrument __afl_prev_loc
+#15 1.529 Not Instrument __afl_prev_loc
+#15 1.529 Not Instrument __afl_prev_loc
+#15 1.529 Not Instrument __afl_prev_loc
+#15 1.533 Not Instrument __afl_prev_loc
+#15 1.534 Not Instrument __afl_prev_loc
+#15 1.869 Not Instrument __afl_prev_loc
+#15 1.870 Not Instrument __afl_prev_loc
+#15 1.871 Not Instrument __afl_prev_loc
+#15 1.872 Not Instrument __afl_prev_loc
+#15 1.873 Not Instrument __afl_prev_loc
+#15 1.874 Not Instrument __afl_prev_loc
+#15 1.877 Not Instrument __afl_prev_loc
+#15 1.877 Not Instrument __afl_prev_loc
+#15 1.878 Not Instrument __afl_prev_loc
+#15 1.878 Not Instrument __afl_prev_loc
+#15 1.878 Not Instrument __afl_prev_loc
+#15 1.878 Not Instrument __afl_prev_loc
+#15 1.879 Not Instrument __afl_prev_loc
+#15 1.879 Not Instrument __afl_prev_loc
+#15 1.879 Not Instrument __afl_prev_loc
+#15 1.879 Not Instrument __afl_prev_loc
+#15 1.879 Not Instrument __afl_prev_loc
+#15 1.880 Not Instrument __afl_prev_loc
+#15 1.880 Not Instrument __afl_prev_loc
+#15 1.880 Not Instrument __afl_prev_loc
+#15 1.880 Not Instrument __afl_prev_loc
+#15 1.881 Not Instrument __afl_prev_loc
+#15 1.881 Not Instrument __afl_prev_loc
+#15 1.882 Not Instrument __afl_prev_loc
+#15 1.882 Not Instrument __afl_prev_loc
+#15 1.882 Not Instrument __afl_prev_loc
+#15 1.882 Not Instrument __afl_prev_loc
+#15 1.883 Not Instrument __afl_prev_loc
+#15 1.884 Not Instrument __afl_prev_loc
+#15 1.884 Not Instrument __afl_prev_loc
+#15 1.885 Not Instrument __afl_prev_loc
+#15 1.885 Not Instrument __afl_prev_loc
+#15 1.885 Not Instrument __afl_prev_loc
+#15 1.885 Not Instrument __afl_prev_loc
+#15 1.886 Not Instrument __afl_prev_loc
+#15 1.886 Not Instrument __afl_prev_loc
+#15 1.886 Not Instrument __afl_prev_loc
+#15 1.887 Not Instrument __afl_prev_loc
+#15 1.888 Not Instrument __afl_prev_loc
+#15 1.889 Not Instrument __afl_prev_loc
+#15 1.891 Not Instrument __afl_prev_loc
+#15 1.893 Not Instrument __afl_prev_loc
+#15 1.894 Not Instrument __afl_prev_loc
+#15 1.894 Not Instrument __afl_prev_loc
+#15 1.894 Not Instrument __afl_prev_loc
+#15 1.895 Not Instrument __afl_prev_loc
+#15 1.897 Not Instrument __afl_prev_loc
+#15 1.898 Not Instrument __afl_prev_loc
+#15 1.899 Not Instrument __afl_prev_loc
+#15 1.899 Not Instrument __afl_prev_loc
+#15 1.900 Not Instrument __afl_prev_loc
+#15 1.902 Not Instrument __afl_prev_loc
+#15 1.905 Not Instrument __afl_prev_loc
+#15 1.906 Not Instrument __afl_prev_loc
+#15 1.909 Not Instrument __afl_prev_loc
+#15 1.909 Not Instrument __afl_prev_loc
+#15 1.910 Not Instrument __afl_prev_loc
+#15 1.911 Not Instrument __afl_prev_loc
+#15 1.915 Not Instrument __afl_prev_loc
+#15 1.918 Not Instrument __afl_prev_loc
+#15 1.920 Not Instrument __afl_prev_loc
+#15 1.920 Not Instrument __afl_prev_loc
+#15 1.934 Not Instrument __afl_prev_loc
+#15 1.934 Not Instrument __afl_prev_loc
+#15 1.949 Not Instrument __afl_prev_loc
+#15 1.949 Not Instrument __afl_prev_loc
+#15 1.954 Not Instrument __afl_prev_loc
+#15 1.955 Not Instrument __afl_prev_loc
+#15 1.955 Not Instrument __afl_prev_loc
+#15 1.956 Not Instrument __afl_prev_loc
+#15 1.957 Not Instrument __afl_prev_loc
+#15 1.957 Not Instrument __afl_prev_loc
+#15 1.957 Not Instrument __afl_prev_loc
+#15 1.958 Not Instrument __afl_prev_loc
+#15 1.958 Not Instrument __afl_prev_loc
+#15 1.959 Not Instrument __afl_prev_loc
+#15 1.959 Not Instrument __afl_prev_loc
+#15 1.959 Not Instrument __afl_prev_loc
+#15 1.959 Not Instrument __afl_prev_loc
+#15 1.961 Not Instrument __afl_prev_loc
+#15 1.961 Not Instrument __afl_prev_loc
+#15 1.961 Not Instrument __afl_prev_loc
+#15 1.967 Not Instrument __afl_prev_loc
+#15 1.967 Not Instrument __afl_prev_loc
+#15 1.967 Not Instrument __afl_prev_loc
+#15 1.967 Not Instrument __afl_prev_loc
+#15 1.968 Not Instrument __afl_prev_loc
+#15 1.968 Not Instrument __afl_prev_loc
+#15 1.970 Not Instrument __afl_prev_loc
+#15 1.970 Not Instrument __afl_prev_loc
+#15 1.970 Not Instrument __afl_prev_loc
+#15 1.970 Not Instrument __afl_prev_loc
+#15 1.971 Not Instrument __afl_prev_loc
+#15 1.971 Not Instrument __afl_prev_loc
+#15 1.973 Not Instrument __afl_prev_loc
+#15 1.975 Not Instrument __afl_prev_loc
+#15 1.975 Not Instrument __afl_prev_loc
+#15 1.975 Not Instrument __afl_prev_loc
+#15 1.975 Not Instrument __afl_prev_loc
+#15 1.976 Not Instrument __afl_prev_loc
+#15 1.976 Not Instrument __afl_prev_loc
+#15 1.976 Not Instrument __afl_prev_loc
+#15 1.978 Not Instrument __afl_prev_loc
+#15 1.978 Not Instrument __afl_prev_loc
+#15 1.979 Not Instrument __afl_prev_loc
+#15 1.979 Not Instrument __afl_prev_loc
+#15 1.981 Not Instrument __afl_prev_loc
+#15 1.984 Not Instrument __afl_prev_loc
+#15 1.986 Not Instrument __afl_prev_loc
+#15 1.986 Not Instrument __afl_prev_loc
+#15 1.989 Not Instrument __afl_prev_loc
+#15 1.992 Not Instrument __afl_prev_loc
+#15 1.996 Not Instrument __afl_prev_loc
+#15 1.996 Not Instrument __afl_prev_loc
+#15 1.997 Not Instrument __afl_prev_loc
+#15 1.998 Not Instrument __afl_prev_loc
+#15 1.998 Not Instrument __afl_prev_loc
+#15 1.999 Not Instrument __afl_prev_loc
+#15 2.003 Not Instrument __afl_prev_loc
+#15 2.004 Not Instrument __afl_prev_loc
+#15 2.017 Not Instrument __afl_prev_loc
+#15 2.017 Not Instrument __afl_prev_loc
+#15 2.021 Not Instrument __afl_prev_loc
+#15 2.023 Not Instrument __afl_prev_loc
+#15 2.032 Not Instrument __afl_prev_loc
+#15 2.032 Not Instrument __afl_prev_loc
+#15 2.033 Not Instrument __afl_prev_loc
+#15 2.034 Not Instrument __afl_prev_loc
+#15 2.035 Not Instrument __afl_prev_loc
+#15 2.035 Not Instrument __afl_prev_loc
+#15 2.035 Not Instrument __afl_prev_loc
+#15 2.036 Not Instrument __afl_prev_loc
+#15 2.036 Not Instrument __afl_prev_loc
+#15 2.038 Not Instrument __afl_prev_loc
+#15 2.042 Not Instrument __afl_prev_loc
+#15 2.042 Not Instrument __afl_prev_loc
+#15 2.043 Not Instrument __afl_prev_loc
+#15 2.043 Not Instrument __afl_prev_loc
+#15 2.044 Not Instrument __afl_prev_loc
+#15 2.044 Not Instrument __afl_prev_loc
+#15 2.045 Not Instrument __afl_prev_loc
+#15 2.047 Not Instrument __afl_prev_loc
+#15 2.048 Not Instrument __afl_prev_loc
+#15 2.048 Not Instrument __afl_prev_loc
+#15 2.049 Not Instrument __afl_prev_loc
+#15 2.049 Not Instrument __afl_prev_loc
+#15 2.049 Not Instrument __afl_prev_loc
+#15 2.049 Not Instrument __afl_prev_loc
+#15 2.049 Not Instrument __afl_prev_loc
+#15 2.050 Not Instrument __afl_prev_loc
+#15 2.050 Not Instrument __afl_prev_loc
+#15 2.050 Not Instrument __afl_prev_loc
+#15 2.052 Not Instrument __afl_prev_loc
+#15 2.053 Not Instrument __afl_prev_loc
+#15 2.053 Not Instrument __afl_prev_loc
+#15 2.053 Not Instrument __afl_prev_loc
+#15 2.053 Not Instrument __afl_prev_loc
+#15 2.054 Not Instrument __afl_prev_loc
+#15 2.056 Not Instrument __afl_prev_loc
+#15 2.057 Not Instrument __afl_prev_loc
+#15 2.057 Not Instrument __afl_prev_loc
+#15 2.059 Not Instrument __afl_prev_loc
+#15 2.060 Not Instrument __afl_prev_loc
+#15 2.060 Not Instrument __afl_prev_loc
+#15 2.061 Not Instrument __afl_prev_loc
+#15 2.061 Not Instrument __afl_prev_loc
+#15 2.063 Not Instrument __afl_prev_loc
+#15 2.064 Not Instrument __afl_prev_loc
+#15 2.066 Not Instrument __afl_prev_loc
+#15 2.068 Not Instrument __afl_prev_loc
+#15 2.072 Not Instrument __afl_prev_loc
+#15 2.073 Not Instrument __afl_prev_loc
+#15 2.073 Not Instrument __afl_prev_loc
+#15 2.074 Not Instrument __afl_prev_loc
+#15 2.075 Not Instrument __afl_prev_loc
+#15 2.075 Not Instrument __afl_prev_loc
+#15 2.075 Not Instrument __afl_prev_loc
+#15 2.076 Not Instrument __afl_prev_loc
+#15 2.082 Not Instrument __afl_prev_loc
+#15 2.083 Not Instrument __afl_prev_loc
+#15 2.091 Not Instrument __afl_prev_loc
+#15 2.092 Not Instrument __afl_prev_loc
+#15 2.092 Not Instrument __afl_prev_loc
+#15 2.092 Not Instrument __afl_prev_loc
+#15 2.108 Not Instrument __afl_prev_loc
+#15 2.110 Not Instrument __afl_prev_loc
+#15 2.111 Not Instrument __afl_prev_loc
+#15 2.111 Not Instrument __afl_prev_loc
+#15 2.111 Not Instrument __afl_prev_loc
+#15 2.112 Not Instrument __afl_prev_loc
+#15 2.112 Not Instrument __afl_prev_loc
+#15 2.112 Not Instrument __afl_prev_loc
+#15 2.112 Not Instrument __afl_prev_loc
+#15 2.112 Not Instrument __afl_prev_loc
+#15 2.113 Not Instrument __afl_prev_loc
+#15 2.114 Not Instrument __afl_prev_loc
+#15 2.115 Not Instrument __afl_prev_loc
+#15 2.117 Not Instrument __afl_prev_loc
+#15 2.118 Not Instrument __afl_prev_loc
+#15 2.118 Not Instrument __afl_prev_loc
+#15 2.119 Not Instrument __afl_prev_loc
+#15 2.120 Not Instrument __afl_prev_loc
+#15 2.121 Not Instrument __afl_prev_loc
+#15 2.121 Not Instrument __afl_prev_loc
+#15 2.129 Not Instrument __afl_prev_loc
+#15 2.130 Not Instrument __afl_prev_loc
+#15 2.130 Not Instrument __afl_prev_loc
+#15 2.130 Not Instrument __afl_prev_loc
+#15 2.130 Not Instrument __afl_prev_loc
+#15 2.130 Not Instrument __afl_prev_loc
+#15 2.131 Not Instrument __afl_prev_loc
+#15 2.131 Not Instrument __afl_prev_loc
+#15 2.132 Not Instrument __afl_prev_loc
+#15 2.132 Not Instrument __afl_prev_loc
+#15 2.133 Not Instrument __afl_prev_loc
+#15 2.133 Not Instrument __afl_prev_loc
+#15 2.134 Not Instrument __afl_prev_loc
+#15 2.134 Not Instrument __afl_prev_loc
+#15 2.134 Not Instrument __afl_prev_loc
+#15 2.137 Not Instrument __afl_prev_loc
+#15 2.137 Not Instrument __afl_prev_loc
+#15 2.137 Not Instrument __afl_prev_loc
+#15 2.138 Not Instrument __afl_prev_loc
+#15 2.139 Not Instrument __afl_prev_loc
+#15 2.139 Not Instrument __afl_prev_loc
+#15 2.140 Not Instrument __afl_prev_loc
+#15 2.143 Not Instrument __afl_prev_loc
+#15 2.144 Not Instrument __afl_prev_loc
+#15 2.151 Not Instrument __afl_prev_loc
+#15 2.153 Not Instrument __afl_prev_loc
+#15 2.155 Not Instrument __afl_prev_loc
+#15 2.156 Not Instrument __afl_prev_loc
+#15 2.165 Not Instrument __afl_prev_loc
+#15 2.165 Not Instrument __afl_prev_loc
+#15 2.166 Not Instrument __afl_prev_loc
+#15 2.168 Not Instrument __afl_prev_loc
+#15 2.169 Not Instrument __afl_prev_loc
+#15 2.170 Not Instrument __afl_prev_loc
+#15 2.171 Not Instrument __afl_prev_loc
+#15 2.172 Not Instrument __afl_prev_loc
+#15 2.173 Not Instrument __afl_prev_loc
+#15 2.175 Not Instrument __afl_prev_loc
+#15 2.175 Not Instrument __afl_prev_loc
+#15 2.176 Not Instrument __afl_prev_loc
+#15 2.180 Not Instrument __afl_prev_loc
+#15 2.182 Not Instrument __afl_prev_loc
+#15 2.186 Not Instrument __afl_prev_loc
+#15 2.188 Not Instrument __afl_prev_loc
+#15 2.188 Not Instrument __afl_prev_loc
+#15 2.190 Not Instrument __afl_prev_loc
+#15 2.198 Not Instrument __afl_prev_loc
+#15 2.200 Not Instrument __afl_prev_loc
+#15 2.202 Not Instrument __afl_prev_loc
+#15 2.203 Not Instrument __afl_prev_loc
+#15 2.204 Not Instrument __afl_prev_loc
+#15 2.205 Not Instrument __afl_prev_loc
+#15 2.206 Not Instrument __afl_prev_loc
+#15 2.206 Not Instrument __afl_prev_loc
+#15 2.206 Not Instrument __afl_prev_loc
+#15 2.207 Not Instrument __afl_prev_loc
+#15 2.208 Not Instrument __afl_prev_loc
+#15 2.208 Not Instrument __afl_prev_loc
+#15 2.208 Not Instrument __afl_prev_loc
+#15 2.209 Not Instrument __afl_prev_loc
+#15 2.210 Not Instrument __afl_prev_loc
+#15 2.210 Not Instrument __afl_prev_loc
+#15 2.210 Not Instrument __afl_prev_loc
+#15 2.210 Not Instrument __afl_prev_loc
+#15 2.211 Not Instrument __afl_prev_loc
+#15 2.214 Not Instrument __afl_prev_loc
+#15 2.217 Not Instrument __afl_prev_loc
+#15 2.217 Not Instrument __afl_prev_loc
+#15 2.217 Not Instrument __afl_prev_loc
+#15 2.218 Not Instrument __afl_prev_loc
+#15 2.219 Not Instrument __afl_prev_loc
+#15 2.220 Not Instrument __afl_prev_loc
+#15 2.222 Not Instrument __afl_prev_loc
+#15 2.222 Not Instrument __afl_prev_loc
+#15 2.223 Not Instrument __afl_prev_loc
+#15 2.225 Not Instrument __afl_prev_loc
+#15 2.228 Not Instrument __afl_prev_loc
+#15 2.230 Not Instrument __afl_prev_loc
+#15 2.232 Not Instrument __afl_prev_loc
+#15 2.233 Not Instrument __afl_prev_loc
+#15 2.235 Not Instrument __afl_prev_loc
+#15 2.237 Not Instrument __afl_prev_loc
+#15 2.240 Not Instrument __afl_prev_loc
+#15 2.240 Not Instrument __afl_prev_loc
+#15 2.242 Not Instrument __afl_prev_loc
+#15 2.243 Not Instrument __afl_prev_loc
+#15 2.245 Not Instrument __afl_prev_loc
+#15 2.246 Not Instrument __afl_prev_loc
+#15 2.248 Not Instrument __afl_prev_loc
+#15 2.248 Not Instrument __afl_prev_loc
+#15 2.251 Not Instrument __afl_prev_loc
+#15 2.251 Not Instrument __afl_prev_loc
+#15 2.256 Not Instrument __afl_prev_loc
+#15 2.260 Not Instrument __afl_prev_loc
+#15 2.268 Not Instrument __afl_prev_loc
+#15 2.268 Not Instrument __afl_prev_loc
+#15 2.269 Not Instrument __afl_prev_loc
+#15 2.269 Not Instrument __afl_prev_loc
+#15 2.274 Not Instrument __afl_prev_loc
+#15 2.275 Not Instrument __afl_prev_loc
+#15 2.281 Not Instrument __afl_prev_loc
+#15 2.284 Not Instrument __afl_prev_loc
+#15 2.287 Not Instrument __afl_prev_loc
+#15 2.287 Not Instrument __afl_prev_loc
+#15 2.288 Not Instrument __afl_prev_loc
+#15 2.288 Not Instrument __afl_prev_loc
+#15 2.289 Not Instrument __afl_prev_loc
+#15 2.289 Not Instrument __afl_prev_loc
+#15 2.289 Not Instrument __afl_prev_loc
+#15 2.292 Not Instrument __afl_prev_loc
+#15 2.292 Not Instrument __afl_prev_loc
+#15 2.292 Not Instrument __afl_prev_loc
+#15 2.293 Not Instrument __afl_prev_loc
+#15 2.294 Not Instrument __afl_prev_loc
+#15 2.294 Not Instrument __afl_prev_loc
+#15 2.295 Not Instrument __afl_prev_loc
+#15 2.297 Not Instrument __afl_prev_loc
+#15 2.298 Not Instrument __afl_prev_loc
+#15 2.300 Not Instrument __afl_prev_loc
+#15 2.300 Not Instrument __afl_prev_loc
+#15 2.302 Not Instrument __afl_prev_loc
+#15 2.303 Not Instrument __afl_prev_loc
+#15 2.303 Not Instrument __afl_prev_loc
+#15 2.303 Not Instrument __afl_prev_loc
+#15 2.304 Not Instrument __afl_prev_loc
+#15 2.307 Not Instrument __afl_prev_loc
+#15 2.307 Not Instrument __afl_prev_loc
+#15 2.308 Not Instrument __afl_prev_loc
+#15 2.315 Not Instrument __afl_prev_loc
+#15 2.316 Not Instrument __afl_prev_loc
+#15 2.318 Not Instrument __afl_prev_loc
+#15 2.319 Not Instrument __afl_prev_loc
+#15 2.321 Not Instrument __afl_prev_loc
+#15 2.321 Not Instrument __afl_prev_loc
+#15 2.363 Not Instrument __afl_prev_loc
+#15 2.363 Not Instrument __afl_prev_loc
+#15 2.688 Not Instrument __afl_prev_loc
+#15 2.688 Not Instrument __afl_prev_loc
+#15 2.688 Not Instrument __afl_prev_loc
+#15 2.689 Not Instrument __afl_prev_loc
+#15 2.689 Not Instrument __afl_prev_loc
+#15 2.690 Not Instrument __afl_prev_loc
+#15 2.690 Not Instrument __afl_prev_loc
+#15 2.690 Not Instrument __afl_prev_loc
+#15 2.690 Not Instrument __afl_prev_loc
+#15 2.690 Not Instrument __afl_prev_loc
+#15 2.690 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.691 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.692 Not Instrument __afl_prev_loc
+#15 2.693 Not Instrument __afl_prev_loc
+#15 2.693 Not Instrument __afl_prev_loc
+#15 2.693 Not Instrument __afl_prev_loc
+#15 2.693 Not Instrument __afl_prev_loc
+#15 2.693 Not Instrument __afl_prev_loc
+#15 2.693 Not Instrument __afl_prev_loc
+#15 2.694 Not Instrument __afl_prev_loc
+#15 2.694 Not Instrument __afl_prev_loc
+#15 2.694 Not Instrument __afl_prev_loc
+#15 2.694 Not Instrument __afl_prev_loc
+#15 2.694 Not Instrument __afl_prev_loc
+#15 2.695 Not Instrument __afl_prev_loc
+#15 2.695 Not Instrument __afl_prev_loc
+#15 2.695 Not Instrument __afl_prev_loc
+#15 2.695 Not Instrument __afl_prev_loc
+#15 2.695 Not Instrument __afl_prev_loc
+#15 2.696 Not Instrument __afl_prev_loc
+#15 2.696 Not Instrument __afl_prev_loc
+#15 2.696 Not Instrument __afl_prev_loc
+#15 2.696 Not Instrument __afl_prev_loc
+#15 2.696 Not Instrument __afl_prev_loc
+#15 2.696 Not Instrument __afl_prev_loc
+#15 2.697 Not Instrument __afl_prev_loc
+#15 2.697 Not Instrument __afl_prev_loc
+#15 2.698 Not Instrument __afl_prev_loc
+#15 2.698 Not Instrument __afl_prev_loc
+#15 2.699 Not Instrument __afl_prev_loc
+#15 2.699 Not Instrument __afl_prev_loc
+#15 2.700 Not Instrument __afl_prev_loc
+#15 2.704 Not Instrument __afl_prev_loc
+#15 2.707 Not Instrument __afl_prev_loc
+#15 2.878 Not Instrument __afl_prev_loc
+#15 2.880 Not Instrument __afl_prev_loc
+#15 2.888 Not Instrument __afl_prev_loc
+#15 2.888 Not Instrument __afl_prev_loc
+#15 2.897 PLEASE submit a bug report to https://bugs.llvm.org/ and include the crash backtrace, preprocessed source, and associated run script.
+#15 2.897 Stack dump:
+#15 2.897 0.	Program arguments: clang -flegacy-pass-manager -Xclang -load -Xclang /home/WAFLGo/afl-llvm-pass.so -Qunused-arguments "-DJERRY_COMMIT_HASH=\" (b7e3baee)\"" -DJERRY_CPOINTER_32_BIT=0 -DJERRY_DEBUGGER=0 -DJERRY_ERROR_MESSAGES=1 -DJERRY_EXTERNAL_CONTEXT=0 -DJERRY_GC_LIMIT=(0) -DJERRY_GC_MARK_LIMIT=(8) -DJERRY_GLOBAL_HEAP_SIZE=(512) -DJERRY_LINE_INFO=1 -DJERRY_LOGGING=1 -DJERRY_MEM_GC_BEFORE_EACH_ALLOC=0 -DJERRY_MEM_STATS=0 -DJERRY_PARSER=1 -DJERRY_PARSER_DUMP_BYTE_CODE=0 -DJERRY_REGEXP_DUMP_BYTE_CODE=0 -DJERRY_REGEXP_STRICT_MODE=0 -DJERRY_SNAPSHOT_EXEC=0 -DJERRY_SNAPSHOT_SAVE=0 -DJERRY_STACK_LIMIT=(0) -DJERRY_SYSTEM_ALLOCATOR=0 -DJERRY_VALGRIND=0 -DJERRY_VM_EXEC_STOP=0 -I/home/jerryscript/jerry-core/include -I/home/jerryscript/jerry-libm/include -I/home/jerryscript/jerry-ext/include -I/home/jerryscript/jerry-port/default/include -g -mllvm --notI -std=c99 -pedantic -fno-builtin -fno-stack-protector -Wall -Werror=all -Wextra -Werror=extra -Wformat-nonliteral -Werror=format-nonliteral -Winit-self -Werror=init-self -Wconversion -Werror=conversion -Wsign-conversion -Werror=sign-conversion -Wformat-security -Werror=format-security -Wmissing-declarations -Werror=missing-declarations -Wshadow -Werror=shadow -Wstrict-prototypes -Werror=strict-prototypes -Wundef -Werror=undef -Wold-style-definition -Werror=old-style-definition -Wno-stack-protector -Wno-attributes -Werror -Wno-nested-anon-types -Wno-static-in-inline -g -o CMakeFiles/jerry.dir/main-unix.c.o -c /home/jerryscript/jerry-main/main-unix.c -g -funroll-loops -D__AFL_HAVE_MANUAL_CONTROL=1 -D__AFL_COMPILER=1 -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION=1 "-D__AFL_LOOP(_A)=({ static volatile char *_B __attribute__((used));  _B = (char*)\"##SIG_AFL_PERSISTENT##\"; __attribute__((visibility(\"default\"))) int _L(unsigned int) __asm__(\"__afl_persistent_loop\"); _L(_A); })" "-D__AFL_INIT()=do { static volatile char *_A __attribute__((used));  _A = (char*)\"##SIG_AFL_DEFER_FORKSRV##\"; __attribute__((visibility(\"default\"))) void _I(void) __asm__(\"__afl_manual_init\"); _I(); } while (0)"
+#15 2.898 1.	<eof> parser at end of file
+#15 2.898 2.	Code generation
+#15 2.986  #0 0x00007c44bcc801c4 PrintStackTraceSignalHandler(void*) Signals.cpp:0:0
+#15 2.986  #1 0x00007c44bcc7e01c llvm::sys::CleanupOnSignal(unsigned long) (/usr/local/bin/../lib/libLLVM-13.so+0x6e701c)
+#15 2.986  #2 0x00007c44bcb845e8 CrashRecoverySignalHandler(int) CrashRecoveryContext.cpp:0:0
+#15 2.986  #3 0x00007c44bc1c3090 (/lib/x86_64-linux-gnu/libc.so.6+0x43090)
+#15 2.986  #4 0x00007c44bd66afa7 llvm::DIE::getUnitDie() const (/usr/local/bin/../lib/libLLVM-13.so+0x10d3fa7)
+#15 2.986  #5 0x00007c44bd68ec44 llvm::DwarfDebug::finishEntityDefinitions() (/usr/local/bin/../lib/libLLVM-13.so+0x10f7c44)
+#15 2.986  #6 0x00007c44bd6a1c09 llvm::DwarfDebug::finalizeModuleInfo() (/usr/local/bin/../lib/libLLVM-13.so+0x110ac09)
+#15 2.986  #7 0x00007c44bd6a6938 llvm::DwarfDebug::endModule() (/usr/local/bin/../lib/libLLVM-13.so+0x110f938)
+#15 2.986  #8 0x00007c44bd652ecb llvm::AsmPrinter::doFinalization(llvm::Module&) (/usr/local/bin/../lib/libLLVM-13.so+0x10bbecb)
+#15 2.986  #9 0x00007c44bcdd5d75 llvm::FPPassManager::doFinalization(llvm::Module&) (/usr/local/bin/../lib/libLLVM-13.so+0x83ed75)
+#15 2.986 #10 0x00007c44bcde2728 llvm::legacy::PassManagerImpl::run(llvm::Module&) (/usr/local/bin/../lib/libLLVM-13.so+0x84b728)
+#15 2.986 #11 0x00007c44c1861267 (anonymous namespace)::EmitAssemblyHelper::EmitAssembly(clang::BackendAction, std::unique_ptr<llvm::raw_pwrite_stream, std::default_delete<llvm::raw_pwrite_stream> >) (.constprop.0) BackendUtil.cpp:0:0
+#15 2.986 #12 0x00007c44c18637f7 clang::EmitBackendOutput(clang::DiagnosticsEngine&, clang::HeaderSearchOptions const&, clang::CodeGenOptions const&, clang::TargetOptions const&, clang::LangOptions const&, llvm::StringRef, llvm::Module*, clang::BackendAction, std::unique_ptr<llvm::raw_pwrite_stream, std::default_delete<llvm::raw_pwrite_stream> >) (/usr/local/bin/../lib/libclang-cpp.so.13+0x1b937f7)
+#15 2.986 #13 0x00007c44c1c16112 clang::BackendConsumer::HandleTranslationUnit(clang::ASTContext&) (/usr/local/bin/../lib/libclang-cpp.so.13+0x1f46112)
+#15 2.986 #14 0x00007c44c081b089 clang::ParseAST(clang::Sema&, bool, bool) (/usr/local/bin/../lib/libclang-cpp.so.13+0xb4b089)
+#15 2.986 #15 0x00007c44c23e1989 clang::FrontendAction::Execute() (/usr/local/bin/../lib/libclang-cpp.so.13+0x2711989)
+#15 2.986 #16 0x00007c44c236bc89 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/usr/local/bin/../lib/libclang-cpp.so.13+0x269bc89)
+#15 2.986 #17 0x00007c44c24600a8 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/usr/local/bin/../lib/libclang-cpp.so.13+0x27900a8)
+#15 2.986 #18 0x00005e55d6f903e0 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/usr/local/bin/clang-13+0x143e0)
+#15 2.986 #19 0x00005e55d6f8db1d ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&) driver.cpp:0:0
+#15 2.986 #20 0x00007c44c201fec9 void llvm::function_ref<void ()>::callback_fn<clang::driver::CC1Command::Execute(llvm::ArrayRef<llvm::Optional<llvm::StringRef> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, bool*) const::'lambda'()>(long) Job.cpp:0:0
+#15 2.986 #21 0x00007c44bcb846f7 llvm::CrashRecoveryContext::RunSafely(llvm::function_ref<void ()>) (/usr/local/bin/../lib/libLLVM-13.so+0x5ed6f7)
+#15 2.986 #22 0x00007c44c202023c clang::driver::CC1Command::Execute(llvm::ArrayRef<llvm::Optional<llvm::StringRef> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, bool*) const (.part.0) Job.cpp:0:0
+#15 2.986 #23 0x00007c44c1ff35ab clang::driver::Compilation::ExecuteCommand(clang::driver::Command const&, clang::driver::Command const*&) const (/usr/local/bin/../lib/libclang-cpp.so.13+0x23235ab)
+#15 2.986 #24 0x00007c44c1ff3fb9 clang::driver::Compilation::ExecuteJobs(clang::driver::JobList const&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*> >&) const (/usr/local/bin/../lib/libclang-cpp.so.13+0x2323fb9)
+#15 2.986 #25 0x00007c44c2003ee1 clang::driver::Driver::ExecuteCompilation(clang::driver::Compilation&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*> >&) (/usr/local/bin/../lib/libclang-cpp.so.13+0x2333ee1)
+#15 2.986 #26 0x00005e55d6f8b89d main (/usr/local/bin/clang-13+0xf89d)
+#15 2.986 #27 0x00007c44bc1a4083 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24083)
+#15 2.986 #28 0x00005e55d6f8d49e _start (/usr/local/bin/clang-13+0x1149e)
+#15 2.986 clang-13: error: clang frontend command failed with exit code 139 (use -v to see invocation)
+#15 2.986 clang version 13.0.0
+#15 2.986 Target: x86_64-unknown-linux-gnu
+#15 2.986 Thread model: posix
+#15 2.986 InstalledDir: /usr/local/bin
+#15 3.008 clang-13: note: diagnostic msg: 
+#15 3.008 ********************
+#15 3.008 
+#15 3.008 PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+#15 3.008 Preprocessed source(s) and associated run script(s) are located at:
+#15 3.008 clang-13: note: diagnostic msg: /tmp/main-unix-2b3744.c
+#15 3.008 clang-13: note: diagnostic msg: /tmp/main-unix-2b3744.sh
+#15 3.008 clang-13: note: diagnostic msg: 
+#15 3.008 
+#15 3.008 ********************
+#15 3.014 ERROR:Failed to compile using given arguments:
+#15 3.014 clang [-flegacy-pass-manager -Xclang -load -Xclang /home/WAFLGo/afl-llvm-pass.so -Qunused-arguments -DJERRY_COMMIT_HASH=" (b7e3baee)" -DJERRY_CPOINTER_32_BIT=0 -DJERRY_DEBUGGER=0 -DJERRY_ERROR_MESSAGES=1 -DJERRY_EXTERNAL_CONTEXT=0 -DJERRY_GC_LIMIT=(0) -DJERRY_GC_MARK_LIMIT=(8) -DJERRY_GLOBAL_HEAP_SIZE=(512) -DJERRY_LINE_INFO=1 -DJERRY_LOGGING=1 -DJERRY_MEM_GC_BEFORE_EACH_ALLOC=0 -DJERRY_MEM_STATS=0 -DJERRY_PARSER=1 -DJERRY_PARSER_DUMP_BYTE_CODE=0 -DJERRY_REGEXP_DUMP_BYTE_CODE=0 -DJERRY_REGEXP_STRICT_MODE=0 -DJERRY_SNAPSHOT_EXEC=0 -DJERRY_SNAPSHOT_SAVE=0 -DJERRY_STACK_LIMIT=(0) -DJERRY_SYSTEM_ALLOCATOR=0 -DJERRY_VALGRIND=0 -DJERRY_VM_EXEC_STOP=0 -I/home/jerryscript/jerry-core/include -I/home/jerryscript/jerry-libm/include -I/home/jerryscript/jerry-ext/include -I/home/jerryscript/jerry-port/default/include -g -mllvm --notI -std=c99 -pedantic -fno-builtin -fno-stack-protector -Wall -Werror=all -Wextra -Werror=extra -Wformat-nonliteral -Werror=format-nonliteral -Winit-self -Werror=init-self -Wconversion -Werror=conversion -Wsign-conversion -Werror=sign-conversion -Wformat-security -Werror=format-security -Wmissing-declarations -Werror=missing-declarations -Wshadow -Werror=shadow -Wstrict-prototypes -Werror=strict-prototypes -Wundef -Werror=undef -Wold-style-definition -Werror=old-style-definition -Wno-stack-protector -Wno-attributes -Werror -Wno-nested-anon-types -Wno-static-in-inline -g -o CMakeFiles/jerry.dir/main-unix.c.o -c /home/jerryscript/jerry-main/main-unix.c -g -funroll-loops -D__AFL_HAVE_MANUAL_CONTROL=1 -D__AFL_COMPILER=1 -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION=1 -D__AFL_LOOP(_A)=({ static volatile char *_B __attribute__((used));  _B = (char*)"##SIG_AFL_PERSISTENT##"; __attribute__((visibility("default"))) int _L(unsigned int) __asm__("__afl_persistent_loop"); _L(_A); }) -D__AFL_INIT()=do { static volatile char *_A __attribute__((used));  _A = (char*)"##SIG_AFL_DEFER_FORKSRV##"; __attribute__((visibility("default"))) void _I(void) __asm__("__afl_manual_init"); _I(); } while (0)]
+#15 3.014 exit status: exit status 139
+#15 3.015 make[2]: *** [jerry-main/CMakeFiles/jerry.dir/build.make:63: jerry-main/CMakeFiles/jerry.dir/main-unix.c.o] Error 1
+#15 3.015 make[1]: *** [CMakeFiles/Makefile2:349: jerry-main/CMakeFiles/jerry.dir/all] Error 2
+#15 3.015 make: *** [Makefile:130: all] Error 2
+#15 3.025 ERROR: buildwaflgo_b7e3bae/bin/jerry.bc did not build
+#15 ERROR: process "/bin/bash -c ./bwaflgo.sh jerryscript.env $commit" did not complete successfully: exit code: 1
+------
+ > [waflgo_jerryscript 6/8] RUN ./bwaflgo.sh jerryscript.env b7e3bae:
+3.008 clang-13: note: diagnostic msg: 
+3.008 
+3.008 ********************
+3.014 ERROR:Failed to compile using given arguments:
+3.014 clang [-flegacy-pass-manager -Xclang -load -Xclang /home/WAFLGo/afl-llvm-pass.so -Qunused-arguments -DJERRY_COMMIT_HASH=" (b7e3baee)" -DJERRY_CPOINTER_32_BIT=0 -DJERRY_DEBUGGER=0 -DJERRY_ERROR_MESSAGES=1 -DJERRY_EXTERNAL_CONTEXT=0 -DJERRY_GC_LIMIT=(0) -DJERRY_GC_MARK_LIMIT=(8) -DJERRY_GLOBAL_HEAP_SIZE=(512) -DJERRY_LINE_INFO=1 -DJERRY_LOGGING=1 -DJERRY_MEM_GC_BEFORE_EACH_ALLOC=0 -DJERRY_MEM_STATS=0 -DJERRY_PARSER=1 -DJERRY_PARSER_DUMP_BYTE_CODE=0 -DJERRY_REGEXP_DUMP_BYTE_CODE=0 -DJERRY_REGEXP_STRICT_MODE=0 -DJERRY_SNAPSHOT_EXEC=0 -DJERRY_SNAPSHOT_SAVE=0 -DJERRY_STACK_LIMIT=(0) -DJERRY_SYSTEM_ALLOCATOR=0 -DJERRY_VALGRIND=0 -DJERRY_VM_EXEC_STOP=0 -I/home/jerryscript/jerry-core/include -I/home/jerryscript/jerry-libm/include -I/home/jerryscript/jerry-ext/include -I/home/jerryscript/jerry-port/default/include -g -mllvm --notI -std=c99 -pedantic -fno-builtin -fno-stack-protector -Wall -Werror=all -Wextra -Werror=extra -Wformat-nonliteral -Werror=format-nonliteral -Winit-self -Werror=init-self -Wconversion -Werror=conversion -Wsign-conversion -Werror=sign-conversion -Wformat-security -Werror=format-security -Wmissing-declarations -Werror=missing-declarations -Wshadow -Werror=shadow -Wstrict-prototypes -Werror=strict-prototypes -Wundef -Werror=undef -Wold-style-definition -Werror=old-style-definition -Wno-stack-protector -Wno-attributes -Werror -Wno-nested-anon-types -Wno-static-in-inline -g -o CMakeFiles/jerry.dir/main-unix.c.o -c /home/jerryscript/jerry-main/main-unix.c -g -funroll-loops -D__AFL_HAVE_MANUAL_CONTROL=1 -D__AFL_COMPILER=1 -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION=1 -D__AFL_LOOP(_A)=({ static volatile char *_B __attribute__((used));  _B = (char*)"##SIG_AFL_PERSISTENT##"; __attribute__((visibility("default"))) int _L(unsigned int) __asm__("__afl_persistent_loop"); _L(_A); }) -D__AFL_INIT()=do { static volatile char *_A __attribute__((used));  _A = (char*)"##SIG_AFL_DEFER_FORKSRV##"; __attribute__((visibility("default"))) void _I(void) __asm__("__afl_manual_init"); _I(); } while (0)]
+3.014 exit status: exit status 139
+3.015 make[2]: *** [jerry-main/CMakeFiles/jerry.dir/build.make:63: jerry-main/CMakeFiles/jerry.dir/main-unix.c.o] Error 1
+3.015 make[1]: *** [CMakeFiles/Makefile2:349: jerry-main/CMakeFiles/jerry.dir/all] Error 2
+3.015 make: *** [Makefile:130: all] Error 2
+3.025 ERROR: buildwaflgo_b7e3bae/bin/jerry.bc did not build
+------
+waflgo_jerryscript.Dockerfile:66
+--------------------
+  64 |     
+  65 |     # Build jerryscript with WAFLGo under /home/php/buildwaflgo_$commit
+  66 | >>> RUN ./bwaflgo.sh jerryscript.env $commit
+  67 |     
+  68 |     # avoid git permission problem on start
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/bash -c ./bwaflgo.sh jerryscript.env $commit" did not complete successfully: exit code: 1

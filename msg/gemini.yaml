@@ -122,6 +122,82 @@
   msg_reduced: null
   best_result_enhanced: N
   score_enhanced: 0.0
+- proj: libxml2
+  issue: 553
+  commit: db21cd5
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 3.0
+  msg: 'malloc-fail: Handle malloc failures in xmlAddEncodingAlias
+
+
+    Avoid memory errors if an allocation fails.
+
+
+    See #344. Fixes #553.'
+  msg_enhanced: null
+  msg_reduced: 'malloc-fail: Handle malloc failures
+
+
+    Avoid memory errors if an allocation fails.
+
+
+    See #344. Fixes #553.'
+  best_result_reduced: B
+  score_reduced: 3.0
+- proj: libxml2
+  issue: 720
+  commit: 3ad7f81
+  scenario: FIX
+  best_result: R
+  best_result_msgonly: R
+  score_msgonly: 1.0
+  msg: '[CVE-2024-34459] Fix buffer overread with `xmllint --htmlout`
+
+
+    Add a missing bounds check.
+
+
+    Fixes #720.'
+  msg_enhanced: '[CVE-2024-34459] Fix buffer overread in `xmllint --htmlout` by preventing
+    the input pointer from decrementing past the start of the buffer when an error
+    occurs at the beginning of a line.
+
+
+    Add a missing bounds check.
+
+
+    Fixes #720.'
+  msg_reduced: '[CVE-2024-34459] Fix buffer overread with `xmllint`
+
+
+    Add a missing bounds check.
+
+
+    Fixes #720.'
+  best_result_enhanced: R
+  score_enhanced: 1.0
+  best_result_reduced: R
+  score_reduced: 0.9
+- proj: libxml2
+  issue: 841
+  commit: dc6270d
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 3.0
+  msg: 'xmllint: Fix UAF with --push --repeat
+
+
+    Short-lived regression. Fixes #841.'
+  msg_enhanced: null
+  msg_reduced: 'xmllint: Fix UAF
+
+
+    Short-lived regression. Fixes #841.'
+  best_result_reduced: B
+  score_reduced: 3.0
 - proj: poppler
   issue: 1282
   commit: 4564a00
@@ -505,3 +581,404 @@
     close GH-465'
   best_result_reduced: B
   score_reduced: 3.0
+- proj: jq
+  issue: 2825
+  commit: 3fa10e8
+  scenario: FIX
+  best_result: D
+  best_result_msgonly: R
+  score_msgonly: 1.0
+  msg: 'Fix crash on numeric comparison again (ref #2825)
+
+
+    The decNumber library subtracts the exponents of two numbers,
+
+    we make sure to limit the number of digits not to make it overflows.
+
+    Since the maximum adjusted exponent is `emax` and the minimum is
+
+    `emin - digits + 1`, we follow `emax - (emin - digits + 1) <= INT32_MAX`.'
+  msg_enhanced: 'Fix crash on numeric comparison when the difference between the exponents
+    of two decNumber numbers exceeds `INT32_MAX`, leading to a signed integer overflow
+    and a segmentation fault.
+
+
+    The decNumber library subtracts the exponents of two numbers,
+
+    we make sure to limit the number of digits not to make it overflows.
+
+    Since the maximum adjusted exponent is `emax` and the minimum is
+
+    `emin - digits + 1`, we follow `emax - (emin - digits + 1) <= INT32_MAX`.'
+  msg_reduced: 'Fix crash on numeric comparison again (ref #2825)
+
+
+    The decNumber library subtracts the exponents of two numbers,
+
+    we make sure to limit the number of digits not to make it overflows.'
+  best_result_enhanced: D
+  score_enhanced: 1.2
+  best_result_reduced: R
+  score_reduced: 1.0
+- proj: jq
+  issue: 2976
+  commit: 71c2ab5
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 3.0
+  msg: 'Merge pull request from GHSA-686w-5m7m-54vc
+
+
+    decNumberToString calls for a buffer that can hold a string of digits+14
+
+    characters, not a buffer of size digits+14.
+
+    We need to allocate an extra byte for the NUL byte.
+
+
+    -10E-1000010001, for example, will be stringified as -1.0E-1000010000
+
+    and decNumberToString will currently write an extra NUL byte after the
+
+    allocated buffer in the heap.
+
+
+    Originally reported by @SEU-SSL on GitHub.
+
+
+    Ref: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64574
+
+
+    Fixes GHSA-686w-5m7m-54vc'
+  msg_enhanced: null
+  msg_reduced: 'Merge pull request from GHSA-686w-5m7m-54vc
+
+
+    decNumberToString calls for a buffer that can hold a string of digits+14
+
+    characters, not a buffer of size digits+14.
+
+    We need to allocate an extra byte for the NUL byte.
+
+
+    Originally reported by @SEU-SSL on GitHub.
+
+
+    Ref: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64574
+
+
+    Fixes GHSA-686w-5m7m-54vc'
+  best_result_reduced: R
+  score_reduced: 1.0
+- proj: jq
+  issue: 3262
+  commit: de21386
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 2.8
+  msg: 'Fix signed integer overflow in jvp_array_write and jvp_object_rehash
+
+
+    This commit fixes signed integer overflow and SEGV issues on growing
+
+    arrays and objects. The size of arrays and objects is now limited to
+
+    `536870912` (`0x20000000`). This fixes CVE-2024-23337 and fixes #3262.'
+  msg_enhanced: 'Fix signed integer overflow in `jvp_array_write` and `jvp_object_rehash`
+    when growing arrays and objects beyond 536870912 elements, leading to a segmentation
+    fault.
+
+
+    This commit fixes signed integer overflow and SEGV issues on growing
+
+    arrays and objects. The size of arrays and objects is now limited to
+
+    `536870912` (`0x20000000`). This fixes CVE-2024-23337 and fixes #3262.'
+  msg_reduced: 'Fix signed integer overflow
+
+
+    This commit fixes signed integer overflow and SEGV issues. This fixes CVE-2024-23337
+    and fixes #3262.'
+  best_result_enhanced: B
+  score_enhanced: 2.8
+  best_result_reduced: B
+  score_reduced: 3.0
+- proj: jq
+  issue: 49014
+  commit: 499c91b
+  scenario: FIX
+  best_result: R
+  best_result_msgonly: N
+  score_msgonly: 0.0
+  msg: Fixes CVE-2025-49014 which was introduced in 1.8.0
+  msg_enhanced: Fixes CVE-2025-49014 by ensuring `strftime` and `strflocaltime` do
+    not attempt to dereference a freed format string when handling an empty format
+    string.
+  msg_reduced: null
+  best_result_enhanced: N
+  score_enhanced: 0.0
+- proj: micropython
+  issue: 13007
+  commit: f397a3e
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 0.5
+  msg: 'py/objslice: Validate that the argument to indices() is an integer.
+
+
+    Otherwise passing in a non-integer can lead to an invalid memory access.
+
+
+    Thanks to Junwha Hong and Wonil Jang @S2Lab, UNIST for finding the issue.
+
+
+    Fixes issue #13007.
+
+
+    Signed-off-by: Damien George <damien@micropython.org>'
+  msg_enhanced: 'py/objslice: Validate that the argument to `indices()` is an integer,
+    preventing a heap-buffer-overflow when a non-integer, such as a float, is passed
+    as the `length_obj` argument to `slice_indices`, leading to misinterpretation
+    and invalid memory access.
+
+
+    Otherwise passing in a non-integer can lead to an invalid memory access.
+
+
+    Thanks to Junwha Hong and Wonil Jang @S2Lab, UNIST for finding the issue.
+
+
+    Fixes issue #13007.
+
+
+    Signed-off-by: Damien George <damien@micropython.org>'
+  msg_reduced: 'py/objslice: Validate that the argument is an integer.
+
+
+    Otherwise passing in a non-integer can lead to an invalid memory access.
+
+
+    Thanks to Junwha Hong and Wonil Jang @S2Lab, UNIST for finding the issue.
+
+
+    Fixes issue #13007.
+
+
+    Signed-off-by: Damien George <damien@micropython.org>'
+  best_result_enhanced: D
+  score_enhanced: 1.0
+  best_result_reduced: N
+  score_reduced: 0.0
+- proj: micropython
+  issue: 13041
+  commit: 908ab1c
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 2.1
+  msg: "py/objint: Fix int.to_bytes() buffer size checks.\n\nFixes and improvements\
+    \ to `int.to_bytes()` are:\n- No longer overflows if byte size is 0 (closes #13041).\n\
+    - Raises OverflowError in any case where number won't fit into byte length\n \
+    \ (now matches CPython, previously MicroPython would return a truncated\n  bytes\
+    \ object).\n- Document that `micropython int.to_bytes()` doesn't implement the\
+    \ optional\n  signed kwarg, but will behave as if `signed=True` when the integer\
+    \ is\n  negative (this is the current behaviour).  Add tests for this also.\n\n\
+    Requires changes for small ints, MPZ large ints, and \"long long\" large\nints.\n\
+    \nAdds a new set of unit tests for ints between 32 and 64 bits to increase\ncoverage\
+    \ of \"long long\" large ints, which are otherwise untested.\n\nTested on unix\
+    \ port (64 bit small ints, MPZ long ints) and Zephyr STM32WB\nboard (32 bit small\
+    \ ints, long long large ints).\n\nThis work was funded through GitHub Sponsors.\n\
+    \nSigned-off-by: Angus Gratton <angus@redyak.com.au>"
+  msg_enhanced: "py/objint: Fix int.to_bytes() buffer size checks when converting\
+    \ integers to a byte representation of a specified length, where providing a length\
+    \ of 0 bytes or a length insufficient to store the integer (including its sign\
+    \ for negative numbers) previously resulted in a heap-buffer-overflow or truncation\
+    \ instead of an OverflowError.\n\nFixes and improvements to `int.to_bytes()` are:\n\
+    - No longer overflows if byte size is 0 (closes #13041).\n- Raises OverflowError\
+    \ in any case where number won't fit into byte length\n  (now matches CPython,\
+    \ previously MicroPython would return a truncated\n  bytes object).\n- Document\
+    \ that `micropython int.to_bytes()` doesn't implement the optional\n  signed kwarg,\
+    \ but will behave as if `signed=True` when the integer is\n  negative (this is\
+    \ the current behaviour).  Add tests for this also.\n\nRequires changes for small\
+    \ ints, MPZ large ints, and \"long long\" large\nints.\n\nAdds a new set of unit\
+    \ tests for ints between 32 and 64 bits to increase\ncoverage of \"long long\"\
+    \ large ints, which are otherwise untested.\n\nTested on unix port (64 bit small\
+    \ ints, MPZ long ints) and Zephyr STM32WB\nboard (32 bit small ints, long long\
+    \ large ints).\n\nThis work was funded through GitHub Sponsors.\n\nSigned-off-by:\
+    \ Angus Gratton <angus@redyak.com.au>"
+  msg_reduced: "py/objint: Fix int.to_bytes() buffer size checks.\n \nSigned-off-by:\
+    \ Angus Gratton <angus@redyak.com.au>"
+  best_result_enhanced: D
+  score_enhanced: 2.0
+  best_result_reduced: D
+  score_reduced: 2.0
+- proj: micropython
+  issue: 17733
+  commit: 3185bb5
+  scenario: FIX
+  best_result: R
+  best_result_msgonly: R
+  score_msgonly: 1.0
+  msg: 'py/obj: Add new type flag to indicate subscr accepts slice-on-stack.
+
+
+    The recently merged 5e9189d6d1c00c92694888bf9c74276779c40716 now allows
+
+    temporary slices to be allocated on the C stack, which is much better than
+
+    allocating them on the GC heap.
+
+
+    Unfortunately there are cases where the C-allocated slice can escape and be
+
+    retained as an object, which leads to crashes (because that object points
+
+    to the C stack which now has other values on it).
+
+
+    The fix here is to add a new `MP_TYPE_FLAG_SUBSCR_ALLOWS_STACK_SLICE`.
+
+    Native types should set this flag if their subscr method is guaranteed not
+
+    to hold on to a reference of the slice object.
+
+
+    Fixes issue #17733 (see also #17723).
+
+
+    Signed-off-by: Damien George <damien@micropython.org>'
+  msg_enhanced: 'py/obj: Add new type flag to indicate subscr accepts slice-on-stack.
+
+
+    This commit fixes a bug where, after 5e9189d6d1c00c92694888bf9c74276779c40716,
+    a C-allocated temporary slice could escape the `LOAD_SUBSCR` or `STORE_SUBSCR`
+    bytecode optimisation path for native types, leading to crashes when the slice
+    object refers to deallocated stack memory. This occurs when an exception is raised
+    during subscription, and the exception''s value retains a reference to the temporary
+    stack-allocated slice object.
+
+    The fix is to add a new `MP_TYPE_FLAG_SUBSCR_ALLOWS_STACK_SLICE` flag which must
+    be set by native types that can guarantee they will not retain a reference to
+    the slice object passed to their subscr method.
+
+
+    Fixes issue #17733 (see also #17723).
+
+
+    Signed-off-by: Damien George <damien@micropython.org>'
+  msg_reduced: 'py/obj: Add new type flag to indicate subscr accepts slice-on-stack.
+
+
+    Signed-off-by: Damien George <damien@micropython.org>'
+  best_result_enhanced: R
+  score_enhanced: 1.0
+  best_result_reduced: R
+  score_reduced: 1.0
+- proj: micropython
+  issue: 17815
+  commit: c0252d7
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: B
+  score_msgonly: 3.0
+  msg: "py/parse: Fix missing nlr_pop call in complex path of binary_op_maybe.\n\n\
+    Reproducer (needs to be run as one compilation unit):\n\n    ans = (-1) ** 2.3\n\
+    \    aa\n\nFixes issue #17815.\n\nSigned-off-by: Jeff Epler <jepler@gmail.com>"
+  msg_enhanced: null
+  msg_reduced: "py/parse: Fix missing nlr_pop call in complex path of binary_op_maybe.\n\
+    \    aa\n\nFixes issue #17815.\n\nSigned-off-by: Jeff Epler <jepler@gmail.com>"
+  best_result_reduced: R
+  score_reduced: 0.3
+- proj: micropython
+  issue: 17841
+  commit: 4b013ec
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: R
+  score_msgonly: 1.0
+  msg: 'extmod/vfs_reader: Check that open() resulted in a file-like object.
+
+
+    That is, an object whose type defines the protocol slot.
+
+
+    Note that due to protocol confusion, a variant of the original crasher that
+
+    returned e.g., a machine.Pin instance could still lead to a crash (#17852).
+
+
+    Fixes issue #17841.
+
+
+    Signed-off-by: Jeff Epler <jepler@gmail.com>
+
+    Signed-off-by: Jeff Epler <jepler@unpythonic.net>'
+  msg_enhanced: 'extmod/vfs_reader: Check that open() resulted in a file-like object
+    returned by a VFS `open()` method, to prevent a segmentation fault when `execfile()`
+    attempts to process a non-file-like object.'
+  msg_reduced: 'extmod/vfs_reader: Check that open() resulted in a object.
+
+
+    That is, an object whose type defines the protocol slot.
+
+
+    Note that due to protocol confusion, a variant of the original crasher that
+
+    returned e.g., a machine.Pin instance could still lead to a crash (#17852).
+
+
+    Fixes issue #17841.
+
+
+    Signed-off-by: Jeff Epler <jepler@gmail.com>
+
+    Signed-off-by: Jeff Epler <jepler@unpythonic.net>'
+  best_result_enhanced: B
+  score_enhanced: 1.2
+  best_result_reduced: R
+  score_reduced: 1.0
+- proj: micropython
+  issue: 17847
+  commit: 0615d13
+  scenario: FIX
+  best_result: B
+  best_result_msgonly: N
+  score_msgonly: 0.0
+  msg: 'py/objringio: Detect incorrect constructor calls.
+
+
+    ringbuffer.size must be at least 2, and is a 16-bit quantity.
+
+
+    This fixes several cases including the one the fuzzer discovered, which
+
+    would lead to a fatal signal when accessing the object.
+
+
+    Fixes issue #17847.
+
+
+    Signed-off-by: Jeff Epler <jepler@gmail.com>'
+  msg_enhanced: 'py/objringio: Detect incorrect constructor calls when the `micropython.RingIO`
+    constructor is called with a buffer of length 0 or 1, or an integer size of 0,
+    which previously led to a fatal signal due to division by zero during object access.
+
+
+    ringbuffer.size must be at least 2, and is a 16-bit quantity.
+
+
+    This fixes several cases including the one the fuzzer discovered, which
+
+    would lead to a fatal signal when accessing the object.
+
+
+    Fixes issue #17847.
+
+
+    Signed-off-by: Jeff Epler <jepler@gmail.com>'
+  msg_reduced: null
+  best_result_enhanced: B
+  score_enhanced: 2.4

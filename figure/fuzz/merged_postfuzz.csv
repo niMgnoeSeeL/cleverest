@@ -39,26 +39,56 @@ BIC	mujs	166	3f71a1c	250905-2247	none	N	 |
 BIC	mujs	166	3f71a1c	250905-2250	none	D	id:005167,src:002678+004317,time:72502467,execs:15794039,op:splice,rep:3,+cov |	
 BIC	mujs	166	3f71a1c	250905-2252	none	D	id:004304,src:004063,time:30658650,execs:7354409,op:havoc,rep:1,+cov |	
 BIC	mujs	166	3f71a1c	250905-2254	none	D	id:000651,src:000441,time:590912,execs:142228,op:havoc,rep:2,+cov |	
-BIC	libxml2	535	9a82b94	250826-2134	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250826-2135	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250826-2136	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250826-2138	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250826-2139	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250903-1710	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250903-1712	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250903-1715	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250903-1717	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	535	9a82b94	250903-1719	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
-BIC	libxml2	550	7e3f469	250826-2134	none	D	id:003124,src:003106,time:27668818,execs:2430723,op:havoc,rep:3 |	
-BIC	libxml2	550	7e3f469	250826-2135	none	D	id:002276,src:002145,time:9450407,execs:850291,op:havoc,rep:3 |	
-BIC	libxml2	550	7e3f469	250826-2136	none	D	id:001905,src:001470,time:4307296,execs:409155,op:havoc,rep:2 |	
-BIC	libxml2	550	7e3f469	250826-2138	none	D	id:002384,src:000234+002376,time:11948235,execs:1084201,op:splice,rep:8 |	
-BIC	libxml2	550	7e3f469	250826-2139	none	D	id:003914,src:003913,time:55581364,execs:4398054,op:havoc,rep:2 |	
-BIC	libxml2	550	7e3f469	250903-1710	none	D	id:003308,src:002712,time:37542890,execs:3635544,op:havoc,rep:1 |	
-BIC	libxml2	550	7e3f469	250903-1712	none	D	id:002540,src:002529,time:13357044,execs:1300690,op:havoc,rep:2 |	
-BIC	libxml2	550	7e3f469	250903-1715	none	D	id:003274,src:003203,time:39287460,execs:3789982,op:havoc,rep:1 |	
-BIC	libxml2	550	7e3f469	250903-1717	none	D	id:001346,src:000004,time:3307145,execs:338228,op:havoc,rep:5,+cov |	
-BIC	libxml2	550	7e3f469	250903-1719	none	D	id:001837,src:001740,time:6886564,execs:611417,op:havoc,rep:1,+cov |	
+BIC	libxml2	535	9a82b94	260203-0908	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0138	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0141	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0146	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0150	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0154	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0201	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0206	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0209	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	535	9a82b94	260204-0215	bug_^global-buffer-overflow	B	id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow	0.0
+BIC	libxml2	550	74c84a8	260203-0908	behave	D	id:000001,time:0,execs:0,orig:TRIGGER_550_74c84a8_2_gpt-4o-2024-08-06_behave |	
+BIC	libxml2	550	74c84a8	260204-0138	behave	D	id:000005,src:000001,time:76,execs:61,op:quick,pos:0,+cov |	
+BIC	libxml2	550	74c84a8	260204-0141	behave	D	id:000005,src:000004,time:86,execs:65,op:quick,pos:0,+cov |	
+BIC	libxml2	550	74c84a8	260204-0146	behave	D	id:000005,src:000004,time:93,execs:67,op:quick,pos:0,+cov |	
+BIC	libxml2	550	74c84a8	260204-0150	behave	D	id:000003,time:0,execs:0,orig:TRIGGER_550_74c84a8_4_gpt-4o-2024-08-06_behave |	
+BIC	libxml2	550	74c84a8	260204-0154	behave	D	id:000005,src:000001,time:51,execs:52,op:quick,pos:0,+cov |	
+BIC	libxml2	550	74c84a8	260204-0201	behave	D	id:000005,src:000003,time:95,execs:66,op:havoc,rep:12,+cov |	
+BIC	libxml2	550	74c84a8	260204-0206	behave	D	id:000005,src:000000,time:47,execs:50,op:quick,pos:0,+cov |	
+BIC	libxml2	550	74c84a8	260204-0209	behave	D	id:000005,src:000000,time:81,execs:61,op:havoc,rep:2,+cov |	
+BIC	libxml2	550	74c84a8	260204-0215	behave	D	id:000005,src:000003,time:126,execs:76,op:quick,pos:0,+cov |	
+BIC	libxml2	553	1406b20	260203-0908	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0138	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0141	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0146	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0150	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0154	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0201	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0206	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0209	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	553	1406b20	260204-0215	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	libxml2	720	14604a4	260203-0908	bug_heap-buffer-overflow^heap-buffer-overflow	X	id:000000,sig:06,src:001215+003089,time:46117463,execs:10965453,op:splice,rep:6	46117463.0
+BIC	libxml2	720	14604a4	260204-0138	behave	D	id:000000,time:0,execs:0,orig:TRIGGER_720_14604a4_1_gpt-4o-2024-08-06_reach |	
+BIC	libxml2	720	14604a4	260204-0141	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:001188+000835,time:68703792,execs:16951428,op:splice,rep:1	68703792.0
+BIC	libxml2	720	14604a4	260204-0146	bug_heap-buffer-overflow^heap-buffer-overflow	X	id:000000,sig:06,src:002255,time:42830632,execs:10427891,op:havoc,rep:2	42830632.0
+BIC	libxml2	720	14604a4	260204-0150	behave	D	id:000000,time:0,execs:0,orig:TRIGGER_720_14604a4_1_gpt-4o-2024-08-06_reach |	
+BIC	libxml2	720	14604a4	260204-0154	bug_^heap-buffer-overflow	B	id:000003,sig:06,src:003093,time:56450060,execs:14783677,op:havoc,rep:4	56450060.0
+BIC	libxml2	720	14604a4	260204-0201	bug_heap-buffer-overflow^heap-buffer-overflow	X	id:000000,sig:06,src:005725,time:38328402,execs:10729215,op:havoc,rep:7	38328402.0
+BIC	libxml2	720	14604a4	260204-0206	bug_heap-buffer-overflow^heap-buffer-overflow	X	id:000000,sig:06,src:001943+003489,time:85734724,execs:20426340,op:splice,rep:15	85734724.0
+BIC	libxml2	720	14604a4	260204-0209	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:001357,time:6506613,execs:1973106,op:havoc,rep:2	6506613.0
+BIC	libxml2	720	14604a4	260204-0215	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:001427,time:2750745,execs:836762,op:havoc,rep:3	2750745.0
+BIC	libxml2	841	9cfc723	260203-0908	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0138	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0141	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0146	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0150	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0154	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0201	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0206	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0209	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
+BIC	libxml2	841	9cfc723	260204-0215	bug_^heap-use-after-free	B	id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free	0.0
 BIC	poppler	1282	3d35d20	250827-1951	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:24084,execs:1122,op:quick,pos:292	24084.0
 BIC	poppler	1282	3d35d20	250827-2003	bug_^heap-use-after-free	B	id:000000,sig:06,src:000000,time:17264,execs:977,op:quick,pos:244	17264.0
 BIC	poppler	1282	3d35d20	250827-2026	bug_^heap-use-after-free	B	id:000000,sig:06,src:000002,time:24655,execs:1128,op:quick,pos:279	24655.0
@@ -77,6 +107,36 @@ BIC	poppler	1289	3cae777	250903-1722	bug_^Aborted	B	id:000004,sig:06,src:000002,
 BIC	poppler	1289	3cae777	250903-1746	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
 BIC	poppler	1289	3cae777	250903-1809	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
 BIC	poppler	1289	3cae777	250903-1837	bug_SEGV^SEGV	X	id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV	0.0
+BIC	jq	2825	680baef	260116-0616	bug_^SEGV	B	id:000000,sig:11,src:001347,time:2650564,execs:154570,op:havoc,rep:4	2650564.0
+BIC	jq	2825	680baef	260117-0904	bug_^SEGV	B	id:000000,sig:11,src:002161+001366,time:9536245,execs:1111582,op:splice,rep:2	9536245.0
+BIC	jq	2825	680baef	260117-0907	bug_Segmentation fault^SEGV	B	id:000000,sig:11,src:000490+000073,time:2292206,execs:112330,op:splice,rep:2	2292206.0
+BIC	jq	2825	680baef	260117-0909	bug_^SEGV	B	id:000000,sig:11,src:002769,time:8979005,execs:1054791,op:havoc,rep:1	8979005.0
+BIC	jq	2825	680baef	260117-0913	bug_^Segmentation fault	B	id:000000,sig:11,src:001584+001036,time:3167294,execs:230194,op:splice,rep:4	3167294.0
+BIC	jq	2825	680baef	260117-0916	bug_^Segmentation fault	B	id:000000,sig:11,src:001979,time:7925435,execs:891750,op:havoc,rep:2	7925435.0
+BIC	jq	2825	680baef	260117-0919	bug_Segmentation fault^SEGV	B	id:000000,sig:11,src:001557+002143,time:26497299,execs:3093202,op:splice,rep:4	26497299.0
+BIC	jq	2825	680baef	260117-0921	bug_^SEGV	B	id:000000,sig:11,src:001512+003189,time:78144504,execs:9657827,op:splice,rep:2	78144504.0
+BIC	jq	2825	680baef	260117-0924	bug_^Segmentation fault	B	id:000001,sig:11,src:003439+002841,time:26821873,execs:3268179,op:splice,rep:1	26821873.0
+BIC	jq	2825	680baef	260117-0927	bug_Segmentation fault^SEGV	B	id:000000,sig:11,src:001341+001352,time:3533507,execs:280208,op:splice,rep:1	3533507.0
+BIC	jq	2976	680baef	260116-0616	bug_^Segmentation fault	B	id:000000,sig:06,src:000557+000506,time:2634020,execs:119106,op:splice,rep:2	2634020.0
+BIC	jq	2976	680baef	260117-0904	bug_^heap-buffer-overflow	B	id:000001,sig:06,src:000477,time:2382326,execs:95753,op:havoc,rep:1	2382326.0
+BIC	jq	2976	680baef	260117-0907	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000001,time:121650,execs:4584,op:havoc,rep:2	121650.0
+BIC	jq	2976	680baef	260117-0909	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000501+000151,time:2975709,execs:151810,op:splice,rep:1	2975709.0
+BIC	jq	2976	680baef	260117-0913	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000784,time:4503804,execs:295702,op:havoc,rep:2	4503804.0
+BIC	jq	2976	680baef	260117-0916	bug_^Segmentation fault	B	id:000000,sig:06,src:000806,time:5273142,execs:368987,op:havoc,rep:7	5273142.0
+BIC	jq	2976	680baef	260117-0919	bug_^Segmentation fault	B	id:000000,sig:06,src:000463+000397,time:2010494,execs:74287,op:splice,rep:2	2010494.0
+BIC	jq	2976	680baef	260117-0921	bug_^heap-buffer-overflow	B	id:000000,sig:06,src:000586,time:2830974,execs:138567,op:havoc,rep:2	2830974.0
+BIC	jq	2976	680baef	260117-0924	bug_Segmentation fault^heap-buffer-overflow	B	id:000000,sig:06,src:000459+000296,time:19560580,execs:1634259,op:splice,rep:2	19560580.0
+BIC	jq	2976	680baef	260117-0927	bug_^Segmentation fault	B	id:000000,sig:06,src:000953+000430,time:6704028,execs:486555,op:splice,rep:4	6704028.0
+BIC	jq	3262	0e067ef	260116-0616	bug_Segmentation fault^Segmentation fault	X	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0904	bug_^Segmentation fault	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_3_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0907	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_1_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0909	bug_Segmentation fault^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0913	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0916	bug_^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0919	bug_Segmentation fault^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0921	bug_Segmentation fault^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0924	bug_Segmentation fault^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
+BIC	jq	3262	0e067ef	260117-0927	bug_Segmentation fault^SEGV	B	id:000000,time:0,execs:0,orig:TRIGGER_#3262_0e067ef_2_gpt-4o-2024-08-06_bug_^SEGV	0.0
 BIC	jerryscript	5013	b7e3bae	250826-2133	bug_Aborted^Aborted	X	id:000000,sig:06,src:000000,time:77924,execs:21821,op:havoc,rep:1	77924.0
 BIC	jerryscript	5013	b7e3bae	250826-2139	bug_stack-overflow^stack-overflow	X	id:000000,sig:06,src:000000,time:1403,execs:549,op:quick,pos:133	1403.0
 BIC	jerryscript	5013	b7e3bae	250826-2145	bug_Aborted^Aborted	X	id:000000,sig:06,src:000002,time:136110,execs:36318,op:havoc,rep:2	136110.0
@@ -137,6 +197,15 @@ BIC	z3	7252	a7b1db6	250827-1928	none	N	 |
 BIC	z3	7252	a7b1db6	250903-1733	none	N	 |	
 BIC	z3	7252	a7b1db6	250903-1743	none	N	 |	
 BIC	z3	7252	a7b1db6	250903-1753	none	N	 |	
+BIC	micropython	13007	4c93955	260120-0706	bug_^Segmentation fault	B	id:000157,sig:11,src:004555,time:13782281,execs:9486119,op:havoc,rep:2	13782281.0
+BIC	micropython	13007	4c93955	260127-1224	bug_^Segmentation fault	B	id:000070,sig:11,src:000366,time:1999932,execs:1532290,op:havoc,rep:1	1999932.0
+BIC	micropython	13007	4c93955	260127-1230	bug_^Segmentation fault	B	id:000000,sig:11,src:000001,time:6527,execs:5260,op:arith8,pos:81,val:+26	6527.0
+BIC	micropython	13007	4c93955	260127-1241	bug_^Segmentation fault	B	id:000163,sig:11,src:003939,time:11853530,execs:9853111,op:havoc,rep:1	11853530.0
+BIC	micropython	13007	4c93955	260127-1246	bug_Aborted^Aborted	X	id:000000,sig:06,src:000680,time:153261,execs:128579,op:havoc,rep:2	153261.0
+BIC	micropython	13007	4c93955	260127-1251	bug_^Segmentation fault	B	id:000077,sig:11,src:000437,time:3564191,execs:3078644,op:havoc,rep:1	3564191.0
+BIC	micropython	13007	4c93955	260127-1256	bug_^Aborted	B	id:000215,sig:06,src:001668,time:26679478,execs:21496907,op:havoc,rep:1	26679478.0
+BIC	micropython	13007	4c93955	260127-1302	bug_Aborted^Aborted	X	id:000000,sig:06,src:001102,time:597166,execs:527960,op:havoc,rep:2	597166.0
+BIC	micropython	13007	4c93955	260127-1307	bug_^Segmentation fault	B	id:000000,sig:11,src:000000,time:5712,execs:4853,op:arith8,pos:75,val:+26	5712.0
 BIC	php-src	16777	5cb38e9	250826-2135	none	N	 |	
 BIC	php-src	16777	5cb38e9	250826-2141	none	N	 |	
 BIC	php-src	16777	5cb38e9	250826-2147	none	N	 |	
@@ -173,6 +242,48 @@ BIC	php-src	17463	7904a08	250903-1706	none	N	 |
 BIC	php-src	17463	7904a08	250903-1720	none	D	id:006888,src:006886,time:79838583,execs:1883981,op:havoc,rep:1 |	
 BIC	php-src	17463	7904a08	250903-1729	none	N	 |	
 BIC	php-src	17463	7904a08	250903-1739	none	N	 |	
+BIC	micropython	17733	5e9189d	260120-0706	bug_^Segmentation fault	B	id:000000,sig:11,src:004261,time:6496819,execs:4517770,op:havoc,rep:1	6496819.0
+BIC	micropython	17733	5e9189d	260127-1224	none	N	 |	
+BIC	micropython	17733	5e9189d	260127-1230	bug_^Segmentation fault	B	id:000000,sig:11,src:006912,time:32056604,execs:24008379,op:havoc,rep:3	32056604.0
+BIC	micropython	17733	5e9189d	260127-1236	bug_^Segmentation fault	B	id:000000,sig:11,src:005226,time:58923305,execs:39557694,op:havoc,rep:3	58923305.0
+BIC	micropython	17733	5e9189d	260127-1241	none	N	 |	
+BIC	micropython	17733	5e9189d	260127-1246	bug_^Segmentation fault	B	id:000000,sig:11,src:002539,time:2725449,execs:2073992,op:havoc,rep:2	2725449.0
+BIC	micropython	17733	5e9189d	260127-1251	bug_^Segmentation fault	B	id:000000,sig:11,src:003987,time:5211551,execs:4664291,op:havoc,rep:2	5211551.0
+BIC	micropython	17733	5e9189d	260127-1256	bug_^Segmentation fault	B	id:000000,sig:11,src:003174,time:2067012,execs:1529346,op:havoc,rep:1	2067012.0
+BIC	micropython	17733	5e9189d	260127-1302	bug_Aborted^Aborted	X	id:000000,sig:11,src:003653,time:2893698,execs:2320873,op:havoc,rep:3	2893698.0
+BIC	micropython	17733	5e9189d	260127-1307	bug_Segmentation fault^Segmentation fault	X	id:000000,sig:11,src:007720,time:70625476,execs:55693452,op:havoc,rep:1	70625476.0
+BIC	micropython	17815	69ead7d	260120-0706	bug_^Segmentation fault	B	id:000003,sig:11,src:007737,time:62959092,execs:43470819,op:havoc,rep:16	62959092.0
+BIC	micropython	17815	69ead7d	260127-1224	bug_^Segmentation fault	B	id:000000,sig:11,src:006842+005223,time:26450341,execs:17912620,op:splice,rep:1	26450341.0
+BIC	micropython	17815	69ead7d	260127-1230	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17815_69ead7d_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17815	69ead7d	260127-1236	bug_^Segmentation fault	B	id:000000,sig:11,src:005878,time:18796463,execs:13219257,op:havoc,rep:5	18796463.0
+BIC	micropython	17815	69ead7d	260127-1241	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17815_69ead7d_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17815	69ead7d	260127-1246	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17815_69ead7d_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17815	69ead7d	260127-1251	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17815_69ead7d_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17815	69ead7d	260127-1256	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17815_69ead7d_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17815	69ead7d	260127-1302	bug_^Segmentation fault	B	id:000000,sig:11,src:005271,time:18140685,execs:14174097,op:havoc,rep:2	18140685.0
+BIC	micropython	17815	69ead7d	260127-1307	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17815_69ead7d_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260120-0706	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1224	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1230	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1236	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1241	bug_Segmentation fault^Segmentation fault	X	id:000000,sig:11,src:007083,time:26271323,execs:20864132,op:havoc,rep:2	26271323.0
+BIC	micropython	17841	e702046	260127-1246	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1251	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1256	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1302	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17841	e702046	260127-1307	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17841_e702046_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260120-0706	bug_^dumped core	B	id:000000,sig:08,src:000001,time:2446,execs:2456,op:flip4,pos:51	2446.0
+BIC	micropython	17847	7e14680	260127-1224	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1230	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1236	behave	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1241	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1246	bug_^dumped core	B	id:000000,sig:08,src:002844,time:49009482,execs:37777488,op:havoc,rep:1	49009482.0
+BIC	micropython	17847	7e14680	260127-1251	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1256	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1302	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#17847_7e14680_1_gpt-4o-2024-08-06_behave |	
+BIC	micropython	17847	7e14680	260127-1307	behave	D	id:000000,sig:11,src:000004,time:2253767,execs:1871790,op:havoc,rep:1 |	
+BIC	jq	49014	4003202	260116-0616	bug_SEGV^Segmentation fault	B	id:000002,sig:11,src:004795,time:56429123,execs:7240775,op:havoc,rep:2	56429123.0
+BIC	jq	49014	4003202	260117-0919	bug_Segmentation fault^heap-use-after-free	B	id:000000,sig:06,src:000000,time:139043,execs:2946,op:arith8,pos:26,val:+31	139043.0
 FIX	mujs	65	833f82c	250906-0154	none	N	 |	
 FIX	mujs	65	833f82c	250906-0156	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_#65_833f82c_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
 FIX	mujs	65	833f82c	250906-0157	bug_SEGV^	B	id:000000,sig:11,src:000004,time:890139,execs:236296,op:havoc,rep:2	890139.0
@@ -213,16 +324,43 @@ FIX	mujs	166	8b5ba20	250906-0203	bug_heap-use-after-free^	B	id:000000,time:0,exe
 FIX	mujs	166	8b5ba20	250906-0204	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
 FIX	mujs	166	8b5ba20	250906-0205	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
 FIX	mujs	166	8b5ba20	250906-0207	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_#166_8b5ba20_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
-FIX	libxml2	535	d0c3f01	250826-0828	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250826-0831	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250826-0833	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250826-0836	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250826-0839	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250903-1843	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250903-1845	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250903-1847	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250903-1849	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
-FIX	libxml2	535	d0c3f01	250903-1850	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_#535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260203-0909	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0139	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0142	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0147	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0151	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0157	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0203	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0208	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0212	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	535	d0c3f01	260204-0217	bug_global-buffer-overflow^	B	id:000000,time:0,execs:0,orig:TRIGGER_535_d0c3f01_1_gpt-4o-2024-08-06_bug_global-buffer-overflow^	0.0
+FIX	libxml2	553	db21cd5	260203-0909	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0139	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0142	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0147	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0151	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0157	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0203	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0208	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0212	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	553	db21cd5	260204-0217	bug_SEGV^	B	id:000000,time:0,execs:0,orig:TRIGGER_553_db21cd5_1_gpt-4o-2024-08-06_bug_SEGV^	0.0
+FIX	libxml2	720	3ad7f81	260204-0142	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001399+000617,time:6354922,execs:2297980,op:splice,rep:8	6354922.0
+FIX	libxml2	720	3ad7f81	260204-0147	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001183,time:12129372,execs:4393971,op:havoc,rep:8	12129372.0
+FIX	libxml2	720	3ad7f81	260204-0151	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:002851,time:8041417,execs:2847579,op:havoc,rep:8	8041417.0
+FIX	libxml2	720	3ad7f81	260204-0157	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001143,time:8936589,execs:3416768,op:havoc,rep:1	8936589.0
+FIX	libxml2	720	3ad7f81	260204-0208	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001103,time:3020788,execs:1153505,op:havoc,rep:12	3020788.0
+FIX	libxml2	720	3ad7f81	260204-0212	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001736+000436,time:36877049,execs:9787297,op:splice,rep:13	36877049.0
+FIX	libxml2	720	3ad7f81	260204-0217	bug_heap-buffer-overflow^	B	id:000000,sig:06,src:001190,time:4100646,execs:1596561,op:havoc,rep:5	4100646.0
+FIX	libxml2	841	dc6270d	260203-0909	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0139	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0142	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0147	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0151	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0157	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0203	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0208	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0212	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
+FIX	libxml2	841	dc6270d	260204-0217	bug_heap-use-after-free^	B	id:000000,time:0,execs:0,orig:TRIGGER_841_dc6270d_1_gpt-4o-2024-08-06_bug_heap-use-after-free^	0.0
 FIX	poppler	1282	4564a00	250825-0916	none	N	 |	
 FIX	poppler	1282	4564a00	250825-0927	none	N	 |	
 FIX	poppler	1282	4564a00	250825-0953	bug_Aborted^	B	id:000000,sig:06,src:002172,time:26736473,execs:1192845,op:havoc,rep:6	26736473.0
@@ -241,6 +379,11 @@ FIX	poppler	1289	efb6868	250904-0411	bug_Aborted^	B	id:000000,sig:06,src:000000,
 FIX	poppler	1289	efb6868	250904-0422	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
 FIX	poppler	1289	efb6868	250904-0431	bug_Aborted^	B	id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^	0.0
 FIX	poppler	1303	a4ca3a9	250904-0402	none	D	id:000000,time:0,execs:0,orig:TRIGGER_#1303_a4ca3a9_2_gpt-4o-2024-08-06_behave |	
+FIX	jq	2825	3fa10e8	260116-0622	bug_Aborted^Aborted	X	id:000000,sig:06,src:004043,time:24652553,execs:3095397,op:havoc,rep:3	24652553.0
+FIX	jq	2825	3fa10e8	260117-0906	bug_SEGV^	B	id:000000,sig:11,src:004655+000624,time:63043074,execs:7458327,op:splice,rep:3	63043074.0
+FIX	jq	2825	3fa10e8	260117-0908	bug_SEGV^	B	id:000000,sig:11,src:002012+000295,time:25912435,execs:3273128,op:splice,rep:1	25912435.0
+FIX	jq	2825	3fa10e8	260117-0911	bug_Aborted^Aborted	X	id:000000,sig:06,src:002341+000543,time:39218171,execs:4942723,op:splice,rep:2	39218171.0
+FIX	jq	2825	3fa10e8	260117-0915	bug_Aborted^Aborted	X	id:000000,sig:06,src:002600,time:7330730,execs:863571,op:havoc,rep:1	7330730.0
 FIX	jerryscript	5013	3686410	250825-2226	bug_Aborted^	B	id:000000,sig:06,src:000002,time:4827051,execs:1168290,op:havoc,rep:1	4827051.0
 FIX	jerryscript	5013	3686410	250825-2228	bug_Aborted^	B	id:000000,sig:06,src:000000,time:80018,execs:22094,op:havoc,rep:1	80018.0
 FIX	jerryscript	5013	3686410	250825-2230	bug_Aborted^	B	id:000004,sig:06,src:000004,time:4736545,execs:1147944,op:havoc,rep:2	4736545.0
@@ -276,6 +419,17 @@ FIX	z3	7252	a6b5027	250826-2140	none	N	 |
 FIX	z3	7252	a6b5027	250826-2150	none	N	 |	
 FIX	z3	7252	a6b5027	250903-2341	none	N	 |	
 FIX	z3	7252	a6b5027	250903-2351	none	N	 |	
+FIX	micropython	13007	f397a3e	260127-1233	none	N	 |	
+FIX	micropython	13041	908ab1c	260120-0711	bug_Segmentation fault^	B	id:000000,sig:11,src:003349,time:10451228,execs:8174062,op:havoc,rep:2	10451228.0
+FIX	micropython	13041	908ab1c	260127-1227	bug_Segmentation fault^	B	id:000000,sig:11,src:003715,time:4986595,execs:4159404,op:havoc,rep:1	4986595.0
+FIX	micropython	13041	908ab1c	260127-1233	bug_Segmentation fault^	B	id:000000,sig:11,src:002432,time:1879798,execs:1646700,op:havoc,rep:1	1879798.0
+FIX	micropython	13041	908ab1c	260127-1238	bug_Segmentation fault^	B	id:000000,sig:11,src:002897,time:1585237,execs:1325066,op:havoc,rep:3	1585237.0
+FIX	micropython	13041	908ab1c	260127-1243	bug_Segmentation fault^	B	id:000000,sig:11,src:000366,time:1371083,execs:977218,op:havoc,rep:1	1371083.0
+FIX	micropython	13041	908ab1c	260127-1248	bug_Aborted^	B	id:000000,sig:06,src:000791,time:10770499,execs:7533309,op:havoc,rep:2	10770499.0
+FIX	micropython	13041	908ab1c	260127-1253	bug_Segmentation fault^	B	id:000000,sig:11,src:003713,time:3616288,execs:2470641,op:havoc,rep:1	3616288.0
+FIX	micropython	13041	908ab1c	260127-1259	bug_Aborted^	B	id:000000,sig:06,src:000003,time:9015173,execs:6236292,op:havoc,rep:1	9015173.0
+FIX	micropython	13041	908ab1c	260127-1305	bug_Segmentation fault^	B	id:000000,sig:11,src:006524,time:62581938,execs:43242358,op:havoc,rep:1	62581938.0
+FIX	micropython	13041	908ab1c	260127-1310	bug_Segmentation fault^	B	id:000000,sig:11,src:000537,time:879404,execs:603424,op:havoc,rep:2	879404.0
 FIX	php-src	16777	18b18f0	250825-1737	none	N	 |	
 FIX	php-src	16777	18b18f0	250825-1740	none	N	 |	
 FIX	php-src	16777	18b18f0	250825-1744	none	N	 |	
@@ -296,3 +450,33 @@ FIX	php-src	17463	e4473ab	250903-2310	bug_negative-size-param^	B	id:000000,time:
 FIX	php-src	17463	e4473ab	250903-2315	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
 FIX	php-src	17463	e4473ab	250903-2320	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
 FIX	php-src	17463	e4473ab	250903-2326	bug_negative-size-param^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17463_e4473ab_1_gpt-4o-2024-08-06_bug_negative-size-param^	0.0
+FIX	micropython	17733	3185bb5	260120-0711	bug_Segmentation fault^Segmentation fault	X	id:000000,sig:11,src:004656+007411,time:59262408,execs:50030298,op:splice,rep:2	59262408.0
+FIX	micropython	17733	3185bb5	260127-1227	bug_Segmentation fault^	B	id:000000,sig:11,src:007503,time:28125595,execs:21825599,op:havoc,rep:5	28125595.0
+FIX	micropython	17733	3185bb5	260127-1233	none	N	 |	
+FIX	micropython	17733	3185bb5	260127-1238	bug_Segmentation fault^	B	id:000000,sig:11,src:004017,time:3830517,execs:3416706,op:havoc,rep:2	3830517.0
+FIX	micropython	17733	3185bb5	260127-1243	bug_Segmentation fault^	B	id:000000,sig:11,src:002979,time:2499574,execs:1916512,op:havoc,rep:2	2499574.0
+FIX	micropython	17733	3185bb5	260127-1248	bug_Segmentation fault^	B	id:000000,sig:11,src:006188,time:34405238,execs:25120280,op:havoc,rep:1	34405238.0
+FIX	micropython	17733	3185bb5	260127-1253	bug_Segmentation fault^	B	id:000000,sig:11,src:007180+000973,time:39319884,execs:26918471,op:splice,rep:4	39319884.0
+FIX	micropython	17733	3185bb5	260127-1259	bug_Segmentation fault^Segmentation fault	X	id:000000,sig:11,src:005179,time:51556877,execs:37864079,op:havoc,rep:8	51556877.0
+FIX	micropython	17733	3185bb5	260127-1305	bug_Aborted^Aborted	X	id:000000,sig:06,src:004922,time:11439590,execs:8252105,op:havoc,rep:8	11439590.0
+FIX	micropython	17733	3185bb5	260127-1310	none	N	 |	
+FIX	micropython	17815	c0252d7	260120-0711	bug_Segmentation fault^	B	id:000000,sig:11,src:000000,time:160,execs:203,op:flip1,pos:3	160.0
+FIX	micropython	17815	c0252d7	260127-1227	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1233	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1238	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1243	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1248	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1253	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1259	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1305	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17815	c0252d7	260127-1310	bug_Segmentation fault^	B	id:000000,time:0,execs:0,orig:TRIGGER_#17815_c0252d7_1_gpt-4o-2024-08-06_bug_stack-overflow^	0.0
+FIX	micropython	17841	4b013ec	260120-0711	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1227	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1233	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1238	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1243	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1248	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1253	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1259	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1305	none	N	 |	
+FIX	micropython	17841	4b013ec	260127-1310	none	N	 |	

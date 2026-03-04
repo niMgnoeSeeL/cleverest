@@ -5,7 +5,11 @@
 # process: read config file to get envs and commits, locate exp_${conf_suffix}* dirs, find fuzzing results for each commit, and check if there are new crashes found
 # output: for each commit, get count of experiments that found crashes, and avg time used to find the first crash
 
+# Determine the directory of the current script
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+
 conf=${1-"mujs.env"}
+exproot=${2-"."}
 source $conf
 source utils.sh
 
@@ -26,7 +30,7 @@ conf_suffix+=$( [ -n "$GENCMD" ] && echo "_GENCMD" )$( [ -n "$NOFEEDBACK" ] && e
 
 
 # exp_dirs=$(find * -maxdepth 1 -type d -name "exp_${conf_suffix}_*" | sort)
-exp_dirs=$(find * -maxdepth 0 -type d -regex "exp_${conf_suffix}_[0-9].*" | sort)  # strict match
+exp_dirs=$(find $exproot -maxdepth 3 -type d -regex ".*/exp_${conf_suffix}_[0-9].*" | sort)  # strict match
 echo "$exp_dirs"
 
 # print number of exp_dirs found and abort if zero
@@ -48,6 +52,7 @@ for i in "${!COMMITS[@]}"; do
     issue=${ISSUES[$i]:-$i}
     commit=${COMMITS[$i]}   
     id="#${issue}_${commit}"
+    [ "$PROJ_NAME" = "libxml2" ] && id="${issue}_${commit}"  # filename containing # affect libxml2 #550 bug-triggering
     command=${COMMANDS[$i]}
     echo "Checking commit $commit"
     builddir_before=buildafl_before_$commit
@@ -57,8 +62,6 @@ for i in "${!COMMITS[@]}"; do
     cnt_exps=0
     time_sum=0
     for exp_dir in $exp_dirs; do
-        pushd $exp_dir
-        echo "Entering $exp_dir"
         status=none
         finals[$i]="N"
         first_file=""
@@ -67,16 +70,17 @@ for i in "${!COMMITS[@]}"; do
         fuzzout_dir_before=fuzzout_${id}_before
         fuzzout_dir_after=fuzzout_${id}_after
         if [ "$SCENARIO" = "FIX" ]; then
-            fuzzout_dir=$fuzzout_dir_before
+            fuzzout_dir=$exp_dir/$fuzzout_dir_before
         else
-            fuzzout_dir=$fuzzout_dir_after
+            fuzzout_dir=$exp_dir/$fuzzout_dir_after
         fi
         # one line to make sure fuzzout_dir exists, otherwise skip
-        [ -d $fuzzout_dir ] || { echo "No $fuzzout_dir found in $exp_dir"; popd; continue; }
+        [ -d $fuzzout_dir ] || { echo "No $fuzzout_dir found in $exp_dir"; continue; }
         # j is removing $conf_suffix from $exp_dir
-        j=${exp_dir#"exp_${conf_suffix}_"}
+        exp_base=$(basename $exp_dir)
+        j=${exp_base#"exp_${conf_suffix}_"}
         ((cnt_exps++))
-        echo "Checking $exp_dir/$fuzzout_dir"
+        echo "Checking $fuzzout_dir"
         # iter over all files in default/crashes, if empty, use queue
         crashes=$(find $fuzzout_dir/default/crashes* -maxdepth 1 -type f -name "id*" | sort)
         queues=$(find $fuzzout_dir/default/queue -maxdepth 1 -type f -name "id:*" | sort)
@@ -89,8 +93,8 @@ for i in "${!COMMITS[@]}"; do
         for input_file in $crashes; do
             fileid=$(echo $input_file | grep -oP "id:\K[0-9]+")
             status=none
-            cmd_before=$(get_cmd "../$PROJ_NAME/$builddir_before/$DIR_REL/$command" "$input_file")
-            cmd_after=$(get_cmd "../$PROJ_NAME/$builddir_after/$DIR_REL/$command" "$input_file")
+            cmd_before=$(get_cmd "./$PROJ_NAME/$builddir_before/$DIR_REL/$command" "$input_file")
+            cmd_after=$(get_cmd "./$PROJ_NAME/$builddir_after/$DIR_REL/$command" "$input_file")
             
             # echo "Checking $input_file"
             # echo "Running $cmd_before"
@@ -118,7 +122,7 @@ for i in "${!COMMITS[@]}"; do
             if [[ "$bug_before" || "$bug_after" ]]; then  # bug triggered
                 status="bug_$bug_before^$bug_after"
                 [ "${finals[$i]}" = "N" ] && finals[$i]="X" && first_file=$input_file && time_this=$(afl_testcase_ms "$first_file")
-                if [[ "$bug_before" && "$bug_after" ]]; then
+                if [[ "$bug_before" && "$bug_after" && "$bug_before" == "$bug_after" ]]; then
                     echo "🐛Unintended Bug unrelated to commit $commit with $input_file! Interesting :)" | tee -a $chat_log
                 elif [[ "$bug_before" && "$SCENARIO" = "FIX" ]]; then
                     echo "🐞Intended $status triggered before commit $commit with $input_file!" | tee -a $chat_log
@@ -139,11 +143,10 @@ for i in "${!COMMITS[@]}"; do
                 echo "retcode after: $retcode_after"
             fi
         done
-        popd
         # if cnt_success not zero, calculate avg time, otherwise assign as "-"
         # [ $cnt_success -gt 0 ] && avg_time=$(echo "scale=2; $sum_seconds / $cnt_success" | bc) || avg_time="-"
         # tbl+="\n$commit | $cnt_success/$cnt_exps | $avg_time | $first_filees"
-        tbl+="\n$issue | $commit | $j | $status | ${finals[$i]} | $first_file | $time_this"
+        tbl+="\n$issue | $commit | $j | $status | ${finals[$i]} | $(basename $first_file) | $time_this"
         echo -e "$tbl" >$tbl_file
     done
 done

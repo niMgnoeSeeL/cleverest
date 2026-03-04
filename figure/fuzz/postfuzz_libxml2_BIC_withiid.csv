@@ -1,11 +1,51 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-535 | 9a82b94 | 240828-1646 | none | N |  | 
-535 | 9a82b94 | 240828-1648 | none | N |  | 
-535 | 9a82b94 | 240828-1649 | none | N |  | 
-535 | 9a82b94 | 240828-1651 | none | N |  | 
-535 | 9a82b94 | 240828-1653 | none | N |  | 
-550 | 7e3f469 | 240828-1646 | none | N |  | 
-550 | 7e3f469 | 240828-1648 | none | N |  | 
-550 | 7e3f469 | 240828-1649 | none | N |  | 
-550 | 7e3f469 | 240828-1651 | none | N |  | 
-550 | 7e3f469 | 240828-1653 | none | N |  | 
+535 | 9a82b94 | 260203-0908 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0138 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0141 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0146 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0150 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0154 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0201 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0206 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0209 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+535 | 9a82b94 | 260204-0215 | bug_^global-buffer-overflow | B | id:000000,time:0,execs:0,orig:TRIGGER_535_9a82b94_1_gpt-4o-2024-08-06_bug_^global-buffer-overflow | 0
+550 | 74c84a8 | 260203-0908 | behave | D | id:000001,time:0,execs:0,orig:TRIGGER_550_74c84a8_2_gpt-4o-2024-08-06_behave | 
+550 | 74c84a8 | 260204-0138 | behave | D | id:000005,src:000001,time:76,execs:61,op:quick,pos:0,+cov | 
+550 | 74c84a8 | 260204-0141 | behave | D | id:000005,src:000004,time:86,execs:65,op:quick,pos:0,+cov | 
+550 | 74c84a8 | 260204-0146 | behave | D | id:000005,src:000004,time:93,execs:67,op:quick,pos:0,+cov | 
+550 | 74c84a8 | 260204-0150 | behave | D | id:000003,time:0,execs:0,orig:TRIGGER_550_74c84a8_4_gpt-4o-2024-08-06_behave | 
+550 | 74c84a8 | 260204-0154 | behave | D | id:000005,src:000001,time:51,execs:52,op:quick,pos:0,+cov | 
+550 | 74c84a8 | 260204-0201 | behave | D | id:000005,src:000003,time:95,execs:66,op:havoc,rep:12,+cov | 
+550 | 74c84a8 | 260204-0206 | behave | D | id:000005,src:000000,time:47,execs:50,op:quick,pos:0,+cov | 
+550 | 74c84a8 | 260204-0209 | behave | D | id:000005,src:000000,time:81,execs:61,op:havoc,rep:2,+cov | 
+550 | 74c84a8 | 260204-0215 | behave | D | id:000005,src:000003,time:126,execs:76,op:quick,pos:0,+cov | 
+553 | 1406b20 | 260203-0908 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0138 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0141 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0146 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0150 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0154 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0201 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0206 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0209 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+553 | 1406b20 | 260204-0215 | bug_^SEGV | B | id:000000,time:0,execs:0,orig:TRIGGER_553_1406b20_1_gpt-4o-2024-08-06_bug_^SEGV | 0
+720 | 14604a4 | 260203-0908 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001215+003089,time:46117463,execs:10965453,op:splice,rep:6 | 46117463
+720 | 14604a4 | 260204-0138 | behave | D | id:000000,time:0,execs:0,orig:TRIGGER_720_14604a4_1_gpt-4o-2024-08-06_reach | 
+720 | 14604a4 | 260204-0141 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:001188+000835,time:68703792,execs:16951428,op:splice,rep:1 | 68703792
+720 | 14604a4 | 260204-0146 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:002255,time:42830632,execs:10427891,op:havoc,rep:2 | 42830632
+720 | 14604a4 | 260204-0150 | behave | D | id:000000,time:0,execs:0,orig:TRIGGER_720_14604a4_1_gpt-4o-2024-08-06_reach | 
+720 | 14604a4 | 260204-0154 | bug_^heap-buffer-overflow | B | id:000003,sig:06,src:003093,time:56450060,execs:14783677,op:havoc,rep:4 | 56450060
+720 | 14604a4 | 260204-0201 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:005725,time:38328402,execs:10729215,op:havoc,rep:7 | 38328402
+720 | 14604a4 | 260204-0206 | bug_heap-buffer-overflow^heap-buffer-overflow | X | id:000000,sig:06,src:001943+003489,time:85734724,execs:20426340,op:splice,rep:15 | 85734724
+720 | 14604a4 | 260204-0209 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:001357,time:6506613,execs:1973106,op:havoc,rep:2 | 6506613
+720 | 14604a4 | 260204-0215 | bug_^heap-buffer-overflow | B | id:000000,sig:06,src:001427,time:2750745,execs:836762,op:havoc,rep:3 | 2750745
+841 | 9cfc723 | 260203-0908 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0138 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0141 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0146 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0150 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0154 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0201 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0206 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0209 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0
+841 | 9cfc723 | 260204-0215 | bug_^heap-use-after-free | B | id:000000,time:0,execs:0,orig:TRIGGER_841_9cfc723_1_gpt-4o-2024-08-06_bug_^heap-use-after-free | 0

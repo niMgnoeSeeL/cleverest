@@ -1,26 +1,19 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-1282 | 3d35d20 | 240829-1146 | bug_^heap-use-after-free | B | fuzzout_3d35d20_after/default/crashes/id:000000,sig:06,src:000000,time:11944,execs:1001,op:quick,pos:244 | 11944
-1282 | 3d35d20 | 240829-1212 | bug_^heap-use-after-free | B | fuzzout_3d35d20_after/default/crashes/id:000000,sig:06,src:000003,time:183906,execs:10110,op:havoc,rep:2 | 183906
-1282 | 3d35d20 | 240829-1238 | bug_^heap-use-after-free | B | fuzzout_3d35d20_after/default/crashes/id:000000,sig:06,src:000002,time:11442,execs:920,op:quick,pos:213 | 11442
-1282 | 3d35d20 | 240829-1304 | bug_^heap-use-after-free | B | fuzzout_3d35d20_after/default/crashes/id:000000,sig:06,src:000002,time:288670,execs:16792,op:havoc,rep:3 | 288670
-1282 | 3d35d20 | 240829-1328 | bug_^heap-use-after-free | B | fuzzout_3d35d20_after/default/crashes/id:000000,sig:06,src:000003,time:13222,execs:1076,op:quick,pos:246 | 13222
-1289 | 3cae777 | 240829-1146 | none | N |  | 
-1289 | 3cae777 | 240829-1212 | bug_SEGV^SEGV | X |  | 
-1289 | 3cae777 | 240829-1238 | none | N |  | 
-1289 | 3cae777 | 240829-1304 | none | N |  | 
-1289 | 3cae777 | 240829-1328 | behave | D |  | 
-1303 | e674ca6 | 240829-1146 | none | N |  | 
-1303 | e674ca6 | 240829-1212 | none | N |  | 
-1303 | e674ca6 | 240829-1238 | none | N |  | 
-1303 | e674ca6 | 240829-1304 | none | N |  | 
-1303 | e674ca6 | 240829-1328 | none | N |  | 
-1305 | aaf2e80 | 240829-1146 | none | N |  | 
-1305 | aaf2e80 | 240829-1212 | none | N |  | 
-1305 | aaf2e80 | 240829-1238 | none | N |  | 
-1305 | aaf2e80 | 240829-1304 | none | N |  | 
-1305 | aaf2e80 | 240829-1328 | none | N |  | 
-1381 | 245abad | 240829-1146 | none | N |  | 
-1381 | 245abad | 240829-1212 | none | N |  | 
-1381 | 245abad | 240829-1238 | none | N |  | 
-1381 | 245abad | 240829-1304 | none | N |  | 
-1381 | 245abad | 240829-1328 | none | N |  | 
+1282 | 3d35d20 | 250903-1703 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000000,time:2339,execs:340,op:inf,pos:0 | 2339
+1282 | 3d35d20 | 250903-1722 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000001,time:3720,execs:524,op:havoc,rep:2 | 3720
+1282 | 3d35d20 | 250903-1746 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000000,time:2412,execs:350,op:inf,pos:0 | 2412
+1282 | 3d35d20 | 250903-1809 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000000,time:2506,execs:349,op:inf,pos:0 | 2506
+1282 | 3d35d20 | 250903-1837 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000004,time:7572,execs:1010,op:quick,pos:240 | 7572
+1282 | 3d35d20 | 250827-1951 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000000,time:24084,execs:1122,op:quick,pos:292 | 24084
+1282 | 3d35d20 | 250827-2003 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000000,time:17264,execs:977,op:quick,pos:244 | 17264
+1282 | 3d35d20 | 250827-2026 | bug_^heap-use-after-free | B | id:000000,sig:06,src:000002,time:24655,execs:1128,op:quick,pos:279 | 24655
+1289 | 3cae777 | 250903-1703 | bug_^Aborted | B | id:000003,sig:06,src:000002,time:4562,execs:607,op:quick,pos:60 | 4562
+1289 | 3cae777 | 250903-1722 | bug_^Aborted | B | id:000004,sig:06,src:000002,time:3543,execs:468,op:quick,pos:70 | 3543
+1289 | 3cae777 | 250903-1746 | bug_SEGV^SEGV | X | id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV | 0
+1289 | 3cae777 | 250903-1809 | bug_SEGV^SEGV | X | id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV | 0
+1289 | 3cae777 | 250903-1837 | bug_SEGV^SEGV | X | id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV | 0
+1289 | 3cae777 | 250827-1940 | bug_SEGV^SEGV | X | id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV | 0
+1289 | 3cae777 | 250827-1951 | bug_SEGV^SEGV | X | id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV | 0
+1289 | 3cae777 | 250827-2003 | bug_^Aborted | B | id:000005,sig:06,src:000002,time:9622,execs:467,op:quick,pos:70 | 9622
+1289 | 3cae777 | 250827-2015 | bug_SEGV^SEGV | X | id:000000,sig:11,src:000003,time:7294,execs:367,op:quick,pos:51 | 7294
+1289 | 3cae777 | 250827-2026 | bug_SEGV^SEGV | X | id:000000,time:0,execs:0,orig:TRIGGER_#1289_3cae777_1_gpt-4o-2024-08-06_bug_SEGV^SEGV | 0

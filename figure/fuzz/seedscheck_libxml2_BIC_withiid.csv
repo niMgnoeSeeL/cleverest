@@ -1,3 +1,6 @@
 issue | commit | # of files | # of (B,D,R,X,N) | final | first file | bug_types
-535 | 9a82b94 | 14 | (13,0,1,0,0) | B | seeds_libxml2/dtd9 | bug_^global-buffer-overflow:13 
-550 | 7e3f469 | 14 | (0,0,1,0,13) | R | seeds_libxml2/dtd12 | 
+535 | 9a82b94 | 14 | (1,0,0,0,0) | B | seeds/xml/dtd1 | bug_^global-buffer-overflow:1 
+550 | 74c84a8 | 14 | (0,1,1,0,0) | D | seeds/xml/eve.dtd | 
+553 | 1406b20 | 14 | (1,0,0,0,0) | B | seeds/xml/dtd1 | bug_^SEGV:1 
+720 | 14604a4 | 14 | (0,14,0,0,0) | D | seeds/xml/dtd1 | 
+841 | 9cfc723 | 14 | (1,0,0,0,0) | B | seeds/xml/dtd1 | bug_^heap-use-after-free:1 

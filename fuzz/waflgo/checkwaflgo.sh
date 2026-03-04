@@ -5,14 +5,15 @@
 # process: read config file to get envs and commits, locate exp_${conf_suffix}* dirs, find fuzzing results for each commit, and check if there are new crashes found
 # output: for each commit, get count of experiments that found crashes, and avg time used to find the first crash
 
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
 conf=$1
 # suffix=${2-"1"} # just 1-5 repitition
+outdir_base=${2-"$SCRIPT_DIR/out"}
 SCENARIO=${SCENARIO:-BIC}
 
 source utils.sh
 source $conf
-outdir_base=baselines
 
 # loop over commits in ${COMMITS[@]}
 # for each commit, check if there are crashes found in each exp_dir
@@ -20,13 +21,14 @@ outdir_base=baselines
 # output in format: commit | count of exp containing crash | avg_time | paths for each exp containing crash | first_crash_time for each exp
 # tbl="commit | count of exp containing crash | avg_time to find first crash | first_crashes in all exps"
 tbl="issue | commit | idx | status | final | first crash | time to find first crash"
-tbl_file="postwaflgo_${PROJ_NAME}_${SCENARIO}.csv"
+tbl_file="waflgo_${PROJ_NAME}_${SCENARIO}.csv"
 for i in "${!COMMITS[@]}"; do
     issue=${ISSUES[$i]:-$i}
     commit=${COMMITS[$i]}   
     id="#${issue}_${commit}"
     command=${COMMANDS[$i]}
-    echo "Checking commit $commit"
+    echo "Checking commit $id"
+    # NOTE: use buildafl as we do not measure reachability for fuzzing
     builddir_before=buildafl_before_$commit
     builddir_after=buildafl_after_$commit
 
@@ -34,7 +36,10 @@ for i in "${!COMMITS[@]}"; do
     cnt_exps=0
     time_sum=0
     fuzzout_dir_pat="waflgo_${PROJ_NAME}_${commit}_*"
-    fuzzout_dirs=$(find $outdir_base -maxdepth 2 -type d -name "$fuzzout_dir_pat" | sort)
+    fuzzout_dirs=$(find $outdir_base -maxdepth 2 -type d -name "$fuzzout_dir_pat" | sort -V)
+    # if not found, use "waflgo_${PROJ_NAME}_${issue}_${commit}_*"
+    [[ -z $fuzzout_dirs ]] && fuzzout_dir_pat="waflgo_${PROJ_NAME}_${issue}_${commit}_*"
+    fuzzout_dirs=$(find $outdir_base -maxdepth 2 -type d -name "$fuzzout_dir_pat" | sort -V)
     # one line to make sure fuzzout_dir exists, otherwise skip
     [[ -z $fuzzout_dirs ]] && { echo "No $fuzzout_dir_pat found in $outdir_base"; continue; }
     for fuzzout_dir in $fuzzout_dirs; do
@@ -43,7 +48,7 @@ for i in "${!COMMITS[@]}"; do
         first_file=""
         time_this=""
         # iter and enter all fuzzout_{commit} dirs
-        j=${fuzzout_dirs##*_}
+        j=${fuzzout_dir##*_}
         ((cnt_exps++))
         echo "Checking $fuzzout_dir"
         # iter over all files in default/crashes, if empty, use queue
@@ -78,7 +83,7 @@ for i in "${!COMMITS[@]}"; do
             if [[ "$bug_before" || "$bug_after" ]]; then  # bug triggered
                 status="bug_$bug_before^$bug_after"
                 [ "${finals[$i]}" = "N" ] && finals[$i]="X" && first_file=$input_file
-                if [[ "$bug_before" && "$bug_after" ]]; then
+                if [[ "$bug_before" && "$bug_after" && "$bug_before" == "$bug_after" ]]; then
                     echo "🐛Unintended Bug unrelated to commit $commit with $input_file! Interesting :)" | tee -a $chat_log
                 elif [[ "$bug_before" && "$SCENARIO" = "FIX" ]]; then
                     echo "🐞Intended $status triggered before commit $commit with $input_file!" | tee -a $chat_log

@@ -1,26 +1,51 @@
-issue | commit | idx | final | time to find first crash in ms | first_crash
-1282 | 4564a00 | 1 | R | orig:3-eledpar_mwe.pdf | out_poppler_4564a00_1/queue/id:000000,orig:3-eledpar_mwe.pdf
-1282 | 4564a00 | 2 | R | orig:3-eledpar_mwe.pdf | out_poppler_4564a00_2/queue/id:000000,orig:3-eledpar_mwe.pdf
-1282 | 4564a00 | 3 | R | orig:3-eledpar_mwe.pdf | out_poppler_4564a00_3/queue/id:000000,orig:3-eledpar_mwe.pdf
-1282 | 4564a00 | 4 | R | orig:3-eledpar_mwe.pdf | out_poppler_4564a00_4/queue/id:000000,orig:3-eledpar_mwe.pdf
-1282 | 4564a00 | 5 | R | orig:3-eledpar_mwe.pdf | out_poppler_4564a00_5/queue/id:000000,orig:3-eledpar_mwe.pdf
-1289 | efb6868 | 1 | N |  | 
-1289 | efb6868 | 2 | N |  | 
-1289 | efb6868 | 3 | N |  | 
-1289 | efb6868 | 4 | N |  | 
-1289 | efb6868 | 5 | N |  | 
-1303 | a4ca3a9 | 1 | N |  | 
-1303 | a4ca3a9 | 2 | N |  | 
-1303 | a4ca3a9 | 3 | N |  | 
-1303 | a4ca3a9 | 4 | N |  | 
-1303 | a4ca3a9 | 5 | N |  | 
-1305 | 907d05a | 1 | R | orig:docs-boxshape.pdf | out_poppler_907d05a_1/queue/id:000026,orig:docs-boxshape.pdf
-1305 | 907d05a | 2 | R | orig:docs-boxshape.pdf | out_poppler_907d05a_2/queue/id:000026,orig:docs-boxshape.pdf
-1305 | 907d05a | 3 | R | orig:docs-boxshape.pdf | out_poppler_907d05a_3/queue/id:000026,orig:docs-boxshape.pdf
-1305 | 907d05a | 4 | R | orig:docs-boxshape.pdf | out_poppler_907d05a_4/queue/id:000026,orig:docs-boxshape.pdf
-1305 | 907d05a | 5 | R | orig:docs-boxshape.pdf | out_poppler_907d05a_5/queue/id:000026,orig:docs-boxshape.pdf
-1381 | 1be35ee | 1 | R | orig:DDC-09.pdf | out_poppler_1be35ee_1/queue/id:000006,orig:DDC-09.pdf
-1381 | 1be35ee | 2 | R | orig:DDC-09.pdf | out_poppler_1be35ee_2/queue/id:000006,orig:DDC-09.pdf
-1381 | 1be35ee | 3 | R | orig:DDC-09.pdf | out_poppler_1be35ee_3/queue/id:000006,orig:DDC-09.pdf
-1381 | 1be35ee | 4 | R | orig:DDC-09.pdf | out_poppler_1be35ee_4/queue/id:000006,orig:DDC-09.pdf
-1381 | 1be35ee | 5 | R | orig:DDC-09.pdf | out_poppler_1be35ee_5/queue/id:000006,orig:DDC-09.pdf
+issue | commit | idx | status | final | first crash | time to find first crash
+1282 | 4564a00 | 1 | old | R | out_poppler_4564a00_1/queue/id:000000,orig:3-eledpar_mwe.pdf | orig:3-eledpar_mwe.pdf
+1282 | 4564a00 | 2 | old | R | out_poppler_4564a00_2/queue/id:000000,orig:3-eledpar_mwe.pdf | orig:3-eledpar_mwe.pdf
+1282 | 4564a00 | 3 | old | R | out_poppler_4564a00_3/queue/id:000000,orig:3-eledpar_mwe.pdf | orig:3-eledpar_mwe.pdf
+1282 | 4564a00 | 4 | old | R | out_poppler_4564a00_4/queue/id:000000,orig:3-eledpar_mwe.pdf | orig:3-eledpar_mwe.pdf
+1282 | 4564a00 | 5 | old | R | out_poppler_4564a00_5/queue/id:000000,orig:3-eledpar_mwe.pdf | orig:3-eledpar_mwe.pdf
+1282 | 4564a00 | 6 | none | N |  | 
+1282 | 4564a00 | 7 | none | N |  | 
+1282 | 4564a00 | 8 | none | N |  | 
+1282 | 4564a00 | 9 | none | N |  | 
+1282 | 4564a00 | 10 | none | N |  | 
+1289 | efb6868 | 1 | old | N | None |  |
+1289 | efb6868 | 2 | old | N | None |  |
+1289 | efb6868 | 3 | old | N | None |  |
+1289 | efb6868 | 4 | old | N | None |  |
+1289 | efb6868 | 5 | old | N | None |  |
+1289 | efb6868 | 6 | none | N |  | 
+1289 | efb6868 | 7 | none | N |  | 
+1289 | efb6868 | 8 | none | N |  | 
+1289 | efb6868 | 9 | none | N |  | 
+1289 | efb6868 | 10 | none | N |  | 
+1303 | a4ca3a9 | 1 | old | N | None |  |
+1303 | a4ca3a9 | 2 | old | N | None |  |
+1303 | a4ca3a9 | 3 | old | N | None |  |
+1303 | a4ca3a9 | 4 | old | N | None |  |
+1303 | a4ca3a9 | 5 | old | N | None |  |
+1303 | a4ca3a9 | 6 | none | N |  | 
+1303 | a4ca3a9 | 7 | none | N |  | 
+1303 | a4ca3a9 | 8 | none | N |  | 
+1303 | a4ca3a9 | 9 | none | N |  | 
+1303 | a4ca3a9 | 10 | none | N |  |
+1305 | 907d05a | 1 | old | R | out_poppler_907d05a_1/queue/id:000026,orig:docs-boxshape.pdf | orig:docs-boxshape.pdf
+1305 | 907d05a | 2 | old | R | out_poppler_907d05a_2/queue/id:000026,orig:docs-boxshape.pdf | orig:docs-boxshape.pdf
+1305 | 907d05a | 3 | old | R | out_poppler_907d05a_3/queue/id:000026,orig:docs-boxshape.pdf | orig:docs-boxshape.pdf
+1305 | 907d05a | 4 | old | R | out_poppler_907d05a_4/queue/id:000026,orig:docs-boxshape.pdf | orig:docs-boxshape.pdf
+1305 | 907d05a | 5 | old | R | out_poppler_907d05a_5/queue/id:000026,orig:docs-boxshape.pdf | orig:docs-boxshape.pdf
+1305 | 907d05a | 6 | none | N |  | 
+1305 | 907d05a | 7 | none | N |  | 
+1305 | 907d05a | 8 | none | N |  | 
+1305 | 907d05a | 9 | none | N |  | 
+1305 | 907d05a | 10 | none | N |  | 
+1381 | 1be35ee | 1 | old | R | out_poppler_1be35ee_1/queue/id:000006,orig:DDC-09.pdf | orig:DDC-09.pdf
+1381 | 1be35ee | 2 | old | R | out_poppler_1be35ee_2/queue/id:000006,orig:DDC-09.pdf | orig:DDC-09.pdf
+1381 | 1be35ee | 3 | old | R | out_poppler_1be35ee_3/queue/id:000006,orig:DDC-09.pdf | orig:DDC-09.pdf
+1381 | 1be35ee | 4 | old | R | out_poppler_1be35ee_4/queue/id:000006,orig:DDC-09.pdf | orig:DDC-09.pdf
+1381 | 1be35ee | 5 | old | R | out_poppler_1be35ee_5/queue/id:000006,orig:DDC-09.pdf | orig:DDC-09.pdf
+1381 | 1be35ee | 6 | none | N |  | 
+1381 | 1be35ee | 7 | none | N |  | 
+1381 | 1be35ee | 8 | none | N |  | 
+1381 | 1be35ee | 9 | none | N |  | 
+1381 | 1be35ee | 10 | none | N |  | 

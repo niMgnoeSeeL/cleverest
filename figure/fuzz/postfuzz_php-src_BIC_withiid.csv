@@ -1,21 +1,37 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-16777 | 5cb38e9 | 250212-1131 | none | N |  | 
-16777 | 5cb38e9 | 250217-2122 | none | N |  | 
-16777 | 5cb38e9 | 250217-2145 | none | N |  | 
-16777 | 5cb38e9 | 250217-2201 | none | N |  | 
-16777 | 5cb38e9 | 250217-2220 | none | N |  | 
-16978 | 8c704ab | 250212-1131 | bug_^stack-buffer-overflow | B | fuzzout_#16978_8c704ab_after/default/crashes/id:000000,sig:06,src:004549,time:43618981,execs:836052,op:havoc,rep:1 | 43618981
-16978 | 8c704ab | 250217-2122 | none | N |  | 
-16978 | 8c704ab | 250217-2145 | none | N |  | 
-16978 | 8c704ab | 250217-2201 | none | N |  | 
-16978 | 8c704ab | 250217-2220 | none | N |  | 
-17442 | 998bce1 | 250212-1131 | none | N |  | 
-17442 | 998bce1 | 250217-2122 | none | N |  | 
-17442 | 998bce1 | 250217-2145 | none | N |  | 
-17442 | 998bce1 | 250217-2201 | none | N |  | 
-17442 | 998bce1 | 250217-2220 | none | N |  | 
-17463 | 7904a08 | 250212-1131 | none | N |  | 
-17463 | 7904a08 | 250217-2122 | none | N |  | 
-17463 | 7904a08 | 250217-2145 | none | N |  | 
-17463 | 7904a08 | 250217-2201 | none | N |  | 
-17463 | 7904a08 | 250217-2220 | none | N |  | 
+16777 | 5cb38e9 | 250903-1706 | none | N |  | 
+16777 | 5cb38e9 | 250903-1712 | none | N |  | 
+16777 | 5cb38e9 | 250903-1720 | none | N |  | 
+16777 | 5cb38e9 | 250903-1729 | none | N |  | 
+16777 | 5cb38e9 | 250903-1739 | none | N |  | 
+16777 | 5cb38e9 | 250826-2135 | none | N |  | 
+16777 | 5cb38e9 | 250826-2141 | none | N |  | 
+16777 | 5cb38e9 | 250826-2147 | none | N |  | 
+16777 | 5cb38e9 | 250826-2154 | none | N |  | 
+16777 | 5cb38e9 | 250826-2201 | none | N |  | 
+16978 | 8c704ab | 250903-1706 | none | N |  | 
+16978 | 8c704ab | 250903-1712 | none | D | id:000809,src:000739,time:2680189,execs:31403,op:havoc,rep:1,+cov | 
+16978 | 8c704ab | 250903-1720 | bug_^negative-size-param | B | id:000000,sig:06,src:001665,time:10455208,execs:121788,op:havoc,rep:1 | 10455208
+16978 | 8c704ab | 250903-1729 | bug_^negative-size-param | B | id:000000,sig:06,src:001130,time:30150635,execs:350377,op:quick,pos:47,val:+2 | 30150635
+16978 | 8c704ab | 250903-1739 | bug_^negative-size-param | B | id:000000,sig:06,src:000003,time:1913048,execs:22116,op:havoc,rep:1 | 1913048
+16978 | 8c704ab | 250826-2135 | none | D | id:003803,src:001014,time:44095571,execs:531736,op:havoc,rep:2,+cov | 
+16978 | 8c704ab | 250826-2141 | bug_^negative-size-param | B | id:000000,sig:06,src:000002,time:2712737,execs:33141,op:havoc,rep:1 | 2712737
+16978 | 8c704ab | 250826-2147 | none | D | id:001762,src:001761,time:14149201,execs:171560,op:havoc,rep:2,+cov | 
+16978 | 8c704ab | 250826-2154 | bug_^negative-size-param | B | id:000000,sig:06,src:001333,time:6248788,execs:76162,op:havoc,rep:1 | 6248788
+16978 | 8c704ab | 250826-2201 | none | N |  | 
+17442 | 998bce1 | 250903-1706 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250903-1712 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250903-1720 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250903-1729 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_4_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250903-1739 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250826-2135 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250826-2141 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250826-2147 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250826-2154 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_1_gpt-4o-2024-08-06_behave | 
+17442 | 998bce1 | 250826-2201 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#17442_998bce1_2_gpt-4o-2024-08-06_behave | 
+17463 | 7904a08 | 250903-1706 | none | N |  | 
+17463 | 7904a08 | 250903-1720 | none | D | id:006888,src:006886,time:79838583,execs:1883981,op:havoc,rep:1 | 
+17463 | 7904a08 | 250903-1729 | none | N |  | 
+17463 | 7904a08 | 250903-1739 | none | N |  | 
+17463 | 7904a08 | 250826-2147 | none | D | id:001429,src:001427,time:7237085,execs:177691,op:havoc,rep:1,+cov | 
+17463 | 7904a08 | 250826-2154 | none | D | id:000038,src:000003,time:8959,execs:604,op:quick,pos:29,+cov | 

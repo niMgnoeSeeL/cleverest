@@ -10,11 +10,15 @@ if [ "$#" -lt 2 ]; then
     exit 1
 fi
 
+# Determine the directory of the current script
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+
 conf=$1
 exp_dir=$2
 hours=${3-"24"}
-# full_suffix = remove "exp_" from $exp_dir
-full_suffix=${exp_dir#"exp_"}
+exp_base=$(basename "$exp_dir")
+# full_suffix = remove "exp_" from $exp_base
+full_suffix=${exp_base#"exp_"}
 
 # full_suffix construction: ${PROJ_NAME}_${SCENARIO}_GIT${GIT_INFO}_ITER${MAX_ITER}_${LLM}_TEMP${LLM_TEMP}
 # parse $SCENARIO from $full_suffix
@@ -35,6 +39,7 @@ for i in "${!COMMITS[@]}"; do
     issue=${ISSUES[$i]}
     commit=${COMMITS[$i]}   
     id="#${issue}_${commit}"
+    [ "$PROJ_NAME" = "libxml2" ] && id="${issue}_${commit}"  # filename containing # affect libxml2 #550 bug-triggering
     buildafl_before=buildafl_before_$commit
     buildafl_after=buildafl_after_$commit
     indir=fuzzin_${id}
@@ -61,13 +66,19 @@ for i in "${!COMMITS[@]}"; do
         fi
     fi 
 
-    cmd_before="../$PROJ_NAME/$buildafl_before/$DIR_REL/$command"
-    cmd_after="../$PROJ_NAME/$buildafl_after/$DIR_REL/$command"
+    # if TRIGGER_${id}_* not exist, skip, no fuzz
+    if ! ls TRIGGER_${id}_* 1> /dev/null 2>&1; then
+        echo "No TRIGGER_${id}_* files found, skip fuzzing $commit"
+        continue
+    fi
+    mkdir -p $indir
+    cp TRIGGER_${id}_* $indir
+
+    proj_path=$(realpath "$SCRIPT_DIR/../$PROJ_NAME")
+    cmd_before="$proj_path/$buildafl_before/$DIR_REL/$command"
+    cmd_after="$proj_path/$buildafl_after/$DIR_REL/$command"
     fuzzcmd_before="afl-fuzz -i $indir -o $outdir_before -- $cmd_before"
     fuzzcmd_after="afl-fuzz -i $indir -o $outdir_after -- $cmd_after"
-
-    mkdir -p $indir
-    cp INPUT_${id}_* $indir
     
     session_before="fuzz${hours}h_${id}_before_${full_suffix}"
     session_after="fuzz${hours}h_${id}_after_${full_suffix}"
@@ -81,10 +92,11 @@ for i in "${!COMMITS[@]}"; do
         tmux new-session -d -s $session_before
         tmux send-keys -t $session_before "timeout ${hours}h $fuzzcmd_before" Enter
     fi
-
-    # fuzz after commit for both BIC/FIX, hope to find new bug after FIX
-    tmux new-session -d -s $session_after
-    tmux send-keys -t $session_after "timeout ${hours}h $fuzzcmd_after" Enter
+    # fuzz after commit for BIC
+    if [ "$SCENARIO" = "BIC" ]; then
+        tmux new-session -d -s $session_after
+        tmux send-keys -t $session_after "timeout ${hours}h $fuzzcmd_after" Enter
+    fi
     set +x
 done    
 popd

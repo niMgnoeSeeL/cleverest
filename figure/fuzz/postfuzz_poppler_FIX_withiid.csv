@@ -1,26 +1,19 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-1282 | 4564a00 | 240829-1200 | none | N |  | 
-1282 | 4564a00 | 240829-1227 | none | N |  | 
-1282 | 4564a00 | 240829-1252 | behave | D |  | 
-1282 | 4564a00 | 240829-1318 | none | N |  | 
-1282 | 4564a00 | 240829-1341 | none | N |  | 
-1289 | efb6868 | 240829-1200 | none | N |  | 
-1289 | efb6868 | 240829-1227 | behave | D |  | 
-1289 | efb6868 | 240829-1252 | none | N |  | 
-1289 | efb6868 | 240829-1318 | behave | D |  | 
-1289 | efb6868 | 240829-1341 | none | N |  | 
-1303 | a4ca3a9 | 240829-1200 | none | N |  | 
-1303 | a4ca3a9 | 240829-1227 | none | N |  | 
-1303 | a4ca3a9 | 240829-1252 | none | N |  | 
-1303 | a4ca3a9 | 240829-1318 | none | N |  | 
-1303 | a4ca3a9 | 240829-1341 | none | N |  | 
-1305 | 907d05a | 240829-1200 | none | N |  | 
-1305 | 907d05a | 240829-1227 | none | N |  | 
-1305 | 907d05a | 240829-1252 | none | N |  | 
-1305 | 907d05a | 240829-1318 | none | N |  | 
-1305 | 907d05a | 240829-1341 | none | N |  | 
-1381 | 1be35ee | 240829-1200 | none | N |  | 
-1381 | 1be35ee | 240829-1227 | none | N |  | 
-1381 | 1be35ee | 240829-1252 | none | N |  | 
-1381 | 1be35ee | 240829-1318 | none | N |  | 
-1381 | 1be35ee | 240829-1341 | none | N |  | 
+1282 | 4564a00 | 250904-0351 | none | N |  | 
+1282 | 4564a00 | 250904-0402 | none | N |  | 
+1282 | 4564a00 | 250904-0411 | none | N |  | 
+1282 | 4564a00 | 250904-0422 | none | N |  | 
+1282 | 4564a00 | 250904-0431 | none | N |  | 
+1282 | 4564a00 | 250825-0916 | none | N |  | 
+1282 | 4564a00 | 250825-0927 | none | N |  | 
+1282 | 4564a00 | 250825-0953 | bug_Aborted^ | B | id:000000,sig:06,src:002172,time:26736473,execs:1192845,op:havoc,rep:6 | 26736473
+1282 | 4564a00 | 250825-1002 | none | N |  | 
+1289 | efb6868 | 250904-0351 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^ | 0
+1289 | efb6868 | 250904-0402 | bug_Aborted^ | B | id:000000,sig:06,src:000000,time:2215,execs:331,op:quick,pos:57 | 2215
+1289 | efb6868 | 250904-0411 | bug_Aborted^ | B | id:000000,sig:06,src:000000,time:3522,execs:501,op:quick,pos:70 | 3522
+1289 | efb6868 | 250904-0422 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^ | 0
+1289 | efb6868 | 250904-0431 | bug_Aborted^ | B | id:000000,time:0,execs:0,orig:TRIGGER_#1289_efb6868_1_gpt-4o-2024-08-06_bug_Aborted^ | 0
+1289 | efb6868 | 250825-0916 | bug_Aborted^ | B | id:000000,sig:06,src:000001,time:8108,execs:449,op:quick,pos:58 | 8108
+1289 | efb6868 | 250825-0927 | bug_Aborted^ | B | id:000000,sig:06,src:000000,time:8664,execs:457,op:quick,pos:70 | 8664
+1289 | efb6868 | 250825-0953 | bug_Aborted^ | B | id:000000,sig:06,src:000000,time:7090,execs:372,op:quick,pos:57 | 7090
+1303 | a4ca3a9 | 250904-0402 | none | D | id:000000,time:0,execs:0,orig:TRIGGER_#1303_a4ca3a9_2_gpt-4o-2024-08-06_behave | 

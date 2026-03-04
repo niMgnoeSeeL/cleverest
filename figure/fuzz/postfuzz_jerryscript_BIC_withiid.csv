@@ -1,21 +1,41 @@
 issue | commit | idx | status | final | first crash | time to find first crash
-5013 | b7e3bae | 250212-1127 | bug_Aborted^Aborted | X | fuzzout_#5013_b7e3bae_after/default/crashes/id:000000,sig:06,src:005381,time:21743779,execs:4115034,op:havoc,rep:2 | 
-5013 | b7e3bae | 250212-1131 | bug_Aborted^Aborted | X | fuzzout_#5013_b7e3bae_after/default/crashes/id:000000,sig:06,src:000000,time:68398,execs:17541,op:havoc,rep:1 | 
-5013 | b7e3bae | 250212-1136 | bug_Aborted^Aborted | X | fuzzout_#5013_b7e3bae_after/default/crashes/id:000000,sig:06,src:002876,time:7014460,execs:1450060,op:havoc,rep:1 | 
-5013 | b7e3bae | 250212-1140 | bug_Aborted^Aborted | X | fuzzout_#5013_b7e3bae_after/default/crashes/id:000000,sig:06,src:000002,time:48383,execs:10768,op:havoc,rep:1 | 
-5013 | b7e3bae | 250212-1144 | bug_Aborted^Aborted | X | fuzzout_#5013_b7e3bae_after/default/crashes/id:000000,sig:11,src:001796,time:1990557,execs:375864,op:havoc,rep:1 | 
-5138 | 70e275e | 250212-1127 | bug_^Aborted | B | fuzzout_#5138_70e275e_after/default/crashes/id:000000,sig:06,src:000000,time:6730,execs:1289,op:flip1,pos:113 | 6730
-5138 | 70e275e | 250212-1131 | bug_^Aborted | B | fuzzout_#5138_70e275e_after/default/crashes/id:000000,sig:06,src:000212+000000,time:287393,execs:63114,op:splice,rep:8 | 287393
-5138 | 70e275e | 250212-1136 | bug_^Aborted | B | fuzzout_#5138_70e275e_after/default/crashes/id:000000,sig:06,src:000002,time:33579,execs:9195,op:havoc,rep:4 | 33579
-5138 | 70e275e | 250212-1140 | bug_^Aborted | B | fuzzout_#5138_70e275e_after/default/crashes/id:000000,sig:06,src:000000,time:40546,execs:9067,op:havoc,rep:2 | 40546
-5138 | 70e275e | 250212-1144 | bug_^Aborted | B | fuzzout_#5138_70e275e_after/default/crashes/id:000000,sig:06,src:000000,time:84025,execs:18777,op:havoc,rep:1 | 84025
-5117 | 53b61c1 | 250212-1127 | bug_^Aborted | B | fuzzout_#5117_53b61c1_after/default/crashes/id:000000,sig:06,src:000002,time:108187,execs:20367,op:havoc,rep:4 | 108187
-5117 | 53b61c1 | 250212-1131 | bug_^Aborted | B | fuzzout_#5117_53b61c1_after/default/crashes/id:000000,sig:06,src:000000,time:92237,execs:23347,op:havoc,rep:4 | 92237
-5117 | 53b61c1 | 250212-1136 | bug_^Aborted | B | fuzzout_#5117_53b61c1_after/default/crashes/id:000000,sig:06,src:000000,time:41316,execs:11380,op:havoc,rep:2 | 41316
-5117 | 53b61c1 | 250212-1140 | bug_^Aborted | B | fuzzout_#5117_53b61c1_after/default/crashes/id:000000,sig:06,src:000001,time:30405,execs:6734,op:havoc,rep:1 | 30405
-5117 | 53b61c1 | 250212-1144 | bug_^Aborted | B | fuzzout_#5117_53b61c1_after/default/crashes/id:000000,sig:06,src:000001,time:22839,execs:5543,op:havoc,rep:3 | 22839
-5153 | 70e275e | 250212-1127 | bug_^Aborted | B | fuzzout_#5153_70e275e_after/default/crashes/id:000000,sig:06,src:000001,time:2492,execs:406,op:quick,pos:78 | 2492
-5153 | 70e275e | 250212-1131 | bug_^Aborted | B | fuzzout_#5153_70e275e_after/default/crashes/id:000000,sig:06,src:000000,time:1710,execs:482,op:quick,pos:106 | 1710
-5153 | 70e275e | 250212-1136 | bug_^Aborted | B | fuzzout_#5153_70e275e_after/default/crashes/id:000000,sig:06,src:000002,time:55923,execs:14899,op:havoc,rep:1 | 55923
-5153 | 70e275e | 250212-1140 | bug_^Aborted | B | fuzzout_#5153_70e275e_after/default/crashes/id:000000,sig:06,src:000001,time:1709,execs:438,op:quick,pos:89 | 1709
-5153 | 70e275e | 250212-1144 | bug_^Aborted | B | fuzzout_#5153_70e275e_after/default/crashes/id:000000,sig:06,src:000003,time:1963,execs:481,op:quick,pos:95 | 1963
+5013 | b7e3bae | 250903-1708 | bug_Aborted^Aborted | X | id:000000,sig:06,src:003762,time:7798294,execs:1595383,op:havoc,rep:4 | 7798294
+5013 | b7e3bae | 250903-1714 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000362,time:588602,execs:150367,op:havoc,rep:1 | 588602
+5013 | b7e3bae | 250903-1720 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000981,time:1605508,execs:354584,op:havoc,rep:4 | 1605508
+5013 | b7e3bae | 250903-1727 | bug_Aborted^Aborted | X | id:000000,sig:06,src:001410,time:1570129,execs:347287,op:havoc,rep:2 | 1570129
+5013 | b7e3bae | 250903-1733 | bug_Aborted^Aborted | X | id:000000,sig:06,src:002219,time:2627166,execs:572313,op:havoc,rep:1 | 2627166
+5013 | b7e3bae | 250826-2133 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000000,time:77924,execs:21821,op:havoc,rep:1 | 77924
+5013 | b7e3bae | 250826-2139 | bug_stack-overflow^stack-overflow | X | id:000000,sig:06,src:000000,time:1403,execs:549,op:quick,pos:133 | 1403
+5013 | b7e3bae | 250826-2145 | bug_Aborted^Aborted | X | id:000000,sig:06,src:000002,time:136110,execs:36318,op:havoc,rep:2 | 136110
+5013 | b7e3bae | 250826-2150 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:101758,execs:27723,op:havoc,rep:1 | 101758
+5013 | b7e3bae | 250826-2156 | bug_Aborted^Aborted | X | id:000000,sig:06,src:002498+004647,time:12400773,execs:3000184,op:splice,rep:2 | 12400773
+5138 | 70e275e | 250903-1708 | bug_^Aborted | B | id:000000,sig:06,src:000002,time:705,execs:428,op:quick,pos:82 | 705
+5138 | 70e275e | 250903-1714 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:54741,execs:25020,op:havoc,rep:3 | 54741
+5138 | 70e275e | 250903-1720 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:2417,execs:1056,op:flip1,pos:53 | 2417
+5138 | 70e275e | 250903-1727 | bug_^Aborted | B | id:000000,sig:06,src:001317+001217,time:962052,execs:223246,op:splice,rep:2 | 962052
+5138 | 70e275e | 250903-1733 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:727,execs:406,op:quick,pos:81 | 727
+5138 | 70e275e | 250826-2133 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:189502,execs:46835,op:havoc,rep:4 | 189502
+5138 | 70e275e | 250826-2139 | bug_^Aborted | B | id:000000,sig:06,src:000003,time:1334,execs:503,op:quick,pos:80 | 1334
+5138 | 70e275e | 250826-2145 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:1461,execs:535,op:quick,pos:109 | 1461
+5138 | 70e275e | 250826-2150 | bug_^Aborted | B | id:000000,sig:06,src:000004,time:46326,execs:13949,op:havoc,rep:3 | 46326
+5138 | 70e275e | 250826-2156 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:1228,execs:442,op:quick,pos:82 | 1228
+5117 | 53b61c1 | 250903-1708 | bug_^Aborted | B | id:000003,sig:06,src:000205,time:358055,execs:101269,op:quick,pos:47 | 358055
+5117 | 53b61c1 | 250903-1714 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:20568,execs:10465,op:havoc,rep:1 | 20568
+5117 | 53b61c1 | 250903-1720 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:28471,execs:12649,op:havoc,rep:1 | 28471
+5117 | 53b61c1 | 250903-1727 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:9601,execs:4807,op:havoc,rep:2 | 9601
+5117 | 53b61c1 | 250903-1733 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:14354,execs:6985,op:havoc,rep:2 | 14354
+5117 | 53b61c1 | 250826-2133 | bug_^Aborted | B | id:000000,sig:06,src:000003,time:2530,execs:879,op:flip1,pos:66 | 2530
+5117 | 53b61c1 | 250826-2139 | bug_^Aborted | B | id:000000,sig:06,src:000003,time:130378,execs:33674,op:havoc,rep:2 | 130378
+5117 | 53b61c1 | 250826-2145 | bug_^Aborted | B | id:000000,sig:06,src:000003,time:151426,execs:38626,op:havoc,rep:3 | 151426
+5117 | 53b61c1 | 250826-2150 | bug_^Aborted | B | id:000000,sig:06,src:000596+000002,time:295913,execs:73159,op:splice,rep:1 | 295913
+5117 | 53b61c1 | 250826-2156 | bug_^Aborted | B | id:000000,sig:06,src:000003,time:3559,execs:1167,op:flip2,pos:35 | 3559
+5153 | 70e275e | 250903-1708 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:22131,execs:11019,op:havoc,rep:3 | 22131
+5153 | 70e275e | 250903-1714 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:758,execs:448,op:quick,pos:86 | 758
+5153 | 70e275e | 250903-1720 | bug_^Aborted | B | id:000000,sig:06,src:000003,time:33005,execs:15681,op:havoc,rep:2 | 33005
+5153 | 70e275e | 250903-1727 | bug_^Aborted | B | id:000000,sig:06,src:000002,time:675,execs:393,op:quick,pos:80 | 675
+5153 | 70e275e | 250903-1733 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:511,execs:296,op:quick,pos:56 | 511
+5153 | 70e275e | 250826-2133 | bug_^Aborted | B | id:000000,sig:06,src:000001,time:1297,execs:504,op:quick,pos:99 | 1297
+5153 | 70e275e | 250826-2139 | bug_^Aborted | B | id:000000,sig:06,src:000000,time:1404,execs:529,op:quick,pos:116 | 1404
+5153 | 70e275e | 250826-2145 | bug_^Aborted | B | id:000000,sig:06,src:000002,time:48627,execs:14515,op:havoc,rep:3 | 48627
+5153 | 70e275e | 250826-2150 | bug_^Aborted | B | id:000000,sig:06,src:000004,time:2383,execs:811,op:quick,pos:259 | 2383
+5153 | 70e275e | 250826-2156 | bug_^Aborted | B | id:000000,sig:06,src:000549+000003,time:485703,execs:118019,op:splice,rep:3 | 485703

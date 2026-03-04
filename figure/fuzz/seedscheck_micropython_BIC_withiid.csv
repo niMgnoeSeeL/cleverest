@@ -1,0 +1,7 @@
+issue | commit | # of files | # of (B,D,R,X,N) | final | first file | bug_types
+13007 | 4c93955 | 13 | (0,0,1,1,4) | R | seeds/py/non_compliant.py | bug_stack-buffer-overflow^stack-buffer-overflow:1 
+13041 | 1fef566 | 13 | (0,0,0,1,12) | X | seeds/py/rge_sm.py | bug_stack-buffer-overflow^stack-buffer-overflow:1 
+17733 | 5e9189d | 13 | (0,0,1,0,4) | R | seeds/py/non_compliant.py | 
+17815 | 69ead7d | 13 | (0,0,1,0,0) | R | seeds/py/cexample_class.py | 
+17841 | e702046 | 13 | (0,0,0,0,13) | N |  | 
+17847 | 7e14680 | 13 | (0,0,0,0,13) | N |  | 

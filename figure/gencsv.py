@@ -2,13 +2,17 @@ import os
 import csv
 import sys
 import argparse
+import glob
 
 
 SCORE_MAP = {'B': 3, 'D': 2, 'R': 1, 'X': 0, 'N': 0}
 # some commits trigger unintended bugs without gcov data dumped, manually inspected reachability
+# commits triggering bugs that still reach changed code:
 # ! gdb --args ./build_before_b7e3bae/bin/jerry ../exp_jerryscript_BIC_GITFULL_ITER5_gpt-4o-2024-08-06_TEMP0.5_250212-1127/INPUT_#5013_b7e3bae_2_gpt-4o-2024-08-06 
 # ! gdb --args ./build_after_d7e2125/bin/jerry ../exp_jerryscript_FIX_GITFULL_ITER5_gpt-4o-2024-08-06_TEMP1.0_250218-0140/INPUT_#5117_d7e2125_1_gpt-4o-2024-08-06
-MANUAL_MAP = {'832e069': 2, 'b7e3bae': 1, 'd7e2125': 1}
+# commits triggering unrelated bugs
+# ! libtool --mode=execute gdb --args ./build_after_499c91b/jq -nf ../repdata_jq/exp_jq_FIX_GITFULL_ITER5_gpt-4o-2024-08-06_TEMP0.5_260117-0915/TRIGGER_#49014_499c91b_2_gpt-4o-2024-08-06_bug_requested\^requested
+MANUAL_MAP = {'b7e3bae': 1, 'd7e2125': 1}
 
 COMMIT2IID = {
     # bic
@@ -73,6 +77,18 @@ def parse_summary_file(file_path):
                 score = SCORE_MAP[final_result]
                 if final_result == 'X' and commit in MANUAL_MAP:
                   score = MANUAL_MAP[commit]
+                # NOTE: unintended bugs (X) if have status that do NOT trigger same bug before^after, see as behave change, score should be 2
+                # found mujs #141 832e069 and micropython CVE-2025-49014 4003202
+                if final_result == 'X':
+                  status_list = statuses.split(' ')
+                  for status in status_list:
+                    if not status.startswith('bug_'):
+                      continue
+                    bug_before, _sep, bug_after = status.partition('^')
+                    bug_before = bug_before.lstrip('bug_')
+                    if bug_before != bug_after:  # different bugs triggered
+                      score = 2
+                      break
                 if config['GIT_INFO'] == 'MSGONLY' and commit == '907d05a' and final_result == 'D':  # poppler #1305 FIX MSGONLY one behave cannot be reproduced, set to 0
                   final_result = 'N'
                   score = 0
@@ -94,16 +110,8 @@ def main():
 
     # Find all SUMMARY_*.txt files in the specified input directory
     summary_files = [os.path.join(input_dir, f) for f in os.listdir(input_dir) if f.startswith('SUMMARY_') and f.endswith('.txt')]
-    # recursively find all SUMMARY_*.txt files
-    if True:
-    # if not summary_files:
-      for root, dirs, files in os.walk(input_dir):
-        depth = root[len(input_dir):].count(os.sep)
-        if depth > 1:  # avoid redundant SUMMARY under exp_*
-          continue
-        for file in files:
-          if file.startswith('SUMMARY_') and file.endswith('.txt'):
-            summary_files.append(os.path.join(root, file))
+    # find all {input_dir}/<subject>/SUMMARY_*.txt files
+    summary_files.extend(glob.glob(os.path.join(input_dir, '*', 'SUMMARY_*.txt')))
     aggregated_results = []
 
     print("Found {} summary files".format(len(summary_files)))

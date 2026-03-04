@@ -1,3 +1,6 @@
 issue | commit | # of files | # of (B,D,R,X,N) | final | first file | bug_types
-535 | d0c3f01 | 14 | (13,0,1,0,0) | B | seeds_libxml2/dtd9 | bug_global-buffer-overflow^:13 
+535 | d0c3f01 | 14 | (1,0,0,0,0) | B | seeds/xml/dtd1 | bug_global-buffer-overflow^:1 
 550 | 6273df6 | 14 | (0,0,0,0,14) | N |  | 
+553 | db21cd5 | 14 | (1,0,0,0,0) | B | seeds/xml/dtd1 | bug_SEGV^:1 
+720 | 3ad7f81 | 14 | (0,14,0,0,0) | D | seeds/xml/dtd1 | 
+841 | dc6270d | 14 | (1,0,0,0,0) | B | seeds/xml/dtd1 | bug_heap-use-after-free^:1 
