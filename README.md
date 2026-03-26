@@ -22,13 +22,14 @@ The data of experiments in the paper is available at `repdata.tar.xz` (uncompres
 
 ## Evaluation Setup
 
-The system is tested on Docker container [aflplusplus/aflplusplus:v4.21c](https://hub.docker.com/layers/aflplusplus/aflplusplus/v4.21c/images/sha256-2c445346a9f5c4e321a08c5d3ae77282ca61ad332dd2ddb7683a724f91d0e136) running Ubuntu 22.04, with following dependencies installed:
+The system is tested on Docker container [aflplusplus/aflplusplus:v4.21c](https://hub.docker.com/layers/aflplusplus/aflplusplus/v4.21c/images/sha256-2c445346a9f5c4e321a08c5d3ae77282ca61ad332dd2ddb7683a724f91d0e136) running Ubuntu 22.04.
+
+You can launch Docker container with necessary dependencies installed with following commands:
 
 ```bash
-# necessary dependencies for Cleverest to run
-apt-get install -y curl gawk jq tmux
-# dependencies for building mujs, libxml2, and poppler
-apt-get install -y libreadline-dev libfreetype-dev libfontconfig-dev libnss3-dev libtiff-dev
+docker build -t cleverest .
+docker run --rm -it --name clever cleverest
+docker exec -it clever bash
 ```
 
 You will need to specify OpenAI API key in environment variable before running experiments, or set it in `openai` Bash script.
